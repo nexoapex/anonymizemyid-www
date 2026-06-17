@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="page wrap">
+  <header class="page-head">
+    <a class="back" href="{{ "/" | relURL }}">← {{ site.Params.appName }}</a>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="lede muted">{{ . }}</p>{{ end }}
+    {{ if .Lastmod }}<p class="muted small">Last updated {{ .Lastmod.Format "2 January 2006" }}</p>{{ end }}
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

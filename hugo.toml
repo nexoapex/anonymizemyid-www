@@ -1,0 +1,57 @@
+baseURL = "https://anonymizemyid.com/"
+title = "Anonymize my ID — share your ID, not your identity"
+theme = "aegis"
+enableRobotsTXT = true
+enableInlineShortcodes = true
+disableKinds = ["taxonomy", "term"]
+
+[languages.en]
+  locale = "en-US"
+  label = "English"
+
+[params]
+  appName = "Anonymize my ID"
+  tagline = "Share your ID, not your identity."
+  description = "Photograph an ID card or passport and create a safe, watermarked, redacted copy — processed 100% on your phone. No account, no upload."
+  price = "€4"
+  priceNote = "one-time · yours for life"
+  freeUses = 2
+  comingSoon = true
+  appStoreUrl = "#"
+  playStoreUrl = "#"
+  domain = "anonymizemyid.com"
+
+  # Legal entity (Nexo Apex S.L.)
+  company = "NEXO APEX S.L."
+  brand = "Anonymize my ID"
+  vat = "B55467146"
+  address = "Edificio Camí Reial, c/ Camí Reial 13-17, 3a planta, 43700 El Vendrell, Tarragona, Spain"
+  phone = "+34 659 696 741"
+  email = "hi@nexoapex.com"
+  privacyEmail = "rgpd@nexoapex.com"
+  parentSite = "https://nexoapex.com"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menus]
+  [[menus.footer]]
+    name = "Privacy Policy"
+    pageRef = "/privacy"
+    weight = 10
+  [[menus.footer]]
+    name = "Legal Notice & Terms"
+    pageRef = "/terms"
+    weight = 20
+  [[menus.footer]]
+    name = "Imprint"
+    pageRef = "/imprint"
+    weight = 30
+  [[menus.footer]]
+    name = "About"
+    pageRef = "/about"
+    weight = 40
+  [[menus.footer]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 50

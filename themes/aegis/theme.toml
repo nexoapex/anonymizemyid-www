@@ -1,0 +1,8 @@
+name = "Aegis"
+license = "MIT"
+description = "Greenfield charcoal + amber theme for the Anonymize my ID product site."
+min_version = "0.146.0"
+
+[author]
+  name = "Nexo Apex S.L."
+  homepage = "https://nexoapex.com"

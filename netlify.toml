@@ -1,0 +1,18 @@
+# Netlify build settings for the Anonymize my ID website (Hugo).
+# Import this repo on Netlify (Add new site → Import from GitHub) — these
+# settings are picked up automatically; then point the custom domain at it.
+
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.163.2"
+  TZ = "Europe/Madrid"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
