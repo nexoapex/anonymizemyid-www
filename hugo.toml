@@ -10,6 +10,7 @@ disableKinds = ["taxonomy", "term"]
   label = "English"
 
 [params]
+  googleAnalytics = "G-524LZY9KB9"
   appName = "Anonymize my ID"
   tagline = "Share your ID, not your identity."
   description = "Photograph an ID card or passport and create a safe, watermarked, redacted copy — processed 100% on your phone. No account, no upload."
