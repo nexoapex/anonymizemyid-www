@@ -1,4 +1,9 @@
 {{ define "main" }}
+{{/* Optimised, correctly-sized WebP screenshots (Hugo image processing). */}}
+{{ $home := (resources.Get "images/screens/app-home.png").Resize "600x webp q82" }}
+{{ $before := (resources.Get "images/screens/before.png").Resize "560x webp q82" }}
+{{ $free := (resources.Get "images/screens/after-free.png").Resize "560x webp q82" }}
+{{ $pro := (resources.Get "images/screens/after-pro.png").Resize "560x webp q82" }}
 
 <!-- HERO -->
 <section class="hero">
@@ -14,7 +19,7 @@
     </div>
     <div class="hero-art">
       <div class="device">
-        <img src="{{ "images/screens/app-home.png" | relURL }}" alt="Anonymize my ID app home screen" loading="eager" width="300" height="650">
+        <img src="{{ $home.RelPermalink }}" alt="Anonymize my ID app home screen" width="{{ $home.Width }}" height="{{ $home.Height }}" loading="eager" fetchpriority="high" decoding="async">
       </div>
     </div>
   </div>
@@ -54,16 +59,16 @@
 
     <div class="ba">
       <figure>
-        <div class="ba-doc"><img src="{{ "images/screens/before.png" | relURL }}" alt="Original ID document" loading="lazy"></div>
+        <div class="ba-doc"><img src="{{ $before.RelPermalink }}" width="{{ $before.Width }}" height="{{ $before.Height }}" alt="Original ID document" loading="lazy" decoding="async"></div>
         <figcaption>Before — your document</figcaption>
       </figure>
       <div class="ba-arrow" aria-hidden="true">→</div>
       <figure>
-        <div class="ba-doc"><img src="{{ "images/screens/after-free.png" | relURL }}" alt="Anonymized copy: black and white, all fields hidden, watermarked" loading="lazy"></div>
+        <div class="ba-doc"><img src="{{ $free.RelPermalink }}" width="{{ $free.Width }}" height="{{ $free.Height }}" alt="Anonymized copy: black and white, all fields hidden, watermarked" loading="lazy" decoding="async"></div>
         <figcaption>Free — all hidden · B&amp;W · watermark</figcaption>
       </figure>
       <figure>
-        <div class="ba-doc"><img src="{{ "images/screens/after-pro.png" | relURL }}" alt="Anonymized copy with Pro: blur and partial redaction in colour" loading="lazy"></div>
+        <div class="ba-doc"><img src="{{ $pro.RelPermalink }}" width="{{ $pro.Width }}" height="{{ $pro.Height }}" alt="Anonymized copy with Pro: blur and partial redaction in colour" loading="lazy" decoding="async"></div>
         <figcaption>Pro — blur, partial, colour</figcaption>
       </figure>
     </div>

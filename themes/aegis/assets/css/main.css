@@ -1,7 +1,7 @@
 :root{
   --bg:#0F1115; --surface:#171A20; --elev:#1F232B; --high:#272C36; --border:#2C313B;
   --amber:#F2A93B; --amber-bright:#FFC061; --amber-deep:#C77F22; --amber-wash:rgba(242,169,59,.10);
-  --text:#F4F1EA; --text-2:#AAB0BB; --muted:#6E747F; --safe:#53BE86;
+  --text:#F4F1EA; --text-2:#AAB0BB; --muted:#98A0AD; --safe:#53BE86;
   --ink:#1A1206;
   --radius:16px; --radius-lg:22px;
   --wrap:1080px;
@@ -18,6 +18,8 @@ body{
 }
 a{color:var(--amber-bright); text-decoration:none}
 a:hover{text-decoration:underline}
+/* Inline links within body copy must not rely on colour alone (a11y). */
+p a{text-decoration:underline}
 h1,h2,h3{line-height:1.12; letter-spacing:-.02em; margin:0 0 .4em}
 h1{font-size:clamp(2rem,5vw,3.3rem); font-weight:800}
 h2{font-size:clamp(1.5rem,3.4vw,2.2rem); font-weight:800}

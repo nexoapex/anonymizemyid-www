@@ -15,8 +15,10 @@
 
 <meta name="theme-color" content="#0F1115">
 <link rel="icon" href="{{ "images/favicon.svg" | relURL }}" type="image/svg+xml">
+{{ with site.Params.googleAnalytics }}<link rel="dns-prefetch" href="https://www.googletagmanager.com">{{ end }}
 
-{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{/* Inline the (tiny) CSS to remove a render-blocking request and speed up FCP/LCP. */}}
+{{ $css := resources.Get "css/main.css" | minify }}
+<style>{{ $css.Content | safeCSS }}</style>
 
 {{ partial "analytics.html" . }}
