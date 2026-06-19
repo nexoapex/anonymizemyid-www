@@ -14,7 +14,7 @@
       <p class="lede">Photograph an ID card or passport and get a safe, watermarked, redacted copy — processed entirely on your phone. Perfect for hotels, rentals and visa forms while you travel.</p>
       <div id="get" class="hero-cta">
         {{ partial "store-badges.html" . }}
-        <p class="muted small">Launching soon on iOS &amp; Android.</p>
+        <p class="muted small">Now on Android — iOS coming soon.</p>
       </div>
     </div>
     <div class="hero-art">
@@ -125,6 +125,7 @@
         <h3>Pro</h3>
         <div class="price">{{ site.Params.price }} <span>once</span></div>
         <p class="muted">{{ site.Params.priceNote }}</p>
+        <p class="muted small">{{ site.Params.priceDisclaimer }}</p>
         <ul>
           <li><strong>Unlimited</strong> anonymizations</li>
           <li>Choose exactly what to hide</li>
@@ -158,7 +159,7 @@
     <h2 class="section-title">Questions</h2>
     <details><summary>Is my document uploaded anywhere?</summary><p>No. Everything is processed on your device. The app has no server and never sends or stores your photo.</p></details>
     <details><summary>What does the free version include?</summary><p>{{ site.Params.freeUses }} anonymizations per install. Each one hides every sensitive field, renders in black &amp; white and adds a watermark.</p></details>
-    <details><summary>What do I get with Pro?</summary><p>A one-time {{ site.Params.price }} unlock — yours for life, no subscription — for unlimited anonymizations and full control: choose what to hide, blur/pixelate/solid bars, partial redaction, colour, and a custom watermark.</p></details>
+    <details><summary>What do I get with Pro?</summary><p>A one-time {{ site.Params.price }} unlock ({{ site.Params.priceDisclaimer }}) — yours for life, no subscription — for unlimited anonymizations and full control: choose what to hide, blur/pixelate/solid bars, partial redaction, colour, and a custom watermark.</p></details>
     <details><summary>Which documents are supported?</summary><p>ID cards (front and back) and passport data pages, with presets tuned for Spanish- and English-speaking countries.</p></details>
     <details><summary>Is it safe to share an anonymized copy?</summary><p>The app helps you hide sensitive fields and adds a tamper-evident watermark. You stay in control of what's covered before you share.</p></details>
   </div>
@@ -170,7 +171,7 @@
     <h2>Travel light. Share safely.</h2>
     <p class="muted">Get {{ site.Params.appName }} on your phone.</p>
     {{ partial "store-badges.html" . }}
-    <p class="muted small">Launching soon on iOS &amp; Android.</p>
+    <p class="muted small">Now on Android — iOS coming soon.</p>
   </div>
 </section>
 

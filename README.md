@@ -32,9 +32,34 @@ All tunables are in `hugo.toml` under `[params]`:
 
 - Product copy: `appName`, `tagline`, `price`, `freeUses`.
 - Legal entity: `company`, `vat`, `address`, `phone`, `email`, `privacyEmail`.
-- Store launch: set `appStoreUrl` / `playStoreUrl` and `comingSoon = false` to
-  turn the "Coming soon" badges into live download links.
+- Store launch: set `appStoreUrl` / `playStoreUrl` to the real store links to
+  turn each "Coming soon" badge into a live download button. Each badge flips
+  independently as soon as its URL is set (leave it as `#` to stay "Coming
+  soon"), so platforms can launch one at a time.
 - `baseURL` (top of `hugo.toml`) — the production domain.
+
+## SEO & GEO
+
+The site ships a full set of machine-readable signals for search engines and AI
+answer engines:
+
+- **`sitemap.xml`** + **`robots.txt`** — `robots.txt` explicitly welcomes AI
+  crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot, …) and
+  points at the sitemap.
+- **JSON-LD structured data** (`themes/aegis/layouts/partials/structured-data.html`)
+  — `Organization` + `WebSite` everywhere, `SoftwareApplication` + `FAQPage` on
+  the home page, `WebPage` + `BreadcrumbList` on inner pages.
+- **`llms.txt`** + **`llms-full.txt`** — generated from the live content via Hugo
+  output formats (`[outputs]` / `[outputFormats]` in `hugo.toml`).
+- **Open Graph + Twitter** cards using `static/images/og.png` (1200×630).
+- **Icons & PWA** — `favicon.svg`, `favicon.ico`, 16/32 px PNGs,
+  `apple-touch-icon.png`, `icon-192/512.png` and `site.webmanifest` (generated
+  from the brand mark with `rsvg-convert`).
+- **`humans.txt`** and **`.well-known/security.txt`**.
+
+> When you change the FAQ, edit it in **both** `layouts/index.html` (the visible
+> `<details>`) and `partials/structured-data.html` (the `FAQPage` data) so the
+> page and its structured data stay in sync.
 
 ## Deploy (Netlify, free tier)
 

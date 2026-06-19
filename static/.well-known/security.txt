@@ -1,0 +1,7 @@
+# Security contact for anonymizemyid.com (NEXO APEX S.L.)
+Contact: mailto:hi@nexoapex.com
+Contact: https://anonymizemyid.com/contact/
+Expires: 2027-06-19T00:00:00.000Z
+Preferred-Languages: en, es
+Canonical: https://anonymizemyid.com/.well-known/security.txt
+Policy: https://anonymizemyid.com/privacy/

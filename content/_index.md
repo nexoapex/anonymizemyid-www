@@ -1,4 +1,4 @@
 ---
 title: "Anonymize my ID — share your ID, not your identity"
-description: "Photograph an ID card or passport and create a safe, watermarked, redacted copy — processed 100% on your phone. No account, no upload. One-time €4 to unlock everything."
+description: "Photograph an ID card or passport and create a safe, watermarked, redacted copy — processed 100% on your phone. No account, no upload. A one-time purchase of about €4 (excl. VAT, varies by region) unlocks everything."
 ---

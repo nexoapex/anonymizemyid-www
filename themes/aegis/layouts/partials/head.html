@@ -1,21 +1,48 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{- $isHome := .IsHome -}}
+{{- $desc := .Description | default site.Params.description -}}
+{{- $ogTitle := cond $isHome (printf "%s — %s" site.Params.appName site.Params.tagline) .Title -}}
+{{- $ogImage := "images/og.png" | absURL -}}
+{{- $ogAlt := site.Params.ogImageAlt | default (printf "%s — %s" site.Params.appName site.Params.tagline) -}}
 <title>{{ if $isHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Params.appName }}{{ end }}</title>
-<meta name="description" content="{{ .Description | default site.Params.description }}">
+<meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="{{ site.Params.company }}">
+<meta name="generator" content="Hugo">
 
 <meta property="og:site_name" content="{{ site.Params.appName }}">
-<meta property="og:title" content="{{ if $isHome }}{{ site.Params.appName }} — {{ site.Params.tagline }}{{ else }}{{ .Title }}{{ end }}">
-<meta property="og:description" content="{{ .Description | default site.Params.description }}">
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:description" content="{{ $desc }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ "images/og.png" | absURL }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:image:secure_url" content="{{ $ogImage }}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ $ogAlt }}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $ogTitle }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+<meta name="twitter:image:alt" content="{{ $ogAlt }}">
 
 <meta name="theme-color" content="#0F1115">
+<meta name="apple-mobile-web-app-title" content="{{ site.Params.appName }}">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="icon" href="{{ "images/favicon.svg" | relURL }}" type="image/svg+xml">
-{{ with site.Params.googleAnalytics }}<link rel="dns-prefetch" href="https://www.googletagmanager.com">{{ end }}
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
+<link rel="icon" href="{{ "images/favicon-32x32.png" | relURL }}" type="image/png" sizes="32x32">
+<link rel="icon" href="{{ "images/favicon-16x16.png" | relURL }}" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | relURL }}" sizes="180x180">
+<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+{{ with site.Params.googleAnalytics }}<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">{{ end }}
+
+{{ partial "structured-data.html" . }}
 
 {{/* Inline the (tiny) CSS to remove a render-blocking request and speed up FCP/LCP. */}}
 {{ $css := resources.Get "css/main.css" | minify }}

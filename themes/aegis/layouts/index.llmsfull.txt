@@ -1,0 +1,52 @@
+{{- /* llms-full.txt — full text of the whole site in one file for LLMs / GEO. */ -}}
+# {{ site.Params.appName }} — full site content
+
+> {{ site.Params.tagline }} {{ site.Params.description }}
+> Canonical: {{ site.Home.Permalink }} · Publisher: {{ site.Params.company }} · Language: en-US
+
+---
+
+# Home — {{ site.Params.appName }}
+URL: {{ site.Home.Permalink }}
+
+{{ site.Params.appName }}: {{ site.Params.tagline }} Photograph an ID card or passport and get a safe, watermarked, redacted copy — processed entirely on your phone. No account, no upload, no server. Built for travellers who must share a copy of their document (hotels, car rental, visa forms) without handing over their identity.
+
+## How it works
+1. Snap or pick — photograph your ID or passport, or choose an existing photo. Everything happens offline.
+2. Hide what matters — drag the boxes over the sensitive fields. Free hides everything; Pro lets you choose blur, pixelate, partial or colour.
+3. Share safely — export a watermarked copy and send it anywhere; your real details stay private.
+
+## Pricing
+- Free (€0): {{ site.Params.freeUses }} anonymizations per install, every sensitive field hidden, black & white + watermark, ID cards & passports, 100% offline.
+- Pro ({{ site.Params.price }} once — {{ site.Params.priceDisclaimer }}): unlimited anonymizations, choose exactly what to hide, blur/pixelate/solid bars, partial redaction (show last digits), keep it in colour, custom watermark text & opacity.
+
+## Availability
+- Android: available on Google Play — {{ site.Params.playStoreUrl }}
+- iOS: coming soon
+
+## FAQ
+Q: Is my document uploaded anywhere?
+A: No. Everything is processed on your device. The app has no server and never sends or stores your photo.
+
+Q: What does the free version include?
+A: {{ site.Params.freeUses }} anonymizations per install. Each one hides every sensitive field, renders in black & white and adds a watermark.
+
+Q: What do I get with Pro?
+A: A one-time {{ site.Params.price }} unlock ({{ site.Params.priceDisclaimer }}) — yours for life, no subscription — for unlimited anonymizations and full control: choose what to hide, blur/pixelate/solid bars, partial redaction, colour, and a custom watermark.
+
+Q: Which documents are supported?
+A: ID cards (front and back) and passport data pages, with presets tuned for Spanish- and English-speaking countries.
+
+Q: Is it safe to share an anonymized copy?
+A: The app helps you hide sensitive fields and adds a tamper-evident watermark. You stay in control of what's covered before you share.
+{{ range site.RegularPages }}
+---
+
+# {{ .Title }}
+URL: {{ .Permalink }}
+{{ with .Description }}Summary: {{ . }}
+{{ end }}
+{{ .RawContent }}
+{{ end }}
+---
+© {{ now.Year }} {{ site.Params.company }}. {{ site.Params.appName }} processes documents 100% on-device. Apple, App Store, Google Play and their logos are trademarks of their respective owners.

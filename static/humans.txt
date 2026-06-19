@@ -1,0 +1,27 @@
+/* TEAM */
+  Company: NEXO APEX S.L.
+  Site: https://nexoapex.com
+  Contact: hi [at] nexoapex.com
+  Location: El Vendrell, Tarragona, Spain
+
+/* PRODUCT */
+  Name: Anonymize my ID
+  What: Privacy-first, on-device ID & passport anonymizer
+  Site: https://anonymizemyid.com
+  Android: https://play.google.com/store/apps/details?id=com.nexoapex.anonymizemyid
+  iOS: coming soon
+
+/* PRIVACY */
+  Your documents are processed 100% on your device.
+  No account, no upload, no server. The original photo never leaves your phone.
+
+/* TECHNOLOGY */
+  Standards: HTML5, CSS3, JSON-LD, Open Graph, llms.txt
+  Site generator: Hugo (extended)
+  App: Flutter
+  Hosting: Netlify
+
+/* THANKS */
+  Built with care for travellers who value their privacy.
+
+  Last update: 2026-06

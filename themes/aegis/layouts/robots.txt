@@ -1,0 +1,11 @@
+{{- /* Custom robots.txt: open to all crawlers, and explicitly welcoming to AI /
+       GEO crawlers (this is a public marketing site we WANT cited). */ -}}
+User-agent: *
+Allow: /
+
+{{ range slice "GPTBot" "OAI-SearchBot" "ChatGPT-User" "ClaudeBot" "Claude-Web" "anthropic-ai" "Claude-SearchBot" "PerplexityBot" "Perplexity-User" "Google-Extended" "GoogleOther" "Applebot" "Applebot-Extended" "Bingbot" "Amazonbot" "DuckDuckBot" "CCBot" "Bytespider" "cohere-ai" "Meta-ExternalAgent" "Diffbot" -}}
+User-agent: {{ . }}
+Allow: /
+
+{{ end -}}
+Sitemap: {{ "sitemap.xml" | absURL }}

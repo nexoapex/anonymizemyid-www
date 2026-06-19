@@ -1,0 +1,23 @@
+{{- /* llms.txt — concise, curated map of the site for LLMs (see llmstxt.org). */ -}}
+# {{ site.Params.appName }}
+
+> {{ site.Params.tagline }} {{ site.Params.description }}
+
+{{ site.Params.appName }} is a privacy-first mobile app by {{ site.Params.company }} that photographs an ID card or passport and produces a safe, watermarked, redacted copy — processed 100% on the device, with no account, no upload and no server. Free tier: {{ site.Params.freeUses }} anonymizations per install (every field hidden, black & white, watermark). Pro is a one-time purchase of {{ site.Params.price }} ({{ site.Params.priceDisclaimer }}) for unlimited use, blur/pixelate/solid-bar redaction, partial redaction, colour output and a custom watermark. Android is available on Google Play; iOS is coming soon.
+
+## Pages
+- [Home]({{ site.Home.Permalink }}): {{ site.Params.description }}
+{{ range site.RegularPages -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end }}
+## Get the app
+- Get it on Google Play: {{ site.Params.playStoreUrl }}
+- iOS: coming soon
+
+## About
+- Publisher: {{ site.Params.company }} ({{ site.Params.parentSite }})
+- Support: {{ site.Params.email }} — Privacy / GDPR: {{ site.Params.privacyEmail }}
+- Location: El Vendrell, Tarragona, Spain
+
+## Optional
+- [Full site text (one file)]({{ "llms-full.txt" | absURL }}): every page's content concatenated for deep context

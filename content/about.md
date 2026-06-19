@@ -14,7 +14,7 @@ zone.
 **Anonymize my ID** fixes that. Photograph your ID or passport and the app
 creates a safe copy with the sensitive fields hidden and a watermark applied —
 **entirely on your phone**. No account, no upload, no server. The free version
-hides everything in black & white with a watermark; a one-time **€4** unlock
+hides everything in black & white with a watermark; a one-time unlock of about €4 (excl. VAT, varies by region)
 gives you full control over what to hide and how (blur, pixelate, partial,
 colour) with unlimited use.
 

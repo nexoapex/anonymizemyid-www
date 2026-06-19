@@ -157,8 +157,8 @@ details p{color:var(--text-2); margin:0 0 12px}
 .badge-text{display:flex; flex-direction:column; line-height:1.1}
 .badge-text small{font-size:.62rem; color:#c9ced6; text-transform:uppercase; letter-spacing:.04em}
 .badge-text strong{font-size:1.05rem; font-weight:700}
-.badges--soon .badge{opacity:.85; cursor:default}
-.badges--soon .badge:hover{border-color:#3a3f49}
+.badge--soon{opacity:.85; cursor:default}
+.badge--soon:hover{border-color:#3a3f49}
 @media(max-width:840px){ .hero-cta .badges{justify-content:center} }
 
 /* Content pages */
