@@ -1,0 +1,137 @@
+# English UI strings. Keys are shared with i18n/es.toml.
+
+# ── Navigation / header ──
+nav_how = "How it works"
+nav_features = "Features"
+nav_pricing = "Pricing"
+nav_guides = "Guides"
+nav_get = "Get the app"
+nav_primary = "Primary"
+lang_switcher = "Language"
+lang_en = "English"
+lang_es = "Español"
+
+# ── Hero ──
+hero_pill = "100% on-device · no upload"
+hero_lede = "Photograph an ID card or passport and get a safe, watermarked, redacted copy — processed entirely on your phone. Perfect for hotels, rentals and visa forms while you travel."
+hero_home_alt = "Anonymize my ID app home screen"
+badges_free_try = "Free to try on iOS and Android."
+app_lang_note = ""
+
+# ── Trust strip ──
+trust_no_account_t = "No account"
+trust_no_account_d = "nothing to sign up for"
+trust_no_upload_t = "No upload"
+trust_no_upload_d = "your photo never leaves the phone"
+trust_docs_t = "IDs & passports"
+trust_docs_d = "Spanish & English-speaking countries"
+trust_onetime_t = "One-time"
+trust_onetime_d = "no subscription, ever"
+
+# ── How it works ──
+how_title = "Three taps to a safe copy"
+step1_t = "Snap or pick"
+step1_d = "Photograph your ID or passport, or choose an existing photo. Everything happens offline."
+step2_t = "Hide what matters"
+step2_d = "Drag the boxes over the sensitive fields. Free hides everything; Pro lets you choose blur, pixelate, partial or colour."
+step3_t = "Share safely"
+step3_d = "Export a watermarked copy and send it anywhere — your real details stay private."
+ba_before_alt = "Original ID document"
+ba_free_alt = "Anonymized copy: black and white, all fields hidden, watermarked"
+ba_pro_alt = "Anonymized copy with Pro: blur and partial redaction in colour"
+ba_before_cap = "Before — your document"
+ba_free_cap = "Free — all hidden · B&W · watermark"
+ba_pro_cap = "Pro — blur, partial, colour"
+
+# ── Features ──
+features_title = "Built for privacy, made to travel"
+feat_offline_t = "100% offline"
+feat_offline_d = "All processing runs on-device with Apple/Google's image engine. Nothing is uploaded."
+feat_stored_t = "Nothing stored"
+feat_stored_d = "No account, and the app never keeps a copy of your original photo."
+feat_docs_t = "IDs & passports"
+feat_docs_d = "Front and back ID cards plus passport data pages, with sensible field presets."
+feat_hide_t = "Hide every field"
+feat_hide_d = "Move, resize, add or delete redaction boxes to cover exactly what you want."
+feat_blur_t = "Blur · pixelate · bars"
+feat_blur_d = "Pick how each field is hidden — a clean solid bar, a blur, or a pixelate."
+feat_partial_t = "Partial redaction"
+feat_partial_d = "Reveal just the last digits of a number while hiding the rest."
+feat_bw_t = "B&W or colour"
+feat_bw_d = "Keep the classic black-and-white photocopy look, or stay in colour."
+feat_watermark_t = "Tamper-evident watermark"
+feat_watermark_d = "Tile a custom watermark across the whole image so copies can't be reused."
+
+# ── Pricing ──
+pricing_title = "Simple pricing"
+pricing_sub = "Try it free. Unlock everything once — no subscription."
+plan_free = "Free"
+plan_free_price = "€0"
+plan_free_note = "To get a feel for it"
+plan_free_li1_suffix = "anonymizations per install"
+plan_free_li2 = "Every sensitive field hidden"
+plan_free_li3 = "Black & white + watermark"
+plan_free_li4 = "ID cards & passports"
+plan_free_li5 = "100% offline"
+plan_best = "Best value"
+plan_pro = "Pro"
+plan_pro_once = "once"
+plan_pro_li1_strong = "Unlimited"
+plan_pro_li1_suffix = "anonymizations"
+plan_pro_li2 = "Choose exactly what to hide"
+plan_pro_li3 = "Blur, pixelate or solid bars"
+plan_pro_li4 = "Partial redaction (show last digits)"
+plan_pro_li5 = "Keep it in colour"
+plan_pro_li6 = "Custom watermark text & opacity"
+plan_get = "Get the app"
+
+# ── Privacy band ──
+privacy_title = "Your identity never leaves your phone"
+privacy_body = "There is no server, no account and no analytics on your documents. The original photo is processed locally and is never stored or sent anywhere."
+privacy_read = "Read the privacy policy →"
+
+# ── FAQ ──
+faq_title = "Questions"
+
+# ── Guides (home teaser + hub) ──
+guides_title = "Guides"
+guides_teaser_sub = "Plain-English advice on sharing your passport or ID without giving your identity away."
+read_guide = "Read the guide →"
+browse_all = "Browse all guides"
+
+# ── Final CTA ──
+cta_title = "Travel light. Share safely."
+cta_sub = "Get Anonymize my ID on your phone."
+
+# ── Store badges ──
+badge_download = "Download on the"
+badge_getiton = "Get it on"
+badge_soon = "Coming soon to"
+
+# ── Footer ──
+footer_tagline_suffix = "Processed 100% on your device."
+footer_parent = "Nexo Apex"
+footer_aria = "Footer"
+footer_product_of = "Anonymize my ID is a product of {{ .company }} (TIN {{ .vat }}), {{ .address }}."
+footer_rights = "© {{ .year }} {{ .company }}. All rights reserved. Apple, App Store, Google Play and their logos are trademarks of their respective owners."
+
+# ── Guides templates ──
+guide_cta_hub_title = "Share your ID, not your identity"
+guide_cta_hub_body = "Anonymize my ID does all of this for you — hide the sensitive fields and add a watermark, 100% on your phone, no upload."
+guide_cta_title = "Do it in a few taps"
+guide_cta_body = "Anonymize my ID hides every sensitive field and adds a tamper-evident watermark — 100% on your phone, no account, no upload."
+crumb_home = "Home"
+byline_by = "By the Anonymize my ID team"
+byline_min_read = "min read"
+byline_updated = "Updated"
+howto_default = "Step by step"
+guide_faq_title = "Frequently asked questions"
+related_title = "Keep reading"
+
+# ── Legal / single pages ──
+single_updated = "Last updated"
+
+# ── 404 ──
+notfound_title = "Page not found"
+notfound_body = "That page doesn't exist — but your documents are safe. Head back home."
+notfound_home = "← Back home"

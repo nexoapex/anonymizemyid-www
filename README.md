@@ -19,12 +19,14 @@ Requires Hugo **extended** ≥ 0.163.
 ## Structure
 
 ```
-hugo.toml            site config + [params] (price, store URLs, company details)
-content/             _index, privacy, terms, imprint, about, contact (Markdown)
-content/guides/      SEO/GEO content hub — _index + one Markdown file per guide
+hugo.toml            site config + [languages.en|es] + shared [params]
+i18n/                UI string tables — en.toml + es.toml (one key per string)
+content/             _index, privacy, terms, imprint, about, contact (+ .es.md)
+content/guides/      SEO/GEO content hub — _index + one Markdown file per guide (+ .es.md)
 themes/aegis/        layouts + assets/css (the theme)
   layouts/guides/    list.html (hub) + single.html (article) templates
-  partials/home-faq.html   single source for the home FAQ (page + schema)
+  partials/home-faq.html   single source for the home FAQ (page + schema, per language)
+  partials/lang-switch.html   EN|ES switcher; head.html carries the redirect script
 static/images/       favicon, og image, screenshots
 netlify.toml         Netlify build settings
 ```
@@ -42,9 +44,26 @@ All tunables are in `hugo.toml` under `[params]`:
   Safari smart-banner meta tag and the app's structured data. Both stores are
   live: iOS (`apps.apple.com/app/id6781656126`) and Google Play.
 - `baseURL` (top of `hugo.toml`) — the production domain.
-- Language: English today. The config is i18n-ready (`defaultContentLanguage`,
-  a weighted `[languages.en]`, and `hreflang` alternates wired into the
-  `<head>`), so a `[languages.es]` can be added without restructuring.
+- Per-language copy lives under `[languages.en.params]` / `[languages.es.params]`
+  (`tagline`, `description`, `price`, `priceNote`, `priceDisclaimer`); everything
+  shared (brand, store URLs, legal entity) stays in the root `[params]`.
+
+## Languages (EN + ES)
+
+The site is bilingual: **English** is the default, served at `/`; **Spanish** is
+served at `/es/`. Adding a third language is: a `[languages.xx]` block in
+`hugo.toml`, an `i18n/xx.toml`, and `*.xx.md` content files.
+
+- **UI strings** are in `i18n/en.toml` / `i18n/es.toml` and used via `{{ i18n "key" }}`.
+  Page text is translated by filename — `about.md` (EN) + `about.es.md` (ES).
+- **Language detection & redirect** — a tiny inline script in `partials/head.html`
+  reads the browser language (and any explicit choice saved by the switcher) and
+  redirects an es-preferring visitor from an English page to its Spanish twin,
+  using the page's own `hreflang` links. It **never** redirects a Spanish page to
+  English on its own, so crawlers index every URL. The `EN|ES` switcher
+  (`partials/lang-switch.html`) stores the choice in `localStorage` so it sticks.
+- **hreflang + x-default** alternates are emitted for every page from
+  `.AllTranslations`; English is `x-default`.
 
 ## SEO & GEO
 
@@ -62,11 +81,13 @@ answer engines:
 - **Content hub for SEO/GEO** (`content/guides/`) — plain-English guides written
   for high-intent queries and answer engines: clear question headings, concise
   citable passages, per-article FAQs, and internal links to the app and siblings.
-- **`hreflang`** alternates in the `<head>` (English + `x-default` today;
-  i18n-ready for a future Spanish edition).
-- **`llms.txt`** + **`llms-full.txt`** — generated from the live content via Hugo
-  output formats (`[outputs]` / `[outputFormats]` in `hugo.toml`); `llms.txt`
+- **`hreflang`** alternates in the `<head>` for every page (`en`, `es`, and
+  `x-default` → English), plus per-language `og:locale` / `og:locale:alternate`.
+- **`llms.txt`** + **`llms-full.txt`** — generated per language (`/llms.txt`,
+  `/es/llms.txt`, …) from the live content via Hugo output formats; `llms.txt`
   lists the guides in their own section.
+- **Sitemaps** — a sitemap index at `/sitemap.xml` referencing the per-language
+  `/en/sitemap.xml` and `/es/sitemap.xml`; `robots.txt` points at the index.
 - **Open Graph + Twitter** cards using `static/images/og.png` (1200×630).
 - **Icons & PWA** — `favicon.svg`, `favicon.ico`, 16/32 px PNGs,
   `apple-touch-icon.png`, `icon-192/512.png` and `site.webmanifest` (generated

@@ -46,7 +46,16 @@ img{max-width:100%; display:block}
 .nav a:hover{color:var(--text); text-decoration:none}
 .nav-cta{color:var(--ink)!important; background:var(--amber); padding:9px 14px; border-radius:999px}
 .nav-cta:hover{background:var(--amber-bright)}
-@media(max-width:640px){ .nav a:not(.nav-cta){display:none} }
+@media(max-width:640px){ .nav > a:not(.nav-cta){display:none} }
+
+/* Language switcher (EN | ES segmented toggle) */
+.lang-switch{display:inline-flex; gap:2px; border:1px solid var(--border); border-radius:999px; padding:2px}
+.lang-switch a{font-size:.72rem; font-weight:700; letter-spacing:.03em; color:var(--text-2);
+  padding:4px 9px; border-radius:999px; line-height:1}
+.lang-switch a:hover{color:var(--text); text-decoration:none}
+.lang-switch a.is-current{background:var(--high); color:var(--text)}
+/* "App is in English for now" note */
+.app-lang-note{margin-top:6px; opacity:.9}
 
 /* Buttons & pills */
 .btn{display:inline-block; background:var(--amber); color:var(--ink); font-weight:700;

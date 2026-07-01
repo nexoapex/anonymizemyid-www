@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="page wrap">
   <header class="page-head">
-    <a class="back" href="{{ "/" | relURL }}">← {{ site.Params.appName }}</a>
+    <a class="back" href="{{ "/" | relLangURL }}">← {{ site.Params.appName }}</a>
     <h1>{{ .Title }}</h1>
     {{ with .Params.subtitle }}<p class="lede muted">{{ . }}</p>{{ end }}
   </header>
@@ -13,16 +13,17 @@
       <a class="guide-card" href="{{ .RelPermalink }}">
         <h2>{{ .Title }}</h2>
         <p>{{ .Description | default .Summary | truncate 170 }}</p>
-        <span class="guide-more">Read the guide →</span>
+        <span class="guide-more">{{ i18n "read_guide" }}</span>
       </a>
     {{ end }}
   </div>
 
   <aside class="guide-cta">
-    <h2>Share your ID, not your identity</h2>
-    <p class="muted">{{ site.Params.appName }} does all of this for you — hide the sensitive fields and add a watermark, 100% on your phone, no upload.</p>
+    <h2>{{ i18n "guide_cta_hub_title" }}</h2>
+    <p class="muted">{{ i18n "guide_cta_hub_body" }}</p>
     {{ partial "store-badges.html" . }}
-    <p class="muted small">Free to try on iOS and Android.</p>
+    <p class="muted small">{{ i18n "badges_free_try" }}</p>
+    {{ with (i18n "app_lang_note") }}<p class="muted small app-lang-note">{{ . }}</p>{{ end }}
   </aside>
 </article>
 {{ end }}

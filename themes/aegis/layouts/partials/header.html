@@ -1,17 +1,18 @@
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ site.Params.appName }} home">
+    <a class="brand" href="{{ "/" | relLangURL }}" aria-label="{{ site.Params.appName }}">
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#1A1206" d="M12 2 4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3Zm0 2.2 6 2.25V11c0 3.9-2.5 6.8-6 8.8C8.5 17.8 6 14.9 6 11V6.45L12 4.2Z"/></svg>
       </span>
       <span class="brand-name">{{ site.Params.appName }}</span>
     </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="{{ "/#how" | relURL }}">How it works</a>
-      <a href="{{ "/#features" | relURL }}">Features</a>
-      <a href="{{ "/#pricing" | relURL }}">Pricing</a>
-      <a href="{{ "/guides/" | relURL }}">Guides</a>
-      <a class="nav-cta" href="{{ "/#get" | relURL }}">Get the app</a>
+    <nav class="nav" aria-label="{{ i18n "nav_primary" }}">
+      <a href="{{ "/" | relLangURL }}#how">{{ i18n "nav_how" }}</a>
+      <a href="{{ "/" | relLangURL }}#features">{{ i18n "nav_features" }}</a>
+      <a href="{{ "/" | relLangURL }}#pricing">{{ i18n "nav_pricing" }}</a>
+      <a href="{{ "/guides/" | relLangURL }}">{{ i18n "nav_guides" }}</a>
+      {{ partial "lang-switch.html" . }}
+      <a class="nav-cta" href="{{ "/" | relLangURL }}#get">{{ i18n "nav_get" }}</a>
     </nav>
   </div>
 </header>

@@ -1,7 +1,7 @@
 {{- /* Single source of truth for the home-page FAQ. Rendered as visible
        <details> in layouts/index.html AND as FAQPage JSON-LD in
        partials/structured-data.html, so the page and its structured data can
-       never drift. Returns a slice of {q, a} dicts. */ -}}
+       never drift. Returns a slice of {q, a} dicts for the current language. */ -}}
 {{- $faq := slice
     (dict "q" "Is my document uploaded anywhere?"
           "a" "No. Everything is processed on your device. The app has no server and never sends or stores your photo.")
@@ -20,4 +20,24 @@
     (dict "q" "Is it GDPR-friendly?"
           "a" "Yes. Because your document is processed 100% on-device with no account and no upload, it never becomes data that we — or anyone else — could store, leak or be compelled to hand over.")
 -}}
+{{- if eq site.Language.Lang "es" -}}
+{{- $faq = slice
+    (dict "q" "¿Se sube mi documento a algún sitio?"
+          "a" "No. Todo se procesa en tu dispositivo. La app no tiene servidor y nunca envía ni guarda tu foto.")
+    (dict "q" "¿Qué incluye la versión gratuita?"
+          "a" (printf "%d anonimizaciones por instalación. Cada una oculta todos los campos sensibles, lo pasa a blanco y negro y añade una marca de agua." (int site.Params.freeUses)))
+    (dict "q" "¿Qué consigo con Pro?"
+          "a" (printf "Un desbloqueo único de %s (%s) — para siempre y sin suscripción — con anonimizaciones ilimitadas y control total: elige qué ocultar, desenfoque/pixelado/barras sólidas, censura parcial, color y una marca de agua personalizada." site.Params.price site.Params.priceDisclaimer))
+    (dict "q" "¿Qué documentos admite?"
+          "a" "Documentos de identidad por delante y por detrás — como el DNI o el NIE españoles — y las páginas de datos del pasaporte, con campos predefinidos pensados para países de habla hispana e inglesa.")
+    (dict "q" "¿Es seguro compartir una copia anonimizada?"
+          "a" "La app te ayuda a ocultar los campos sensibles y añade una marca de agua a prueba de manipulaciones, de modo que una copia compartida no pueda usarse para suplantarte. Tú controlas exactamente qué se tapa antes de compartir.")
+    (dict "q" "¿Puedo enviar una copia de mi DNI o pasaporte por correo o WhatsApp?"
+          "a" "Solo si la censuras antes. Una vez ocultos los campos sensibles y añadida la marca de agua, una imagen interceptada o reenviada no sirve para abrir cuentas ni falsificar documentos. Anonymize my ID prepara esa copia segura en unos toques.")
+    (dict "q" "¿En qué móviles funciona?"
+          "a" "En iPhone y iPad con iOS 13 o posterior desde el App Store, y en móviles Android desde Google Play. Funciona totalmente sin conexión en ambos.")
+    (dict "q" "¿Cumple con el RGPD?"
+          "a" "Sí. Como tu documento se procesa 100% en el dispositivo, sin cuenta y sin subir nada, nunca se convierte en datos que nosotros — ni nadie — podamos guardar, filtrar o vernos obligados a entregar.")
+-}}
+{{- end -}}
 {{- return $faq -}}

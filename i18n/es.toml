@@ -1,0 +1,137 @@
+# Spanish UI strings. Keys mirror i18n/en.toml.
+
+# ── Navegación / cabecera ──
+nav_how = "Cómo funciona"
+nav_features = "Funciones"
+nav_pricing = "Precio"
+nav_guides = "Guías"
+nav_get = "Descargar la app"
+nav_primary = "Principal"
+lang_switcher = "Idioma"
+lang_en = "English"
+lang_es = "Español"
+
+# ── Hero ──
+hero_pill = "100% en el dispositivo · sin subir nada"
+hero_lede = "Fotografía tu DNI, NIE o pasaporte y consigue una copia segura, con marca de agua y los datos ocultos — procesada por completo en tu móvil. Perfecta para hoteles, alquileres y trámites de visado cuando viajas."
+hero_home_alt = "Pantalla de inicio de la app Anonymize my ID"
+badges_free_try = "Gratis para probar en iOS y Android."
+app_lang_note = "Por ahora, la aplicación está disponible solo en inglés."
+
+# ── Franja de confianza ──
+trust_no_account_t = "Sin cuenta"
+trust_no_account_d = "nada que registrar"
+trust_no_upload_t = "Sin subir nada"
+trust_no_upload_d = "tu foto nunca sale del móvil"
+trust_docs_t = "DNI y pasaportes"
+trust_docs_d = "países de habla hispana e inglesa"
+trust_onetime_t = "Pago único"
+trust_onetime_d = "sin suscripciones, nunca"
+
+# ── Cómo funciona ──
+how_title = "Tres toques para una copia segura"
+step1_t = "Haz o elige una foto"
+step1_d = "Fotografía tu DNI o pasaporte, o elige una foto que ya tengas. Todo ocurre sin conexión."
+step2_t = "Oculta lo que importa"
+step2_d = "Arrastra las cajas sobre los campos sensibles. La versión gratuita lo oculta todo; Pro te deja elegir desenfoque, pixelado, parcial o color."
+step3_t = "Comparte con tranquilidad"
+step3_d = "Exporta una copia con marca de agua y envíala a donde quieras — tus datos reales quedan en privado."
+ba_before_alt = "Documento de identidad original"
+ba_free_alt = "Copia anonimizada: en blanco y negro, con todos los campos ocultos y marca de agua"
+ba_pro_alt = "Copia anonimizada con Pro: desenfoque y censura parcial en color"
+ba_before_cap = "Antes — tu documento"
+ba_free_cap = "Gratis — todo oculto · B/N · marca de agua"
+ba_pro_cap = "Pro — desenfoque, parcial, color"
+
+# ── Funciones ──
+features_title = "Pensada para la privacidad, hecha para viajar"
+feat_offline_t = "100% sin conexión"
+feat_offline_d = "Todo el procesamiento ocurre en el dispositivo con el motor de imagen de Apple/Google. No se sube nada."
+feat_stored_t = "No se guarda nada"
+feat_stored_d = "Sin cuenta, y la app nunca conserva una copia de tu foto original."
+feat_docs_t = "DNI y pasaportes"
+feat_docs_d = "Documentos por delante y por detrás, y las páginas de datos del pasaporte, con campos predefinidos con criterio."
+feat_hide_t = "Oculta cada campo"
+feat_hide_d = "Mueve, redimensiona, añade o borra las cajas para tapar exactamente lo que quieras."
+feat_blur_t = "Desenfoque · pixelado · barras"
+feat_blur_d = "Elige cómo se oculta cada campo — una barra sólida, un desenfoque o un pixelado."
+feat_partial_t = "Censura parcial"
+feat_partial_d = "Muestra solo los últimos dígitos de un número y oculta el resto."
+feat_bw_t = "B/N o color"
+feat_bw_d = "Mantén el clásico aspecto de fotocopia en blanco y negro, o déjalo en color."
+feat_watermark_t = "Marca de agua a prueba de manipulaciones"
+feat_watermark_d = "Repite una marca de agua propia por toda la imagen para que las copias no puedan reutilizarse."
+
+# ── Precio ──
+pricing_title = "Precio sencillo"
+pricing_sub = "Pruébala gratis. Desbloquéalo todo una vez — sin suscripción."
+plan_free = "Gratis"
+plan_free_price = "0 €"
+plan_free_note = "Para hacerte una idea"
+plan_free_li1_suffix = "anonimizaciones por instalación"
+plan_free_li2 = "Todos los campos sensibles ocultos"
+plan_free_li3 = "Blanco y negro + marca de agua"
+plan_free_li4 = "DNI y pasaportes"
+plan_free_li5 = "100% sin conexión"
+plan_best = "La mejor opción"
+plan_pro = "Pro"
+plan_pro_once = "una vez"
+plan_pro_li1_strong = "Ilimitadas"
+plan_pro_li1_suffix = "anonimizaciones"
+plan_pro_li2 = "Elige exactamente qué ocultar"
+plan_pro_li3 = "Desenfoque, pixelado o barras sólidas"
+plan_pro_li4 = "Censura parcial (muestra los últimos dígitos)"
+plan_pro_li5 = "Mantenlo en color"
+plan_pro_li6 = "Texto y opacidad de la marca de agua a tu gusto"
+plan_get = "Descargar la app"
+
+# ── Franja de privacidad ──
+privacy_title = "Tu identidad nunca sale de tu móvil"
+privacy_body = "No hay servidor, ni cuenta, ni analítica sobre tus documentos. La foto original se procesa en local y nunca se guarda ni se envía a ningún sitio."
+privacy_read = "Lee la política de privacidad →"
+
+# ── Preguntas ──
+faq_title = "Preguntas"
+
+# ── Guías (bloque en inicio + índice) ──
+guides_title = "Guías"
+guides_teaser_sub = "Consejos claros para compartir tu pasaporte o DNI sin regalar tu identidad."
+read_guide = "Leer la guía →"
+browse_all = "Ver todas las guías"
+
+# ── Llamada final ──
+cta_title = "Viaja ligero. Comparte con tranquilidad."
+cta_sub = "Descarga Anonymize my ID en tu móvil."
+
+# ── Insignias de tienda ──
+badge_download = "Descárgalo en el"
+badge_getiton = "Disponible en"
+badge_soon = "Muy pronto en"
+
+# ── Pie de página ──
+footer_tagline_suffix = "Procesado 100% en tu dispositivo."
+footer_parent = "Nexo Apex"
+footer_aria = "Pie de página"
+footer_product_of = "Anonymize my ID es un producto de {{ .company }} (NIF {{ .vat }}), {{ .address }}."
+footer_rights = "© {{ .year }} {{ .company }}. Todos los derechos reservados. Apple, App Store, Google Play y sus logotipos son marcas de sus respectivos propietarios."
+
+# ── Plantillas de guías ──
+guide_cta_hub_title = "Comparte tu documento, no tu identidad"
+guide_cta_hub_body = "Anonymize my ID lo hace todo por ti — oculta los campos sensibles y añade una marca de agua, 100% en tu móvil y sin subir nada."
+guide_cta_title = "Hazlo en unos toques"
+guide_cta_body = "Anonymize my ID oculta cada campo sensible y añade una marca de agua a prueba de manipulaciones — 100% en tu móvil, sin cuenta y sin subir nada."
+crumb_home = "Inicio"
+byline_by = "Por el equipo de Anonymize my ID"
+byline_min_read = "min de lectura"
+byline_updated = "Actualizado"
+howto_default = "Paso a paso"
+guide_faq_title = "Preguntas frecuentes"
+related_title = "Sigue leyendo"
+
+# ── Páginas legales ──
+single_updated = "Última actualización"
+
+# ── 404 ──
+notfound_title = "Página no encontrada"
+notfound_body = "Esa página no existe — pero tus documentos están a salvo. Vuelve al inicio."
+notfound_home = "← Volver al inicio"

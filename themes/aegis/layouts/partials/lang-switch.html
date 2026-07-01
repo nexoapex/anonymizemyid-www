@@ -1,0 +1,13 @@
+{{- /* Language switcher — links to this page's translation in each language.
+       data-lang lets the head redirect script remember an explicit choice so it
+       won't bounce the visitor back. */ -}}
+{{- $cur := .Language.Lang -}}
+{{- $translations := .AllTranslations -}}
+{{- if gt (len $translations) 1 -}}
+<div class="lang-switch" role="group" aria-label="{{ i18n "lang_switcher" }}">
+  {{- range $translations -}}
+  {{- $label := i18n (printf "lang_%s" .Language.Lang) -}}
+  <a href="{{ .Permalink }}" hreflang="{{ .Language.Lang }}" data-lang="{{ .Language.Lang }}" title="{{ $label }}" aria-label="{{ $label }}"{{ if eq .Language.Lang $cur }} class="is-current" aria-current="true"{{ end }}>{{ .Language.Lang | upper }}</a>
+  {{- end -}}
+</div>
+{{- end -}}

@@ -4,6 +4,7 @@
 {{- $orgID := printf "%s#organization" $base -}}
 {{- $siteID := printf "%s#website" $base -}}
 {{- $ogImage := "images/og.png" | absURL -}}
+{{- $inLang := cond (eq site.Language.Lang "es") "es-ES" "en-US" -}}
 {{- $org := dict
     "@type" "Organization"
     "@id" $orgID
@@ -27,7 +28,7 @@
     "url" $base
     "name" site.Params.appName
     "description" site.Params.description
-    "inLanguage" "en-US"
+    "inLanguage" $inLang
     "publisher" (dict "@id" $orgID)
 -}}
 {{- $graph := slice $org $website -}}
@@ -48,6 +49,7 @@
       "installUrl" $stores
       "image" $ogImage
       "inLanguage" "en-US"
+      "availableLanguage" "English"
       "publisher" (dict "@id" $orgID)
       "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "EUR" "availability" "https://schema.org/InStock")
   -}}
@@ -74,7 +76,7 @@
       "url" .Permalink
       "datePublished" (.Date.Format "2006-01-02")
       "dateModified" (.Lastmod.Format "2006-01-02")
-      "inLanguage" "en-US"
+      "inLanguage" $inLang
       "isPartOf" (dict "@id" $siteID)
       "author" (dict "@id" $orgID)
       "publisher" (dict "@id" $orgID)
@@ -108,7 +110,7 @@
       "url" .Permalink
       "name" .Title
       "description" (.Description | default site.Params.description)
-      "inLanguage" "en-US"
+      "inLanguage" $inLang
       "isPartOf" (dict "@id" $siteID)
       "publisher" (dict "@id" $orgID)
       "breadcrumb" (dict "@type" "BreadcrumbList" "itemListElement" $crumbs)

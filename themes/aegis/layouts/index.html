@@ -9,17 +9,18 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="pill"><span class="dot"></span> 100% on-device · no upload</span>
+      <span class="pill"><span class="dot"></span> {{ i18n "hero_pill" }}</span>
       <h1>{{ site.Params.tagline }}</h1>
-      <p class="lede">Photograph an ID card or passport and get a safe, watermarked, redacted copy — processed entirely on your phone. Perfect for hotels, rentals and visa forms while you travel.</p>
+      <p class="lede">{{ i18n "hero_lede" }}</p>
       <div id="get" class="hero-cta">
         {{ partial "store-badges.html" . }}
-        <p class="muted small">Free to try on iOS and Android.</p>
+        <p class="muted small">{{ i18n "badges_free_try" }}</p>
+        {{ with (i18n "app_lang_note") }}<p class="muted small app-lang-note">{{ . }}</p>{{ end }}
       </div>
     </div>
     <div class="hero-art">
       <div class="device">
-        <img src="{{ $home.RelPermalink }}" alt="Anonymize my ID app home screen" width="{{ $home.Width }}" height="{{ $home.Height }}" loading="eager" fetchpriority="high" decoding="async">
+        <img src="{{ $home.RelPermalink }}" alt="{{ i18n "hero_home_alt" }}" width="{{ $home.Width }}" height="{{ $home.Height }}" loading="eager" fetchpriority="high" decoding="async">
       </div>
     </div>
   </div>
@@ -28,48 +29,48 @@
 <!-- TRUST STRIP -->
 <section class="strip">
   <div class="wrap strip-inner">
-    <div><strong>No account</strong><span>nothing to sign up for</span></div>
-    <div><strong>No upload</strong><span>your photo never leaves the phone</span></div>
-    <div><strong>IDs &amp; passports</strong><span>Spanish &amp; English-speaking countries</span></div>
-    <div><strong>One-time {{ site.Params.price }}</strong><span>no subscription, ever</span></div>
+    <div><strong>{{ i18n "trust_no_account_t" }}</strong><span>{{ i18n "trust_no_account_d" }}</span></div>
+    <div><strong>{{ i18n "trust_no_upload_t" }}</strong><span>{{ i18n "trust_no_upload_d" }}</span></div>
+    <div><strong>{{ i18n "trust_docs_t" }}</strong><span>{{ i18n "trust_docs_d" }}</span></div>
+    <div><strong>{{ i18n "trust_onetime_t" }} {{ site.Params.price }}</strong><span>{{ i18n "trust_onetime_d" }}</span></div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
 <section id="how" class="section">
   <div class="wrap">
-    <h2 class="section-title">Three taps to a safe copy</h2>
+    <h2 class="section-title">{{ i18n "how_title" }}</h2>
     <div class="steps">
       <div class="step">
         <span class="step-n">1</span>
-        <h3>Snap or pick</h3>
-        <p>Photograph your ID or passport, or choose an existing photo. Everything happens offline.</p>
+        <h3>{{ i18n "step1_t" }}</h3>
+        <p>{{ i18n "step1_d" }}</p>
       </div>
       <div class="step">
         <span class="step-n">2</span>
-        <h3>Hide what matters</h3>
-        <p>Drag the boxes over the sensitive fields. Free hides everything; Pro lets you choose blur, pixelate, partial or colour.</p>
+        <h3>{{ i18n "step2_t" }}</h3>
+        <p>{{ i18n "step2_d" }}</p>
       </div>
       <div class="step">
         <span class="step-n">3</span>
-        <h3>Share safely</h3>
-        <p>Export a watermarked copy and send it anywhere — your real details stay private.</p>
+        <h3>{{ i18n "step3_t" }}</h3>
+        <p>{{ i18n "step3_d" }}</p>
       </div>
     </div>
 
     <div class="ba">
       <figure>
-        <div class="ba-doc"><img src="{{ $before.RelPermalink }}" width="{{ $before.Width }}" height="{{ $before.Height }}" alt="Original ID document" loading="lazy" decoding="async"></div>
-        <figcaption>Before — your document</figcaption>
+        <div class="ba-doc"><img src="{{ $before.RelPermalink }}" width="{{ $before.Width }}" height="{{ $before.Height }}" alt="{{ i18n "ba_before_alt" }}" loading="lazy" decoding="async"></div>
+        <figcaption>{{ i18n "ba_before_cap" }}</figcaption>
       </figure>
       <div class="ba-arrow" aria-hidden="true">→</div>
       <figure>
-        <div class="ba-doc"><img src="{{ $free.RelPermalink }}" width="{{ $free.Width }}" height="{{ $free.Height }}" alt="Anonymized copy: black and white, all fields hidden, watermarked" loading="lazy" decoding="async"></div>
-        <figcaption>Free — all hidden · B&amp;W · watermark</figcaption>
+        <div class="ba-doc"><img src="{{ $free.RelPermalink }}" width="{{ $free.Width }}" height="{{ $free.Height }}" alt="{{ i18n "ba_free_alt" }}" loading="lazy" decoding="async"></div>
+        <figcaption>{{ i18n "ba_free_cap" }}</figcaption>
       </figure>
       <figure>
-        <div class="ba-doc"><img src="{{ $pro.RelPermalink }}" width="{{ $pro.Width }}" height="{{ $pro.Height }}" alt="Anonymized copy with Pro: blur and partial redaction in colour" loading="lazy" decoding="async"></div>
-        <figcaption>Pro — blur, partial, colour</figcaption>
+        <div class="ba-doc"><img src="{{ $pro.RelPermalink }}" width="{{ $pro.Width }}" height="{{ $pro.Height }}" alt="{{ i18n "ba_pro_alt" }}" loading="lazy" decoding="async"></div>
+        <figcaption>{{ i18n "ba_pro_cap" }}</figcaption>
       </figure>
     </div>
   </div>
@@ -78,24 +79,24 @@
 <!-- FEATURES -->
 <section id="features" class="section section--alt">
   <div class="wrap">
-    <h2 class="section-title">Built for privacy, made to travel</h2>
+    <h2 class="section-title">{{ i18n "features_title" }}</h2>
     <div class="feature-grid">
       {{ $features := slice
-        (dict "t" "100% offline" "d" "All processing runs on-device with Apple/Google's image engine. Nothing is uploaded.")
-        (dict "t" "Nothing stored" "d" "No account, and the app never keeps a copy of your original photo.")
-        (dict "t" "IDs &amp; passports" "d" "Front and back ID cards plus passport data pages, with sensible field presets.")
-        (dict "t" "Hide every field" "d" "Move, resize, add or delete redaction boxes to cover exactly what you want.")
-        (dict "t" "Blur · pixelate · bars" "d" "Pick how each field is hidden — a clean solid bar, a blur, or a pixelate.")
-        (dict "t" "Partial redaction" "d" "Reveal just the last digits of a number while hiding the rest.")
-        (dict "t" "B&amp;W or colour" "d" "Keep the classic black-and-white photocopy look, or stay in colour.")
-        (dict "t" "Tamper-evident watermark" "d" "Tile a custom watermark across the whole image so copies can't be reused.")
+        (dict "t" (i18n "feat_offline_t") "d" (i18n "feat_offline_d"))
+        (dict "t" (i18n "feat_stored_t") "d" (i18n "feat_stored_d"))
+        (dict "t" (i18n "feat_docs_t") "d" (i18n "feat_docs_d"))
+        (dict "t" (i18n "feat_hide_t") "d" (i18n "feat_hide_d"))
+        (dict "t" (i18n "feat_blur_t") "d" (i18n "feat_blur_d"))
+        (dict "t" (i18n "feat_partial_t") "d" (i18n "feat_partial_d"))
+        (dict "t" (i18n "feat_bw_t") "d" (i18n "feat_bw_d"))
+        (dict "t" (i18n "feat_watermark_t") "d" (i18n "feat_watermark_d"))
       }}
       {{ range $features }}
         <div class="feature">
           <span class="feature-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg>
           </span>
-          <div><h3>{{ .t | safeHTML }}</h3><p>{{ .d | safeHTML }}</p></div>
+          <div><h3>{{ .t }}</h3><p>{{ .d }}</p></div>
         </div>
       {{ end }}
     </div>
@@ -105,36 +106,36 @@
 <!-- PRICING -->
 <section id="pricing" class="section">
   <div class="wrap">
-    <h2 class="section-title">Simple pricing</h2>
-    <p class="section-sub muted">Try it free. Unlock everything once — no subscription.</p>
+    <h2 class="section-title">{{ i18n "pricing_title" }}</h2>
+    <p class="section-sub muted">{{ i18n "pricing_sub" }}</p>
     <div class="plans">
       <div class="plan">
-        <h3>Free</h3>
-        <div class="price">€0</div>
-        <p class="muted">To get a feel for it</p>
+        <h3>{{ i18n "plan_free" }}</h3>
+        <div class="price">{{ i18n "plan_free_price" }}</div>
+        <p class="muted">{{ i18n "plan_free_note" }}</p>
         <ul>
-          <li>{{ site.Params.freeUses }} anonymizations per install</li>
-          <li>Every sensitive field hidden</li>
-          <li>Black &amp; white + watermark</li>
-          <li>ID cards &amp; passports</li>
-          <li>100% offline</li>
+          <li>{{ site.Params.freeUses }} {{ i18n "plan_free_li1_suffix" }}</li>
+          <li>{{ i18n "plan_free_li2" }}</li>
+          <li>{{ i18n "plan_free_li3" }}</li>
+          <li>{{ i18n "plan_free_li4" }}</li>
+          <li>{{ i18n "plan_free_li5" }}</li>
         </ul>
       </div>
       <div class="plan plan--pro">
-        <span class="plan-tag">Best value</span>
-        <h3>Pro</h3>
-        <div class="price">{{ site.Params.price }} <span>once</span></div>
+        <span class="plan-tag">{{ i18n "plan_best" }}</span>
+        <h3>{{ i18n "plan_pro" }}</h3>
+        <div class="price">{{ site.Params.price }} <span>{{ i18n "plan_pro_once" }}</span></div>
         <p class="muted">{{ site.Params.priceNote }}</p>
         <p class="muted small">{{ site.Params.priceDisclaimer }}</p>
         <ul>
-          <li><strong>Unlimited</strong> anonymizations</li>
-          <li>Choose exactly what to hide</li>
-          <li>Blur, pixelate or solid bars</li>
-          <li>Partial redaction (show last digits)</li>
-          <li>Keep it in colour</li>
-          <li>Custom watermark text &amp; opacity</li>
+          <li><strong>{{ i18n "plan_pro_li1_strong" }}</strong> {{ i18n "plan_pro_li1_suffix" }}</li>
+          <li>{{ i18n "plan_pro_li2" }}</li>
+          <li>{{ i18n "plan_pro_li3" }}</li>
+          <li>{{ i18n "plan_pro_li4" }}</li>
+          <li>{{ i18n "plan_pro_li5" }}</li>
+          <li>{{ i18n "plan_pro_li6" }}</li>
         </ul>
-        <a class="btn" href="#get">Get the app</a>
+        <a class="btn" href="{{ "/" | relLangURL }}#get">{{ i18n "plan_get" }}</a>
       </div>
     </div>
   </div>
@@ -147,8 +148,8 @@
       <svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 10V8a6 6 0 0 1 12 0v2M5 10h14v10H5z"/></svg>
     </div>
     <div>
-      <h2>Your identity never leaves your phone</h2>
-      <p class="muted">There is no server, no account and no analytics on your documents. The original photo is processed locally and is never stored or sent anywhere. <a href="{{ "/privacy" | relURL }}">Read the privacy policy →</a></p>
+      <h2>{{ i18n "privacy_title" }}</h2>
+      <p class="muted">{{ i18n "privacy_body" }} <a href="{{ "/privacy" | relLangURL }}">{{ i18n "privacy_read" }}</a></p>
     </div>
   </div>
 </section>
@@ -156,7 +157,7 @@
 <!-- FAQ -->
 <section class="section">
   <div class="wrap narrow">
-    <h2 class="section-title">Questions</h2>
+    <h2 class="section-title">{{ i18n "faq_title" }}</h2>
     {{ range partial "home-faq.html" . }}
     <details><summary>{{ .q }}</summary><p>{{ .a }}</p></details>
     {{ end }}
@@ -169,18 +170,18 @@
 {{ if $guides }}
 <section class="section section--alt">
   <div class="wrap">
-    <h2 class="section-title">Guides</h2>
-    <p class="section-sub muted">Plain-English advice on sharing your passport or ID without giving your identity away.</p>
+    <h2 class="section-title">{{ i18n "guides_title" }}</h2>
+    <p class="section-sub muted">{{ i18n "guides_teaser_sub" }}</p>
     <div class="guide-grid">
       {{ range first 4 $guides }}
         <a class="guide-card" href="{{ .RelPermalink }}">
           <h3>{{ .Title }}</h3>
           <p>{{ .Description | default .Summary | truncate 130 }}</p>
-          <span class="guide-more">Read the guide →</span>
+          <span class="guide-more">{{ i18n "read_guide" }}</span>
         </a>
       {{ end }}
     </div>
-    <p class="center" style="margin-top:26px"><a class="btn btn--ghost" href="{{ .RelPermalink }}">Browse all guides</a></p>
+    <p class="center" style="margin-top:26px"><a class="btn btn--ghost" href="{{ .RelPermalink }}">{{ i18n "browse_all" }}</a></p>
   </div>
 </section>
 {{ end }}
@@ -189,10 +190,11 @@
 <!-- GET -->
 <section class="section section--cta">
   <div class="wrap cta-inner">
-    <h2>Travel light. Share safely.</h2>
-    <p class="muted">Get {{ site.Params.appName }} on your phone.</p>
+    <h2>{{ i18n "cta_title" }}</h2>
+    <p class="muted">{{ i18n "cta_sub" }}</p>
     {{ partial "store-badges.html" . }}
-    <p class="muted small">Free to try on iOS and Android.</p>
+    <p class="muted small">{{ i18n "badges_free_try" }}</p>
+    {{ with (i18n "app_lang_note") }}<p class="muted small app-lang-note">{{ . }}</p>{{ end }}
   </div>
 </section>
 

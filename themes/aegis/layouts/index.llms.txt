@@ -1,31 +1,36 @@
 {{- /* llms.txt — concise, curated map of the site for LLMs (see llmstxt.org). */ -}}
+{{- $es := eq site.Language.Lang "es" -}}
 # {{ site.Params.appName }}
 
 > {{ site.Params.tagline }} {{ site.Params.description }}
 
-{{ site.Params.appName }} is a privacy-first mobile app by {{ site.Params.company }} that photographs an ID card or passport and produces a safe, watermarked, redacted copy — processed 100% on the device, with no account, no upload and no server. Free tier: {{ site.Params.freeUses }} anonymizations per install (every field hidden, black & white, watermark). Pro is a one-time purchase of {{ site.Params.price }} ({{ site.Params.priceDisclaimer }}) for unlimited use, blur/pixelate/solid-bar redaction, partial redaction, colour output and a custom watermark. Available on the App Store (iOS 13 or later) and on Google Play (Android).
+{{ if $es -}}
+{{ site.Params.appName }} es una app móvil centrada en la privacidad de {{ site.Params.company }} que fotografía un DNI o pasaporte y produce una copia segura, con marca de agua y los datos ocultos — procesada 100% en el dispositivo, sin cuenta, sin subir nada y sin servidor. Versión gratuita: {{ site.Params.freeUses }} anonimizaciones por instalación (todos los campos ocultos, blanco y negro, marca de agua). Pro es un pago único de {{ site.Params.price }} ({{ site.Params.priceDisclaimer }}) con uso ilimitado, censura con desenfoque/pixelado/barras sólidas, censura parcial, salida en color y marca de agua personalizada. Disponible en el App Store (iOS 13 o posterior) y en Google Play (Android). La aplicación está por ahora disponible solo en inglés.
+{{- else -}}
+{{ site.Params.appName }} is a privacy-first mobile app by {{ site.Params.company }} that photographs an ID card or passport and produces a safe, watermarked, redacted copy — processed 100% on the device, with no account, no upload and no server. Free tier: {{ site.Params.freeUses }} anonymizations per install (every field hidden, black & white, watermark). Pro is a one-time purchase of {{ site.Params.price }} ({{ site.Params.priceDisclaimer }}) for unlimited use, blur/pixelate/solid-bar redaction, partial redaction, colour output and a custom watermark. Available on the App Store (iOS 13 or later) and on Google Play (Android). The app interface is in English for now.
+{{- end }}
 
-## Pages
-- [Home]({{ site.Home.Permalink }}): {{ site.Params.description }}
+## {{ if $es }}Páginas{{ else }}Pages{{ end }}
+- [{{ if $es }}Inicio{{ else }}Home{{ end }}]({{ site.Home.Permalink }}): {{ site.Params.description }}
 {{ range (where site.RegularPages "Section" "!=" "guides") -}}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{ end }}
 {{- $guides := where site.RegularPages "Section" "guides" -}}
 {{- with $guides }}
-## Guides
-Practical, plain-English guides on sharing ID documents safely.
+## {{ if $es }}Guías{{ else }}Guides{{ end }}
+{{ if $es }}Guías claras y prácticas para compartir documentos de identidad de forma segura.{{ else }}Practical, plain-English guides on sharing ID documents safely.{{ end }}
 {{ range . -}}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{ end }}
 {{- end }}
-## Get the app
+## {{ if $es }}Descargar la app{{ else }}Get the app{{ end }}
 - App Store (iOS): {{ site.Params.appStoreUrl }}
 - Google Play (Android): {{ site.Params.playStoreUrl }}
 
-## About
-- Publisher: {{ site.Params.company }} ({{ site.Params.parentSite }})
-- Support: {{ site.Params.email }} — Privacy / GDPR: {{ site.Params.privacyEmail }}
-- Location: El Vendrell, Tarragona, Spain
+## {{ if $es }}Información{{ else }}About{{ end }}
+- {{ if $es }}Editor{{ else }}Publisher{{ end }}: {{ site.Params.company }} ({{ site.Params.parentSite }})
+- {{ if $es }}Soporte{{ else }}Support{{ end }}: {{ site.Params.email }} — {{ if $es }}Privacidad / RGPD{{ else }}Privacy / GDPR{{ end }}: {{ site.Params.privacyEmail }}
+- {{ if $es }}Ubicación{{ else }}Location{{ end }}: El Vendrell, Tarragona, {{ if $es }}España{{ else }}Spain{{ end }}
 
-## Optional
-- [Full site text (one file)]({{ "llms-full.txt" | absURL }}): every page's content concatenated for deep context
+## {{ if $es }}Opcional{{ else }}Optional{{ end }}
+- [{{ if $es }}Texto completo del sitio (un archivo){{ else }}Full site text (one file){{ end }}]({{ "llms-full.txt" | relLangURL }}): {{ if $es }}el contenido de cada página concatenado para contexto profundo{{ else }}every page's content concatenated for deep context{{ end }}

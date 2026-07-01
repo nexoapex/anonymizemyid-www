@@ -5,18 +5,35 @@
 {{- $ogTitle := cond $isHome (printf "%s — %s" site.Params.appName site.Params.tagline) .Title -}}
 {{- $ogImage := "images/og.png" | absURL -}}
 {{- $ogAlt := site.Params.ogImageAlt | default (printf "%s — %s" site.Params.appName site.Params.tagline) -}}
+{{- $ogLocale := cond (eq site.Language.Lang "es") "es_ES" "en_US" -}}
 <title>{{ if $isHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Params.appName }}{{ end }}</title>
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">
-{{- /* hreflang alternates — i18n-ready. Today this emits English + x-default;
-       when a [languages.es] is added, .AllTranslations fills in the alternates
-       automatically with no template change. */ -}}
+{{- /* hreflang alternates — English is x-default; Spanish (/es/) is the second
+       edition. .AllTranslations emits every translation of this page. */ -}}
 {{- $alts := .AllTranslations | default (slice .) -}}
 {{- $xdefault := .Permalink -}}
 {{- range $alts -}}{{- if eq .Language.Lang "en" -}}{{- $xdefault = .Permalink -}}{{- end -}}{{- end }}
 {{ range $alts }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
 {{ end -}}
 <link rel="alternate" hreflang="x-default" href="{{ $xdefault }}">
+{{- /* Browser-language redirect. Runs only after the hreflang links above are in
+       the DOM. Sends an es-preferring visitor from an English page to its Spanish
+       twin, and honours an explicit choice saved by the language switcher. It
+       deliberately never redirects a Spanish page to English on its own, so
+       search-engine crawlers (Accept-Language en) index every URL. */ -}}
+<script>
+(function(){try{
+var cur=(document.documentElement.getAttribute("lang")||"en").slice(0,2).toLowerCase(),stored=null;
+try{stored=localStorage.getItem("amid_lang");}catch(e){}
+var nav=(navigator.languages&&navigator.languages[0])||navigator.language||"en";
+var pref=stored||(/^es/i.test(nav)?"es":"en"),target=null;
+if(pref==="es"&&cur!=="es")target="es";else if(stored==="en"&&cur==="es")target="en";
+if(target){var l=document.querySelector('link[rel="alternate"][hreflang="'+target+'"]');
+if(l&&l.href&&l.href.replace(/#.*$/,"")!==location.href.replace(/#.*$/,"")){location.replace(l.href);return;}}
+document.addEventListener("click",function(e){var t=e.target;while(t&&t.nodeType===1){if(t.tagName==="A"&&t.hasAttribute("data-lang")){try{localStorage.setItem("amid_lang",t.getAttribute("data-lang"));}catch(_){}break;}t=t.parentNode;}},true);
+}catch(e){}})();
+</script>
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="{{ site.Params.company }}">
 <meta name="generator" content="Hugo">
@@ -26,7 +43,9 @@
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="{{ $ogLocale }}">
+{{- range .Translations }}
+<meta property="og:locale:alternate" content="{{ cond (eq .Language.Lang "es") "es_ES" "en_US" }}">{{ end }}
 <meta property="og:image" content="{{ $ogImage }}">
 <meta property="og:image:secure_url" content="{{ $ogImage }}">
 <meta property="og:image:type" content="image/png">
