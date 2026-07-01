@@ -8,6 +8,15 @@
 <title>{{ if $isHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Params.appName }}{{ end }}</title>
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{- /* hreflang alternates — i18n-ready. Today this emits English + x-default;
+       when a [languages.es] is added, .AllTranslations fills in the alternates
+       automatically with no template change. */ -}}
+{{- $alts := .AllTranslations | default (slice .) -}}
+{{- $xdefault := .Permalink -}}
+{{- range $alts -}}{{- if eq .Language.Lang "en" -}}{{- $xdefault = .Permalink -}}{{- end -}}{{- end }}
+{{ range $alts }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{ end -}}
+<link rel="alternate" hreflang="x-default" href="{{ $xdefault }}">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="{{ site.Params.company }}">
 <meta name="generator" content="Hugo">
@@ -33,6 +42,8 @@
 <meta name="theme-color" content="#0F1115">
 <meta name="apple-mobile-web-app-title" content="{{ site.Params.appName }}">
 <meta name="apple-mobile-web-app-capable" content="yes">
+{{- with site.Params.appStoreId }}
+<meta name="apple-itunes-app" content="app-id={{ . }}">{{ end }}
 <link rel="icon" href="{{ "images/favicon.svg" | relURL }}" type="image/svg+xml">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
 <link rel="icon" href="{{ "images/favicon-32x32.png" | relURL }}" type="image/png" sizes="32x32">

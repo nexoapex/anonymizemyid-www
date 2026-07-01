@@ -5,9 +5,15 @@ enableRobotsTXT = true
 enableInlineShortcodes = true
 disableKinds = ["taxonomy", "term"]
 
+# English today; the site is structured so a Spanish [languages.es] can be added
+# later without moving files (hreflang is wired up in the <head>).
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
 [languages.en]
   locale = "en-US"
   label = "English"
+  weight = 1
 
 [params]
   googleAnalytics = "G-524LZY9KB9"
@@ -19,7 +25,10 @@ disableKinds = ["taxonomy", "term"]
   priceDisclaimer = "Approx. — excludes VAT, varies by region"
   freeUses = 2
   # A store badge goes live as soon as its URL is set; leave "#" to keep "Coming soon".
-  appStoreUrl = "#"
+  # The country-less App Store link 301-redirects each visitor to their own
+  # storefront (e.g. /us/, /es/), which is what we want for a travel audience.
+  appStoreUrl = "https://apps.apple.com/app/id6781656126"
+  appStoreId = "6781656126"
   playStoreUrl = "https://play.google.com/store/apps/details?id=com.nexoapex.anonymizemyid"
   domain = "anonymizemyid.com"
   ogImageAlt = "Anonymize my ID — a passport photographed, then redacted and watermarked on-device"
@@ -38,6 +47,10 @@ disableKinds = ["taxonomy", "term"]
   unsafe = true
 
 [menus]
+  [[menus.footer]]
+    name = "Guides"
+    pageRef = "/guides"
+    weight = 5
   [[menus.footer]]
     name = "Privacy Policy"
     pageRef = "/privacy"

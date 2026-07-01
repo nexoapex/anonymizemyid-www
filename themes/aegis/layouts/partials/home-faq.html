@@ -1,0 +1,23 @@
+{{- /* Single source of truth for the home-page FAQ. Rendered as visible
+       <details> in layouts/index.html AND as FAQPage JSON-LD in
+       partials/structured-data.html, so the page and its structured data can
+       never drift. Returns a slice of {q, a} dicts. */ -}}
+{{- $faq := slice
+    (dict "q" "Is my document uploaded anywhere?"
+          "a" "No. Everything is processed on your device. The app has no server and never sends or stores your photo.")
+    (dict "q" "What does the free version include?"
+          "a" (printf "%d anonymizations per install. Each one hides every sensitive field, renders in black & white and adds a watermark." (int site.Params.freeUses)))
+    (dict "q" "What do I get with Pro?"
+          "a" (printf "A one-time %s unlock (%s) — yours for life, no subscription — for unlimited anonymizations and full control: choose what to hide, blur/pixelate/solid bars, partial redaction, colour, and a custom watermark." site.Params.price site.Params.priceDisclaimer))
+    (dict "q" "Which documents are supported?"
+          "a" "ID cards front and back — such as the Spanish DNI or NIE — and passport data pages, with field presets tuned for Spanish- and English-speaking countries.")
+    (dict "q" "Is it safe to share an anonymized copy?"
+          "a" "The app helps you hide the sensitive fields and adds a tamper-evident watermark, so a shared copy can't be reused to impersonate you. You stay in control of exactly what's covered before you share.")
+    (dict "q" "Can I send a copy of my ID or passport by email or WhatsApp?"
+          "a" "Only if you redact it first. Once the sensitive fields are hidden and the copy is watermarked, an intercepted or forwarded image can't be used to open accounts or forge documents. Anonymize my ID prepares that safe copy in a few taps.")
+    (dict "q" "Which phones does it run on?"
+          "a" "iPhone and iPad on iOS 13 or later from the App Store, and Android phones on Google Play. It works fully offline on both.")
+    (dict "q" "Is it GDPR-friendly?"
+          "a" "Yes. Because your document is processed 100% on-device with no account and no upload, it never becomes data that we — or anyone else — could store, leak or be compelled to hand over.")
+-}}
+{{- return $faq -}}

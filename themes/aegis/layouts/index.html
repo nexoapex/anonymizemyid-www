@@ -14,7 +14,7 @@
       <p class="lede">Photograph an ID card or passport and get a safe, watermarked, redacted copy — processed entirely on your phone. Perfect for hotels, rentals and visa forms while you travel.</p>
       <div id="get" class="hero-cta">
         {{ partial "store-badges.html" . }}
-        <p class="muted small">Now on Android — iOS coming soon.</p>
+        <p class="muted small">Free to try on iOS and Android.</p>
       </div>
     </div>
     <div class="hero-art">
@@ -157,13 +157,34 @@
 <section class="section">
   <div class="wrap narrow">
     <h2 class="section-title">Questions</h2>
-    <details><summary>Is my document uploaded anywhere?</summary><p>No. Everything is processed on your device. The app has no server and never sends or stores your photo.</p></details>
-    <details><summary>What does the free version include?</summary><p>{{ site.Params.freeUses }} anonymizations per install. Each one hides every sensitive field, renders in black &amp; white and adds a watermark.</p></details>
-    <details><summary>What do I get with Pro?</summary><p>A one-time {{ site.Params.price }} unlock ({{ site.Params.priceDisclaimer }}) — yours for life, no subscription — for unlimited anonymizations and full control: choose what to hide, blur/pixelate/solid bars, partial redaction, colour, and a custom watermark.</p></details>
-    <details><summary>Which documents are supported?</summary><p>ID cards (front and back) and passport data pages, with presets tuned for Spanish- and English-speaking countries.</p></details>
-    <details><summary>Is it safe to share an anonymized copy?</summary><p>The app helps you hide sensitive fields and adds a tamper-evident watermark. You stay in control of what's covered before you share.</p></details>
+    {{ range partial "home-faq.html" . }}
+    <details><summary>{{ .q }}</summary><p>{{ .a }}</p></details>
+    {{ end }}
   </div>
 </section>
+
+<!-- GUIDES -->
+{{ with site.GetPage "/guides" }}
+{{ $guides := where site.RegularPages "Section" "guides" }}
+{{ if $guides }}
+<section class="section section--alt">
+  <div class="wrap">
+    <h2 class="section-title">Guides</h2>
+    <p class="section-sub muted">Plain-English advice on sharing your passport or ID without giving your identity away.</p>
+    <div class="guide-grid">
+      {{ range first 4 $guides }}
+        <a class="guide-card" href="{{ .RelPermalink }}">
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description | default .Summary | truncate 130 }}</p>
+          <span class="guide-more">Read the guide →</span>
+        </a>
+      {{ end }}
+    </div>
+    <p class="center" style="margin-top:26px"><a class="btn btn--ghost" href="{{ .RelPermalink }}">Browse all guides</a></p>
+  </div>
+</section>
+{{ end }}
+{{ end }}
 
 <!-- GET -->
 <section class="section section--cta">
@@ -171,7 +192,7 @@
     <h2>Travel light. Share safely.</h2>
     <p class="muted">Get {{ site.Params.appName }} on your phone.</p>
     {{ partial "store-badges.html" . }}
-    <p class="muted small">Now on Android — iOS coming soon.</p>
+    <p class="muted small">Free to try on iOS and Android.</p>
   </div>
 </section>
 

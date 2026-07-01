@@ -186,3 +186,46 @@ details p{color:var(--text-2); margin:0 0 12px}
 .footer-links a:hover{color:var(--text)}
 .footer-legal{margin-top:26px; border-top:1px solid var(--border); padding-top:18px; font-size:.8rem}
 .footer-legal p{margin:.3em 0}
+
+/* Guides — hub cards (home teaser + hub list) */
+.guide-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:8px}
+.guide-grid--list{margin-top:26px}
+.guide-card{display:flex; flex-direction:column; gap:8px; background:var(--elev); border:1px solid var(--border);
+  border-radius:var(--radius); padding:22px; color:var(--text); transition:transform .15s, border-color .15s, box-shadow .15s}
+.guide-card:hover{border-color:rgba(242,169,59,.55); text-decoration:none; transform:translateY(-2px); box-shadow:var(--shadow)}
+.guide-card h2,.guide-card h3{margin:0; font-size:1.08rem; color:var(--text); letter-spacing:-.01em}
+.guide-card p{margin:0; color:var(--text-2); font-size:.92rem; flex:1}
+.guide-more{color:var(--amber-bright); font-weight:700; font-size:.85rem}
+@media(max-width:640px){ .guide-grid{grid-template-columns:1fr} }
+
+/* Ghost button (secondary CTA) */
+.btn--ghost{background:transparent; color:var(--amber-bright); border:1px solid rgba(242,169,59,.5)}
+.btn--ghost:hover{background:var(--amber-wash); color:var(--amber-bright)}
+
+/* Breadcrumbs */
+.crumbs{font-size:.82rem; color:var(--muted); margin-bottom:14px; display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+.crumbs a{color:var(--text-2)}
+.crumbs a:hover{color:var(--text)}
+.crumbs span[aria-hidden]{color:var(--border)}
+
+/* Guide article */
+.guide .byline{margin-top:12px}
+.guide-body{margin-top:8px}
+.guide-body h2{margin-top:1.8em}
+.howto{padding-left:22px; margin:1.2em 0}
+.howto li{margin:.6em 0; color:var(--text-2)}
+.howto li strong{color:var(--text)}
+
+/* Guide CTA card */
+.guide-cta{margin:40px 0 8px; background:var(--elev); border:1px solid rgba(242,169,59,.35);
+  border-radius:var(--radius-lg); padding:26px}
+.guide-cta h2{margin:0 0 .3em; font-size:1.3rem}
+.guide-cta .badges{margin-top:14px}
+
+/* Related guides */
+.related{margin-top:34px; border-top:1px solid var(--border); padding-top:22px}
+.related h2{font-size:1.15rem}
+.related ul{list-style:none; padding:0; margin:0}
+.related li{padding:9px 0; border-top:1px solid var(--border)}
+.related li:first-child{border-top:0}
+.related a{color:var(--amber-bright); font-weight:600}

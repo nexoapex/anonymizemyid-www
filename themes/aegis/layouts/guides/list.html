@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article class="page wrap">
+  <header class="page-head">
+    <a class="back" href="{{ "/" | relURL }}">← {{ site.Params.appName }}</a>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="lede muted">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+
+  <div class="guide-grid guide-grid--list">
+    {{ range .Pages.ByDate.Reverse }}
+      <a class="guide-card" href="{{ .RelPermalink }}">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Description | default .Summary | truncate 170 }}</p>
+        <span class="guide-more">Read the guide →</span>
+      </a>
+    {{ end }}
+  </div>
+
+  <aside class="guide-cta">
+    <h2>Share your ID, not your identity</h2>
+    <p class="muted">{{ site.Params.appName }} does all of this for you — hide the sensitive fields and add a watermark, 100% on your phone, no upload.</p>
+    {{ partial "store-badges.html" . }}
+    <p class="muted small">Free to try on iOS and Android.</p>
+  </aside>
+</article>
+{{ end }}

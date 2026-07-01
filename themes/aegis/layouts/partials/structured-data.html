@@ -32,41 +32,78 @@
 -}}
 {{- $graph := slice $org $website -}}
 {{- if .IsHome -}}
+  {{- /* Only advertise store links that are actually live. */ -}}
+  {{- $stores := slice -}}
+  {{- if hasPrefix site.Params.appStoreUrl "http" }}{{ $stores = $stores | append site.Params.appStoreUrl }}{{ end -}}
+  {{- if hasPrefix site.Params.playStoreUrl "http" }}{{ $stores = $stores | append site.Params.playStoreUrl }}{{ end -}}
   {{- $app := dict
       "@type" "SoftwareApplication"
       "@id" (printf "%s#app" $base)
       "name" site.Params.appName
       "description" site.Params.description
       "applicationCategory" "UtilitiesApplication"
-      "operatingSystem" "Android"
+      "operatingSystem" "iOS, Android"
       "url" $base
-      "downloadUrl" site.Params.playStoreUrl
-      "installUrl" site.Params.playStoreUrl
+      "downloadUrl" $stores
+      "installUrl" $stores
       "image" $ogImage
       "inLanguage" "en-US"
       "publisher" (dict "@id" $orgID)
       "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "EUR" "availability" "https://schema.org/InStock")
   -}}
-  {{- $faqSrc := slice
-      (dict "q" "Is my document uploaded anywhere?" "a" "No. Everything is processed on your device. The app has no server and never sends or stores your photo.")
-      (dict "q" "What does the free version include?" "a" (printf "%d anonymizations per install. Each one hides every sensitive field, renders in black & white and adds a watermark." (int site.Params.freeUses)))
-      (dict "q" "What do I get with Pro?" "a" (printf "A one-time %s unlock (%s) — yours for life, no subscription — for unlimited anonymizations and full control: choose what to hide, blur/pixelate/solid bars, partial redaction, colour, and a custom watermark." site.Params.price site.Params.priceDisclaimer))
-      (dict "q" "Which documents are supported?" "a" "ID cards (front and back) and passport data pages, with presets tuned for Spanish- and English-speaking countries.")
-      (dict "q" "Is it safe to share an anonymized copy?" "a" "The app helps you hide sensitive fields and adds a tamper-evident watermark. You stay in control of what's covered before you share.")
-  -}}
   {{- $faqItems := slice -}}
-  {{- range $faqSrc -}}
+  {{- range (partial "home-faq.html" .) -}}
     {{- $faqItems = $faqItems | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) -}}
   {{- end -}}
   {{- $faqPage := dict "@type" "FAQPage" "@id" (printf "%s#faq" $base) "mainEntity" $faqItems -}}
   {{- $graph = $graph | append $app $faqPage -}}
+{{- else if and .IsPage (eq .Section "guides") -}}
+  {{- /* Guide article: Article + BreadcrumbList, plus optional FAQPage / HowTo
+         driven by the page's own front matter (faq:, howto:). */ -}}
+  {{- $crumbs := slice
+      (dict "@type" "ListItem" "position" 1 "name" site.Params.appName "item" $base)
+      (dict "@type" "ListItem" "position" 2 "name" .Parent.Title "item" .Parent.Permalink)
+      (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink)
+  -}}
+  {{- $article := dict
+      "@type" "Article"
+      "@id" (printf "%s#article" .Permalink)
+      "headline" .Title
+      "name" .Title
+      "description" (.Description | default .Summary)
+      "url" .Permalink
+      "datePublished" (.Date.Format "2006-01-02")
+      "dateModified" (.Lastmod.Format "2006-01-02")
+      "inLanguage" "en-US"
+      "isPartOf" (dict "@id" $siteID)
+      "author" (dict "@id" $orgID)
+      "publisher" (dict "@id" $orgID)
+      "mainEntityOfPage" .Permalink
+      "image" $ogImage
+      "breadcrumb" (dict "@type" "BreadcrumbList" "itemListElement" $crumbs)
+  -}}
+  {{- $graph = $graph | append $article -}}
+  {{- with .Params.faq -}}
+    {{- $qs := slice -}}
+    {{- range . -}}
+      {{- $qs = $qs | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) -}}
+    {{- end -}}
+    {{- $graph = $graph | append (dict "@type" "FAQPage" "@id" (printf "%s#faq" $.Permalink) "mainEntity" $qs) -}}
+  {{- end -}}
+  {{- with .Params.howto -}}
+    {{- $steps := slice -}}
+    {{- range $i, $s := .steps -}}
+      {{- $steps = $steps | append (dict "@type" "HowToStep" "position" (add $i 1) "name" $s.name "text" $s.text) -}}
+    {{- end -}}
+    {{- $graph = $graph | append (dict "@type" "HowTo" "@id" (printf "%s#howto" $.Permalink) "name" (.name | default $.Title) "description" (.description | default $.Description) "step" $steps) -}}
+  {{- end -}}
 {{- else -}}
   {{- $crumbs := slice
       (dict "@type" "ListItem" "position" 1 "name" site.Params.appName "item" $base)
       (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink)
   -}}
   {{- $webpage := dict
-      "@type" "WebPage"
+      "@type" (cond .IsSection "CollectionPage" "WebPage")
       "@id" (printf "%s#webpage" .Permalink)
       "url" .Permalink
       "name" .Title

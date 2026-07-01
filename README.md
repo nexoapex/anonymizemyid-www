@@ -21,7 +21,10 @@ Requires Hugo **extended** ≥ 0.163.
 ```
 hugo.toml            site config + [params] (price, store URLs, company details)
 content/             _index, privacy, terms, imprint, about, contact (Markdown)
+content/guides/      SEO/GEO content hub — _index + one Markdown file per guide
 themes/aegis/        layouts + assets/css (the theme)
+  layouts/guides/    list.html (hub) + single.html (article) templates
+  partials/home-faq.html   single source for the home FAQ (page + schema)
 static/images/       favicon, og image, screenshots
 netlify.toml         Netlify build settings
 ```
@@ -35,8 +38,13 @@ All tunables are in `hugo.toml` under `[params]`:
 - Store launch: set `appStoreUrl` / `playStoreUrl` to the real store links to
   turn each "Coming soon" badge into a live download button. Each badge flips
   independently as soon as its URL is set (leave it as `#` to stay "Coming
-  soon"), so platforms can launch one at a time.
+  soon"), so platforms can launch one at a time. `appStoreId` powers the iOS
+  Safari smart-banner meta tag and the app's structured data. Both stores are
+  live: iOS (`apps.apple.com/app/id6781656126`) and Google Play.
 - `baseURL` (top of `hugo.toml`) — the production domain.
+- Language: English today. The config is i18n-ready (`defaultContentLanguage`,
+  a weighted `[languages.en]`, and `hreflang` alternates wired into the
+  `<head>`), so a `[languages.es]` can be added without restructuring.
 
 ## SEO & GEO
 
@@ -47,19 +55,34 @@ answer engines:
   crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot, …) and
   points at the sitemap.
 - **JSON-LD structured data** (`themes/aegis/layouts/partials/structured-data.html`)
-  — `Organization` + `WebSite` everywhere, `SoftwareApplication` + `FAQPage` on
-  the home page, `WebPage` + `BreadcrumbList` on inner pages.
+  — `Organization` + `WebSite` everywhere; `SoftwareApplication` (iOS + Android)
+  + `FAQPage` on the home page; `Article` + `BreadcrumbList` on each guide, with
+  an optional `FAQPage` and `HowTo` driven by that guide's front matter
+  (`faq:` / `howto:`); `WebPage` / `CollectionPage` on the other inner pages.
+- **Content hub for SEO/GEO** (`content/guides/`) — plain-English guides written
+  for high-intent queries and answer engines: clear question headings, concise
+  citable passages, per-article FAQs, and internal links to the app and siblings.
+- **`hreflang`** alternates in the `<head>` (English + `x-default` today;
+  i18n-ready for a future Spanish edition).
 - **`llms.txt`** + **`llms-full.txt`** — generated from the live content via Hugo
-  output formats (`[outputs]` / `[outputFormats]` in `hugo.toml`).
+  output formats (`[outputs]` / `[outputFormats]` in `hugo.toml`); `llms.txt`
+  lists the guides in their own section.
 - **Open Graph + Twitter** cards using `static/images/og.png` (1200×630).
 - **Icons & PWA** — `favicon.svg`, `favicon.ico`, 16/32 px PNGs,
   `apple-touch-icon.png`, `icon-192/512.png` and `site.webmanifest` (generated
   from the brand mark with `rsvg-convert`).
 - **`humans.txt`** and **`.well-known/security.txt`**.
 
-> When you change the FAQ, edit it in **both** `layouts/index.html` (the visible
-> `<details>`) and `partials/structured-data.html` (the `FAQPage` data) so the
-> page and its structured data stay in sync.
+> The home FAQ lives in one place — `themes/aegis/layouts/partials/home-faq.html`
+> (a returning partial). Both the visible `<details>` in `layouts/index.html` and
+> the `FAQPage` JSON-LD in `partials/structured-data.html` read from it, so the
+> page and its structured data can't drift. Each guide's own FAQ works the same
+> way, from its `faq:` front matter.
+>
+> **New guide?** Add `content/guides/<slug>.md` with `title`, `description`,
+> `date`/`lastmod`, and optional `faq:` / `howto:` front matter. It is picked up
+> automatically by the hub, the home teaser, the sitemap, `llms.txt` and the
+> Article/FAQ/HowTo structured data — no template changes needed.
 
 ## Deploy (Netlify, free tier)
 

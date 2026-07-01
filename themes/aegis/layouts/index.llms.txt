@@ -3,16 +3,24 @@
 
 > {{ site.Params.tagline }} {{ site.Params.description }}
 
-{{ site.Params.appName }} is a privacy-first mobile app by {{ site.Params.company }} that photographs an ID card or passport and produces a safe, watermarked, redacted copy — processed 100% on the device, with no account, no upload and no server. Free tier: {{ site.Params.freeUses }} anonymizations per install (every field hidden, black & white, watermark). Pro is a one-time purchase of {{ site.Params.price }} ({{ site.Params.priceDisclaimer }}) for unlimited use, blur/pixelate/solid-bar redaction, partial redaction, colour output and a custom watermark. Android is available on Google Play; iOS is coming soon.
+{{ site.Params.appName }} is a privacy-first mobile app by {{ site.Params.company }} that photographs an ID card or passport and produces a safe, watermarked, redacted copy — processed 100% on the device, with no account, no upload and no server. Free tier: {{ site.Params.freeUses }} anonymizations per install (every field hidden, black & white, watermark). Pro is a one-time purchase of {{ site.Params.price }} ({{ site.Params.priceDisclaimer }}) for unlimited use, blur/pixelate/solid-bar redaction, partial redaction, colour output and a custom watermark. Available on the App Store (iOS 13 or later) and on Google Play (Android).
 
 ## Pages
 - [Home]({{ site.Home.Permalink }}): {{ site.Params.description }}
-{{ range site.RegularPages -}}
+{{ range (where site.RegularPages "Section" "!=" "guides") -}}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{ end }}
+{{- $guides := where site.RegularPages "Section" "guides" -}}
+{{- with $guides }}
+## Guides
+Practical, plain-English guides on sharing ID documents safely.
+{{ range . -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end }}
+{{- end }}
 ## Get the app
-- Get it on Google Play: {{ site.Params.playStoreUrl }}
-- iOS: coming soon
+- App Store (iOS): {{ site.Params.appStoreUrl }}
+- Google Play (Android): {{ site.Params.playStoreUrl }}
 
 ## About
 - Publisher: {{ site.Params.company }} ({{ site.Params.parentSite }})

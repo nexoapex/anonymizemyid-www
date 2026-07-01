@@ -8,8 +8,8 @@
   Name: Anonymize my ID
   What: Privacy-first, on-device ID & passport anonymizer
   Site: https://anonymizemyid.com
+  iOS: https://apps.apple.com/app/id6781656126
   Android: https://play.google.com/store/apps/details?id=com.nexoapex.anonymizemyid
-  iOS: coming soon
 
 /* PRIVACY */
   Your documents are processed 100% on your device.
@@ -24,4 +24,4 @@
 /* THANKS */
   Built with care for travellers who value their privacy.
 
-  Last update: 2026-06
+  Last update: 2026-07

@@ -1,0 +1,58 @@
+{{ define "main" }}
+<article class="page wrap guide">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="{{ "/" | relURL }}">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ .Title }}</span>
+  </nav>
+
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="lede muted">{{ . }}</p>{{ end }}
+    <p class="muted small byline">
+      By the {{ site.Params.appName }} team{{ if not .Date.IsZero }} · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>{{ end }}{{ if and (not .Lastmod.IsZero) (ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) }} · Updated {{ .Lastmod.Format "2 January 2006" }}{{ end }}{{ with .ReadingTime }} · {{ . }} min read{{ end }}
+    </p>
+  </header>
+
+  <div class="prose guide-body">
+    {{ .Content }}
+
+    {{ with .Params.howto }}
+    <h2>{{ .name | default "Step by step" }}</h2>
+    <ol class="howto">
+      {{ range .steps }}
+      <li><strong>{{ .name }}</strong> {{ .text }}</li>
+      {{ end }}
+    </ol>
+    {{ end }}
+
+    {{ with .Params.faq }}
+    <h2>Frequently asked questions</h2>
+    {{ range . }}
+    <details><summary>{{ .q }}</summary><p>{{ .a }}</p></details>
+    {{ end }}
+    {{ end }}
+  </div>
+
+  <aside class="guide-cta">
+    <h2>Do it in a few taps</h2>
+    <p class="muted">{{ site.Params.appName }} hides every sensitive field and adds a tamper-evident watermark — 100% on your phone, no account, no upload.</p>
+    {{ partial "store-badges.html" . }}
+    <p class="muted small">Free to try on iOS and Android.</p>
+  </aside>
+
+  {{ $related := where (where site.RegularPages "Section" "guides") "Permalink" "!=" .Permalink }}
+  {{ with $related }}
+  <nav class="related" aria-label="Related guides">
+    <h2>Keep reading</h2>
+    <ul>
+      {{ range first 3 . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="muted">— {{ .Description | default .Summary | truncate 90 }}</span></li>
+      {{ end }}
+    </ul>
+  </nav>
+  {{ end }}
+</article>
+{{ end }}

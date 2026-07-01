@@ -21,8 +21,8 @@ URL: {{ site.Home.Permalink }}
 - Pro ({{ site.Params.price }} once — {{ site.Params.priceDisclaimer }}): unlimited anonymizations, choose exactly what to hide, blur/pixelate/solid bars, partial redaction (show last digits), keep it in colour, custom watermark text & opacity.
 
 ## Availability
-- Android: available on Google Play — {{ site.Params.playStoreUrl }}
-- iOS: coming soon
+- iOS: on the App Store, iOS 13 or later — {{ site.Params.appStoreUrl }}
+- Android: on Google Play — {{ site.Params.playStoreUrl }}
 
 ## FAQ
 Q: Is my document uploaded anywhere?
