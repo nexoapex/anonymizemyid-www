@@ -5,6 +5,15 @@
 {{- $ogTitle := cond $isHome (printf "%s — %s" site.Params.appName site.Params.tagline) .Title -}}
 {{- $ogImage := "images/og.png" | absURL -}}
 {{- $ogAlt := site.Params.ogImageAlt | default (printf "%s — %s" site.Params.appName site.Params.tagline) -}}
+{{- /* Guides get their own generated card (assets/images/og/<slug>[.es].png);
+       everything else keeps the shared app screenshot above. */ -}}
+{{- if and .IsPage (eq .Section "guides") -}}
+  {{- $ogSuffix := cond (eq site.Language.Lang "es") ".es" "" -}}
+  {{- with resources.Get (printf "images/og/%s%s.png" .File.TranslationBaseName $ogSuffix) -}}
+    {{- $ogImage = .RelPermalink | absURL -}}
+    {{- $ogAlt = $.Title -}}
+  {{- end -}}
+{{- end -}}
 {{- $ogLocale := cond (eq site.Language.Lang "es") "es_ES" "en_US" -}}
 <title>{{ if $isHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Params.appName }}{{ end }}</title>
 <meta name="description" content="{{ $desc }}">

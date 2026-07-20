@@ -1,7 +1,7 @@
 ---
 title: "Guías"
 subtitle: "Cómo compartir tu pasaporte o DNI sin regalar tu identidad."
-description: "Guías claras y prácticas para enviar una copia de tu pasaporte o DNI de forma segura — qué censurar, los riesgos reales del correo y WhatsApp, y cómo hacerlo en tu móvil en un minuto."
+description: "Guías claras y prácticas para compartir tu pasaporte o DNI de forma segura — qué censurar y cómo hacerlo en tu móvil en un minuto."
 ---
 
 Un hotel quiere «una copia de tu pasaporte». Un casero te pide que le mandes el

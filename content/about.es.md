@@ -26,7 +26,8 @@ eres.
 ## Quién la hace
 
 Anonymize my ID está desarrollada por **NEXO APEX S.L.**, un estudio de software
-con sede en El Vendrell, Cataluña (España). Creamos productos pequeños,
+con sede en El Vendrell, Cataluña (España), dirigido por **David Pelayo**
+([@pelayocodes](https://x.com/pelayocodes)). Creamos productos pequeños,
 centrados y respetuosos con la privacidad. Más información en
 [nexoapex.com](https://nexoapex.com).
 

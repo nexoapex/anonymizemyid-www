@@ -1,9 +1,10 @@
 ---
 title: "How to send a copy of your passport safely"
 subtitle: "Show what a hotel, visa office or employer needs — and hide the rest."
-description: "The safe way to send a passport copy: redact the passport number, machine-readable zone, date of birth and signature, add a watermark, and never send the original photo."
+description: "The safe way to send a passport copy: redact the passport number, machine-readable zone, date of birth and signature, and add a watermark."
 date: 2026-07-01
 lastmod: 2026-07-01
+weight: 1
 faq:
   - q: "What should I hide on a passport copy?"
     a: "At a minimum: the passport number, the machine-readable zone (the two code lines at the bottom), your date of birth and your signature. Keep only your name and photo, and only if the recipient genuinely needs to match them."

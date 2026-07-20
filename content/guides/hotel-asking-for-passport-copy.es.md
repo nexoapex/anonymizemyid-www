@@ -1,9 +1,10 @@
 ---
 title: "¿Es seguro dar a un hotel una copia de tu pasaporte?"
 subtitle: "Qué es lo normal, cuáles son tus derechos y cómo entregar una copia de fiar."
-description: "Los hoteles pueden estar obligados por ley a registrar a los huéspedes, pero puedes darles una copia censurada. Esto es lo normal, lo que no lo es y cómo compartir una copia segura de tu pasaporte."
+description: "Los hoteles pueden estar obligados por ley a registrar a los huéspedes, pero puedes darles una copia censurada en lugar de la completa sin editar."
 date: 2026-06-29
 lastmod: 2026-06-29
+weight: 5
 faq:
   - q: "¿Los hoteles tienen que ver mi pasaporte?"
     a: "En muchos países, incluida España, los establecimientos de alojamiento están obligados por ley a registrar ciertos datos de identidad de los huéspedes y comunicarlos a las autoridades. Pueden comprobar tu documento, pero rara vez necesitan quedarse una copia completa y sin editar."

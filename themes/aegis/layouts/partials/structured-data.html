@@ -5,6 +5,12 @@
 {{- $siteID := printf "%s#website" $base -}}
 {{- $ogImage := "images/og.png" | absURL -}}
 {{- $inLang := cond (eq site.Language.Lang "es") "es-ES" "en-US" -}}
+{{- if and .IsPage (eq .Section "guides") -}}
+  {{- $ogSuffix := cond (eq site.Language.Lang "es") ".es" "" -}}
+  {{- with resources.Get (printf "images/og/%s%s.png" .File.TranslationBaseName $ogSuffix) -}}
+    {{- $ogImage = .RelPermalink | absURL -}}
+  {{- end -}}
+{{- end -}}
 {{- $org := dict
     "@type" "Organization"
     "@id" $orgID
@@ -61,7 +67,18 @@
   {{- $graph = $graph | append $app $faqPage -}}
 {{- else if and .IsPage (eq .Section "guides") -}}
   {{- /* Guide article: Article + BreadcrumbList, plus optional FAQPage / HowTo
-         driven by the page's own front matter (faq:, howto:). */ -}}
+         driven by the page's own front matter (faq:, howto:). Author is a
+         named Person (E-E-A-T); kept in this branch since only guide
+         Articles reference it. */ -}}
+  {{- $authorID := printf "%s#person-david-pelayo" $base -}}
+  {{- $author := dict
+      "@type" "Person"
+      "@id" $authorID
+      "name" "David Pelayo"
+      "sameAs" (slice "https://x.com/pelayocodes")
+      "worksFor" (dict "@id" $orgID)
+  -}}
+  {{- $graph = $graph | append $author -}}
   {{- $crumbs := slice
       (dict "@type" "ListItem" "position" 1 "name" site.Params.appName "item" $base)
       (dict "@type" "ListItem" "position" 2 "name" .Parent.Title "item" .Parent.Permalink)
@@ -78,7 +95,7 @@
       "dateModified" (.Lastmod.Format "2006-01-02")
       "inLanguage" $inLang
       "isPartOf" (dict "@id" $siteID)
-      "author" (dict "@id" $orgID)
+      "author" (dict "@id" $authorID)
       "publisher" (dict "@id" $orgID)
       "mainEntityOfPage" .Permalink
       "image" $ogImage

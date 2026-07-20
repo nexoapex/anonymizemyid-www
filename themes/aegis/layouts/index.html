@@ -173,7 +173,7 @@
     <h2 class="section-title">{{ i18n "guides_title" }}</h2>
     <p class="section-sub muted">{{ i18n "guides_teaser_sub" }}</p>
     <div class="guide-grid">
-      {{ range first 4 $guides }}
+      {{ range first 4 $guides.ByWeight }}
         <a class="guide-card" href="{{ .RelPermalink }}">
           <h3>{{ .Title }}</h3>
           <p>{{ .Description | default .Summary | truncate 130 }}</p>
@@ -181,7 +181,7 @@
         </a>
       {{ end }}
     </div>
-    <p class="center" style="margin-top:26px"><a class="btn btn--ghost" href="{{ .RelPermalink }}">{{ i18n "browse_all" }}</a></p>
+    <p class="center mt-lg"><a class="btn btn--ghost" href="{{ .RelPermalink }}">{{ i18n "browse_all" }}</a></p>
   </div>
 </section>
 {{ end }}

@@ -4,6 +4,7 @@ subtitle: "Qué necesitan ver de verdad las agencias e inmobiliarias — y cómo
 description: "Caseros y agencias suelen pedir el DNI al verificar inquilinos. Esto es lo normal, qué censurar y cómo enviar una copia segura."
 date: 2026-07-20
 lastmod: 2026-07-20
+weight: 6
 faq:
   - q: "¿Es normal que un casero o una agencia pidan una copia de mi DNI o pasaporte?"
     a: "Sí. La verificación de inquilinos, las comprobaciones de identidad y la prevención de fraude suelen incluir confirmar quién eres, así que te lo pidan no es en sí una señal de alarma. Lo que importa es qué envías: casi nunca hace falta una copia completa y sin editar."

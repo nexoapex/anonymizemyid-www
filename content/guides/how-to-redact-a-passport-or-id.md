@@ -1,9 +1,10 @@
 ---
 title: "How to redact a passport or ID card (and what to hide)"
 subtitle: "Exactly which fields to cover, which to keep, and how to do it in a minute."
-description: "A step-by-step guide to redacting a passport or ID card: hide the document number, machine-readable zone, date of birth and signature, keep only what's needed, and add a watermark."
+description: "A step-by-step guide to redacting a passport or ID card: hide the document number, machine-readable zone, date of birth and signature, and add a watermark."
 date: 2026-06-30
 lastmod: 2026-06-30
+weight: 2
 howto:
   name: "Redact a passport or ID, step by step"
   description: "Turn a photo of your passport or ID card into a safe, watermarked copy that hides the fields used for identity theft."

@@ -4,6 +4,7 @@ subtitle: "What letting agents and landlords actually need to see — and how to
 description: "Landlords and letting agents often ask for ID during referencing. Here's what's normal, what to redact, and how to send a safe copy."
 date: 2026-07-20
 lastmod: 2026-07-20
+weight: 6
 faq:
   - q: "Is it normal for a landlord or letting agent to ask for a copy of my ID?"
     a: "Yes. Referencing, right-to-reside checks and fraud prevention all commonly involve confirming your identity, so being asked is not a red flag by itself. What matters is what you send: a full, unedited scan is rarely necessary."

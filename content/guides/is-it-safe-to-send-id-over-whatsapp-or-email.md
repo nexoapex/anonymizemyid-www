@@ -1,9 +1,10 @@
 ---
 title: "Is it safe to send your ID over WhatsApp or email?"
 subtitle: "What really happens to the image after you hit send — and the safer way to share."
-description: "WhatsApp and email aren't built to protect your ID. Here's what happens to the image, the real risks, and how to share a redacted copy of your passport or DNI instead."
+description: "WhatsApp and email aren't built to protect your ID. Here's what happens to the image after you hit send, and the safer way to share it."
 date: 2026-06-28
 lastmod: 2026-06-28
+weight: 7
 faq:
   - q: "Is WhatsApp encrypted enough to send my ID?"
     a: "End-to-end encryption protects the message in transit, but not what happens next. The image is often saved to the recipient's photo gallery, backed up to their cloud, and can be forwarded in one tap. Encryption does not stop a copy from spreading once it arrives."

@@ -1,9 +1,10 @@
 ---
 title: "Is it safe to give a hotel a copy of your passport?"
 subtitle: "What's normal, what your rights are, and how to hand over a copy you can trust."
-description: "Hotels can be legally required to register guests, but you can give them a redacted copy. Here's what's normal, what isn't, and how to share a safe copy of your passport."
+description: "Hotels can be legally required to register guests, but you can give them a redacted copy instead of the full, unedited one."
 date: 2026-06-29
 lastmod: 2026-06-29
+weight: 5
 faq:
   - q: "Do hotels have to see my passport?"
     a: "In many countries, including Spain, accommodation providers are legally required to record certain guest identity details and report them to the authorities. They can check your document, but they rarely need to keep a full, unedited copy."

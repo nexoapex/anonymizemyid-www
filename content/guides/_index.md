@@ -1,7 +1,7 @@
 ---
 title: "Guides"
 subtitle: "How to share your passport or ID without giving your identity away."
-description: "Practical, plain-English guides on sending a copy of your passport or ID card safely — what to redact, the real risks of email and WhatsApp, and how to do it on your phone in a minute."
+description: "Practical, plain-English guides on sharing your passport or ID safely — what to redact, and how to do it on your phone in a minute."
 ---
 
 A hotel wants "a copy of your passport." A landlord asks you to WhatsApp your ID. A visa form needs a scan. Handing over a full, unedited photo of your document is one of the quickest ways to leak your identity — and once it is sitting in someone's inbox or camera roll, you cannot get it back.

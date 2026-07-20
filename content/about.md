@@ -24,7 +24,8 @@ to travel to a stranger's inbox just to prove who you are.
 ## Who makes it
 
 Anonymize my ID is built by **NEXO APEX S.L.**, a software studio based in
-El Vendrell, Catalonia, Spain. We build small, focused, privacy-respecting
-products. Learn more at [nexoapex.com](https://nexoapex.com).
+El Vendrell, Catalonia, Spain, run by **David Pelayo**
+([@pelayocodes](https://x.com/pelayocodes)). We build small, focused,
+privacy-respecting products. Learn more at [nexoapex.com](https://nexoapex.com).
 
 Questions, feedback or press? Write to **hi@nexoapex.com**.

@@ -28,6 +28,7 @@ p{margin:0 0 1rem}
 .muted{color:var(--text-2)}
 .small{font-size:.85rem}
 .center{text-align:center}
+.mt-lg{margin-top:26px}
 img{max-width:100%; display:block}
 .wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px}
 .narrow{max-width:760px}

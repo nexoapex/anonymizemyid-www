@@ -1,9 +1,10 @@
 ---
 title: "¿Es seguro enviar tu documento por WhatsApp o correo?"
 subtitle: "Qué le pasa de verdad a la imagen después de darle a enviar — y la forma más segura de compartir."
-description: "WhatsApp y el correo no están hechos para proteger tu documento. Esto es lo que le pasa a la imagen, los riesgos reales y cómo compartir una copia censurada de tu pasaporte o DNI."
+description: "WhatsApp y el correo no están hechos para proteger tu documento. Esto es lo que le pasa a la imagen después de enviarla, y la forma más segura de compartirla."
 date: 2026-06-28
 lastmod: 2026-06-28
+weight: 7
 faq:
   - q: "¿WhatsApp está lo bastante cifrado para enviar mi documento?"
     a: "El cifrado de extremo a extremo protege el mensaje en tránsito, pero no lo que pasa después. La imagen suele guardarse en la galería de quien la recibe, se sube a su copia de seguridad en la nube y puede reenviarse con un toque. El cifrado no evita que una copia se extienda una vez llega."

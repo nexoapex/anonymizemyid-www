@@ -1,9 +1,10 @@
 ---
 title: "Cómo enviar una copia de tu pasaporte de forma segura"
 subtitle: "Enseña lo que un hotel, una oficina de visados o una empresa necesitan — y oculta el resto."
-description: "La forma segura de enviar una copia del pasaporte: censura el número de pasaporte, la zona de lectura mecánica, la fecha de nacimiento y la firma, añade una marca de agua y no envíes nunca la foto original."
+description: "La forma segura de enviar una copia del pasaporte: censura el número, la zona de lectura mecánica, la fecha de nacimiento y la firma, y añade una marca de agua."
 date: 2026-07-01
 lastmod: 2026-07-01
+weight: 1
 faq:
   - q: "¿Qué debo ocultar en una copia del pasaporte?"
     a: "Como mínimo: el número de pasaporte, la zona de lectura mecánica (las dos líneas de código de abajo), tu fecha de nacimiento y tu firma. Deja visibles solo tu nombre y tu foto, y solo si quien la recibe necesita cotejarlos."

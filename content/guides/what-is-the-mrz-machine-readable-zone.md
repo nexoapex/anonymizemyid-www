@@ -4,6 +4,7 @@ subtitle: "The two lines of code at the bottom of the photo page, decoded — an
 description: "The MRZ is the two-line code on a passport or ID card that encodes your identity in machine-readable form. What it contains, and why to redact it."
 date: 2026-07-20
 lastmod: 2026-07-20
+weight: 3
 faq:
   - q: "What is the MRZ on a passport or ID card?"
     a: "MRZ stands for machine-readable zone: the two (on a passport) or three (on many ID cards) lines of capital letters, numbers and < characters printed at the bottom of the photo page or the back of the card. It follows a global standard (ICAO 9303), so any scanner or reader, anywhere, can pull your details from it automatically."
