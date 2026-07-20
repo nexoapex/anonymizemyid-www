@@ -36,7 +36,7 @@ Redacting a document sounds technical, but it comes down to one idea: cover the 
 These are the fields that do the damage if they leak. Cover every one of them:
 
 - **The document number** — passport number, DNI/NIE number, or ID card number.
-- **The machine-readable zone (MRZ)** — the two lines of `<<<` characters at the bottom of a passport, or the code block on the back of an ID card. It re-encodes the number, your date of birth and expiry, so hiding the number alone is not enough.
+- **[The machine-readable zone (MRZ)]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — the two lines of `<<<` characters at the bottom of a passport, or the code block on the back of an ID card. It re-encodes the number, your date of birth and expiry, so hiding the number alone is not enough.
 - **Date and place of birth.**
 - **Your signature.**
 - **The support / CAN number** on the back of many national ID cards, and any **parents' names** printed there.

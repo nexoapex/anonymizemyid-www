@@ -63,7 +63,7 @@ no se los des.
 Tapa esto antes de que la copia salga de tu móvil:
 
 - **El número de pasaporte o de documento.**
-- **La zona de lectura mecánica** — las dos líneas de código de la parte inferior.
+- **[La zona de lectura mecánica]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — las dos líneas de código de la parte inferior.
 - **Tu fecha y lugar de nacimiento.**
 - **Tu firma.**
 - **Las fechas de emisión y caducidad**, salvo que quien la recibe necesite ver la validez.

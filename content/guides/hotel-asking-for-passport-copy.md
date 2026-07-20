@@ -31,7 +31,7 @@ To meet registration rules and match you to your booking, a hotel typically need
 - your **nationality** and **document type**,
 - your **photo**, to confirm the document is yours.
 
-It almost never has a genuine need to retain your **passport number**, your **machine-readable zone** or your **date of birth** in a copy sitting on its systems. Those are exactly the fields that turn a leaked hotel file into an identity-theft kit.
+It almost never has a genuine need to retain your **passport number**, your **[machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** or your **date of birth** in a copy sitting on its systems. Those are exactly the fields that turn a leaked hotel file into an identity-theft kit.
 
 ## How to hand over a copy you can trust
 

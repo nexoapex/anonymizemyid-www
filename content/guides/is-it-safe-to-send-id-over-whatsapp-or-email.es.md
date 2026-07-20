@@ -43,8 +43,8 @@ la **permanencia y la copia**.
 ## Por qué esto importa especialmente con un documento
 
 La foto de un documento es especialmente peligrosa si se filtra porque tiene **mucho
-valor y no se puede cambiar**. Tu número de pasaporte, tu número de DNI y la zona de
-lectura mecánica bastan para alimentar el fraude de cuentas y la falsificación y, a
+valor y no se puede cambiar**. Tu número de pasaporte, tu número de DNI y la [zona de
+lectura mecánica]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}) bastan para alimentar el fraude de cuentas y la falsificación y, a
 diferencia de una contraseña, no puedes simplemente restablecerlos. Una copia que se
 escapa hoy puede usarse meses después. Esa asimetría — barata de filtrar, cara y
 lenta de recuperar — es la razón por la que «manda una foto sin más» es un mal punto

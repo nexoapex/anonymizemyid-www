@@ -45,7 +45,7 @@ necesitar:
 - tu **foto**, para confirmar que el documento es tuyo.
 
 Casi nunca tiene una necesidad real de conservar tu **número de pasaporte**, tu
-**zona de lectura mecánica** o tu **fecha de nacimiento** en una copia guardada en
+**[zona de lectura mecánica]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** o tu **fecha de nacimiento** en una copia guardada en
 sus sistemas. Son justo los campos que convierten un archivo filtrado de un hotel en
 un kit de robo de identidad.
 

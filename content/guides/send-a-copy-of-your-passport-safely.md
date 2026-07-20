@@ -21,7 +21,7 @@ You do not have to choose between cooperating and protecting yourself. The trick
 
 ## Why a plain photo of your passport is dangerous
 
-A passport data page is a compact bundle of everything an identity thief wants. The passport number and the **machine-readable zone** — the two lines of `<` characters at the bottom — encode your document number, nationality, date of birth and expiry in a form that is trivial to copy. Add your date of birth and signature, both printed on the same page, and a fraudster has enough to open accounts, apply for credit or forge a document in your name.
+A passport data page is a compact bundle of everything an identity thief wants. The passport number and the **[machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — the two lines of `<` characters at the bottom — encode your document number, nationality, date of birth and expiry in a form that is trivial to copy. Add your date of birth and signature, both printed on the same page, and a fraudster has enough to open accounts, apply for credit or forge a document in your name.
 
 A photo makes this worse, not better. Unlike showing your passport in person, a digital copy can be duplicated perfectly, an unlimited number of times, and it does not expire when your trip ends. Once it lands in an email thread or a chat backup, you have lost control of it for good.
 

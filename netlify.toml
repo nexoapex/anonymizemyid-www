@@ -16,6 +16,10 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # Apex-only (no includeSubDomains/preload — no subdomains exist yet; adding
+    # either later is a one-way door and should be a deliberate call, not a
+    # side effect of an SEO pass).
+    Strict-Transport-Security = "max-age=31536000"
 
 # Long-cache the fingerprinted / stable image + icon assets.
 [[headers]]

@@ -28,7 +28,7 @@ End-to-end encryption, which WhatsApp does provide, only protects the message **
 
 ## Why that matters for an ID specifically
 
-A document photo is uniquely dangerous to leak because it is **high-value and unchangeable**. Your passport number, DNI number and machine-readable zone are enough to fuel account fraud and forgery, and unlike a password you cannot simply reset them. A copy that escapes today can be used months later. That asymmetry — cheap to leak, expensive and slow to recover from — is why "just send a photo" is a bad default.
+A document photo is uniquely dangerous to leak because it is **high-value and unchangeable**. Your passport number, DNI number and [machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}) are enough to fuel account fraud and forgery, and unlike a password you cannot simply reset them. A copy that escapes today can be used months later. That asymmetry — cheap to leak, expensive and slow to recover from — is why "just send a photo" is a bad default.
 
 ## The safer way to share
 

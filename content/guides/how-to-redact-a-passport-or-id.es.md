@@ -40,7 +40,7 @@ cumpliendo su función.
 Estos son los campos que hacen daño si se filtran. Tápalos todos:
 
 - **El número de documento** — número de pasaporte, número de DNI/NIE o número de tarjeta de identidad.
-- **La zona de lectura mecánica (MRZ)** — las dos líneas de caracteres `<<<` de la parte inferior de un pasaporte, o el bloque de código del reverso de un DNI. Vuelve a codificar el número, tu fecha de nacimiento y la caducidad, así que ocultar solo el número no basta.
+- **[La zona de lectura mecánica (MRZ)]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — las dos líneas de caracteres `<<<` de la parte inferior de un pasaporte, o el bloque de código del reverso de un DNI. Vuelve a codificar el número, tu fecha de nacimiento y la caducidad, así que ocultar solo el número no basta.
 - **Fecha y lugar de nacimiento.**
 - **Tu firma.**
 - **El número de soporte / CAN** del reverso de muchos documentos de identidad, y los **nombres de los progenitores** que a veces figuran.
