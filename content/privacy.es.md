@@ -2,7 +2,7 @@
 title: "Política de privacidad"
 subtitle: "Cómo trata tus datos Anonymize my ID — en resumen: no salen de tu móvil."
 description: "Política de privacidad de la app y la web de Anonymize my ID, operadas por NEXO APEX S.L."
-lastmod: 2026-06-17
+lastmod: 2026-07-21
 ---
 
 ## Resumen
@@ -49,11 +49,23 @@ de [RevenueCat](https://www.revenuecat.com/privacy/),
 
 ## 4. Web
 
-Esta web es un sitio informativo estático. Solo usa cookies esenciales, si
-acaso, y no elabora perfiles de los visitantes. Los registros habituales del
-servidor (p. ej. la dirección IP) puede tratarlos nuestro proveedor de
-alojamiento por seguridad y para producir estadísticas de tráfico agregadas y no
-identificativas.
+Esta web no activa ninguna cookie analítica hasta que **tú** decides
+aceptarla. Un aviso de cookies te permite activar Google Analytics, que
+usamos solo de forma agregada para entender el tráfico del sitio (páginas
+vistas, país aproximado, tipo de dispositivo) — nunca para identificarte, y
+nunca vinculado a lo que haces dentro de la app. Si aceptas, Google instala un
+pequeño número de cookies (`_ga`, `_ga_<id-de-contenedor>`); consulta la
+[política de cookies de Google](https://policies.google.com/technologies/cookies)
+para ver los nombres exactos y la duración. Puedes retirar tu consentimiento
+cuando quieras desde **«Preferencias de cookies»** en el pie de página — esto
+detiene Google Analytics de inmediato y borra sus cookies.
+
+Si rechazas, o antes de elegir, solo se usa un dato de almacenamiento local
+del navegador: tu idioma preferido (inglés/español), que nunca sale de tu
+navegador ni se comparte con nadie.
+
+Los registros habituales del servidor (p. ej. la dirección IP) puede
+tratarlos nuestro proveedor de alojamiento por motivos de seguridad.
 
 ## 5. Lo que **no** hacemos
 

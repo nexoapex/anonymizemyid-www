@@ -9,5 +9,8 @@
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
+  {{ partial "cookie-consent.html" . }}
+  {{ $consentJS := resources.Get "js/consent.js" | minify | fingerprint }}
+  <script defer src="{{ $consentJS.RelPermalink }}" integrity="{{ $consentJS.Data.Integrity }}"></script>
 </body>
 </html>

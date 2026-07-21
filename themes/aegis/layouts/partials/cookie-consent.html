@@ -1,0 +1,14 @@
+{{- /* GDPR cookie-consent banner. Hidden by default in markup — assets/js/consent.js
+       un-hides it only when no consent decision is stored yet, and is the sole thing
+       that ever loads Google Analytics (see partials/analytics.html). If JS never
+       runs (blocked, fails), this stays hidden and GA stays unloaded: the fail-safe
+       direction is "no tracking", not "no banner". */ -}}
+<div id="amid-cookie-banner" class="cookie-banner" role="region" aria-label="{{ i18n "cookie_aria" }}" hidden>
+  <div class="wrap cookie-banner-inner">
+    <p>{{ i18n "cookie_banner_body" }} <a href="{{ "/privacy" | relLangURL }}">{{ i18n "cookie_policy_link" }}</a></p>
+    <div class="cookie-banner-actions">
+      <button type="button" class="btn btn--ghost" data-cookie-action="reject">{{ i18n "cookie_reject" }}</button>
+      <button type="button" class="btn" data-cookie-action="accept">{{ i18n "cookie_accept" }}</button>
+    </div>
+  </div>
+</div>

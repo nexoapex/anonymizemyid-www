@@ -128,6 +128,14 @@ howto_default = "Paso a paso"
 guide_faq_title = "Preguntas frecuentes"
 related_title = "Sigue leyendo"
 
+# ── Consentimiento de cookies ──
+cookie_aria = "Consentimiento de cookies"
+cookie_banner_body = "Nos gustaría usar Google Analytics para entender el tráfico del sitio. Solo se activa si lo aceptas, y puedes cambiar de opinión cuando quieras."
+cookie_accept = "Aceptar"
+cookie_reject = "Rechazar"
+cookie_policy_link = "Política de privacidad"
+cookie_manage = "Preferencias de cookies"
+
 # ── Páginas legales ──
 single_updated = "Última actualización"
 

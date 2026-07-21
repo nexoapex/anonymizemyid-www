@@ -2,7 +2,7 @@
 title: "Privacy Policy"
 subtitle: "How Anonymize my ID handles your data — short version: it doesn't leave your phone."
 description: "Privacy Policy for the Anonymize my ID app and website, operated by NEXO APEX S.L."
-lastmod: 2026-06-17
+lastmod: 2026-07-21
 ---
 
 ## Summary
@@ -48,10 +48,23 @@ receipt to validate your entitlement. See the
 
 ## 4. Website
 
-This website is a static informational site. It sets only essential cookies, if
-any, and does not profile visitors. Standard server logs (e.g. IP address) may
-be processed by our hosting provider for security and to produce aggregate,
-non-identifying traffic statistics.
+This website does not set any analytics cookies until **you** choose to accept
+them. A cookie banner lets you opt in to Google Analytics, which we use only in
+aggregate to understand site traffic (e.g. pages viewed, approximate country,
+device type) — never to identify you personally, and never linked to anything
+you do inside the app. If you accept, Google sets a small number of cookies
+(`_ga`, `_ga_<container-id>`); see
+[Google's cookie policy](https://policies.google.com/technologies/cookies) for
+exact names and retention. You can withdraw consent at any time via **"Cookie
+preferences"** in the footer — this stops Google Analytics immediately and
+clears its cookies.
+
+If you reject, or before you choose, only one piece of local browser storage is
+used: your language preference (English/Spanish), which never leaves your
+browser and is not shared with anyone.
+
+Standard server logs (e.g. IP address) may be processed by our hosting
+provider for security purposes.
 
 ## 5. What we do **not** do
 

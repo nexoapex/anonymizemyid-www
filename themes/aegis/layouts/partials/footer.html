@@ -14,6 +14,7 @@
         <a href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}">{{ .Name }}</a>
       {{ end }}
       <a href="{{ site.Params.parentSite }}" rel="noopener">{{ i18n "footer_parent" }}</a>
+      <button type="button" class="footer-cookie-btn" data-cookie-action="manage">{{ i18n "cookie_manage" }}</button>
     </nav>
   </div>
   <div class="wrap footer-legal muted">

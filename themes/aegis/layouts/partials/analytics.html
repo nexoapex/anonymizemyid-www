@@ -1,15 +1,13 @@
 {{- /* Google Analytics (GA4). Loads only on production builds (hugo --gc
-       --minify), never under `hugo server`, so local dev isn't tracked. */ -}}
+       --minify), never under `hugo server`, so local dev isn't tracked — AND
+       only in the browser once the visitor accepts the cookie banner (see
+       partials/cookie-consent.html + assets/js/consent.js). This element
+       carries the measurement ID but never fetches or executes gtag.js
+       itself; consent.js reads data-ga-id and injects the real script tag
+       only after an explicit "Accept". Nothing here should ever call
+       Google before that happens. */ -}}
 {{- with site.Params.googleAnalytics -}}
 {{- if hugo.IsProduction -}}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '{{ . }}');
-</script>
+<div id="amid-ga" data-ga-id="{{ . }}" hidden></div>
 {{- end -}}
 {{- end -}}

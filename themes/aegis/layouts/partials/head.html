@@ -80,8 +80,8 @@ document.addEventListener("click",function(e){var t=e.target;while(t&&t.nodeType
 <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 {{- with .OutputFormats.Get "RSS" }}
 <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
-{{ with site.Params.googleAnalytics }}<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-<link rel="dns-prefetch" href="https://www.googletagmanager.com">{{ end }}
+{{- /* No preconnect/dns-prefetch to Google here on purpose: until consent is
+       granted we make zero contact with Google, not even a DNS hint. */ -}}
 
 {{ partial "structured-data.html" . }}
 

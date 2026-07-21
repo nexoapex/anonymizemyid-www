@@ -20,14 +20,19 @@
     # either later is a one-way door and should be a deliberate call, not a
     # side effect of an SEO pass).
     Strict-Transport-Security = "max-age=31536000"
-    # Hash-based (not nonce-based: Netlify headers are static, and every inline
-    # <script>/<style> on this site is byte-identical on every page, verified
-    # across languages/sections before shipping). 'unsafe-inline' is a no-op
+    # Hash-based (not nonce-based: Netlify headers are static, and the one
+    # remaining inline <script> (the language-redirect in partials/head.html)
+    # and the one inline <style> (main.css, inlined for FCP) are byte-identical
+    # on every page, verified across languages/sections before shipping).
+    # Google Analytics is no longer statically embedded anywhere — it's only
+    # ever injected client-side by assets/js/consent.js, and only after the
+    # visitor accepts the cookie banner (partials/cookie-consent.html); that's
+    # why googletagmanager.com/google-analytics.com stay allow-listed even
+    # though nothing loads them until then. 'unsafe-inline' is a no-op
     # fallback for pre-CSP2 browsers only — modern browsers ignore it once a
-    # hash is present. Recompute the hashes and update this line if
-    # main.css or either inline <script> in partials/head.html /
-    # partials/analytics.html ever changes.
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-GfHaa5x6i8YzncHV+t2ig3YfhnmcxF2Rx5+5ybMi/IM=' 'sha256-C5A1trwm6aJ0EGplab/vC0ApSiDOEJzeDoc6aWqcN8w=' 'unsafe-inline'; style-src 'self' 'sha256-klfpaOJkeAeYgLUWZKtBg8iy8hRSVgvF3WJjbNlle6M=' 'unsafe-inline'; img-src 'self' https://www.google-analytics.com https://*.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+    # hash is present. Recompute the hashes and update this line if main.css
+    # or the inline <script> in partials/head.html ever changes.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-GfHaa5x6i8YzncHV+t2ig3YfhnmcxF2Rx5+5ybMi/IM=' 'unsafe-inline'; style-src 'self' 'sha256-xcIberUUy1q07/0D5P+d/x9togKuQcwfeSLKRPZRRyE=' 'unsafe-inline'; img-src 'self' https://www.google-analytics.com https://*.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
 
 # Long-cache the fingerprinted / stable image + icon assets.
 [[headers]]
