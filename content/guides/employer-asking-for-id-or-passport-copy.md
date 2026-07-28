@@ -5,6 +5,16 @@ description: "New employers often ask for ID during onboarding. Here's what's no
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 8
+keywords:
+  - "employers"
+  - "onboarding"
+  - "right to work"
+  - "who asks for ID"
+answer: "Yes — verifying your identity and right to work is a standard part of onboarding. What is worth questioning is whether HR needs a complete, unredacted copy kept on file indefinitely. Send a copy that keeps your name, photo and right-to-work status and hides the document number, machine-readable zone and signature."
+takeaways:
+  - "**Ask what is kept versus what is only viewed** — right-to-work checks are often a one-off supervised look, not a permanent copy."
+  - "Redact the number, MRZ and signature; reveal your date of birth only if payroll specifically requires it."
+  - "Send a **fresh watermarked copy** for a later background check rather than resending the original email attachment."
 faq:
   - q: "Is it normal for a new employer to ask for a copy of my ID?"
     a: "Yes. Verifying your identity and your right to work is a standard part of onboarding in most places. What's worth questioning is not that they ask, but whether they need a complete, unredacted copy kept on file indefinitely."

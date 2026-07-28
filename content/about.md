@@ -1,7 +1,7 @@
 ---
 title: "About"
 subtitle: "Why we built Anonymize my ID."
-description: "About Anonymize my ID — a privacy-first, on-device ID anonymizer by NEXO APEX S.L."
+description: "Anonymize my ID is a privacy-first, on-device ID anonymizer from NEXO APEX S.L. Why we built it, and how it redacts a passport or ID without uploading anything."
 lastmod: 2026-06-17
 ---
 

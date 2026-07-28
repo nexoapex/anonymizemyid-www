@@ -40,6 +40,16 @@ A: {{ .a }}
 URL: {{ .Permalink }}
 {{ with .Description }}Summary: {{ . }}
 {{ end }}
+{{- /* The guide's own short answer, ahead of the body — the same passage the
+       page shows above the fold and publishes as Article.abstract, so a model
+       reading this file quotes the answer we wrote rather than assembling one
+       from the narrative below. */ -}}
+{{ with .Params.answer }}{{ if $es }}Respuesta corta{{ else }}Short answer{{ end }}: {{ . }}
+{{ end }}
+{{- with .Params.takeaways }}{{ if $es }}Puntos clave{{ else }}Key points{{ end }}:
+{{ range . }}- {{ . }}
+{{ end }}
+{{ end }}
 {{ .RawContent }}
 {{ end }}
 ---

@@ -5,6 +5,16 @@ description: "Los hoteles pueden estar obligados por ley a registrar a los hués
 date: 2026-06-29
 lastmod: 2026-06-29
 weight: 5
+keywords:
+  - "hoteles"
+  - "viajes"
+  - "pasaporte"
+  - "quién pide el DNI"
+answer: "Sí, si tú controlas lo que enseña la copia. En muchos países los alojamientos están obligados por ley a registrar a sus huéspedes, pero eso significa anotar unos datos concretos, no quedarse una imagen completa y sin editar de tu pasaporte. Entrega una copia censurada que mantenga tu nombre, foto y nacionalidad y oculte el número, la MRZ y la fecha de nacimiento."
+takeaways:
+  - "**Ofrece enseñar el original primero**: muchas recepciones solo necesitan anotar los datos en el momento."
+  - "Si de verdad hace falta una copia, tapa el número de pasaporte, la MRZ, la fecha de nacimiento y la firma."
+  - "**Enviar el pasaporte por correo antes de llegar es la versión más arriesgada** de la petición: si no queda otra, manda una copia censurada y con marca de agua para ese hotel y esas fechas."
 faq:
   - q: "¿Los hoteles tienen que ver mi pasaporte?"
     a: "En muchos países, incluida España, los establecimientos de alojamiento están obligados por ley a registrar ciertos datos de identidad de los huéspedes y comunicarlos a las autoridades. Pueden comprobar tu documento, pero rara vez necesitan quedarse una copia completa y sin editar."

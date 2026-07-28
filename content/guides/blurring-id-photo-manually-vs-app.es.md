@@ -5,6 +5,17 @@ description: "Difuminar la foto de un documento con una app de marcado es mejor 
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 9
+keywords:
+  - "desenfoque"
+  - "censurar"
+  - "herramientas"
+  - "cómo hacerlo"
+answer: "Difuminar a mano es mejor que enviar una foto sin editar, pero tiene tres carencias reales: el desenfoque y el pixelado suave a veces se pueden revertir, es fácil olvidar un campo como la zona de lectura mecánica y no hay marca de agua que ate la copia a un único uso. Para todo lo que salga de tu control, usa censura opaca y aplanada."
+takeaways:
+  - "**Las cajas opacas eliminan los píxeles**; el desenfoque y el pixelado pierden información, pero no siempre la destruyen."
+  - "**La MRZ es el campo que todo el mundo olvida**: si se escapa, echa por tierra el resto de la censura."
+  - "El original sin censurar suele quedarse en el carrete junto a la versión editada, listo para enviarse por error."
+  - "La edición manual es proporcionada para compartir algo de poco riesgo cuando sabes exactamente dónde se detiene la imagen."
 faq:
   - q: "¿Es suficiente difuminar la foto de mi documento con la app de marcado del móvil?"
     a: "Es mejor que enviar una foto sin editar, pero tiene carencias reales: el desenfoque y el pixelado a veces se pueden revertir, es fácil pasar por alto un campo como la zona de lectura mecánica si no sabes que hay que taparlo, y no queda ninguna marca de agua que ligue la copia a un fin concreto."

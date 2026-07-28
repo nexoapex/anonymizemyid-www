@@ -16,6 +16,23 @@
     </p>
   </header>
 
+  {{- /* Short answer: a direct, self-contained response to the question in the
+         H1, placed above the fold. Readers who only want the answer get it
+         immediately, and it gives AI search a clean passage to quote instead of
+         having to summarise the narrative body itself. Also emitted as
+         Article.abstract and into llms-full.txt. */ -}}
+  {{ with .Params.answer }}
+  <div class="answer-box">
+    <h2>{{ i18n "short_answer" }}</h2>
+    <div class="answer-lede">{{ . | markdownify }}</div>
+    {{ with $.Params.takeaways }}
+    <ul class="takeaways">
+      {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
+    </ul>
+    {{ end }}
+  </div>
+  {{ end }}
+
   <div class="prose guide-body">
     {{ .Content }}
 
@@ -44,12 +61,34 @@
     {{ with (i18n "app_lang_note") }}<p class="muted small app-lang-note">{{ . }}</p>{{ end }}
   </aside>
 
-  {{ $related := where (where site.RegularPages "Section" "guides") "Permalink" "!=" .Permalink }}
+  {{- /* "Keep reading": topically related guides first (see [related] in
+         hugo.toml), then topped up from the rest of the hub — rotated by this
+         page's own weight, so the top-up spreads across every guide rather
+         than pointing the whole site at the same three. */ -}}
+  {{- $pool := where (where site.RegularPages "Section" "guides") "Permalink" "!=" .Permalink -}}
+  {{- $want := 4 -}}
+  {{- $related := first $want ($pool.Related .) -}}
+  {{- $seen := slice -}}
+  {{- range $related }}{{ $seen = $seen | append .RelPermalink }}{{ end -}}
+  {{- if lt (len $related) $want -}}
+    {{- $ordered := $pool.ByWeight -}}
+    {{- $n := len $ordered -}}
+    {{- $off := mod (int (.Params.weight | default 1)) $n -}}
+    {{- $rotated := slice -}}
+    {{- range $i, $p := $ordered }}{{ if ge $i $off }}{{ $rotated = $rotated | append $p }}{{ end }}{{ end -}}
+    {{- range $i, $p := $ordered }}{{ if lt $i $off }}{{ $rotated = $rotated | append $p }}{{ end }}{{ end -}}
+    {{- range $rotated -}}
+      {{- if and (lt (len $related) $want) (not (in $seen .RelPermalink)) -}}
+        {{- $related = $related | append . -}}
+        {{- $seen = $seen | append .RelPermalink -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end }}
   {{ with $related }}
   <nav class="related" aria-label="{{ i18n "related_title" }}">
     <h2>{{ i18n "related_title" }}</h2>
     <ul>
-      {{ range first 3 . }}
+      {{ range . }}
       <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="muted">— {{ .Description | default .Summary | truncate 90 }}</span></li>
       {{ end }}
     </ul>

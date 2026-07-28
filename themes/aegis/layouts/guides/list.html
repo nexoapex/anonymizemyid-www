@@ -9,7 +9,10 @@
   {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
   <div class="guide-grid guide-grid--list">
-    {{ range .Pages.ByDate.Reverse }}
+    {{/* ByWeight, matching the home-page teaser and the ItemList in the page's
+         structured data — eight guides share a publish date, so ByDate left the
+         order down to Hugo's tiebreak and the three listings disagreed. */}}
+    {{ range .Pages.ByWeight }}
       <a class="guide-card" href="{{ .RelPermalink }}">
         <h2>{{ .Title }}</h2>
         <p>{{ .Description | default .Summary | truncate 170 }}</p>

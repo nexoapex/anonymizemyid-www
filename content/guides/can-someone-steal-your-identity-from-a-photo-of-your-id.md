@@ -5,6 +5,16 @@ description: "Yes, in specific ways. Here's exactly what fields make an ID photo
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 4
+keywords:
+  - "identity theft"
+  - "risk"
+  - "machine-readable zone"
+  - "redaction"
+answer: "Yes — in specific, well-understood ways. A clear photo of a passport or ID data page carries the document number, machine-readable zone, date of birth and signature, which is much of what is needed to open accounts, apply for credit or forge a document in your name. Redacting those fields removes most of that risk."
+takeaways:
+  - "The **document number and MRZ** are the valuable parts — compact, machine-readable and reused by verification systems."
+  - "Most exposure is mundane: an old sent email, an automatic cloud photo backup, one forward too many. No breach required."
+  - "You cannot recall copies already sent, but every new request is a chance to send a redacted one."
 faq:
   - q: "Can someone steal your identity from a photo of your ID?"
     a: "Yes, in specific ways. A clear photo of a passport or ID data page contains enough — document number, machine-readable zone, date of birth, signature — to support opening accounts, applying for credit or forging documents in your name, depending on what other checks a fraudster needs to bypass."
@@ -16,7 +26,7 @@ faq:
     a: "You can't recall what's already out there, but you can stop adding to it. Going forward, redact before sharing, and where practical, ask recipients who no longer need an old copy to delete it."
 ---
 
-Short answer: **yes, in specific and well-understood ways** — but not from any photo, and not through some abstract "hacking." It comes down to a handful of fields, and once you know which ones, the risk is straightforward to manage.
+Not from *any* photo, though, and not through some abstract "hacking." It comes down to a handful of fields — and once you know which ones, the risk is straightforward to manage.
 
 ## What specifically makes a photo dangerous
 

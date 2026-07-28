@@ -1,7 +1,7 @@
 ---
 title: "Política de privacidad"
 subtitle: "Cómo trata tus datos Anonymize my ID — en resumen: no salen de tu móvil."
-description: "Política de privacidad de la app y la web de Anonymize my ID, operadas por NEXO APEX S.L."
+description: "Política de privacidad de la app y la web de Anonymize my ID. Tus documentos se procesan en tu dispositivo: sin cuenta, sin subidas y sin servidor."
 lastmod: 2026-07-21
 ---
 

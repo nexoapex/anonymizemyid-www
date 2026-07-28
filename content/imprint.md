@@ -1,7 +1,7 @@
 ---
 title: "Imprint"
 subtitle: "Company identification."
-description: "Imprint / company identification for Anonymize my ID, a product of NEXO APEX S.L."
+description: "Imprint and company identification for Anonymize my ID: NEXO APEX S.L., registered address in El Vendrell, Tarragona, Spain, VAT number and contact details."
 lastmod: 2026-06-17
 ---
 

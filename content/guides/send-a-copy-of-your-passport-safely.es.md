@@ -5,6 +5,17 @@ description: "La forma segura de enviar una copia del pasaporte: censura el núm
 date: 2026-07-01
 lastmod: 2026-07-01
 weight: 1
+keywords:
+  - "pasaporte"
+  - "censurar"
+  - "marca de agua"
+  - "compartir documentos"
+answer: "Envía una copia censurada, nunca la foto original. Tapa el número de pasaporte, la zona de lectura mecánica, tu fecha de nacimiento y tu firma; deja visibles solo el nombre y la foto que quien la pide tenga que comprobar, y añade una marca de agua con el destinatario y la fecha."
+takeaways:
+  - "**Oculta:** número de pasaporte, zona de lectura mecánica (MRZ), fecha de nacimiento y firma."
+  - "**Deja visible:** tu nombre y tu foto, y solo si quien la pide necesita comprobarlos."
+  - "**Marca de agua** con el destinatario y la fecha, para que la copia no sirva en ningún otro sitio."
+  - "Prepárala en el móvil: la imagen original no llega a salir del teléfono."
 faq:
   - q: "¿Qué debo ocultar en una copia del pasaporte?"
     a: "Como mínimo: el número de pasaporte, la zona de lectura mecánica (las dos líneas de código de abajo), tu fecha de nacimiento y tu firma. Deja visibles solo tu nombre y tu foto, y solo si quien la recibe necesita cotejarlos."

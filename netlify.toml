@@ -7,13 +7,32 @@
   command = "hugo --gc --minify"
 
 [build.environment]
-  HUGO_VERSION = "0.163.2"
+  # Keep in step with the local toolchain, so what gets tested is what deploys.
+  HUGO_VERSION = "0.164.0"
   TZ = "Europe/Madrid"
+
+# English lives at the root (defaultContentLanguageInSubdir = false), but Hugo
+# still writes an /en/ alias — a meta-refresh HTML stub. Search engines treat
+# those as soft redirects and spend crawl budget rendering them; a real 301 is
+# both faster for visitors and unambiguous for crawlers.
+#
+# Deliberately the exact path, NOT /en/*: the only other file Hugo puts under
+# /en/ is /en/sitemap.xml, which is the real English sitemap that the sitemap
+# index points at. A wildcard here would 301 it to the index and English URLs
+# would stop being discoverable through the sitemap altogether.
+[[redirects]]
+  from = "/en/"
+  to = "/"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
+    # Deny by default the powerful features this site never uses. The app does
+    # the camera work on the device, not in the browser — nothing here needs it.
+    Permissions-Policy = "accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()"
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
     # Apex-only (no includeSubDomains/preload — no subdomains exist yet; adding
@@ -32,7 +51,7 @@
     # fallback for pre-CSP2 browsers only — modern browsers ignore it once a
     # hash is present. Recompute the hashes and update this line if main.css
     # or the inline <script> in partials/head.html ever changes.
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-GfHaa5x6i8YzncHV+t2ig3YfhnmcxF2Rx5+5ybMi/IM=' 'unsafe-inline'; style-src 'self' 'sha256-xcIberUUy1q07/0D5P+d/x9togKuQcwfeSLKRPZRRyE=' 'unsafe-inline'; img-src 'self' https://www.google-analytics.com https://*.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-GfHaa5x6i8YzncHV+t2ig3YfhnmcxF2Rx5+5ybMi/IM=' 'unsafe-inline'; style-src 'self' 'sha256-YvZ7BEkZnz0HASkWWtD0HlJtkZCb2ukmZdzzuMCvRLU=' 'unsafe-inline'; img-src 'self' https://www.google-analytics.com https://*.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
 
 # Long-cache the fingerprinted / stable image + icon assets.
 [[headers]]

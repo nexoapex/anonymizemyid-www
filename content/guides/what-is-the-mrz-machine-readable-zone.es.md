@@ -1,10 +1,22 @@
 ---
 title: "Qué es la zona de lectura mecánica (MRZ) de un pasaporte o DNI"
+seoTitle: "Qué es la MRZ (zona de lectura mecánica) y por qué taparla"
 subtitle: "Las líneas de código de la parte inferior de la página, explicadas — y por qué taparlas en cualquier copia."
 description: "La MRZ es el código de dos o tres líneas que codifica tu identidad en un pasaporte o DNI. Esto es lo que contiene y por qué censurarlo."
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 3
+keywords:
+  - "zona de lectura mecánica"
+  - "MRZ"
+  - "ICAO 9303"
+  - "pasaporte"
+  - "censurar"
+answer: "La MRZ — zona de lectura mecánica — son las dos líneas de mayúsculas, números y caracteres `<` de la parte inferior de la página de datos del pasaporte, o tres líneas más cortas en la mayoría de los DNI. Sigue el estándar ICAO 9303 y codifica tu nombre, número de documento, nacionalidad, fecha de nacimiento, sexo y fecha de caducidad de forma que cualquier lector la interpreta al instante."
+takeaways:
+  - "**Repite los campos impresos más sensibles**, así que tapar solo el número de documento los deja al descubierto."
+  - "Tapa **todas las líneas** con una caja opaca: una MRZ parcialmente visible aún revela su estructura."
+  - "Censurar una copia no cambia tu documento real: sigue leyéndose con normalidad en una frontera o un mostrador."
 faq:
   - q: "¿Qué es la zona de lectura mecánica (MRZ) de un pasaporte o DNI?"
     a: "MRZ son las siglas en inglés de «zona de lectura mecánica»: las dos líneas (en un pasaporte) o tres líneas (en muchos DNI) de letras mayúsculas, números y el símbolo < impresas en la parte inferior de la página con la foto o en el reverso del documento. Sigue un estándar internacional (ICAO 9303), así que cualquier lector, en cualquier país, puede extraer tus datos de forma automática."

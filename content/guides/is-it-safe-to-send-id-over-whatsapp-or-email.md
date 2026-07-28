@@ -5,6 +5,17 @@ description: "WhatsApp and email aren't built to protect your ID. Here's what ha
 date: 2026-06-28
 lastmod: 2026-06-28
 weight: 7
+keywords:
+  - "WhatsApp"
+  - "email"
+  - "messaging"
+  - "sharing documents"
+  - "risk"
+answer: "Not as they are. End-to-end encryption protects the message in transit, but not what happens next: the image saves to the recipient's gallery, syncs to their cloud backup, and can be forwarded in one tap. Redact and watermark the copy first, and it becomes safe to send over either."
+takeaways:
+  - "**Encryption is not the problem — persistence and copying are.**"
+  - "Email is the worst offender: your document sits on mail servers, in Sent and in the recipient's inbox for years."
+  - "A redacted, watermarked copy is safe on almost any channel, because there is little a stranger can do with it."
 faq:
   - q: "Is WhatsApp encrypted enough to send my ID?"
     a: "End-to-end encryption protects the message in transit, but not what happens next. The image is often saved to the recipient's photo gallery, backed up to their cloud, and can be forwarded in one tap. Encryption does not stop a copy from spreading once it arrives."

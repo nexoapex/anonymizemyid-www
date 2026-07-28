@@ -5,6 +5,16 @@ description: "Las nuevas empresas suelen pedir el DNI al incorporarte. Esto es l
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 8
+keywords:
+  - "empresas"
+  - "incorporación"
+  - "derecho a trabajar"
+  - "quién pide el DNI"
+answer: "Sí: verificar tu identidad y tu derecho a trabajar es parte habitual de cualquier incorporación. Lo que merece la pena cuestionar es si RR. HH. necesita guardar indefinidamente una copia completa y sin censurar. Envía una copia que mantenga tu nombre, tu foto y tu situación laboral y oculte el número de documento, la zona de lectura mecánica y la firma."
+takeaways:
+  - "**Pregunta qué se guarda y qué solo se consulta**: muchas comprobaciones son una revisión puntual, no una copia permanente."
+  - "Tapa el número, la MRZ y la firma; descubre tu fecha de nacimiento solo si nóminas la necesita expresamente."
+  - "Para una verificación posterior, manda una **copia nueva con marca de agua** en vez de reenviar el archivo del correo antiguo."
 faq:
   - q: "¿Es normal que una nueva empresa pida una copia de mi DNI?"
     a: "Sí. Verificar tu identidad y tu derecho a trabajar es parte habitual de la incorporación en la mayoría de sitios. Lo que sí conviene cuestionar no es que lo pidan, sino si necesitan una copia completa y sin censurar guardada de forma indefinida."

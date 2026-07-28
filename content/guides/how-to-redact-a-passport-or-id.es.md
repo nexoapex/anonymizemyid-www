@@ -5,6 +5,18 @@ description: "Guía paso a paso para censurar un pasaporte o DNI: oculta el núm
 date: 2026-06-30
 lastmod: 2026-06-30
 weight: 2
+keywords:
+  - "censurar"
+  - "pasaporte"
+  - "DNI"
+  - "zona de lectura mecánica"
+  - "cómo hacerlo"
+answer: "Tapa los campos que permitirían a un desconocido *hacerse pasar por ti* y deja solo los que demuestran que *eres tú* ante quien te lo pide. En la práctica: barras opacas sobre el número de documento y la zona de lectura mecánica, además de tu fecha y lugar de nacimiento y tu firma; después aplana la imagen y añade una marca de agua."
+takeaways:
+  - "**Usa barras opacas, no desenfoque**: el desenfoque y el pixelado suave se pueden revertir a veces."
+  - "**No te saltes la zona de lectura mecánica**: repite el número y la fecha de nacimiento, así que tapar solo el número impreso no basta."
+  - "**Aplana la exportación** para que no quede ninguna capa editable debajo."
+  - "En caso de duda, tápalo: enviar una segunda copia menos censurada es fácil; recuperar una que enseñó de más, no."
 howto:
   name: "Censurar un pasaporte o DNI, paso a paso"
   description: "Convierte una foto de tu pasaporte o DNI en una copia segura y con marca de agua que oculta los campos usados para el robo de identidad."

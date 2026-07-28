@@ -5,6 +5,18 @@ description: "A step-by-step guide to redacting a passport or ID card: hide the 
 date: 2026-06-30
 lastmod: 2026-06-30
 weight: 2
+keywords:
+  - "redaction"
+  - "passport"
+  - "ID card"
+  - "machine-readable zone"
+  - "how to"
+answer: "Cover the fields a stranger could use to *be* you, and keep only the fields that prove you *are* you to the person asking. In practice: solid boxes over the document number and the machine-readable zone, plus your date and place of birth and your signature — then flatten the image and add a watermark."
+takeaways:
+  - "**Use solid bars, not blur** — blur and light pixelation can sometimes be reversed."
+  - "**Do not skip the machine-readable zone**: it re-encodes the number and date of birth, so hiding the printed number alone is not enough."
+  - "**Flatten the export** so there is no editable layer left to peel back."
+  - "When in doubt, hide it — a second, less-redacted copy is easy; clawing one back is not."
 howto:
   name: "Redact a passport or ID, step by step"
   description: "Turn a photo of your passport or ID card into a safe, watermarked copy that hides the fields used for identity theft."

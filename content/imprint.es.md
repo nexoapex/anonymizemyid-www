@@ -1,7 +1,7 @@
 ---
 title: "Información de la empresa"
 subtitle: "Identificación de la empresa."
-description: "Datos identificativos de la empresa responsable de Anonymize my ID, un producto de NEXO APEX S.L."
+description: "Datos identificativos de la empresa responsable de Anonymize my ID: NEXO APEX S.L., domicilio social en El Vendrell (Tarragona), NIF y datos de contacto."
 lastmod: 2026-06-17
 ---
 

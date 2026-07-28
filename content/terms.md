@@ -1,7 +1,7 @@
 ---
 title: "Legal Notice & Terms"
 subtitle: "Identification data and the terms that govern the app and this website."
-description: "Legal Notice (LSSI) and Terms of Use for Anonymize my ID, operated by NEXO APEX S.L."
+description: "Legal Notice (LSSICE) and Terms of Use for the Anonymize my ID app and website, operated by NEXO APEX S.L. — licence, pricing, liability and applicable law."
 lastmod: 2026-06-17
 ---
 

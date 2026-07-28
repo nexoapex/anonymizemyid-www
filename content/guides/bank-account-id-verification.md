@@ -5,6 +5,16 @@ description: "Banks need to verify your identity, but not every ID request is th
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 10
+keywords:
+  - "banks"
+  - "KYC"
+  - "anti-money-laundering"
+  - "who asks for ID"
+answer: "It depends on the channel. Verifying your identity is a genuine legal requirement for banks under KYC and anti-money-laundering rules, and their official app or upload portal usually needs the full, unredacted document. A request to email or message a copy is a different situation — verify it independently first, then send a redacted, watermarked copy."
+takeaways:
+  - "**Official app or portal:** expect to send the full document — redacting there can make the check fail."
+  - "**Ad hoc email or message:** verify the request on the number on your card before sending anything."
+  - "**Your date of birth is frequently required** for KYC name-and-DOB matching, so check before hiding it."
 faq:
   - q: "Why does a bank need a copy of my ID?"
     a: "Banks are generally required by anti-money-laundering and know-your-customer (KYC) rules to verify who their customers are before opening or maintaining an account. That's a legitimate, regulated requirement — the question is how they collect it."

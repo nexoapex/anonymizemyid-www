@@ -127,6 +127,7 @@ byline_updated = "Actualizado"
 howto_default = "Paso a paso"
 guide_faq_title = "Preguntas frecuentes"
 related_title = "Sigue leyendo"
+short_answer = "Respuesta corta"
 
 # ── Consentimiento de cookies ──
 cookie_aria = "Consentimiento de cookies"

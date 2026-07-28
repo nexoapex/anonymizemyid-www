@@ -1,7 +1,7 @@
 ---
 title: "Aviso legal y condiciones"
 subtitle: "Datos identificativos y las condiciones que rigen la app y esta web."
-description: "Aviso legal (LSSICE) y condiciones de uso de Anonymize my ID, operada por NEXO APEX S.L."
+description: "Aviso legal (LSSICE) y condiciones de uso de la app y la web de Anonymize my ID, de NEXO APEX S.L.: licencia, precios, responsabilidad y ley aplicable."
 lastmod: 2026-06-17
 ---
 

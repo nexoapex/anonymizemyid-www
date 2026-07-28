@@ -11,6 +11,12 @@
     {{- $ogImage = .RelPermalink | absURL -}}
   {{- end -}}
 {{- end -}}
+{{- /* Store listings double as entity-disambiguation signals for the publisher.
+       Built the same way as the home-page download links: only URLs that are
+       actually live are advertised (an unset store is the placeholder "#"). */ -}}
+{{- $profiles := slice site.Params.parentSite -}}
+{{- if hasPrefix site.Params.appStoreUrl "http" }}{{ $profiles = $profiles | append site.Params.appStoreUrl }}{{ end -}}
+{{- if hasPrefix site.Params.playStoreUrl "http" }}{{ $profiles = $profiles | append site.Params.playStoreUrl }}{{ end -}}
 {{- $org := dict
     "@type" "Organization"
     "@id" $orgID
@@ -19,7 +25,16 @@
     "email" site.Params.email
     "telephone" site.Params.phone
     "vatID" site.Params.vat
-    "logo" ("images/icon-512.png" | absURL)
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" ("images/icon-512.png" | absURL)
+      "width" 512
+      "height" 512)
+    "image" ("images/icon-512.png" | absURL)
+    "sameAs" $profiles
+    "contactPoint" (slice
+      (dict "@type" "ContactPoint" "contactType" "customer support" "email" site.Params.email "availableLanguage" (slice "en" "es"))
+      (dict "@type" "ContactPoint" "contactType" "privacy" "email" site.Params.privacyEmail "availableLanguage" (slice "en" "es")))
     "address" (dict
       "@type" "PostalAddress"
       "streetAddress" "Edificio Camí Reial, c/ Camí Reial 13-17, 3a planta"
@@ -99,8 +114,14 @@
       "publisher" (dict "@id" $orgID)
       "mainEntityOfPage" .Permalink
       "image" $ogImage
+      "wordCount" .WordCount
+      "articleSection" .Parent.Title
       "breadcrumb" (dict "@type" "BreadcrumbList" "itemListElement" $crumbs)
   -}}
+  {{- /* The short answer doubles as the machine-readable abstract — the passage
+         we most want an AI answer engine to lift and attribute. */ -}}
+  {{- with .Params.answer }}{{ $article = merge $article (dict "abstract" .) }}{{ end -}}
+  {{- with .Params.keywords }}{{ $article = merge $article (dict "keywords" (delimit . ", ")) }}{{ end -}}
   {{- $graph = $graph | append $article -}}
   {{- with .Params.faq -}}
     {{- $qs := slice -}}
@@ -121,8 +142,19 @@
       (dict "@type" "ListItem" "position" 1 "name" site.Params.appName "item" $base)
       (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink)
   -}}
+  {{- /* Use the specific WebPage subtype where schema.org has one — it tells a
+         search or answer engine what kind of page this is without it having to
+         infer from the copy. */ -}}
+  {{- $type := cond .IsSection "CollectionPage" "WebPage" -}}
+  {{- /* Generated pages (404) have no backing file, hence the `with` guard. */ -}}
+  {{- $slug := "" -}}
+  {{- with .File }}{{ $slug = .TranslationBaseName }}{{ end -}}
+  {{- if eq $slug "about" }}{{ $type = "AboutPage" }}{{ end -}}
+  {{- if eq $slug "contact" }}{{ $type = "ContactPage" }}{{ end -}}
+  {{- if eq $slug "privacy" }}{{ $type = "PrivacyPolicy" }}{{ end -}}
+  {{- if eq $slug "terms" }}{{ $type = "TermsOfService" }}{{ end -}}
   {{- $webpage := dict
-      "@type" (cond .IsSection "CollectionPage" "WebPage")
+      "@type" $type
       "@id" (printf "%s#webpage" .Permalink)
       "url" .Permalink
       "name" .Title
@@ -132,6 +164,27 @@
       "publisher" (dict "@id" $orgID)
       "breadcrumb" (dict "@type" "BreadcrumbList" "itemListElement" $crumbs)
   -}}
+  {{- with .Lastmod }}{{ $webpage = merge $webpage (dict "dateModified" (.Format "2006-01-02")) }}{{ end -}}
+  {{- /* The guides hub is the entry point AI answer engines crawl to enumerate
+         the library, so spell the whole list out rather than making them
+         follow 12 links to discover it. */ -}}
+  {{- if and .IsSection (eq .Section "guides") -}}
+    {{- $items := slice -}}
+    {{- range $i, $p := .Pages.ByWeight -}}
+      {{- $items = $items | append (dict
+          "@type" "ListItem"
+          "position" (add $i 1)
+          "url" $p.Permalink
+          "name" $p.Title) -}}
+    {{- end -}}
+    {{- $webpage = merge $webpage (dict "mainEntity" (dict
+        "@type" "ItemList"
+        "@id" (printf "%s#guides" .Permalink)
+        "name" .Title
+        "numberOfItems" (len $items)
+        "itemListOrder" "https://schema.org/ItemListOrderAscending"
+        "itemListElement" $items)) -}}
+  {{- end -}}
   {{- $graph = $graph | append $webpage -}}
 {{- end -}}
 {{- $data := dict "@context" "https://schema.org" "@graph" $graph -}}

@@ -5,6 +5,17 @@ description: "Blurring an ID photo with a markup tool is better than nothing, bu
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 9
+keywords:
+  - "blur"
+  - "redaction"
+  - "tools"
+  - "how to"
+answer: "Manual blurring beats sending an unedited photo, but it has three real gaps: blur and light pixelation can sometimes be reversed, it is easy to miss a field like the machine-readable zone, and there is no watermark tying the copy to one purpose. For anything leaving your control, use solid, flattened redaction instead."
+takeaways:
+  - "**Solid opaque blocks remove the pixels**; blur and pixelation are lossy but not always destructive."
+  - "**The MRZ is the field people forget** — missing it undoes the rest of the redaction."
+  - "The unredacted original usually stays in the camera roll next to the edit, ready to be sent by mistake."
+  - "Manual editing is proportionate for low-stakes sharing where you know exactly where the image stops."
 faq:
   - q: "Is blurring my ID photo with my phone's markup tool good enough?"
     a: "It's better than sending an unedited photo, but it has real gaps: blur and pixelation can sometimes be reversed, it's easy to miss a field like the machine-readable zone if you don't know to cover it, and there's no watermark tying the copy to one purpose."

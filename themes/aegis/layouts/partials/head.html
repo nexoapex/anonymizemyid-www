@@ -15,7 +15,14 @@
   {{- end -}}
 {{- end -}}
 {{- $ogLocale := cond (eq site.Language.Lang "es") "es_ES" "en_US" -}}
-<title>{{ if $isHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Params.appName }}{{ end }}</title>
+{{- /* SERP title. Pages may set a shorter `seoTitle` in front matter when the
+       on-page H1 is a long natural question; the brand suffix is only appended
+       while the whole title still fits inside Google's ~60-char display width,
+       so no title is ever truncated mid-word. */ -}}
+{{- $brand := printf " · %s" site.Params.appName -}}
+{{- $head := .Params.seoTitle | default .Title -}}
+{{- $pageTitle := cond (le (add (len $head) (len $brand)) 60) (printf "%s%s" $head $brand) $head -}}
+<title>{{ if $isHome }}{{ site.Title }}{{ else }}{{ $pageTitle }}{{ end }}</title>
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">
 {{- /* hreflang alternates — English is x-default; Spanish (/es/) is the second
@@ -50,7 +57,16 @@ document.addEventListener("click",function(e){var t=e.target;while(t&&t.nodeType
 <meta property="og:site_name" content="{{ site.Params.appName }}">
 <meta property="og:title" content="{{ $ogTitle }}">
 <meta property="og:description" content="{{ $desc }}">
-<meta property="og:type" content="website">
+{{- $isArticle := and .IsPage (eq .Section "guides") }}
+<meta property="og:type" content="{{ cond $isArticle "article" "website" }}">
+{{- if $isArticle }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:author" content="David Pelayo">
+<meta property="article:section" content="{{ .Parent.Title }}">
+{{- range .Params.keywords }}
+<meta property="article:tag" content="{{ . }}">{{ end }}
+{{- end }}
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:locale" content="{{ $ogLocale }}">
 {{- range .Translations }}

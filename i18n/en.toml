@@ -127,6 +127,7 @@ byline_updated = "Updated"
 howto_default = "Step by step"
 guide_faq_title = "Frequently asked questions"
 related_title = "Keep reading"
+short_answer = "Short answer"
 
 # ── Cookie consent ──
 cookie_aria = "Cookie consent"

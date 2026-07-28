@@ -5,6 +5,17 @@ description: "The safe way to send a passport copy: redact the passport number, 
 date: 2026-07-01
 lastmod: 2026-07-01
 weight: 1
+keywords:
+  - "passport"
+  - "redaction"
+  - "watermark"
+  - "sharing documents"
+answer: "Send a redacted copy, never the original photo. Cover the passport number, the machine-readable zone, your date of birth and your signature; keep only the name and photo the recipient actually has to match; and add a watermark naming who the copy is for and when."
+takeaways:
+  - "**Hide:** passport number, machine-readable zone, date of birth, signature."
+  - "**Keep:** your name and photo — and only if the recipient must match them."
+  - "**Watermark** the copy with the recipient and date, so it cannot be reused anywhere else."
+  - "Prepare it on your phone, so the original image never leaves the device."
 faq:
   - q: "What should I hide on a passport copy?"
     a: "At a minimum: the passport number, the machine-readable zone (the two code lines at the bottom), your date of birth and your signature. Keep only your name and photo, and only if the recipient genuinely needs to match them."

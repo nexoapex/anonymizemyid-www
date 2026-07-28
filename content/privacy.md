@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy"
 subtitle: "How Anonymize my ID handles your data — short version: it doesn't leave your phone."
-description: "Privacy Policy for the Anonymize my ID app and website, operated by NEXO APEX S.L."
+description: "Privacy Policy for the Anonymize my ID app and website. Documents are processed entirely on your device — no account, no upload, no server."
 lastmod: 2026-07-21
 ---
 

@@ -5,6 +5,16 @@ description: "Sí, de formas concretas. Esto es exactamente qué campos hacen pe
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 4
+keywords:
+  - "robo de identidad"
+  - "riesgo"
+  - "zona de lectura mecánica"
+  - "censurar"
+answer: "Sí, de formas concretas y bien conocidas. Una foto nítida de la página de datos de un pasaporte o DNI contiene el número de documento, la zona de lectura mecánica, la fecha de nacimiento y la firma: buena parte de lo que hace falta para abrir cuentas, pedir crédito o falsificar un documento a tu nombre. Censurar esos campos elimina casi todo ese riesgo."
+takeaways:
+  - "El **número de documento y la MRZ** son lo valioso: compactos, legibles por máquina y reutilizados por los sistemas de verificación."
+  - "Casi toda la exposición es mundana: un correo enviado hace años, una copia de seguridad automática en la nube, un reenvío de más. No hace falta ningún hackeo."
+  - "No puedes recuperar las copias ya enviadas, pero cada nueva petición es una oportunidad de enviar una censurada."
 faq:
   - q: "¿Pueden robarte la identidad con una foto de tu DNI o pasaporte?"
     a: "Sí, de formas concretas. Una foto nítida de la página de datos de un pasaporte o DNI contiene suficiente — número de documento, zona de lectura mecánica, fecha de nacimiento, firma — para abrir cuentas, pedir crédito o falsificar documentos a tu nombre, según qué otras comprobaciones tenga que superar el estafador."
@@ -16,7 +26,7 @@ faq:
     a: "No puedes retirar lo que ya está fuera, pero sí puedes dejar de añadir más. A partir de ahora, censura antes de compartir y, cuando sea posible, pide a quien ya no necesite una copia antigua que la elimine."
 ---
 
-Respuesta corta: **sí, de formas concretas y bien conocidas** — pero no con cualquier foto, ni por ningún «hackeo» abstracto. Se reduce a un puñado de campos, y en cuanto sabes cuáles son, el riesgo es sencillo de gestionar.
+Pero no con *cualquier* foto, ni por ningún «hackeo» abstracto. Se reduce a un puñado de campos, y en cuanto sabes cuáles son, el riesgo es sencillo de gestionar.
 
 ## Qué hace exactamente peligrosa una foto
 

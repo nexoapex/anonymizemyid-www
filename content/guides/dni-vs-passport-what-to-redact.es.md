@@ -5,6 +5,17 @@ description: "El DNI y el pasaporte ocultan campos distintos en sitios distintos
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 12
+keywords:
+  - "DNI"
+  - "NIE"
+  - "pasaporte"
+  - "España"
+  - "censurar"
+answer: "El principio es idéntico — ocultar el número de documento, la zona de lectura mecánica, la fecha de nacimiento y la firma — pero el formato no lo es. El pasaporte lo reúne todo en una sola página de datos; el DNI español lo reparte entre las dos caras, con la MRZ de tres líneas y el número de soporte en el reverso."
+takeaways:
+  - "**Una copia segura del DNI son dos imágenes, no una**: un anverso censurado con el reverso intacto no sirve de nada."
+  - "**Anverso:** número de DNI y fecha de nacimiento. **Reverso:** las tres líneas completas de la MRZ y el número de soporte."
+  - "**Las tarjetas NIE** tienen los mismos tipos de campos sensibles y se censuran exactamente igual."
 faq:
   - q: "¿Se censura el DNI igual que un pasaporte?"
     a: "El principio es idéntico — tapar el número de documento, la zona de lectura mecánica, la fecha de nacimiento y la firma — pero el formato cambia. Un pasaporte reúne todo en una página; el DNI reparte los datos sensibles entre el anverso y el reverso."

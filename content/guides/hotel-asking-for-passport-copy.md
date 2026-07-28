@@ -5,6 +5,16 @@ description: "Hotels can be legally required to register guests, but you can giv
 date: 2026-06-29
 lastmod: 2026-06-29
 weight: 5
+keywords:
+  - "hotels"
+  - "travel"
+  - "passport"
+  - "who asks for ID"
+answer: "Yes — if you control what the copy shows. Hotels in many countries are legally required to register guests, but that means recording specific details, not keeping a full, unedited image of your passport. Hand over a redacted copy that keeps your name, photo and nationality and hides the number, machine-readable zone and date of birth."
+takeaways:
+  - "**Offer to show the original first** — many front desks only need to record details on the spot."
+  - "If a copy is genuinely needed, hide the passport number, MRZ, date of birth and signature."
+  - "**Emailing a passport before arrival is the riskiest version of the request** — if you must, send a redacted copy watermarked for that hotel and stay."
 faq:
   - q: "Do hotels have to see my passport?"
     a: "In many countries, including Spain, accommodation providers are legally required to record certain guest identity details and report them to the authorities. They can check your document, but they rarely need to keep a full, unedited copy."

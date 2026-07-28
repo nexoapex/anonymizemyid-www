@@ -5,6 +5,17 @@ description: "WhatsApp y el correo no están hechos para proteger tu documento. 
 date: 2026-06-28
 lastmod: 2026-06-28
 weight: 7
+keywords:
+  - "WhatsApp"
+  - "correo electrónico"
+  - "mensajería"
+  - "compartir documentos"
+  - "riesgo"
+answer: "Tal cual, no. El cifrado de extremo a extremo protege el mensaje mientras viaja, pero no lo que pasa después: la imagen se guarda en la galería de quien la recibe, se sincroniza con su copia de seguridad en la nube y se reenvía con un toque. Censura la copia y ponle marca de agua antes: así sí es seguro enviarla por cualquiera de los dos."
+takeaways:
+  - "**El problema no es el cifrado, sino la permanencia y la copia.**"
+  - "El correo es el peor caso: tu documento se queda años en los servidores, en «Enviados» y en la bandeja de quien lo recibe."
+  - "Una copia censurada y con marca de agua es segura en casi cualquier canal, porque un desconocido poco puede hacer con ella."
 faq:
   - q: "¿WhatsApp está lo bastante cifrado para enviar mi documento?"
     a: "El cifrado de extremo a extremo protege el mensaje en tránsito, pero no lo que pasa después. La imagen suele guardarse en la galería de quien la recibe, se sube a su copia de seguridad en la nube y puede reenviarse con un toque. El cifrado no evita que una copia se extienda una vez llega."

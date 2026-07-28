@@ -5,6 +5,16 @@ description: "Al alquilar un coche suelen fotocopiar tu DNI o pasaporte además 
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 11
+keywords:
+  - "alquiler de coches"
+  - "viajes"
+  - "carné de conducir"
+  - "quién pide el DNI"
+answer: "Sí, con los mismos límites que en cualquier otro sitio. El mostrador necesita tu nombre, tu foto y los datos del carné para cuadrar el contrato y el seguro, no tu número de pasaporte, tu MRZ, tu fecha de nacimiento ni tu firma guardados en una fotocopia en la oficina. Prepara una copia censurada y con marca de agua antes de viajar."
+takeaways:
+  - "Pregunta: **«¿necesitáis quedaros una copia o solo comprobarlo?»**. Muchas veces no se queda nada."
+  - "Tapa el número de documento, la MRZ y la firma, y también la fecha de nacimiento salvo que la estén cotejando con tu carné."
+  - "Si también fotocopian el carné de conducir, aplica la misma lógica a todo lo que vaya más allá de demostrar que puedes conducir."
 faq:
   - q: "¿Por qué me pide una empresa de alquiler mi DNI o pasaporte, y no solo el carné?"
     a: "El carné confirma que puedes conducir; un DNI o pasaporte confirma quién eres, que es sobre lo que se redacta el contrato de alquiler y el seguro. Muchos mostradores fotocopian ambos como práctica habitual, sobre todo con clientes extranjeros o según la forma de pago."

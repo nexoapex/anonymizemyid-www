@@ -5,6 +5,17 @@ description: "A Spanish DNI and a passport hide different fields in different pl
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 12
+keywords:
+  - "DNI"
+  - "NIE"
+  - "passport"
+  - "Spain"
+  - "redaction"
+answer: "The principle is identical — hide the document number, machine-readable zone, date of birth and signature — but the layout is not. A passport puts everything on one data page; a Spanish DNI splits it across two sides, with the three-line MRZ and the support number (*número de soporte*) on the back."
+takeaways:
+  - "**A safe DNI copy is two images, not one** — a redacted front with an untouched back defeats the point."
+  - "**Front:** DNI number and date of birth. **Back:** the full three-line MRZ and the support number."
+  - "**NIE cards** carry the same categories of sensitive fields and are redacted exactly the same way."
 faq:
   - q: "Is a Spanish DNI redacted the same way as a passport?"
     a: "The principle is identical — hide the document number, the machine-readable zone, date of birth and signature — but the layout differs. A passport puts everything on one data page; a DNI splits sensitive fields across the front and back."

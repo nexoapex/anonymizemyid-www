@@ -5,6 +5,16 @@ description: "Car rental desks often photocopy your ID or passport alongside you
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 11
+keywords:
+  - "car rental"
+  - "travel"
+  - "driving licence"
+  - "who asks for ID"
+answer: "Yes, within the same limits as anywhere else. The desk needs your name, photo and licence details to match the agreement and the insurance — not your passport number, machine-readable zone, date of birth or signature sitting in a photocopy in the branch's files. Prepare a redacted, watermarked copy before you travel."
+takeaways:
+  - "Ask **\"do you need to keep a copy, or just check it?\"** — often nothing is kept at all."
+  - "Redact the document number, MRZ and signature, plus your date of birth unless it is being matched to your licence."
+  - "If they photocopy your driving licence too, the same logic applies to anything beyond proof that you can drive."
 faq:
   - q: "Why does a car rental company ask for my ID or passport, not just my licence?"
     a: "The licence confirms you can drive; a national ID or passport confirms who you are, which the rental agreement and insurance are written against. Many rental desks photocopy both as standard practice, especially for foreign renters or when paying by certain cards."

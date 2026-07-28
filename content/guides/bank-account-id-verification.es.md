@@ -5,6 +5,16 @@ description: "Los bancos necesitan verificar tu identidad, pero no todas las pet
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 10
+keywords:
+  - "bancos"
+  - "KYC"
+  - "blanqueo de capitales"
+  - "quién pide el DNI"
+answer: "Depende del canal. Verificar tu identidad es una obligación legal real para los bancos por las normas KYC y de prevención del blanqueo, y su app o portal oficial suele necesitar el documento completo y sin censurar. Que te pidan una copia por correo o mensaje es otra cosa: confírmalo por tu cuenta primero y después envía una copia censurada y con marca de agua."
+takeaways:
+  - "**App o portal oficial:** cuenta con enviar el documento completo; censurarlo ahí puede hacer que la verificación falle."
+  - "**Correo o mensaje improvisado:** confirma la petición llamando al teléfono de tu tarjeta antes de enviar nada."
+  - "**La fecha de nacimiento suele hacer falta** para el cotejo de nombre y fecha en KYC, así que compruébalo antes de taparla."
 faq:
   - q: "¿Por qué necesita un banco una copia de mi DNI?"
     a: "Por lo general, la normativa contra el blanqueo de capitales y de conocimiento del cliente (KYC) obliga a los bancos a verificar quién es su cliente antes de abrir o mantener una cuenta. Es un requisito legítimo y regulado — la cuestión es cómo lo recogen."

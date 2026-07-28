@@ -114,6 +114,22 @@ defaultContentLanguageInSubdir = false
 [markup.goldmark.renderer]
   unsafe = true
 
+# Related-content index, used by the "Keep reading" block on guide pages.
+# Before this existed the block linked the same first three guides from every
+# page, so three guides collected 14 inbound links each and eight collected two.
+# Matching on the `keywords` front matter spreads internal link equity (and
+# crawl paths) across the whole hub instead.
+[related]
+  threshold = 20
+  includeNewer = true
+  toLower = true
+  [[related.indices]]
+    name = "keywords"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
 # Extra machine-readable home-page outputs for GEO / LLMs: /llms.txt and
 # /llms-full.txt, alongside the usual HTML + RSS. Generated per language.
 [outputs]

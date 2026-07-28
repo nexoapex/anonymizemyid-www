@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 subtitle: "We're happy to help."
-description: "Contact Anonymize my ID / NEXO APEX S.L. for support, privacy requests or press."
+description: "Contact Anonymize my ID and NEXO APEX S.L. — support and general enquiries, GDPR and privacy requests, and press. Email addresses and company details."
 lastmod: 2026-06-17
 ---
 

@@ -5,6 +5,17 @@ description: "The MRZ is the two-line code on a passport or ID card that encodes
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 3
+keywords:
+  - "machine-readable zone"
+  - "MRZ"
+  - "ICAO 9303"
+  - "passport"
+  - "redaction"
+answer: "The MRZ — machine-readable zone — is the two lines of capital letters, numbers and `<` characters at the bottom of a passport's photo page, or three shorter lines on most ID cards. It follows the ICAO 9303 standard and encodes your name, document number, nationality, date of birth, sex and expiry date in a form any scanner can read instantly."
+takeaways:
+  - "It **repeats the most sensitive printed fields**, so hiding the document number alone leaves them exposed."
+  - "Cover **every line** with a solid box — a partly visible MRZ can still give up its structure."
+  - "Redacting a copy does not change your real document: it still scans normally at a border or check-in desk."
 faq:
   - q: "What is the MRZ on a passport or ID card?"
     a: "MRZ stands for machine-readable zone: the two (on a passport) or three (on many ID cards) lines of capital letters, numbers and < characters printed at the bottom of the photo page or the back of the card. It follows a global standard (ICAO 9303), so any scanner or reader, anywhere, can pull your details from it automatically."
