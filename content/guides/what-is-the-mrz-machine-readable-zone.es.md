@@ -32,7 +32,9 @@ Mira la parte inferior de la página con la foto de tu pasaporte, o el reverso d
 
 ## Qué es la MRZ
 
-La MRZ es una franja de texto estandarizada, pensada para que la lea una máquina, no una persona. Sigue el **Documento 9303 de la OACI**, el mismo estándar internacional que usan los pasaportes y muchos DNI en todo el mundo, y por eso un lector fronterizo de un país puede leer un pasaporte emitido por otro. Dos líneas en un pasaporte (44 caracteres cada una), o tres líneas más cortas en muchos DNI — en cualquier caso, el formato es fijo y público, así que cualquiera con un lector básico — o la cámara de un móvil y software gratuito — puede decodificarlo al instante.
+La MRZ es una franja de texto estandarizada, pensada para que la lea una máquina, no una persona. Sigue el **[Documento 9303 de la OACI](https://www.icao.int/publications/doc-series/doc-9303)**, el mismo estándar internacional que usan los pasaportes y muchos DNI en todo el mundo, y por eso un lector fronterizo de un país puede leer un pasaporte emitido por otro. Dos líneas en un pasaporte (44 caracteres cada una), o tres líneas más cortas en muchos DNI — en cualquier caso, el formato es fijo y público, así que cualquiera con un lector básico — o la cámara de un móvil y software gratuito — puede decodificarlo al instante.
+
+{{< fieldmap >}}
 
 ## Qué información codifica
 

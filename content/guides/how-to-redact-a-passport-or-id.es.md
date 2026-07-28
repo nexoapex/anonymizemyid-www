@@ -48,6 +48,8 @@ demuestran que *eres* tú ante quien pregunta. Si aciertas con ese reparto, una
 copia de tu pasaporte o DNI queda casi inservible para un defraudador y sigue
 cumpliendo su función.
 
+{{< fieldmap >}}
+
 ## Qué ocultar
 
 Estos son los campos que hacen daño si se filtran. Tápalos todos:

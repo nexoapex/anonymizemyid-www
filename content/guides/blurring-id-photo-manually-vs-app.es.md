@@ -43,6 +43,17 @@ Tapar el campo obvio — normalmente el número de documento — con una caja ne
 
 **El original suele seguir existiendo al lado.** Las apps de marcado suelen editar un duplicado, pero la foto de origen — sin censurar — habitualmente se queda en el carrete, y es fácil coger y enviar la que no es bajo presión.
 
+## Cara a cara
+
+| | Herramienta de marcado manual | Flujo de censura dedicado |
+| --- | --- | --- |
+| **Reversibilidad** | El desenfoque y el pixelado suave pierden información, pero no siempre la destruyen | Cajas opacas por defecto: los píxeles desaparecen |
+| **Zona de lectura mecánica** | Fácil de olvidar; no «parece» sensible | Tratada como un campo más que hay que tapar |
+| **Marca de agua** | Ninguna | Se aplica automáticamente, con destinatario y fecha |
+| **Capas editables** | El marcado puede sobrevivir como capa que se quita | Se aplana al exportar |
+| **El original** | El original sin censurar suele quedarse en el carrete | Solo se exporta la copia censurada |
+| **Proporcionado para** | Compartir de poco riesgo y bajo tu control | Todo lo que salga de tu control |
+
 ## Qué hace distinto un flujo de censura dedicado
 
 Está construido alrededor de lo que de verdad tiene un pasaporte o un DNI: cajas sólidas y no reversibles por defecto (no desenfoque), avisos para los campos que se suelen olvidar, una marca de agua aplicada de forma automática y una exportación aplanada sin ninguna capa editable debajo que se pueda despegar después. [Anonymize my ID](/#get) hace exactamente esto, enteramente en el propio dispositivo — consulta [cómo censurar un pasaporte o DNI]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}}) para el método completo.

@@ -15,3 +15,14 @@ mientras ocultas lo que permitiría suplantarte: el número de documento, la zon
 de lectura mecánica, tu fecha de nacimiento y tu firma. Sin tecnicismos y sin
 alarmismos — solo qué tapar, por qué importa y cómo hacerlo en un minuto en tu
 móvil.
+
+## Quién lo pide y qué necesita de verdad
+
+| Quién lo pide | Qué necesita ver de verdad | Se puede tapar |
+| --- | --- | --- |
+| [Un hotel](/es/guides/hotel-asking-for-passport-copy/) | Nombre, foto, nacionalidad | Número, MRZ, fecha de nacimiento, firma |
+| [Un casero o una agencia](/es/guides/landlord-asking-for-id-or-passport-copy/) | Nombre, foto, derecho de residencia | Número, MRZ, fecha de nacimiento, firma |
+| [Una nueva empresa](/es/guides/employer-asking-for-id-or-passport-copy/) | Nombre, foto, situación laboral | Número, MRZ, firma |
+| [Un mostrador de alquiler de coches](/es/guides/car-rental-id-copy/) | Nombre, foto, datos del carné | Número, MRZ, firma |
+| [Un banco, por su portal KYC](/es/guides/bank-account-id-verification/) | El documento completo, por su sistema | Nada: censurarlo puede hacer que falle |
+

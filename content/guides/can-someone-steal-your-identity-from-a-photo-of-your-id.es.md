@@ -32,6 +32,8 @@ Pero no con *cualquier* foto, ni por ningún «hackeo» abstracto. Se reduce a u
 
 El fraude construido sobre una identidad robada suele necesitar responder a las preguntas que un sistema hace para «demostrar» que eres quien dices ser: tu número de documento, tu fecha de nacimiento, a veces una firma que cotejar. Una sola foto nítida de la página de datos de un pasaporte o DNI contiene todo eso, en un formato que se copia a la perfección y se reutiliza de forma indefinida. La [zona de lectura mecánica]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}) empeora esto, no lo mejora — repite los mismos datos en un formato pensado para que una máquina los lea de forma automática y a gran escala.
 
+{{< fieldmap >}}
+
 ## Para qué se usan realmente esos datos
 
 Con suficientes de estos campos, alguien puede intentar abrir cuentas, pedir crédito, dar de alta una tarjeta SIM o elaborar un documento falsificado convincente — no siempre, y no sin tener que superar a veces otras comprobaciones también, pero la foto del documento es con mucha frecuencia la primera pieza que hace posible el resto.

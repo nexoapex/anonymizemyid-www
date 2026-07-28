@@ -58,6 +58,10 @@
   {{- $stores := slice -}}
   {{- if hasPrefix site.Params.appStoreUrl "http" }}{{ $stores = $stores | append site.Params.appStoreUrl }}{{ end -}}
   {{- if hasPrefix site.Params.playStoreUrl "http" }}{{ $stores = $stores | append site.Params.playStoreUrl }}{{ end -}}
+  {{- /* Free to install with a one-time Pro unlock, so the offer is an
+         AggregateOffer over the real range rather than a single "price 0" that
+         quietly hides the paid tier. lowPrice stays 0 — the free tier is
+         genuinely usable, not a trial. */ -}}
   {{- $app := dict
       "@type" "SoftwareApplication"
       "@id" (printf "%s#app" $base)
@@ -72,7 +76,17 @@
       "inLanguage" "en-US"
       "availableLanguage" "English"
       "publisher" (dict "@id" $orgID)
-      "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "EUR" "availability" "https://schema.org/InStock")
+      "offers" (dict
+        "@type" "AggregateOffer"
+        "lowPrice" "0"
+        "highPrice" "4"
+        "priceCurrency" "EUR"
+        "offerCount" 2
+        "availability" "https://schema.org/InStock"
+        "offers" (slice
+          (dict "@type" "Offer" "name" "Free" "price" "0" "priceCurrency" "EUR" "availability" "https://schema.org/InStock")
+          (dict "@type" "Offer" "name" "Pro" "price" "4" "priceCurrency" "EUR" "availability" "https://schema.org/InStock"
+                "description" site.Params.priceDisclaimer)))
   -}}
   {{- $faqItems := slice -}}
   {{- range (partial "home-faq.html" .) -}}
@@ -90,6 +104,10 @@
       "@type" "Person"
       "@id" $authorID
       "name" "David Pelayo"
+      "url" ("about" | absLangURL)
+      "jobTitle" (i18n "author_role")
+      "description" (i18n "author_bio")
+      "knowsAbout" (i18n "author_knows_about" | split "|")
       "sameAs" (slice "https://x.com/pelayocodes")
       "worksFor" (dict "@id" $orgID)
   -}}

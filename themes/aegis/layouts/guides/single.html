@@ -61,6 +61,15 @@
     {{ with (i18n "app_lang_note") }}<p class="muted small app-lang-note">{{ . }}</p>{{ end }}
   </aside>
 
+  {{- /* Author block. The Person entity in the JSON-LD graph asserts expertise;
+         this is the human-readable half of the same claim, which is what both
+         readers and AI answer engines actually weigh for E-E-A-T. */ -}}
+  <aside class="author-card">
+    <p class="author-name">{{ i18n "byline_by" }} <span class="muted">— {{ i18n "author_role" }}</span></p>
+    <p class="muted small">{{ i18n "author_bio" }}</p>
+    <p class="small"><a href="{{ "about" | relLangURL }}">{{ i18n "author_more" }} →</a></p>
+  </aside>
+
   {{- /* "Keep reading": topically related guides first (see [related] in
          hugo.toml), then topped up from the rest of the hub — rotated by this
          page's own weight, so the top-up spreads across every guide rather

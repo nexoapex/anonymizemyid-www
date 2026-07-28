@@ -30,7 +30,7 @@ You arrive at the front desk, tired, and the receptionist asks for your passport
 
 ## Why hotels ask in the first place
 
-In many countries, accommodation providers are **legally required** to register their guests and report certain identity details to the police or local authorities. Spain is a well-known example: hotels, rentals and campsites must collect guest data and submit it. This is a real obligation, not an overreach, and it is why the request is so common across Europe.
+In many countries, accommodation providers are **legally required** to register their guests and report certain identity details to the police or local authorities. Spain is a well-known example: under [Royal Decree 933/2021](https://www.boe.es/eli/es/rd/2021/10/26/933), hotels, rentals and campsites must collect guest data and submit it. This is a real obligation, not an overreach, and it is why the request is so common across Europe.
 
 What the law generally requires is that the hotel **records specific details** — not that it keeps a permanent, unedited image of your entire passport. That distinction is where your privacy lives.
 

@@ -255,6 +255,33 @@ details p{color:var(--text-2); margin:0 0 12px}
 .guide-cta h2{margin:0 0 .3em; font-size:1.3rem}
 .guide-cta .badges{margin-top:14px}
 
+/* Author card (E-E-A-T) */
+.author-card{margin-top:34px; border-top:1px solid var(--border); padding-top:20px}
+.author-card p{margin:0 0 .5em}
+.author-name{font-weight:700; color:var(--text)}
+.author-card .small:last-child{margin-bottom:0}
+
+/* Comparison tables inside guide prose */
+.prose .table-wrap{overflow-x:auto; margin:1.5em 0; border:1px solid var(--border); border-radius:var(--radius)}
+.prose table{border-collapse:collapse; width:100%; min-width:32rem; font-size:.94rem}
+.prose th,.prose td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--border); vertical-align:top}
+.prose thead th{background:var(--high); color:var(--text); font-size:.8rem; letter-spacing:.05em;
+  text-transform:uppercase; white-space:nowrap}
+.prose tbody tr:last-child td{border-bottom:0}
+.prose td:first-child{color:var(--text); font-weight:600}
+
+/* Document field map (multi-modal diagram) */
+.fieldmap{margin:1.6em 0}
+.fieldmap svg{width:100%; height:auto; display:block; border:1px solid var(--border);
+  border-radius:var(--radius); background:var(--elev)}
+.fieldmap figcaption{margin-top:10px; font-size:.85rem; color:var(--muted)}
+.fieldmap-key{display:flex; flex-wrap:wrap; gap:8px 18px; margin:12px 0 0; padding:0; list-style:none;
+  font-size:.85rem; color:var(--text-2)}
+.fieldmap-key li{display:flex; align-items:center; gap:7px}
+.fieldmap-key i{width:11px; height:11px; border-radius:3px; flex:none}
+.fieldmap-key .k-hide{background:#E2574C}
+.fieldmap-key .k-keep{background:#4FB477}
+
 /* Related guides */
 .related{margin-top:34px; border-top:1px solid var(--border); padding-top:22px}
 .related h2{font-size:1.15rem}

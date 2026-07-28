@@ -20,7 +20,11 @@
 ## {{ if $es }}Guías{{ else }}Guides{{ end }}
 {{ if $es }}Guías claras y prácticas para compartir documentos de identidad de forma segura.{{ else }}Practical, plain-English guides on sharing ID documents safely.{{ end }}
 {{ range . -}}
-- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{/* The guide's own short answer follows its description, so an agent that
+     only ever fetches llms.txt still gets the answer we wrote rather than
+     having to fetch and summarise the page. */}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}{{ with .Params.answer }}
+  {{ if $es }}Respuesta corta{{ else }}Short answer{{ end }}: {{ . }}{{ end }}
 {{ end }}
 {{- end }}
 ## {{ if $es }}Descargar la app{{ else }}Get the app{{ end }}

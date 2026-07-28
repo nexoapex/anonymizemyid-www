@@ -38,9 +38,21 @@ La página de datos de un pasaporte reúne tu foto, nombre, número de documento
 El DNI español reparte las mismas categorías de datos entre las dos caras:
 
 - **Anverso:** tu foto, nombre, número de DNI y fecha de nacimiento.
-- **Reverso:** la zona de lectura mecánica (tres líneas, el mismo estándar ICAO 9303 que un pasaporte) y, en el DNI electrónico, un **número de soporte** independiente — que a veces se pide por separado para verificaciones de identidad online.
+- **Reverso:** la zona de lectura mecánica (tres líneas, el mismo [estándar ICAO 9303](https://www.icao.int/publications/doc-series/doc-9303) que un pasaporte) y, en el DNI electrónico, un **número de soporte** independiente — que a veces se pide por separado para verificaciones de identidad online.
 
 Eso significa que una «copia segura» del DNI son en realidad dos imágenes, no una, y las dos necesitan atención — un anverso censurado con un reverso intacto no sirve de nada, porque la MRZ del reverso vuelve a codificar el número y la fecha de nacimiento de todas formas.
+
+## Dónde está cada campo
+
+| Campo | En un pasaporte | En un DNI / NIE | Qué hacer |
+| --- | --- | --- | --- |
+| Foto | Página de datos | Anverso | **Dejar** |
+| Nombre y apellidos | Página de datos | Anverso | **Dejar** |
+| Número de documento | Página de datos | Anverso | **Tapar** |
+| Fecha de nacimiento | Página de datos | Anverso | **Tapar** |
+| Firma | Página de datos | Anverso | **Tapar** |
+| Zona de lectura mecánica | Dos líneas, al pie de la página de datos | Tres líneas, reverso | **Tapar** |
+| Número de soporte | — | Reverso | **Tapar** |
 
 ## Qué censurar en cada cara
 

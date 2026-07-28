@@ -38,7 +38,7 @@ copia.**
 
 En muchos países, los establecimientos de alojamiento están **obligados por ley** a
 registrar a sus huéspedes y comunicar ciertos datos de identidad a la policía o a
-las autoridades locales. España es un ejemplo conocido: hoteles, alquileres y
+las autoridades locales. España es un ejemplo conocido — el [Real Decreto 933/2021](https://www.boe.es/eli/es/rd/2021/10/26/933): hoteles, alquileres y
 campings deben recabar los datos del huésped y remitirlos. Es una obligación real,
 no un abuso, y por eso la petición es tan común en toda Europa.
 

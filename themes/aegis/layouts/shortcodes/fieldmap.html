@@ -1,0 +1,70 @@
+{{- /* Schematic of a passport data page showing which fields to cover and which
+       to leave visible. Multi-modal content is weighted heavily by AI answer
+       engines, and this is the one explanation the guides could not carry in
+       prose: *where* on the document each field actually sits.
+
+       Deliberately hand-built inline SVG rather than an image file: it stays
+       sharp at any size, costs no extra request, and is translated by the same
+       i18n strings as everything else. NOTE — it must never use a `style="..."`
+       attribute or an inline <style> block: the site's CSP is hash-based, and
+       an inline style attribute is silently blocked (this has bitten before).
+       Presentation attributes (fill=, stroke=, font-size=) are fine. */ -}}
+{{- $hide := "#E2574C" -}}
+{{- $keep := "#4FB477" -}}
+{{- $keepFill := "#16281F" -}}
+{{- $line := "#2C313B" -}}
+{{- $label := "#8A93A3" -}}
+{{- $font := "system-ui, -apple-system, Segoe UI, sans-serif" -}}
+{{- $n := .Ordinal -}}
+<figure class="fieldmap">
+  <svg viewBox="0 0 640 412" role="img" aria-labelledby="fm-t{{ $n }} fm-d{{ $n }}" xmlns="http://www.w3.org/2000/svg">
+    <title id="fm-t{{ $n }}">{{ i18n "fm_title" }}</title>
+    <desc id="fm-d{{ $n }}">{{ i18n "fm_alt" }}</desc>
+
+    <rect x="14" y="14" width="612" height="384" rx="12" fill="none" stroke="{{ $line }}" stroke-width="2"/>
+    <text x="34" y="46" font-family="{{ $font }}" font-size="12" fill="{{ $label }}" letter-spacing="2">{{ i18n "fm_doc_label" }}</text>
+    <line x1="14" y1="58" x2="626" y2="58" stroke="{{ $line }}" stroke-width="1"/>
+
+    {{/* Photo — kept visible, so a person can match your face to the booking. */}}
+    <text x="34" y="82" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_photo" }}</text>
+    <rect x="34" y="90" width="118" height="146" rx="4" fill="{{ $keepFill }}" stroke="{{ $keep }}" stroke-width="2"/>
+    <circle cx="93" cy="146" r="26" fill="none" stroke="{{ $keep }}" stroke-width="2"/>
+    <path d="M58 218c8-26 62-26 70 0" fill="none" stroke="{{ $keep }}" stroke-width="2"/>
+
+    {{/* Right-hand printed fields. */}}
+    <text x="182" y="82" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_surname" }}</text>
+    <rect x="182" y="90" width="414" height="22" rx="4" fill="{{ $keepFill }}" stroke="{{ $keep }}" stroke-width="2"/>
+
+    <text x="182" y="130" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_given" }}</text>
+    <rect x="182" y="138" width="414" height="22" rx="4" fill="{{ $keepFill }}" stroke="{{ $keep }}" stroke-width="2"/>
+
+    <text x="182" y="178" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_docno" }}</text>
+    <rect x="182" y="186" width="238" height="22" rx="4" fill="{{ $hide }}"/>
+
+    <text x="440" y="178" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_nationality" }}</text>
+    <rect x="440" y="186" width="156" height="22" rx="4" fill="{{ $keepFill }}" stroke="{{ $keep }}" stroke-width="2"/>
+
+    <text x="182" y="226" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_dob" }}</text>
+    <rect x="182" y="234" width="238" height="22" rx="4" fill="{{ $hide }}"/>
+
+    <text x="440" y="226" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_expiry" }}</text>
+    <rect x="440" y="234" width="156" height="22" rx="4" fill="{{ $hide }}"/>
+
+    {{/* Signature sits under the photo on most data pages. */}}
+    <text x="34" y="276" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_signature" }}</text>
+    <rect x="34" y="284" width="238" height="22" rx="4" fill="{{ $hide }}"/>
+
+    <text x="292" y="276" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_pob" }}</text>
+    <rect x="292" y="284" width="304" height="22" rx="4" fill="{{ $hide }}"/>
+
+    {{/* The MRZ: two full-width lines across the foot of the page. */}}
+    <text x="34" y="330" font-family="{{ $font }}" font-size="11" fill="{{ $label }}">{{ i18n "fm_mrz" }}</text>
+    <rect x="34" y="338" width="562" height="20" rx="3" fill="{{ $hide }}"/>
+    <rect x="34" y="362" width="562" height="20" rx="3" fill="{{ $hide }}"/>
+  </svg>
+  <ul class="fieldmap-key">
+    <li><i class="k-hide"></i>{{ i18n "fm_key_hide" }}</li>
+    <li><i class="k-keep"></i>{{ i18n "fm_key_keep" }}</li>
+  </ul>
+  <figcaption>{{ i18n "fm_caption" }}</figcaption>
+</figure>

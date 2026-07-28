@@ -51,7 +51,7 @@
     # fallback for pre-CSP2 browsers only — modern browsers ignore it once a
     # hash is present. Recompute the hashes and update this line if main.css
     # or the inline <script> in partials/head.html ever changes.
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-GfHaa5x6i8YzncHV+t2ig3YfhnmcxF2Rx5+5ybMi/IM=' 'unsafe-inline'; style-src 'self' 'sha256-YvZ7BEkZnz0HASkWWtD0HlJtkZCb2ukmZdzzuMCvRLU=' 'unsafe-inline'; img-src 'self' https://www.google-analytics.com https://*.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-GfHaa5x6i8YzncHV+t2ig3YfhnmcxF2Rx5+5ybMi/IM=' 'unsafe-inline'; style-src 'self' 'sha256-nMoLVeTE4Cy1N8wVTRYjfPbnMaal5QZ1GEgNqa4SVIA=' 'unsafe-inline'; img-src 'self' https://www.google-analytics.com https://*.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
 
 # Long-cache the fingerprinted / stable image + icon assets.
 [[headers]]

@@ -1,0 +1,27 @@
+{{- /* Wrap every markdown table in a scroll container. Without this a wide
+       comparison table forces the whole page to scroll sideways on a phone,
+       which is most of this site's traffic. Alignment is emitted as the `align`
+       attribute rather than an inline style on purpose: the CSP is hash-based
+       and a `style="..."` attribute would be blocked. */ -}}
+<div class="table-wrap">
+  <table>
+    <thead>
+      {{- range .THead }}
+      <tr>
+        {{- range . }}
+        <th{{ with .Alignment }} align="{{ . }}"{{ end }}>{{ .Text }}</th>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </thead>
+    <tbody>
+      {{- range .TBody }}
+      <tr>
+        {{- range . }}
+        <td{{ with .Alignment }} align="{{ . }}"{{ end }}>{{ .Text }}</td>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </tbody>
+  </table>
+</div>

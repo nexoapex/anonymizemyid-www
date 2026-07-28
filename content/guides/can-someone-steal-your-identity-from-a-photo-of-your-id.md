@@ -32,6 +32,8 @@ Not from *any* photo, though, and not through some abstract "hacking." It comes 
 
 Fraud built on a stolen identity usually needs to answer questions a system asks to "prove" you are who you claim to be: your document number, your date of birth, sometimes a signature to match. A single clear photo of a passport or ID data page contains all of it, in a form that can be copied perfectly and reused indefinitely. The [machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}) makes this worse, not better — it repeats the same data in a format built for machines to read automatically, at scale.
 
+{{< fieldmap >}}
+
 ## What that data is actually used for
 
 With enough of these fields, someone can attempt to open accounts, apply for credit, register a SIM card, or produce a convincing forged document — not universally, and not without sometimes clearing other checks too, but the ID photo is very often the first piece that makes the rest possible.

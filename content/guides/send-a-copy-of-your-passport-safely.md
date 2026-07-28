@@ -47,6 +47,8 @@ Here is the part most people miss: whoever is asking almost never needs the whol
 
 None of that requires your passport number, your machine-readable zone or your date of birth sitting permanently in their files. So do not give it to them.
 
+{{< fieldmap >}}
+
 ## What to redact before you send
 
 Cover these before the copy leaves your phone:

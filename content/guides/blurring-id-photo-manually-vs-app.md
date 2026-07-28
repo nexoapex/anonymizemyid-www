@@ -43,6 +43,17 @@ Covering the obvious field — usually the document number — with a black box 
 
 **The original often still exists next to it.** Markup tools frequently edit a duplicate, but the source photo — unredacted — commonly stays in the camera roll, and it's easy to grab and send the wrong one under pressure.
 
+## Side by side
+
+| | Manual markup tool | Dedicated redaction flow |
+| --- | --- | --- |
+| **Reversibility** | Blur and light pixelation are lossy, not always destructive | Solid, opaque blocks by default — the pixels are gone |
+| **Machine-readable zone** | Easy to miss; it does not look "sensitive" | Treated as a standard field to cover |
+| **Watermark** | None | Applied automatically, naming the recipient and date |
+| **Editable layers** | Markup can survive as a removable layer | Flattened on export |
+| **The original** | Unredacted original usually stays in the camera roll | Only the redacted copy is exported |
+| **Proportionate for** | Low-stakes sharing you fully control | Anything leaving your control |
+
 ## What a dedicated redaction flow does differently
 
 It's built around what's actually on a passport or ID: solid, non-reversible boxes by default (not blur), prompts for the fields people forget, a watermark applied automatically, and a flattened export with no editable layer underneath to peel back later. [Anonymize my ID](/#get) does exactly this, entirely on-device — see [how to redact a passport or ID card]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}}) for the full method.

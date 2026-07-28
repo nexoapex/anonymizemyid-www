@@ -31,7 +31,9 @@ Look at the bottom of your passport's photo page, or the back of a national ID c
 
 ## What the MRZ is
 
-The MRZ is a standardised strip of text designed to be read by a machine, not a person. It follows **ICAO Document 9303**, the same international standard used for passports and many national ID cards worldwide, which is why a border scanner in one country can read a passport issued by another. Two lines on a passport (44 characters each), or three shorter lines on many ID cards — either way, the format is fixed and public, which means anyone with a basic reader — or a phone camera and free software — can decode it instantly.
+The MRZ is a standardised strip of text designed to be read by a machine, not a person. It follows **[ICAO Document 9303](https://www.icao.int/publications/doc-series/doc-9303)**, the same international standard used for passports and many national ID cards worldwide, which is why a border scanner in one country can read a passport issued by another. Two lines on a passport (44 characters each), or three shorter lines on many ID cards — either way, the format is fixed and public, which means anyone with a basic reader — or a phone camera and free software — can decode it instantly.
+
+{{< fieldmap >}}
 
 ## What information it encodes
 

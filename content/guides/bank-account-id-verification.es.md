@@ -30,7 +30,7 @@ Al abrir una cuenta, o a veces solo para mantenerla, un banco pide verificar tu 
 
 ## Por qué lo pide un banco: KYC y prevención del blanqueo de capitales
 
-Las entidades financieras suelen estar obligadas por ley a saber quién es su cliente — un conjunto de comprobaciones conocidas como **KYC (conoce a tu cliente)**, parte de una normativa más amplia contra el blanqueo de capitales. No es que el banco sea curioso: verificar la identidad antes de abrir o mantener una cuenta es una obligación de cumplimiento normativo en la mayoría de sitios, y es una de las pocas peticiones de documento de esta serie de guías con una base legal firme detrás.
+Las entidades financieras suelen estar obligadas por ley a saber quién es su cliente — un conjunto de comprobaciones conocidas como **KYC (conoce a tu cliente)**, parte de una [normativa más amplia contra el blanqueo de capitales](https://eur-lex.europa.eu/eli/dir/2015/849/oj). No es que el banco sea curioso: verificar la identidad antes de abrir o mantener una cuenta es una obligación de cumplimiento normativo en la mayoría de sitios, y es una de las pocas peticiones de documento de esta serie de guías con una base legal firme detrás.
 
 ## Aquí el canal importa más de lo habitual
 
@@ -39,6 +39,16 @@ La mayoría de las verificaciones KYC legítimas se hacen a través de la **app 
 ## Qué necesita una verificación KYC oficial
 
 Los portales oficiales suelen estar diseñados para recoger el documento completo y sin censurar, porque el sistema de verificación está construido para cotejarlo con los datos que aportas (nombre, fecha de nacimiento, número de documento) y a veces para comparar tu cara con la foto. Censurar campos ahí puede hacer que la comprobación falle — es uno de los pocos casos de esta serie de guías en los que el documento completo, por el canal correcto, es de verdad lo que se necesita.
+
+## Portal oficial frente a una petición improvisada
+
+| | App o portal del banco | Correo, mensaje u otra petición improvisada |
+| --- | --- | --- |
+| **¿Es lo esperable?** | Sí: la verificación KYC está construida sobre él | Pocas veces; confírmalo por tu cuenta antes de enviar nada |
+| **¿Enviar el documento completo?** | Normalmente sí: censurarlo puede hacer que falle | No: envía una copia censurada y con marca de agua |
+| **Fecha de nacimiento** | Necesaria para cotejar nombre y fecha | También suele hacer falta; compruébalo antes de taparla |
+| **Número y MRZ** | Necesarios | Tápalos salvo que esa comprobación concreta los necesite |
+| **Marca de agua** | No aplica | Siempre, indicando la petición y la fecha |
 
 ## Si envías una copia fuera de ese sistema
 

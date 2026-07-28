@@ -30,7 +30,7 @@ Opening an account, or sometimes just keeping one open, a bank asks to verify yo
 
 ## Why banks ask: KYC and anti-money-laundering rules
 
-Financial institutions are generally required by law to know who their customers are — a set of checks usually called **KYC (know your customer)**, part of wider anti-money-laundering regulation. This isn't a bank being nosy; verifying identity before opening or maintaining an account is a compliance obligation in most places, and it's one of the few ID requests in this guide series with a hard legal basis behind it.
+Financial institutions are generally required by law to know who their customers are — a set of checks usually called **KYC (know your customer)**, part of wider [anti-money-laundering regulation](https://eur-lex.europa.eu/eli/dir/2015/849/oj). This isn't a bank being nosy; verifying identity before opening or maintaining an account is a compliance obligation in most places, and it's one of the few ID requests in this guide series with a hard legal basis behind it.
 
 ## The channel matters more than usual here
 
@@ -39,6 +39,16 @@ Most legitimate KYC verification happens through the bank's **own app or secure 
 ## What an official KYC upload needs
 
 Official portals are usually designed to capture the full, unredacted document, because the verification system is built to check it against the data you provide (name, date of birth, document number) and sometimes to match your face to the photo. Redacting fields there can cause the check to fail — this is one of the few cases in this guide series where the full document, through the right channel, is genuinely what's required.
+
+## Official portal versus an ad hoc request
+
+| | The bank's own app or portal | Email, message or other ad hoc request |
+| --- | --- | --- |
+| **Is it expected?** | Yes — the KYC check is built around it | Rarely; verify independently before sending anything |
+| **Send the full document?** | Usually yes — redacting can make the check fail | No — send a redacted, watermarked copy |
+| **Date of birth** | Required for name-and-date matching | Often required too; check before hiding it |
+| **Number and MRZ** | Required | Cover unless that specific check needs them |
+| **Watermark** | Not applicable | Always, naming the request and date |
 
 ## If you're sending a copy outside that system
 

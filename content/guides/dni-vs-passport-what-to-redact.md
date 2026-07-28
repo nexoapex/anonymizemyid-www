@@ -38,9 +38,21 @@ A passport's data page puts your photo, name, document number, dates and the [ma
 A Spanish DNI spreads the same categories of data across two sides:
 
 - **Front:** your photo, name, DNI number and date of birth.
-- **Back:** the machine-readable zone (three lines, same ICAO 9303 standard as a passport) and, on the electronic DNIe, a separate **support number** (*número de soporte*) — sometimes requested on its own for online identity checks.
+- **Back:** the machine-readable zone (three lines, same [ICAO 9303 standard](https://www.icao.int/publications/doc-series/doc-9303) as a passport) and, on the electronic DNIe, a separate **support number** (*número de soporte*) — sometimes requested on its own for online identity checks.
 
 That means a "safe copy" of a DNI is really two images, not one, and both need attention — a redacted front with an untouched back defeats the point, since the back's MRZ re-encodes the number and birth date anyway.
+
+## Where each field lives
+
+| Field | On a passport | On a DNI / NIE | Action |
+| --- | --- | --- | --- |
+| Photo | Data page | Front | **Keep** |
+| Name and surnames | Data page | Front | **Keep** |
+| Document number | Data page | Front | **Hide** |
+| Date of birth | Data page | Front | **Hide** |
+| Signature | Data page | Front | **Hide** |
+| Machine-readable zone | Two lines, foot of the data page | Three lines, back | **Hide** |
+| Support number (*número de soporte*) | — | Back | **Hide** |
 
 ## What to redact on each side
 

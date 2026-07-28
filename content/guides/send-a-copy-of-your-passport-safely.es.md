@@ -68,7 +68,10 @@ necesita la página entera. Necesita confirmar una cosa concreta.
 
 Nada de eso exige que tu número de pasaporte, tu zona de lectura mecánica o tu
 fecha de nacimiento queden guardados de forma permanente en sus archivos. Así que
-no se los des.
+no se los des: por el [principio de minimización de datos del RGPD](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
+(artículo 5.1.c), tampoco deberían pedir conservarlos.
+
+{{< fieldmap >}}
 
 ## Qué censurar antes de enviar
 

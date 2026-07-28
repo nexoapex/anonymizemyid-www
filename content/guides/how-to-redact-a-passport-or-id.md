@@ -44,6 +44,8 @@ faq:
 
 Redacting a document sounds technical, but it comes down to one idea: cover the fields a stranger could use to *be* you, and keep only the fields that prove you *are* you to the person asking. Get that split right and a copy of your passport or ID becomes almost useless to a fraudster while still doing its job.
 
+{{< fieldmap >}}
+
 ## What to hide
 
 These are the fields that do the damage if they leak. Cover every one of them:
