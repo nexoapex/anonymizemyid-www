@@ -16,5 +16,6 @@ These guides explain how to show a business what it actually needs to see while 
 | [A landlord or letting agent](/guides/landlord-asking-for-id-or-passport-copy/) | Name, photo, right to reside | Number, MRZ, date of birth, signature |
 | [A new employer](/guides/employer-asking-for-id-or-passport-copy/) | Name, photo, right-to-work status | Number, MRZ, signature |
 | [A car rental desk](/guides/car-rental-id-copy/) | Name, photo, licence details | Number, MRZ, signature |
+| [A short-term rental host](/guides/airbnb-host-asking-for-id/) | Name, photo, nationality | Number, MRZ, date of birth, signature |
 | [A bank, via its own KYC portal](/guides/bank-account-id-verification/) | The full document, through their system | Nothing — redacting can fail the check |
 

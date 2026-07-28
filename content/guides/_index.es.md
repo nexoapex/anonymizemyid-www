@@ -24,5 +24,6 @@ móvil.
 | [Un casero o una agencia](/es/guides/landlord-asking-for-id-or-passport-copy/) | Nombre, foto, derecho de residencia | Número, MRZ, fecha de nacimiento, firma |
 | [Una nueva empresa](/es/guides/employer-asking-for-id-or-passport-copy/) | Nombre, foto, situación laboral | Número, MRZ, firma |
 | [Un mostrador de alquiler de coches](/es/guides/car-rental-id-copy/) | Nombre, foto, datos del carné | Número, MRZ, firma |
+| [Un anfitrión de alquiler turístico](/es/guides/airbnb-host-asking-for-id/) | Nombre, foto, nacionalidad | Número, MRZ, fecha de nacimiento, firma |
 | [Un banco, por su portal KYC](/es/guides/bank-account-id-verification/) | El documento completo, por su sistema | Nada: censurarlo puede hacer que falle |
 
