@@ -67,7 +67,7 @@
   <aside class="author-card">
     <p class="author-name">{{ i18n "byline_by" }} <span class="muted">— {{ i18n "author_role" }}</span></p>
     <p class="muted small">{{ i18n "author_bio" }}</p>
-    <p class="small"><a href="{{ "about" | relLangURL }}">{{ i18n "author_more" }} →</a></p>
+    <p class="small"><a href="{{ with site.GetPage "/about" }}{{ .RelPermalink }}{{ end }}">{{ i18n "author_more" }} →</a></p>
   </aside>
 
   {{- /* "Keep reading": topically related guides first (see [related] in

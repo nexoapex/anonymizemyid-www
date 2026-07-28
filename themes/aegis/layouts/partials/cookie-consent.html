@@ -5,7 +5,8 @@
        direction is "no tracking", not "no banner". */ -}}
 <div id="amid-cookie-banner" class="cookie-banner" role="region" aria-label="{{ i18n "cookie_aria" }}" hidden>
   <div class="wrap cookie-banner-inner">
-    <p>{{ i18n "cookie_banner_body" }} <a href="{{ "/privacy" | relLangURL }}">{{ i18n "cookie_policy_link" }}</a></p>
+    {{/* .RelPermalink keeps the trailing slash; relLangURL would 301. */}}
+    <p>{{ i18n "cookie_banner_body" }} <a href="{{ with site.GetPage "/privacy" }}{{ .RelPermalink }}{{ end }}">{{ i18n "cookie_policy_link" }}</a></p>
     <div class="cookie-banner-actions">
       <button type="button" class="btn btn--ghost" data-cookie-action="reject">{{ i18n "cookie_reject" }}</button>
       <button type="button" class="btn" data-cookie-action="accept">{{ i18n "cookie_accept" }}</button>

@@ -149,7 +149,9 @@
     </div>
     <div>
       <h2>{{ i18n "privacy_title" }}</h2>
-      <p class="muted">{{ i18n "privacy_body" }} <a href="{{ "/privacy" | relLangURL }}">{{ i18n "privacy_read" }}</a></p>
+      {{/* .RelPermalink, not `"/privacy" | relLangURL`: the latter emits
+           /privacy with no trailing slash, which 301s on every hit. */}}
+      <p class="muted">{{ i18n "privacy_body" }} <a href="{{ with site.GetPage "/privacy" }}{{ .RelPermalink }}{{ end }}">{{ i18n "privacy_read" }}</a></p>
     </div>
   </div>
 </section>

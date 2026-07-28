@@ -51,8 +51,10 @@ img{max-width:100%; display:block}
 
 /* Language switcher (EN | ES segmented toggle) */
 .lang-switch{display:inline-flex; gap:2px; border:1px solid var(--border); border-radius:999px; padding:2px}
+/* min-height 24px: WCAG 2.2 AA target size. These pills were 20px tall. */
 .lang-switch a{font-size:.72rem; font-weight:700; letter-spacing:.03em; color:var(--text-2);
-  padding:4px 9px; border-radius:999px; line-height:1}
+  padding:4px 9px; border-radius:999px; line-height:1;
+  display:inline-flex; align-items:center; min-height:24px}
 .lang-switch a:hover{color:var(--text); text-decoration:none}
 .lang-switch a.is-current{background:var(--high); color:var(--text)}
 /* "App is in English for now" note */
@@ -174,7 +176,7 @@ details p{color:var(--text-2); margin:0 0 12px}
 /* Content pages */
 .page{padding:44px 0 70px; max-width:820px}
 .page-head{border-bottom:1px solid var(--border); padding-bottom:18px; margin-bottom:26px}
-.back{font-size:.85rem; font-weight:600}
+.back{font-size:.85rem; font-weight:600; display:inline-flex; align-items:center; min-height:24px}
 .page-head h1{font-size:clamp(1.8rem,4vw,2.6rem); margin:.4em 0 .1em}
 .prose{color:var(--text-2)}
 .prose h1,.prose h2,.prose h3,.prose h4{color:var(--text)}
@@ -192,6 +194,8 @@ details p{color:var(--text-2); margin:0 0 12px}
 .footer-brand{max-width:330px}
 .footer-brand .muted{margin-top:10px; font-size:.9rem}
 .footer-links{display:flex; flex-direction:column; gap:9px}
+/* Standalone nav targets, so they clear the WCAG 2.2 AA 24px minimum (were 23px). */
+.footer-links a,.footer-cookie-btn{display:inline-flex; align-items:center; min-height:24px}
 .footer-links a{color:var(--text-2); font-weight:600; font-size:.92rem}
 .footer-links a:hover{color:var(--text)}
 .footer-legal{margin-top:26px; border-top:1px solid var(--border); padding-top:18px; font-size:.8rem}
@@ -226,7 +230,7 @@ details p{color:var(--text-2); margin:0 0 12px}
 
 /* Breadcrumbs */
 .crumbs{font-size:.82rem; color:var(--muted); margin-bottom:14px; display:flex; flex-wrap:wrap; gap:8px; align-items:center}
-.crumbs a{color:var(--text-2)}
+.crumbs a{color:var(--text-2); display:inline-flex; align-items:center; min-height:24px}
 .crumbs a:hover{color:var(--text)}
 .crumbs span[aria-hidden]{color:var(--border)}
 
@@ -260,6 +264,7 @@ details p{color:var(--text-2); margin:0 0 12px}
 .author-card p{margin:0 0 .5em}
 .author-name{font-weight:700; color:var(--text)}
 .author-card .small:last-child{margin-bottom:0}
+.author-card a{display:inline-flex; align-items:center; min-height:24px}
 
 /* Comparison tables inside guide prose */
 .prose .table-wrap{overflow-x:auto; margin:1.5em 0; border:1px solid var(--border); border-radius:var(--radius)}
@@ -288,4 +293,4 @@ details p{color:var(--text-2); margin:0 0 12px}
 .related ul{list-style:none; padding:0; margin:0}
 .related li{padding:9px 0; border-top:1px solid var(--border)}
 .related li:first-child{border-top:0}
-.related a{color:var(--amber-bright); font-weight:600}
+.related a{color:var(--amber-bright); font-weight:600; display:inline-flex; align-items:center; min-height:24px}
