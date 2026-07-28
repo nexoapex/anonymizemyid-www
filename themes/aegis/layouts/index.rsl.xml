@@ -1,0 +1,24 @@
+{{- /* RSL 1.0 licensing document — https://rslstandard.org/rsl
+
+       Declares, in machine-readable form, what AI systems may do with this
+       site's content. This is a *declaration*, not an access control: it sits
+       alongside robots.txt (which stays open to every crawler) rather than
+       replacing it, so a crawler that ignores RSL is unaffected.
+
+       The terms are deliberately permissive — the whole point of this site's
+       GEO work is to be quoted — with `attribution` as the requested form of
+       payment: use it, cite it. To withdraw training rights later, drop
+       `ai-train` from the permits line below; nothing else needs to change. */ -}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<rsl xmlns="https://rslstandard.org/rsl">
+  <content url="{{ site.Home.Permalink }}" lastmod="{{ site.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+    <license>
+      <permits type="usage">search ai-input ai-train</permits>
+      <payment type="attribution"/>
+    </license>
+    {{- /* Real page permalinks (with their trailing slash), not `"terms" |
+           absLangURL`, which would emit a URL that 301s. */}}
+    <copyright type="organization" contactUrl="{{ with site.GetPage "/contact" }}{{ .Permalink }}{{ end }}">{{ site.Params.company }}</copyright>
+    <terms>{{ with site.GetPage "/terms" }}{{ .Permalink }}{{ end }}</terms>
+  </content>
+</rsl>

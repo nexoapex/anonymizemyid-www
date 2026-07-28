@@ -8,4 +8,9 @@ User-agent: {{ . }}
 Allow: /
 
 {{ end -}}
+{{- /* RSL 1.0 licensing terms (see layouts/index.rsl.xml). The Allow rules
+       above stay fully open — this only tells crawlers that understand RSL what
+       the terms of use are, it does not gate anything. */ -}}
+
+License: {{ "license.xml" | absURL }}
 Sitemap: {{ "sitemap.xml" | absURL }}

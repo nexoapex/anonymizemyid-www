@@ -4,7 +4,7 @@ subtitle: "What onboarding actually requires — and how to send a copy that sti
 description: "New employers often ask for ID during onboarding. Here's what's normal, what to redact, and how to send a safe copy of your passport or ID."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 8
+weight: 11
 keywords:
   - "employers"
   - "onboarding"

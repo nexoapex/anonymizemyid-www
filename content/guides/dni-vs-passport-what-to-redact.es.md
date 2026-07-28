@@ -4,7 +4,7 @@ subtitle: "Mismo principio, formato distinto — dónde están los datos sensibl
 description: "El DNI y el pasaporte ocultan campos distintos en sitios distintos. Esto es lo que tapar en cada uno antes de compartir una copia."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 12
+weight: 7
 keywords:
   - "DNI"
   - "NIE"

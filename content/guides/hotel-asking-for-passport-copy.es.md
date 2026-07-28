@@ -4,7 +4,7 @@ subtitle: "Qué es lo normal, cuáles son tus derechos y cómo entregar una copi
 description: "Los hoteles pueden estar obligados por ley a registrar a los huéspedes, pero puedes darles una copia censurada en lugar de la completa sin editar."
 date: 2026-06-29
 lastmod: 2026-06-29
-weight: 5
+weight: 8
 keywords:
   - "hoteles"
   - "viajes"

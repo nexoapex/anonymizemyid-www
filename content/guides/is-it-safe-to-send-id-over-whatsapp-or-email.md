@@ -4,7 +4,7 @@ subtitle: "What really happens to the image after you hit send — and the safer
 description: "WhatsApp and email aren't built to protect your ID. Here's what happens to the image after you hit send, and the safer way to share it."
 date: 2026-06-28
 lastmod: 2026-06-28
-weight: 7
+weight: 14
 keywords:
   - "WhatsApp"
   - "email"

@@ -130,10 +130,11 @@ defaultContentLanguageInSubdir = false
     name = "date"
     weight = 10
 
-# Extra machine-readable home-page outputs for GEO / LLMs: /llms.txt and
-# /llms-full.txt, alongside the usual HTML + RSS. Generated per language.
+# Extra machine-readable home-page outputs for GEO / LLMs: /llms.txt,
+# /llms-full.txt and /license.xml, alongside the usual HTML + RSS. Generated
+# per language.
 [outputs]
-  home = ["HTML", "RSS", "LLMS", "LLMSFULL"]
+  home = ["HTML", "RSS", "LLMS", "LLMSFULL", "RSL"]
 
 [outputFormats.LLMS]
   mediaType = "text/plain"
@@ -144,3 +145,16 @@ defaultContentLanguageInSubdir = false
   mediaType = "text/plain"
   baseName = "llms-full"
   isPlainText = true
+
+# RSL 1.0 (rslstandard.org) — machine-readable AI licensing terms. Purely
+# declarative: robots.txt still says `Allow: /` for every crawler, so anything
+# that does not understand RSL behaves exactly as it did before. The terms we
+# publish permit search, AI answer use and training, and ask for attribution —
+# consistent with a public marketing site that wants to be cited.
+[mediaTypes."application/rsl+xml"]
+  suffixes = ["xml"]
+
+[outputFormats.RSL]
+  mediaType = "application/rsl+xml"
+  baseName = "license"
+  rel = "license"

@@ -4,7 +4,7 @@ subtitle: "The step that decides what a leaked copy is worth to anyone who finds
 description: "A watermark ties an ID copy to one recipient and one purpose. What to write, where to put it, and why a tiled watermark beats a corner stamp."
 date: 2026-07-28
 lastmod: 2026-07-28
-weight: 15
+weight: 3
 keywords:
   - "watermark"
   - "redaction"

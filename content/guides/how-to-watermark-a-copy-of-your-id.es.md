@@ -4,7 +4,7 @@ subtitle: "El paso que decide cuánto vale una copia filtrada para quien la encu
 description: "Una marca de agua ata la copia a un destinatario y a un uso. Qué escribir, dónde ponerla y por qué una marca en mosaico gana a un sello en la esquina."
 date: 2026-07-28
 lastmod: 2026-07-28
-weight: 15
+weight: 3
 keywords:
   - "marca de agua"
   - "censurar"

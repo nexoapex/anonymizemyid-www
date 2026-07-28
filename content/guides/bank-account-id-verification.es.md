@@ -4,7 +4,7 @@ subtitle: "La diferencia entre una verificación KYC oficial y una copia pedida 
 description: "Los bancos necesitan verificar tu identidad, pero no todas las peticiones son iguales. Esto es lo normal en una verificación KYC y qué censurar cuando no lo es."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 10
+weight: 12
 keywords:
   - "bancos"
   - "KYC"

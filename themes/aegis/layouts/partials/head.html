@@ -96,6 +96,10 @@ document.addEventListener("click",function(e){var t=e.target;while(t&&t.nodeType
 <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 {{- with .OutputFormats.Get "RSS" }}
 <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
+{{- /* RSL 1.0 AI-licensing terms, discoverable from the page as well as from
+       robots.txt and the HTTP Link header. */ -}}
+{{- with site.Home.OutputFormats.Get "RSL" }}
+<link rel="license" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">{{ end }}
 {{- /* No preconnect/dns-prefetch to Google here on purpose: until consent is
        granted we make zero contact with Google, not even a DNS hint. */ -}}
 

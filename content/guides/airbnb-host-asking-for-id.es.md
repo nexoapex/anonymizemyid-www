@@ -4,7 +4,7 @@ subtitle: "Por qué la verificación de la plataforma y un mensaje privado del a
 description: "Los anfitriones de alquiler turístico suelen pedir el DNI por el chat. Qué verifica ya la plataforma, qué exige la ley y qué conviene enviar en su lugar."
 date: 2026-07-28
 lastmod: 2026-07-28
-weight: 16
+weight: 9
 keywords:
   - "alquiler turístico"
   - "viajes"

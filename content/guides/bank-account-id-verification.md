@@ -4,7 +4,7 @@ subtitle: "The difference between an official KYC upload and an ad hoc emailed c
 description: "Banks need to verify your identity, but not every ID request is the same. Here's what's normal for KYC checks and what to redact when it isn't."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 10
+weight: 12
 keywords:
   - "banks"
   - "KYC"

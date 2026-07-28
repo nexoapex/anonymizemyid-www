@@ -64,6 +64,25 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# RSL 1.0 licensing terms at the protocol level, so a crawler that fetches an
+# asset without ever reading robots.txt or the HTML still sees them.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = '<https://anonymizemyid.com/license.xml>; rel="license"; type="application/rsl+xml"'
+
+# The RSL document itself needs its registered media type, which Netlify does
+# not know about.
+[[headers]]
+  for = "/license.xml"
+  [headers.values]
+    Content-Type = "application/rsl+xml; charset=utf-8"
+
+[[headers]]
+  for = "/es/license.xml"
+  [headers.values]
+    Content-Type = "application/rsl+xml; charset=utf-8"
+
 # Serve the web app manifest with the correct content type.
 [[headers]]
   for = "/site.webmanifest"

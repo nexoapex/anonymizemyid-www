@@ -4,7 +4,7 @@ subtitle: "Qué necesitan ver de verdad las agencias e inmobiliarias — y cómo
 description: "Caseros y agencias suelen pedir el DNI al verificar inquilinos. Esto es lo normal, qué censurar y cómo enviar una copia segura."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 6
+weight: 10
 keywords:
   - "caseros"
   - "alquiler"

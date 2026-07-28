@@ -4,7 +4,7 @@ subtitle: "What's normal, what your rights are, and how to hand over a copy you 
 description: "Hotels can be legally required to register guests, but you can give them a redacted copy instead of the full, unedited one."
 date: 2026-06-29
 lastmod: 2026-06-29
-weight: 5
+weight: 8
 keywords:
   - "hotels"
   - "travel"

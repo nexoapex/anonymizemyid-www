@@ -4,7 +4,7 @@ subtitle: "Qué necesita de verdad la incorporación — y cómo enviar una copi
 description: "Las nuevas empresas suelen pedir el DNI al incorporarte. Esto es lo normal, qué censurar y cómo enviar una copia segura de tu documento."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 8
+weight: 11
 keywords:
   - "empresas"
   - "incorporación"

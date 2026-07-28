@@ -4,7 +4,7 @@ subtitle: "What the counter actually needs alongside your driving licence — an
 description: "Car rental desks often photocopy your ID or passport alongside your licence. Here's what's normal, what to redact, and how to share it safely."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 11
+weight: 13
 keywords:
   - "car rental"
   - "travel"
