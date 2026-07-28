@@ -25,10 +25,16 @@ content/             _index, privacy, terms, imprint, about, contact (+ .es.md)
 content/guides/      SEO/GEO content hub — _index + one Markdown file per guide (+ .es.md)
 themes/aegis/        layouts + assets/css (the theme)
   layouts/guides/    list.html (hub) + single.html (article) templates
+  layouts/index.rsl.xml    RSL 1.0 AI-licensing terms -> /license.xml
+  layouts/sitemap.xml      overrides Hugo's built-in template to add x-default
+  layouts/_markup/render-table.html   wraps markdown tables for mobile scroll
+  layouts/shortcodes/fieldmap.html    the passport field-map diagram
   partials/home-faq.html   single source for the home FAQ (page + schema, per language)
   partials/lang-switch.html   EN|ES switcher; head.html carries the redirect script
-static/images/       favicon, og image, screenshots
-netlify.toml         Netlify build settings
+assets/images/og/    per-guide social cards (see scripts/og-card.py)
+static/images/       favicon, shared og image, screenshots
+scripts/             audit + verification tooling (see "Verify & audit")
+netlify.toml         Netlify build settings, security headers, CSP
 ```
 
 ## Configure
@@ -72,23 +78,53 @@ answer engines:
 
 - **`sitemap.xml`** + **`robots.txt`** — `robots.txt` explicitly welcomes AI
   crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot, …) and
-  points at the sitemap.
+  points at the sitemap and the licence.
 - **JSON-LD structured data** (`themes/aegis/layouts/partials/structured-data.html`)
-  — `Organization` + `WebSite` everywhere; `SoftwareApplication` (iOS + Android)
-  + `FAQPage` on the home page; `Article` + `BreadcrumbList` on each guide, with
-  an optional `FAQPage` and `HowTo` driven by that guide's front matter
-  (`faq:` / `howto:`); `WebPage` / `CollectionPage` on the other inner pages.
+  — `Organization` (with `sameAs`, `contactPoint`, `ImageObject` logo) + `WebSite`
+  everywhere; `SoftwareApplication` with an `AggregateOffer` over the real
+  0–4 € range + `FAQPage` on the home page; `Article` + `BreadcrumbList` +
+  `Person` on each guide, with optional `FAQPage` / `HowTo` from that guide's
+  front matter; an `ItemList` of every guide on the hub; and the specific
+  `AboutPage` / `ContactPage` / `PrivacyPolicy` / `TermsOfService` subtypes
+  rather than a generic `WebPage`.
+- **Short-answer blocks** — every guide carries `answer:` and `takeaways:` front
+  matter, rendered above the fold as a "Short answer" card and published three
+  ways: on the page, as `Article.abstract`, and into `llms.txt` /
+  `llms-full.txt`. This is the passage an AI answer engine is meant to quote,
+  so it is written deliberately rather than left to be summarised out of prose.
 - **Content hub for SEO/GEO** (`content/guides/`) — plain-English guides written
-  for high-intent queries and answer engines: clear question headings, concise
-  citable passages, per-article FAQs, and internal links to the app and siblings.
+  for high-intent queries and answer engines: question headings, comparison
+  tables, per-article FAQs, claims linked to primary sources (ICAO 9303, GDPR,
+  the EU AML directive, BOE), and a field-map diagram (`{{< fieldmap >}}`).
+- **Internal linking** — the "Keep reading" block uses Hugo's `[related]` index
+  over each guide's `keywords:`, topped up from the rest of the hub rotated by
+  the page's own weight. Before that it linked the same three guides from every
+  page, so link equity pooled in three URLs.
+- **Author E-E-A-T** — a named `Person` (`url`, `jobTitle`, `description`,
+  `knowsAbout`, `sameAs`) plus a visible author card on every guide.
 - **`hreflang`** alternates in the `<head>` for every page (`en`, `es`, and
-  `x-default` → English), plus per-language `og:locale` / `og:locale:alternate`.
+  `x-default` → English), plus per-language `og:locale` / `og:locale:alternate`,
+  mirrored as `xhtml:link` alternates in the sitemaps.
 - **`llms.txt`** + **`llms-full.txt`** — generated per language (`/llms.txt`,
-  `/es/llms.txt`, …) from the live content via Hugo output formats; `llms.txt`
-  lists the guides in their own section.
+  `/es/llms.txt`, …) from the live content via Hugo output formats; both carry
+  each guide's short answer, so an agent that only fetches `llms.txt` still
+  gets the answer rather than a bare description.
+- **`license.xml`** — [RSL 1.0](https://rslstandard.org/rsl) AI-licensing terms,
+  permitting `search ai-input ai-train` with `payment type="attribution"`.
+  Purely declarative and additive: `robots.txt` stays `Allow: /`, so a crawler
+  that does not speak RSL is unaffected. Discoverable three ways (a `License:`
+  directive in `robots.txt`, `<link rel="license">` in the head, and an HTTP
+  `Link:` header). **To withdraw training rights, delete `ai-train` from the one
+  `<permits>` line in `layouts/index.rsl.xml`** — nothing else changes.
 - **Sitemaps** — a sitemap index at `/sitemap.xml` referencing the per-language
   `/en/sitemap.xml` and `/es/sitemap.xml`; `robots.txt` points at the index.
-- **Open Graph + Twitter** cards using `static/images/og.png` (1200×630).
+  `layouts/sitemap.xml` overrides Hugo's built-in template to add `x-default`.
+- **Open Graph + Twitter** cards — a generated per-guide card
+  (`assets/images/og/<slug>[.es].png`, see `scripts/og-card.py`), falling back
+  to the shared `static/images/og.png` (1200×630). Guides emit `og:type=article`
+  with `article:published_time` / `modified_time` / `author` / `section` / `tag`.
+- **IndexNow** — `static/f6ac9814062bc1ee81990d078bb1e23f.txt` is the key file.
+  Covers Bing, Yandex and Copilot; Google does not participate.
 - **Icons & PWA** — `favicon.svg`, `favicon.ico`, 16/32 px PNGs,
   `apple-touch-icon.png`, `icon-192/512.png` and `site.webmanifest` (generated
   from the brand mark with `rsvg-convert`).
@@ -100,10 +136,50 @@ answer engines:
 > page and its structured data can't drift. Each guide's own FAQ works the same
 > way, from its `faq:` front matter.
 >
-> **New guide?** Add `content/guides/<slug>.md` with `title`, `description`,
-> `date`/`lastmod`, and optional `faq:` / `howto:` front matter. It is picked up
-> automatically by the hub, the home teaser, the sitemap, `llms.txt` and the
-> Article/FAQ/HowTo structured data — no template changes needed.
+> **New guide?** Add `content/guides/<slug>.md` **and `<slug>.es.md`** with
+> `title`, `description`, `date`/`lastmod`, `weight`, `keywords`, `answer`,
+> `takeaways`, and optional `faq:` / `howto:`. The hub, home teaser, sitemap,
+> `llms.txt`, related-content index and Article/FAQ/HowTo structured data all
+> pick it up with no template changes. Two things do **not** happen by
+> themselves: run `python3 scripts/og-card.py <slug>` for its social card
+> (otherwise it falls back to the generic one), and give it a `weight` — guides
+> are ordered by weight, not by date.
+>
+> If the guide's body already opens with its own "Short answer:" line, rewrite
+> that opening — the `answer:` card now sits directly above it.
+
+## Verify & audit
+
+Four scripts, all standalone (`scripts/verify.py` and `scripts/og-card.py` need
+`pip install playwright && playwright install chromium`):
+
+```bash
+hugo --gc --minify
+python3 scripts/audit.py            # static SEO audit; exits non-zero on any issue
+python3 scripts/verify.py           # loads ./public in real Chromium under the prod headers
+python3 scripts/verify.py --live    # same, against https://anonymizemyid.com
+python3 scripts/csp-hashes.py --write   # recompute the CSP hashes after a CSS/inline-JS change
+python3 scripts/og-card.py --all    # generate any missing per-guide OG cards
+```
+
+**Read this before touching `main.css`, `partials/head.html`,
+`partials/cookie-consent.html` or `assets/js/consent.js`:**
+
+- The **CSP is hash-based**, because Netlify headers are static and cannot carry
+  a per-request nonce. It only works because every inline `<style>`/`<script>`
+  is byte-identical on every page. Change the CSS or the inline redirect script
+  and the hash changes — a stale hash means the browser **silently blocks** the
+  stylesheet in production, with no build error. `scripts/csp-hashes.py` asserts
+  the invariant (exactly one distinct hash of each kind) and updates
+  `netlify.toml`. A *new* inline `<script>` is a *new* hash, not a swap.
+  Never use a `style="..."` attribute — it is blocked the same way.
+- **Google Analytics must make zero network contact before consent.** It is
+  injected only by `assets/js/consent.js` after an explicit Accept; nothing
+  Google-shaped may go back into static markup. `scripts/verify.py` asserts this
+  on every page it loads.
+- Build internal links from the page's own `.RelPermalink`, never
+  `"/privacy" | relLangURL` — the latter drops the trailing slash and every hit
+  then 301s. `scripts/audit.py` catches this.
 
 ## Deploy (Netlify, free tier)
 
