@@ -143,6 +143,26 @@ def main():
                 .map(el => (el.innerText || el.tagName).trim().slice(0, 30))""")
             notes += [f"tap target under 24px: {t}" for t in small]
 
+            # Structural a11y that also happens to be structural SEO. Each of
+            # these was verified clean when added, so a hit means a regression.
+            if not page.evaluate("document.documentElement.lang"):
+                notes.append("no lang on <html>")
+            if page.locator("main").count() != 1:
+                notes.append(f"main landmark x{page.locator('main').count()}")
+            if page.locator("a.skip-link").count() != 1:
+                notes.append("no skip link (WCAG 2.4.1)")
+            no_th = page.evaluate(
+                "() => [...document.querySelectorAll('table')]"
+                ".filter(t => !t.querySelector('th')).length")
+            if no_th:
+                notes.append(f"{no_th} table(s) with no <th>")
+            unlabelled = page.evaluate(
+                "() => [...document.querySelectorAll('input,select,textarea')]"
+                ".filter(e => e.type !== 'hidden' && !e.labels?.length"
+                " && !e.getAttribute('aria-label')).length")
+            if unlabelled:
+                notes.append(f"{unlabelled} unlabelled form control(s)")
+
             bad = violations or errors or google or failed or notes
             print(f"{'FAIL' if bad else 'ok  '} {path}")
             for label, items in (("csp", violations), ("console", errors),

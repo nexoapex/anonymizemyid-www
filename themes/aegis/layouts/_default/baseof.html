@@ -4,8 +4,14 @@
   {{ partial "head.html" . }}
 </head>
 <body>
+  {{- /* WCAG 2.4.1 Bypass Blocks (Level A): a keyboard or screen-reader user
+         should not have to walk the header and language switcher on every
+         page. Visually hidden until focused — see .skip-link in main.css. It
+         is the first focusable thing in the document, so it must stay above
+         the header partial. */ -}}
+  <a class="skip-link" href="#top">{{ i18n "skip_to_content" }}</a>
   {{ partial "header.html" . }}
-  <main id="top">
+  <main id="top" tabindex="-1">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}

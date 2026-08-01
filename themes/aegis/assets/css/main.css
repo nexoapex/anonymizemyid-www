@@ -18,6 +18,18 @@ body{
 }
 a{color:var(--amber-bright); text-decoration:none}
 a:hover{text-decoration:underline}
+/* Skip link (WCAG 2.4.1). Off-screen rather than display:none, so it stays in
+   the tab order and is announced; it lands in the top-left on focus. The
+   48px min-height keeps it clear of the 24px target-size floor that
+   scripts/verify.py enforces. */
+.skip-link{
+  position:absolute; left:-9999px; top:0; z-index:100;
+  display:inline-flex; align-items:center; min-height:48px;
+  padding:0 20px; border-radius:0 0 var(--radius) 0;
+  background:var(--amber); color:var(--ink); font-weight:700;
+}
+.skip-link:focus{left:0; text-decoration:none}
+main:focus{outline:none}
 /* Inline links within body copy must not rely on colour alone (a11y). */
 p a{text-decoration:underline}
 h1,h2,h3{line-height:1.12; letter-spacing:-.02em; margin:0 0 .4em}

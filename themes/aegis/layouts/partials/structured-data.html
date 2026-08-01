@@ -66,9 +66,10 @@
          the page: hardcoding en-US contradicted the Spanish name/description
          sitting beside it in the same graph.
 
-         No `screenshot` property until there are real in-app screenshots under
-         static/images — the OG card is a social banner, and passing one off as
-         a screenshot is what gets app rich results demoted.
+         `screenshot` points at the real app captures in assets/images/screens
+         (the same ones the home page shows), never at the OG card — that is a
+         social banner, and passing one off as a screenshot is what gets app
+         rich results demoted.
 
          Free to install with a one-time Pro unlock, so the offer is an
          AggregateOffer over the real range rather than a single "price 0" that
@@ -101,6 +102,17 @@
           (dict "@type" "Offer" "name" "Pro" "price" "4" "priceCurrency" "EUR" "availability" "https://schema.org/InStock"
                 "description" site.Params.priceDisclaimer)))
   -}}
+  {{- $shots := slice -}}
+  {{- range slice "app-home.png" "before.jpg" "after-free.jpg" "after-pro.jpg" -}}
+    {{- with resources.Get (printf "images/screens/%s" .) -}}
+      {{- $shots = $shots | append (dict
+          "@type" "ImageObject"
+          "url" (.RelPermalink | absURL)
+          "width" .Width
+          "height" .Height) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $shots }}{{ $app = merge $app (dict "screenshot" .) }}{{ end -}}
   {{- $faqItems := slice -}}
   {{- range (partial "home-faq.html" .) -}}
     {{- $faqItems = $faqItems | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) -}}
