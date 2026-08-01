@@ -26,6 +26,7 @@ import argparse, functools, http.server, pathlib, re, socketserver, sys, threadi
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
 PORT = 8899
+RELATED_LINKS = 5
 
 PATHS = [
     "/", "/es/", "/guides/", "/es/guides/",
@@ -109,8 +110,11 @@ def main():
                     notes.append("missing the short-answer block")
                 if page.locator(".takeaways li").count() < 3:
                     notes.append("fewer than 3 takeaways")
-                if page.locator("nav.related li").count() != 4:
-                    notes.append("related links != 4")
+                # 4 topical (Hugo's [related] index) + 1 reserved rotation slot
+                # that guarantees the low-overlap guides still get linked; see
+                # layouts/guides/single.html.
+                if page.locator("nav.related li").count() != RELATED_LINKS:
+                    notes.append(f"related links != {RELATED_LINKS}")
                 if page.locator(".author-card").count() != 1:
                     notes.append("missing the author card")
             if page.locator("h1").count() != 1:

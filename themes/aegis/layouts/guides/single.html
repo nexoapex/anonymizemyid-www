@@ -73,10 +73,19 @@
   {{- /* "Keep reading": topically related guides first (see [related] in
          hugo.toml), then topped up from the rest of the hub — rotated by this
          page's own weight, so the top-up spreads across every guide rather
-         than pointing the whole site at the same three. */ -}}
+         than pointing the whole site at the same three.
+
+         A fifth slot is *reserved* for the rotation. With four slots the
+         top-up almost never ran, because keyword overlap across the hub is
+         high: the guides holding the common keywords ("redaction",
+         "passport") collected 17-18 inbound links while the distinctive ones
+         — bank/KYC, hotel, employer — sat on 3, and those are the pages with
+         the clearest commercial intent. Reserving one of the four instead of
+         adding a fifth was tried and is worse: it redistributes nothing and
+         costs every page a topical link (mean inbound 8.0 -> 7.0). */ -}}
   {{- $pool := where (where site.RegularPages "Section" "guides") "Permalink" "!=" .Permalink -}}
-  {{- $want := 4 -}}
-  {{- $related := first $want ($pool.Related .) -}}
+  {{- $want := 5 -}}
+  {{- $related := first (sub $want 1) ($pool.Related .) -}}
   {{- $seen := slice -}}
   {{- range $related }}{{ $seen = $seen | append .RelPermalink }}{{ end -}}
   {{- if lt (len $related) $want -}}
