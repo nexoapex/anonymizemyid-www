@@ -96,15 +96,34 @@ answer engines:
   for high-intent queries and answer engines: question headings, comparison
   tables, per-article FAQs, claims linked to primary sources (ICAO 9303, GDPR,
   the EU AML directive, BOE), and a field-map diagram (`{{< fieldmap >}}`).
-- **Internal linking** — the "Keep reading" block uses Hugo's `[related]` index
-  over each guide's `keywords:`, topped up from the rest of the hub rotated by
-  the page's own weight. Before that it linked the same three guides from every
-  page, so link equity pooled in three URLs.
+- **Internal linking** — the "Keep reading" block shows **five**: four from
+  Hugo's `[related]` index over each guide's `keywords:`, plus **one reserved
+  slot** filled from the rest of the hub rotated by the page's own weight.
+  Keyword overlap is high enough that `[related]` used to fill every slot, so
+  the rotation never ran and inbound links spread 3–18, starving the
+  highest-intent pages (bank/KYC, hotel, employer). Reserving one of the four
+  instead of adding a fifth is worse — it redistributes nothing and costs every
+  page a topical link. Now 5–19, mean 8.9.
+- **`Article.citation`** — the external primary sources are read out of each
+  guide's *rendered body* (`findRE` over `.Content`, own-domain links dropped),
+  so the provenance an answer engine sees cannot drift from the links actually
+  in the prose. Adding a source to a guide is all it takes.
+- **`Article.about`** — entity grounding. Each guide's existing (translated)
+  `keywords:` are mapped to `Thing`s with a `sameAs` pointing at a canonical
+  description, so an engine ties the page to an entity it already holds instead
+  of resolving a bag of strings. Scenario guides whose keywords are situational
+  ("landlords", "hosts") take the baseline *Identity document* entity rather
+  than a stretched one.
 - **Author E-E-A-T** — a named `Person` (`url`, `jobTitle`, `description`,
   `knowsAbout`, `sameAs`) plus a visible author card on every guide.
 - **`hreflang`** alternates in the `<head>` for every page (`en`, `es`, and
   `x-default` → English), plus per-language `og:locale` / `og:locale:alternate`,
   mirrored as `xhtml:link` alternates in the sitemaps.
+- **Spanish slugs** — every `.es.md` guide sets `slug:`, so Spanish pages live
+  at `/es/guides/como-censurar-un-pasaporte-o-dni/` rather than the English
+  path. `netlify.toml` 301s every old `/es/` URL. Translations still pair by
+  filename, so `hreflang` and the OG cards are unaffected. **Adding a Spanish
+  guide means adding a `slug:`** — and if you ever rename one, add the 301.
 - **`llms.txt`** + **`llms-full.txt`** — generated per language (`/llms.txt`,
   `/es/llms.txt`, …) from the live content via Hugo output formats; both carry
   each guide's short answer, so an agent that only fetches `llms.txt` still
