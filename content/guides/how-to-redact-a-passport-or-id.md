@@ -3,7 +3,7 @@ title: "How to redact a passport or ID card (and what to hide)"
 subtitle: "Exactly which fields to cover, which to keep, and how to do it in a minute."
 description: "A step-by-step guide to redacting a passport or ID card: hide the document number, machine-readable zone, date of birth and signature, and add a watermark."
 date: 2026-06-30
-lastmod: 2026-06-30
+lastmod: 2026-08-01
 weight: 2
 keywords:
   - "redaction"
@@ -51,7 +51,7 @@ Redacting a document sounds technical, but it comes down to one idea: cover the 
 These are the fields that do the damage if they leak. Cover every one of them:
 
 - **The document number** — passport number, DNI/NIE number, or ID card number.
-- **[The machine-readable zone (MRZ)]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — the two lines of `<<<` characters at the bottom of a passport, or the code block on the back of an ID card. It re-encodes the number, your date of birth and expiry, so hiding the number alone is not enough.
+- **[The machine-readable zone (MRZ)]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — the two lines of `<<<` characters at the bottom of a passport, or the code block on the back of an ID card. Its layout is fixed by [ICAO Document 9303](https://www.icao.int/publications/doc-series/doc-9303), a public standard, so anything that can read one passport can read yours. It re-encodes the number, your date of birth and expiry, so hiding the number alone is not enough.
 - **Date and place of birth.**
 - **Your signature.**
 - **The support / CAN number** on the back of many national ID cards, and any **parents' names** printed there.
@@ -69,6 +69,6 @@ When in doubt, hide it. It is far easier to send a second, less-redacted copy th
 
 ## A note on blur versus solid bars
 
-Not all redaction is equal. A **solid bar** removes the pixels entirely and cannot be reversed. Heavy **blur** or light **pixelation** can, in some cases, be undone by software — so keep those for low-stakes areas and use solid bars over the number and MRZ. Whatever you use, flatten the result into a new image; never send an editable file with removable layers on top.
+Not all redaction is equal. A **solid bar** removes the pixels entirely and cannot be reversed. Heavy **blur** or light **pixelation** can, in some cases, be undone by software: researchers at Cornell Tech and UT Austin showed in [*Defeating Image Obfuscation with Deep Learning*](https://arxiv.org/abs/1609.00408) that a neural network can read faces, objects and digits back out of both mosaiced and blurred images. Keep those techniques for low-stakes areas and use solid bars over the number and MRZ. Whatever you use, flatten the result into a new image; never send an editable file with removable layers on top.
 
 The steps below walk through the whole process. [Anonymize my ID](/#get) does each one on your phone, offline, in about a minute — but the sequence is the same whichever tool you use.

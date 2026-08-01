@@ -3,7 +3,7 @@ title: "Cómo censurar un pasaporte o DNI (y qué ocultar)"
 subtitle: "Qué campos tapar exactamente, cuáles dejar y cómo hacerlo en un minuto."
 description: "Guía paso a paso para censurar un pasaporte o DNI: oculta el número, la zona de lectura mecánica, la fecha de nacimiento y la firma, y añade una marca de agua."
 date: 2026-06-30
-lastmod: 2026-06-30
+lastmod: 2026-08-01
 weight: 2
 keywords:
   - "censurar"
@@ -55,7 +55,7 @@ cumpliendo su función.
 Estos son los campos que hacen daño si se filtran. Tápalos todos:
 
 - **El número de documento** — número de pasaporte, número de DNI/NIE o número de tarjeta de identidad.
-- **[La zona de lectura mecánica (MRZ)]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — las dos líneas de caracteres `<<<` de la parte inferior de un pasaporte, o el bloque de código del reverso de un DNI. Vuelve a codificar el número, tu fecha de nacimiento y la caducidad, así que ocultar solo el número no basta.
+- **[La zona de lectura mecánica (MRZ)]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — las dos líneas de caracteres `<<<` de la parte inferior de un pasaporte, o el bloque de código del reverso de un DNI. Su formato lo fija el [Documento 9303 de la OACI](https://www.icao.int/publications/doc-series/doc-9303), un estándar público, así que cualquier cosa capaz de leer un pasaporte puede leer el tuyo. Vuelve a codificar el número, tu fecha de nacimiento y la caducidad, así que ocultar solo el número no basta.
 - **Fecha y lugar de nacimiento.**
 - **Tu firma.**
 - **El número de soporte / CAN** del reverso de muchos documentos de identidad, y los **nombres de los progenitores** que a veces figuran.
@@ -76,7 +76,11 @@ censurada que recuperar una que enseñó de más.
 
 No toda censura es igual. Una **barra sólida** elimina los píxeles por completo y
 no se puede revertir. Un **desenfoque** fuerte o un **pixelado** ligero, en
-algunos casos, pueden deshacerse por software — así que resérvalos para zonas de
+algunos casos, pueden deshacerse por software: investigadores de Cornell Tech y
+la Universidad de Texas en Austin demostraron en
+[*Defeating Image Obfuscation with Deep Learning*](https://arxiv.org/abs/1609.00408)
+que una red neuronal puede volver a leer caras, objetos y cifras tanto en
+imágenes pixeladas como desenfocadas. Resérvalos para zonas de
 bajo riesgo y usa barras sólidas sobre el número y la MRZ. Uses lo que uses,
 aplana el resultado en una imagen nueva; nunca envíes un archivo editable con
 capas que se puedan quitar por encima.

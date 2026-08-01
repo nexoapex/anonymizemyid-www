@@ -3,7 +3,7 @@ title: "Cómo enviar una copia de tu pasaporte de forma segura"
 subtitle: "Enseña lo que un hotel, una oficina de visados o una empresa necesitan — y oculta el resto."
 description: "La forma segura de enviar una copia del pasaporte: censura el número, la zona de lectura mecánica, la fecha de nacimiento y la firma, y añade una marca de agua."
 date: 2026-07-01
-lastmod: 2026-07-01
+lastmod: 2026-08-01
 weight: 1
 keywords:
   - "pasaporte"
@@ -44,7 +44,10 @@ La página de datos de un pasaporte es un paquete compacto de todo lo que un
 ladrón de identidad quiere. El número de pasaporte y la **zona de lectura
 mecánica** — las dos líneas de caracteres `<` de la parte inferior — codifican tu
 número de documento, tu nacionalidad, tu fecha de nacimiento y la caducidad en un
-formato que se copia sin esfuerzo. Añade tu fecha de nacimiento y tu firma,
+formato que se copia sin esfuerzo. Ese formato no tiene nada de oscuro: es el
+[Documento 9303 de la OACI](https://www.icao.int/publications/doc-series/doc-9303),
+un estándar internacional público, y por eso cualquier lector del mundo sabe
+interpretarlo sin que nadie se lo explique. Añade tu fecha de nacimiento y tu firma,
 impresas en la misma página, y un defraudador tiene lo suficiente para abrir
 cuentas, pedir crédito o falsificar un documento a tu nombre.
 

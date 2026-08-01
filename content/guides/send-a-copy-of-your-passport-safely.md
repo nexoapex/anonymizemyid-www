@@ -3,7 +3,7 @@ title: "How to send a copy of your passport safely"
 subtitle: "Show what a hotel, visa office or employer needs — and hide the rest."
 description: "The safe way to send a passport copy: redact the passport number, machine-readable zone, date of birth and signature, and add a watermark."
 date: 2026-07-01
-lastmod: 2026-07-01
+lastmod: 2026-08-01
 weight: 1
 keywords:
   - "passport"
@@ -33,7 +33,7 @@ You do not have to choose between cooperating and protecting yourself. The trick
 
 ## Why a plain photo of your passport is dangerous
 
-A passport data page is a compact bundle of everything an identity thief wants. The passport number and the **[machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — the two lines of `<` characters at the bottom — encode your document number, nationality, date of birth and expiry in a form that is trivial to copy. Add your date of birth and signature, both printed on the same page, and a fraudster has enough to open accounts, apply for credit or forge a document in your name.
+A passport data page is a compact bundle of everything an identity thief wants. The passport number and the **[machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — the two lines of `<` characters at the bottom — encode your document number, nationality, date of birth and expiry in a form that is trivial to copy. That format is not obscure: it is [ICAO Document 9303](https://www.icao.int/publications/doc-series/doc-9303), a public international standard, which is the entire reason any scanner anywhere can read it without being told how. Add your date of birth and signature, both printed on the same page, and a fraudster has enough to open accounts, apply for credit or forge a document in your name.
 
 A photo makes this worse, not better. Unlike showing your passport in person, a digital copy can be duplicated perfectly, an unlimited number of times, and it does not expire when your trip ends. Once it lands in an email thread or a chat backup, you have lost control of it for good.
 
@@ -45,7 +45,7 @@ Here is the part most people miss: whoever is asking almost never needs the whol
 - A **car-rental** or **visa** desk needs your name, nationality and that the document is valid.
 - An **employer** or **bank** needs to verify your identity, usually alongside other checks.
 
-None of that requires your passport number, your machine-readable zone or your date of birth sitting permanently in their files. So do not give it to them.
+None of that requires your passport number, your machine-readable zone or your date of birth sitting permanently in their files. So do not give it to them. This is not just prudence — it is the shape of the law. The [GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj) requires personal data to be "adequate, relevant and limited to what is necessary" for the purpose it was collected for (Article 5(1)(c)). A redacted copy is you handing over the necessary part and keeping the rest.
 
 {{< fieldmap >}}
 

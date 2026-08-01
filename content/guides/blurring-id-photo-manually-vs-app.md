@@ -3,7 +3,7 @@ title: "Blurring your ID yourself vs using a dedicated app"
 subtitle: "What manual editing gets right, what it misses, and when each approach is enough."
 description: "Blurring an ID photo with a markup tool is better than nothing, but it misses things a dedicated redaction app handles by default. Here's the honest comparison."
 date: 2026-07-20
-lastmod: 2026-07-20
+lastmod: 2026-08-01
 weight: 6
 keywords:
   - "blur"
@@ -35,7 +35,7 @@ Covering the obvious field — usually the document number — with a black box 
 
 ## Where it falls short
 
-**Blur and pixelation aren't always final.** Light blur and low-strength pixelation are lossy, not destructive — under the right conditions, the original text can sometimes be reconstructed, a documented limitation of both techniques. A **solid, opaque block** removes the pixel data entirely and doesn't have this problem; not every markup tool defaults to one.
+**Blur and pixelation aren't always final.** Light blur and low-strength pixelation are lossy, not destructive — under the right conditions, the original content can sometimes be reconstructed. That is not folklore: in [*Defeating Image Obfuscation with Deep Learning*](https://arxiv.org/abs/1609.00408), researchers at Cornell Tech and UT Austin trained neural networks to read faces, objects and digits back out of both mosaiced and blurred images. A **solid, opaque block** removes the pixel data entirely and doesn't have this problem; not every markup tool defaults to one.
 
 **It's easy to miss a field you don't know to look for.** Most people manually redacting a passport remember the number. Far fewer think of the **[machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — it re-encodes the number, birth date and more, so missing it undoes the rest of the redaction. Date of birth and signature get missed too, since they don't look as obviously "sensitive" as a document number.
 

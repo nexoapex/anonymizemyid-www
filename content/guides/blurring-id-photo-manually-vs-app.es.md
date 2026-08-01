@@ -3,7 +3,7 @@ title: "Difuminar tu DNI a mano o con una app dedicada"
 subtitle: "Qué acierta la edición manual, qué se le escapa y cuándo cada opción es suficiente."
 description: "Difuminar la foto de un documento con una app de marcado es mejor que nada, pero se le escapan cosas que una app de censura dedicada cubre por defecto."
 date: 2026-07-20
-lastmod: 2026-07-20
+lastmod: 2026-08-01
 weight: 6
 keywords:
   - "desenfoque"
@@ -35,7 +35,7 @@ Tapar el campo obvio — normalmente el número de documento — con una caja ne
 
 ## Dónde se queda corta
 
-**El desenfoque y el pixelado no siempre son definitivos.** El desenfoque ligero y el pixelado de baja intensidad tienen pérdida, pero no son destructivos — en las condiciones adecuadas, el texto original a veces se puede reconstruir, una limitación documentada de ambas técnicas. Una **caja sólida y opaca** elimina los datos de los píxeles por completo y no tiene este problema; no todas las apps de marcado lo aplican por defecto.
+**El desenfoque y el pixelado no siempre son definitivos.** El desenfoque ligero y el pixelado de baja intensidad tienen pérdida, pero no son destructivos — en las condiciones adecuadas, el contenido original a veces se puede reconstruir. Y no es folclore: en [*Defeating Image Obfuscation with Deep Learning*](https://arxiv.org/abs/1609.00408), investigadores de Cornell Tech y la Universidad de Texas en Austin entrenaron redes neuronales para volver a leer caras, objetos y cifras en imágenes pixeladas y desenfocadas. Una **caja sólida y opaca** elimina los datos de los píxeles por completo y no tiene este problema; no todas las apps de marcado lo aplican por defecto.
 
 **Es fácil pasar por alto un campo que no sabes que tienes que buscar.** La mayoría de la gente que censura un pasaporte a mano se acuerda del número. Muchas menos piensan en la **[zona de lectura mecánica]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** — vuelve a codificar el número, la fecha de nacimiento y más, así que pasarla por alto anula el resto de la censura. La fecha de nacimiento y la firma también se olvidan, porque no parecen tan obviamente «sensibles» como un número de documento.
 
