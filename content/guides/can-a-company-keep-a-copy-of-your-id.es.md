@@ -5,6 +5,7 @@ description: "Con el RGPD, una empresa necesita una base legal para guardar una 
 date: 2026-07-28
 lastmod: 2026-07-28
 weight: 16
+slug: "puede-una-empresa-guardar-copia-del-dni"
 keywords:
   - "RGPD"
   - "minimización de datos"

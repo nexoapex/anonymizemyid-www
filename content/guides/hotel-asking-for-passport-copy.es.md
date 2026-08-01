@@ -5,6 +5,7 @@ description: "Los hoteles pueden estar obligados por ley a registrar a los hués
 date: 2026-06-29
 lastmod: 2026-06-29
 weight: 8
+slug: "hotel-pide-copia-del-pasaporte"
 keywords:
   - "hoteles"
   - "viajes"

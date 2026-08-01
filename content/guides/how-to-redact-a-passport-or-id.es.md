@@ -5,6 +5,7 @@ description: "Guía paso a paso para censurar un pasaporte o DNI: oculta el núm
 date: 2026-06-30
 lastmod: 2026-08-01
 weight: 2
+slug: "como-censurar-un-pasaporte-o-dni"
 keywords:
   - "censurar"
   - "pasaporte"

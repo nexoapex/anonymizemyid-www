@@ -5,6 +5,7 @@ description: "Una marca de agua ata la copia a un destinatario y a un uso. Qué 
 date: 2026-07-28
 lastmod: 2026-07-28
 weight: 3
+slug: "como-poner-marca-de-agua-al-dni"
 keywords:
   - "marca de agua"
   - "censurar"

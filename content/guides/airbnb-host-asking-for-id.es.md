@@ -5,6 +5,7 @@ description: "Los anfitriones de alquiler turístico suelen pedir el DNI por el 
 date: 2026-07-28
 lastmod: 2026-07-28
 weight: 9
+slug: "anfitrion-de-airbnb-pide-el-dni"
 keywords:
   - "alquiler turístico"
   - "viajes"

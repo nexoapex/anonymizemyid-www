@@ -5,6 +5,7 @@ description: "La forma segura de enviar una copia del pasaporte: censura el núm
 date: 2026-07-01
 lastmod: 2026-08-01
 weight: 1
+slug: "enviar-copia-del-pasaporte-de-forma-segura"
 keywords:
   - "pasaporte"
   - "censurar"

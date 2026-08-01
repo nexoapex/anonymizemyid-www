@@ -5,6 +5,7 @@ description: "Las nuevas empresas suelen pedir el DNI al incorporarte. Esto es l
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 11
+slug: "empresa-pide-copia-del-dni"
 keywords:
   - "empresas"
   - "incorporación"

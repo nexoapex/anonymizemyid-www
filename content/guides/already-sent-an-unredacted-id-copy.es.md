@@ -5,6 +5,7 @@ description: "Enviaste una foto completa de tu DNI o pasaporte y te has arrepent
 date: 2026-07-28
 lastmod: 2026-07-28
 weight: 17
+slug: "ya-he-enviado-el-dni-sin-censurar"
 keywords:
   - "robo de identidad"
   - "riesgo"

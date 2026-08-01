@@ -34,8 +34,10 @@ PATHS = [
     "/guides/how-to-redact-a-passport-or-id/",       # has the fieldmap diagram
     "/guides/dni-vs-passport-what-to-redact/",       # has a comparison table
     "/guides/how-to-watermark-a-copy-of-your-id/",
-    "/es/guides/what-is-the-mrz-machine-readable-zone/",
-    "/es/guides/can-a-company-keep-a-copy-of-your-id/",
+    # Spanish guides carry Spanish slugs (slug: in each .es.md); the English
+    # paths they used to live at are 301s in netlify.toml, not pages.
+    "/es/guides/que-es-la-mrz-zona-de-lectura-mecanica/",
+    "/es/guides/puede-una-empresa-guardar-copia-del-dni/",
     "/about/", "/privacy/", "/terms/", "/contact/", "/imprint/",
 ]
 

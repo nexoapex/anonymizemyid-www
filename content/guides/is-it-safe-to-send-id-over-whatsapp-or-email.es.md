@@ -5,6 +5,7 @@ description: "WhatsApp y el correo no están hechos para proteger tu documento. 
 date: 2026-06-28
 lastmod: 2026-06-28
 weight: 15
+slug: "enviar-el-dni-por-whatsapp-o-correo"
 keywords:
   - "WhatsApp"
   - "correo electrónico"

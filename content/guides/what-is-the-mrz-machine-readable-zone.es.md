@@ -6,6 +6,7 @@ description: "La MRZ es el código de dos o tres líneas que codifica tu identid
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 4
+slug: "que-es-la-mrz-zona-de-lectura-mecanica"
 keywords:
   - "zona de lectura mecánica"
   - "MRZ"

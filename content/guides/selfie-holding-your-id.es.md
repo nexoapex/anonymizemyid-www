@@ -6,6 +6,7 @@ description: "Pedir un selfi con el DNI en la mano puede ser una verificación l
 date: 2026-08-01
 lastmod: 2026-08-01
 weight: 14
+slug: "selfi-con-el-dni-en-la-mano"
 keywords:
   - "selfi con DNI"
   - "verificación de identidad"

@@ -5,6 +5,7 @@ description: "Los bancos necesitan verificar tu identidad, pero no todas las pet
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 12
+slug: "verificacion-de-identidad-en-el-banco"
 keywords:
   - "bancos"
   - "KYC"

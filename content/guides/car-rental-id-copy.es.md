@@ -5,6 +5,7 @@ description: "Al alquilar un coche suelen fotocopiar tu DNI o pasaporte además 
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 13
+slug: "alquiler-de-coche-copia-del-dni"
 keywords:
   - "alquiler de coches"
   - "viajes"

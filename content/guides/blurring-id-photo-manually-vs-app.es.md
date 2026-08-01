@@ -5,6 +5,7 @@ description: "Difuminar la foto de un documento con una app de marcado es mejor 
 date: 2026-07-20
 lastmod: 2026-08-01
 weight: 6
+slug: "difuminar-el-dni-a-mano-o-con-app"
 keywords:
   - "desenfoque"
   - "censurar"

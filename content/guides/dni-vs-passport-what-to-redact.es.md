@@ -5,6 +5,7 @@ description: "El DNI y el pasaporte ocultan campos distintos en sitios distintos
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 7
+slug: "dni-o-pasaporte-que-censurar"
 keywords:
   - "DNI"
   - "NIE"

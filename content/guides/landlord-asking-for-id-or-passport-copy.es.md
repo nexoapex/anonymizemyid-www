@@ -5,6 +5,7 @@ description: "Caseros y agencias suelen pedir el DNI al verificar inquilinos. Es
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 10
+slug: "casero-pide-copia-del-dni"
 keywords:
   - "caseros"
   - "alquiler"

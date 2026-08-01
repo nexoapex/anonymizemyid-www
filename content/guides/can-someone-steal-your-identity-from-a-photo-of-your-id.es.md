@@ -5,6 +5,7 @@ description: "Sí, de formas concretas. Esto es exactamente qué campos hacen pe
 date: 2026-07-20
 lastmod: 2026-07-20
 weight: 5
+slug: "robo-de-identidad-con-una-foto-del-dni"
 keywords:
   - "robo de identidad"
   - "riesgo"

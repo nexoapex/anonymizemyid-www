@@ -26,6 +26,112 @@
   status = 301
   force = true
 
+# Spanish guides moved from the English slug to a Spanish one (round 6).
+# Keep these: they carry the equity of every /es/ URL indexed before the move,
+# and they are the only thing standing between an old inbound link and a 404.
+
+[[redirects]]
+  from = "/es/guides/airbnb-host-asking-for-id/"
+  to = "/es/guides/anfitrion-de-airbnb-pide-el-dni/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/already-sent-an-unredacted-id-copy/"
+  to = "/es/guides/ya-he-enviado-el-dni-sin-censurar/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/bank-account-id-verification/"
+  to = "/es/guides/verificacion-de-identidad-en-el-banco/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/blurring-id-photo-manually-vs-app/"
+  to = "/es/guides/difuminar-el-dni-a-mano-o-con-app/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/can-a-company-keep-a-copy-of-your-id/"
+  to = "/es/guides/puede-una-empresa-guardar-copia-del-dni/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/can-someone-steal-your-identity-from-a-photo-of-your-id/"
+  to = "/es/guides/robo-de-identidad-con-una-foto-del-dni/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/car-rental-id-copy/"
+  to = "/es/guides/alquiler-de-coche-copia-del-dni/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/dni-vs-passport-what-to-redact/"
+  to = "/es/guides/dni-o-pasaporte-que-censurar/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/employer-asking-for-id-or-passport-copy/"
+  to = "/es/guides/empresa-pide-copia-del-dni/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/hotel-asking-for-passport-copy/"
+  to = "/es/guides/hotel-pide-copia-del-pasaporte/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/how-to-redact-a-passport-or-id/"
+  to = "/es/guides/como-censurar-un-pasaporte-o-dni/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/how-to-watermark-a-copy-of-your-id/"
+  to = "/es/guides/como-poner-marca-de-agua-al-dni/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/is-it-safe-to-send-id-over-whatsapp-or-email/"
+  to = "/es/guides/enviar-el-dni-por-whatsapp-o-correo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/landlord-asking-for-id-or-passport-copy/"
+  to = "/es/guides/casero-pide-copia-del-dni/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/selfie-holding-your-id/"
+  to = "/es/guides/selfi-con-el-dni-en-la-mano/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/send-a-copy-of-your-passport-safely/"
+  to = "/es/guides/enviar-copia-del-pasaporte-de-forma-segura/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/guides/what-is-the-mrz-machine-readable-zone/"
+  to = "/es/guides/que-es-la-mrz-zona-de-lectura-mecanica/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
