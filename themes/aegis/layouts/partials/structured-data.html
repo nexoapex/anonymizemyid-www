@@ -11,6 +11,10 @@
     {{- $ogImage = .RelPermalink | absURL -}}
   {{- end -}}
 {{- end -}}
+{{- /* Every card — the shared one and the generated per-guide set — is 1200x630.
+       An ImageObject with real dimensions beats a bare URL string: it saves the
+       consumer a fetch to decide whether the image is usable as a thumbnail. */ -}}
+{{- $ogImageObj := dict "@type" "ImageObject" "url" $ogImage "width" 1200 "height" 630 -}}
 {{- /* Store listings double as entity-disambiguation signals for the publisher.
        Built the same way as the home-page download links: only URLs that are
        actually live are advertised (an unset store is the placeholder "#"). */ -}}
@@ -58,7 +62,15 @@
   {{- $stores := slice -}}
   {{- if hasPrefix site.Params.appStoreUrl "http" }}{{ $stores = $stores | append site.Params.appStoreUrl }}{{ end -}}
   {{- if hasPrefix site.Params.playStoreUrl "http" }}{{ $stores = $stores | append site.Params.playStoreUrl }}{{ end -}}
-  {{- /* Free to install with a one-time Pro unlock, so the offer is an
+  {{- /* This node is emitted on both home pages, so its language has to follow
+         the page: hardcoding en-US contradicted the Spanish name/description
+         sitting beside it in the same graph.
+
+         No `screenshot` property until there are real in-app screenshots under
+         static/images — the OG card is a social banner, and passing one off as
+         a screenshot is what gets app rich results demoted.
+
+         Free to install with a one-time Pro unlock, so the offer is an
          AggregateOffer over the real range rather than a single "price 0" that
          quietly hides the paid tier. lowPrice stays 0 — the free tier is
          genuinely usable, not a trial. */ -}}
@@ -72,9 +84,10 @@
       "url" $base
       "downloadUrl" $stores
       "installUrl" $stores
-      "image" $ogImage
-      "inLanguage" "en-US"
-      "availableLanguage" "English"
+      "image" $ogImageObj
+      "isAccessibleForFree" true
+      "inLanguage" $inLang
+      "availableLanguage" (slice "en" "es")
       "publisher" (dict "@id" $orgID)
       "offers" (dict
         "@type" "AggregateOffer"
@@ -131,7 +144,8 @@
       "author" (dict "@id" $authorID)
       "publisher" (dict "@id" $orgID)
       "mainEntityOfPage" .Permalink
-      "image" $ogImage
+      "image" $ogImageObj
+      "isAccessibleForFree" true
       "wordCount" .WordCount
       "articleSection" .Parent.Title
       "breadcrumb" (dict "@type" "BreadcrumbList" "itemListElement" $crumbs)
@@ -140,6 +154,22 @@
          we most want an AI answer engine to lift and attribute. */ -}}
   {{- with .Params.answer }}{{ $article = merge $article (dict "abstract" .) }}{{ end -}}
   {{- with .Params.keywords }}{{ $article = merge $article (dict "keywords" (delimit . ", ")) }}{{ end -}}
+  {{- /* Primary sources, read straight out of the rendered body rather than a
+         parallel `sources:` front-matter list that would silently drift from
+         the links actually in the prose. These guides pin claims to ICAO 9303,
+         EUR-Lex, the BOE, the EBA and INCIBE; `citation` states that provenance
+         where an answer engine can use it, instead of leaving it to be inferred
+         from anchor text. */ -}}
+  {{- $cites := slice -}}
+  {{- range findRE `href="https?://[^"]+"` .Content -}}
+    {{- $u := replaceRE `^href="|"$` "" . -}}
+    {{- if not (hasPrefix $u $base) -}}{{ $cites = $cites | append $u }}{{ end -}}
+  {{- end -}}
+  {{- with $cites | uniq -}}
+    {{- $refs := slice -}}
+    {{- range . }}{{ $refs = $refs | append (dict "@type" "WebPage" "url" .) }}{{ end -}}
+    {{- $article = merge $article (dict "citation" $refs) -}}
+  {{- end -}}
   {{- $graph = $graph | append $article -}}
   {{- with .Params.faq -}}
     {{- $qs := slice -}}
