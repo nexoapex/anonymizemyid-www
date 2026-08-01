@@ -150,7 +150,7 @@ answer engines:
 
 ## Verify & audit
 
-Four scripts, all standalone (`scripts/verify.py` and `scripts/og-card.py` need
+Five scripts, all standalone (`scripts/verify.py` and `scripts/og-card.py` need
 `pip install playwright && playwright install chromium`):
 
 ```bash
@@ -160,7 +160,14 @@ python3 scripts/verify.py           # loads ./public in real Chromium under the 
 python3 scripts/verify.py --live    # same, against https://anonymizemyid.com
 python3 scripts/csp-hashes.py --write   # recompute the CSP hashes after a CSS/inline-JS change
 python3 scripts/og-card.py --all    # generate any missing per-guide OG cards
+python3 scripts/indexnow.py --new   # ping IndexNow with the URLs the last commit touched
 ```
+
+`indexnow.py` runs **after** the deploy is live, not before — it announces URLs,
+so submitting a page Netlify has not published yet just burns the submission.
+Submit only what changed: the protocol treats resubmitting unchanged pages as
+spam. It covers Bing (and therefore Copilot), Yandex and DuckDuckGo; Google does
+not participate, so a new page still needs Search Console on that side.
 
 **Read this before touching `main.css`, `partials/head.html`,
 `partials/cookie-consent.html` or `assets/js/consent.js`:**
