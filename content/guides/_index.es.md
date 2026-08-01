@@ -1,5 +1,6 @@
 ---
 title: "Guías"
+seoTitle: "Guías de DNI y pasaporte: qué censurar antes de enviar"
 subtitle: "Cómo compartir tu pasaporte o DNI sin regalar tu identidad."
 description: "Guías claras y prácticas para compartir tu pasaporte o DNI de forma segura — qué censurar y cómo hacerlo en tu móvil en un minuto."
 ---

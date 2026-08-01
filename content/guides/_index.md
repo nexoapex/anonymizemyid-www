@@ -1,5 +1,6 @@
 ---
 title: "Guides"
+seoTitle: "Passport & ID guides: what to redact before you share"
 subtitle: "How to share your passport or ID without giving your identity away."
 description: "Practical, plain-English guides on sharing your passport or ID safely — what to redact, and how to do it on your phone in a minute."
 ---
