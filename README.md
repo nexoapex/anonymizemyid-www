@@ -156,6 +156,7 @@ Five scripts, all standalone (`scripts/verify.py` and `scripts/og-card.py` need
 ```bash
 hugo --gc --minify
 python3 scripts/audit.py            # static SEO audit; exits non-zero on any issue
+python3 scripts/audit.py --external # ...plus HEAD every off-site URL (needs network)
 python3 scripts/verify.py           # loads ./public in real Chromium under the prod headers
 python3 scripts/verify.py --live    # same, against https://anonymizemyid.com
 python3 scripts/csp-hashes.py --write   # recompute the CSP hashes after a CSS/inline-JS change

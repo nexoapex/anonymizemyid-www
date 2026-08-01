@@ -170,6 +170,55 @@
     {{- range . }}{{ $refs = $refs | append (dict "@type" "WebPage" "url" .) }}{{ end -}}
     {{- $article = merge $article (dict "citation" $refs) -}}
   {{- end -}}
+  {{- /* Entity grounding. `keywords` is a bag of strings an engine has to
+         resolve on its own; `about` names the same concepts as Things with a
+         sameAs pointing at a canonical description, which is what lets both
+         the Knowledge Graph and an LLM tie this page to an entity it already
+         knows rather than guessing from surrounding text.
+
+         Keyed off each guide's own keywords (which exist already and are
+         translated), so a new guide is grounded by writing its front matter.
+         Only concepts with an unambiguous article are listed. Every URL here
+         was verified live before being added; `python3 scripts/audit.py
+         --external` re-checks them (and the citation links) on demand. */ -}}
+  {{- $entities := dict
+      "passport"                  (slice "Passport" "https://en.wikipedia.org/wiki/Passport")
+      "pasaporte"                 (slice "Pasaporte" "https://en.wikipedia.org/wiki/Passport")
+      "mrz"                       (slice "Machine-readable zone" "https://en.wikipedia.org/wiki/Machine-readable_passport")
+      "machine-readable zone"     (slice "Machine-readable zone" "https://en.wikipedia.org/wiki/Machine-readable_passport")
+      "zona de lectura mecánica"  (slice "Zona de lectura mecánica" "https://en.wikipedia.org/wiki/Machine-readable_passport")
+      "redaction"                 (slice "Redaction" "https://en.wikipedia.org/wiki/Redaction")
+      "censurar"                  (slice "Censura de documentos" "https://en.wikipedia.org/wiki/Redaction")
+      "identity theft"            (slice "Identity theft" "https://en.wikipedia.org/wiki/Identity_theft")
+      "robo de identidad"         (slice "Robo de identidad" "https://en.wikipedia.org/wiki/Identity_theft")
+      "gdpr"                      (slice "GDPR" "https://en.wikipedia.org/wiki/General_Data_Protection_Regulation")
+      "rgpd"                      (slice "RGPD" "https://en.wikipedia.org/wiki/General_Data_Protection_Regulation")
+      "kyc"                       (slice "Know your customer" "https://en.wikipedia.org/wiki/Know_your_customer")
+      "id card"                   (slice "Identity document" "https://en.wikipedia.org/wiki/Identity_document")
+      "dni"                       (slice "Documento Nacional de Identidad" "https://en.wikipedia.org/wiki/Documento_Nacional_de_Identidad_(Spain)")
+      "watermark"                 (slice "Digital watermarking" "https://en.wikipedia.org/wiki/Digital_watermarking")
+      "marca de agua"             (slice "Marca de agua digital" "https://en.wikipedia.org/wiki/Digital_watermarking")
+      "driving licence"           (slice "Driver's licence" "https://en.wikipedia.org/wiki/Driver%27s_license")
+      "whatsapp"                  (slice "WhatsApp" "https://en.wikipedia.org/wiki/WhatsApp")
+  -}}
+  {{- /* Every guide in this hub is about identity documents, including the
+         scenario ones whose keywords are situational ("landlords", "hosts",
+         "onboarding") and match nothing above. Seeding the baseline entity
+         beats stretching a situational keyword onto an article that does not
+         mean the same thing — "short-term rentals" is not Airbnb, and the UK's
+         right-to-work check is not Wikipedia's "right to work". */ -}}
+  {{- $about := slice (dict "@type" "Thing" "name" "Identity document" "sameAs" "https://en.wikipedia.org/wiki/Identity_document") -}}
+  {{- $namesSeen := slice "Identity document" -}}
+  {{- range .Params.keywords -}}
+    {{- with index $entities (lower .) -}}
+      {{- $name := index . 0 -}}
+      {{- if not (in $namesSeen $name) -}}
+        {{- $namesSeen = $namesSeen | append $name -}}
+        {{- $about = $about | append (dict "@type" "Thing" "name" $name "sameAs" (index . 1)) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $about }}{{ $article = merge $article (dict "about" .) }}{{ end -}}
   {{- $graph = $graph | append $article -}}
   {{- with .Params.faq -}}
     {{- $qs := slice -}}

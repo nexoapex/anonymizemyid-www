@@ -36,6 +36,73 @@ def first(pattern, text):
     return m.group(1) if m else ""
 
 
+def check_external(pages):
+    """HEAD every off-site URL the built pages point at, including the ones that
+    only exist inside JSON-LD (Article.citation, Article.about/sameAs).
+
+    Off by default and behind --external: it needs the network, so it is not
+    something a pre-push check should depend on. Worth running whenever a guide
+    gains a source, because a dead primary source is worse than none — it is a
+    citation an answer engine cannot verify.
+    """
+    import concurrent.futures, urllib.error, urllib.request
+
+    # Pull from href attributes and from parsed JSON-LD rather than regexing the
+    # whole document: a bare URL regex has to guess where the URL stops, and
+    # ".../Documento_Nacional_de_Identidad_(Spain)" ends in a character such a
+    # regex almost always treats as a delimiter.
+    def walk(node):
+        if isinstance(node, str):
+            if node.startswith("http"):
+                yield node
+        elif isinstance(node, dict):
+            for v in node.values():
+                yield from walk(v)
+        elif isinstance(node, list):
+            for v in node:
+                yield from walk(v)
+
+    urls = set()
+    for html in pages.values():
+        urls |= set(re.findall(r'href="(https?://[^"]+)"', html))
+        urls |= set(re.findall(r"href=(https?://[^\s>]+)", html))
+        for blob in re.findall(
+                r"<script type=application/ld\+json>(.*?)</script>", html, re.S):
+            try:
+                urls |= set(walk(json.loads(blob)))
+            except Exception:
+                pass  # invalid JSON-LD is already reported by the main pass
+    urls = sorted(u for u in urls if "anonymizemyid.com" not in u
+                  and not u.startswith(("https://schema.org", "http://schema.org")))
+
+    def head(url):
+        req = urllib.request.Request(url, method="HEAD", headers={
+            "User-Agent": "Mozilla/5.0 (compatible; anonymizemyid-audit/1.0)"})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                return url, r.status
+        except urllib.error.HTTPError as e:
+            # A HEAD-hostile host is not a dead link; retry once with GET.
+            if e.code in (403, 405):
+                try:
+                    with urllib.request.urlopen(urllib.request.Request(
+                            url, headers={"User-Agent": "Mozilla/5.0"}), timeout=20) as r:
+                        return url, r.status
+                except Exception as exc:
+                    return url, f"{e.code} then {exc}"
+            return url, e.code
+        except Exception as exc:
+            return url, str(exc)
+
+    bad = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+        for url, status in pool.map(head, urls):
+            if status != 200:
+                bad.append(f"external {status}  {url}")
+    print(f"external URLs checked: {len(urls)}")
+    return bad
+
+
 def main():
     if not PUBLIC.is_dir():
         sys.exit("public/ not found — run `hugo --gc --minify` first")
@@ -136,6 +203,9 @@ def main():
                         pages[other])]
             if url not in back:
                 issues.append(f"hreflang not reciprocal {url} <-> {other}")
+
+    if "--external" in sys.argv:
+        issues += check_external(pages)
 
     issues += [f"duplicate title x{n}     {t[:50]}" for t, n in titles.items() if n > 1]
     issues += [f"duplicate description x{n} {d[:46]}" for d, n in descs.items() if n > 1]
