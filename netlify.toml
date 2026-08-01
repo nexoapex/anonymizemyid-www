@@ -165,6 +165,17 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Hugo fingerprints the JS bundle (consent.min.<sha256>.js) and the tag carries
+# a matching SRI hash, so the bytes behind this URL can never change — editing
+# consent.js produces a different filename. Netlify's default of
+# "max-age=0, must-revalidate" therefore bought a conditional request on every
+# page view in exchange for nothing. `immutable` is only safe *because* of the
+# fingerprint: never widen this to an unhashed path.
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/favicon.ico"
   [headers.values]
