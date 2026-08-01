@@ -4,7 +4,7 @@ subtitle: "Qué dice realmente el RGPD sobre pedirla, conservarla y borrarla."
 description: "Con el RGPD, una empresa necesita una base legal para guardar una copia de tu DNI, y solo mientras la necesite. Qué significa eso y cómo pedir que la borren."
 date: 2026-07-28
 lastmod: 2026-07-28
-weight: 15
+weight: 16
 keywords:
   - "RGPD"
   - "minimización de datos"

@@ -4,7 +4,7 @@ subtitle: "What the GDPR actually says about asking, keeping and deleting."
 description: "Under the GDPR a company needs a lawful reason to hold a copy of your ID, and only for as long as it needs it. What that means, and how to ask for deletion."
 date: 2026-07-28
 lastmod: 2026-07-28
-weight: 15
+weight: 16
 keywords:
   - "GDPR"
   - "data minimisation"

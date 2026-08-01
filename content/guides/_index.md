@@ -18,4 +18,5 @@ These guides explain how to show a business what it actually needs to see while 
 | [A car rental desk](/guides/car-rental-id-copy/) | Name, photo, licence details | Number, MRZ, signature |
 | [A short-term rental host](/guides/airbnb-host-asking-for-id/) | Name, photo, nationality | Number, MRZ, date of birth, signature |
 | [A bank, via its own KYC portal](/guides/bank-account-id-verification/) | The full document, through their system | Nothing — redacting can fail the check |
+| [Someone wanting a selfie with your ID](/guides/selfie-holding-your-id/) | Your face, plus the name and photo on the document | Number, MRZ, date of birth, signature — and check the channel first |
 
