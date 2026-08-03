@@ -17,7 +17,7 @@ read from, which is why this is worth doing at all.
 Only submit URLs that actually changed. The protocol treats repeated
 submissions of unchanged pages as spam, and the penalty is being ignored.
 """
-import argparse, glob, json, pathlib, re, subprocess, sys, urllib.request
+import argparse, csv, glob, io, json, pathlib, re, subprocess, sys, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
@@ -37,24 +37,42 @@ def sitemap_urls():
     return sorted(urls)
 
 
-def changed_urls():
-    """Guide/page URLs touched by the last commit, both languages.
+def source_to_permalink():
+    """Every content file mapped to its published URL, by asking Hugo.
 
-    Maps content/guides/<slug>[.es].md back to its published URL rather than
-    reading the sitemap, so a rename is submitted under the new path only.
+    Deriving the URL from the filename is what this used to do, and it stopped
+    being true twice: when the Spanish guides gained their own `slug:` (so
+    content/guides/foo.es.md is not /es/guides/foo/), and when German renamed
+    the whole section to /de/ratgeber/ via [languages.de.permalinks]. Both
+    produced URLs that 301 or 404 — and IndexNow submissions of URLs that are
+    not the canonical page are worse than none.
+
+    `hugo list all` is Hugo's own answer to the same question, so it cannot
+    drift from the build. Titles contain commas, hence a real CSV parser.
     """
+    out = subprocess.run(["hugo", "list", "all"], cwd=ROOT,
+                         capture_output=True, text=True, check=True).stdout
+    rows = csv.DictReader(io.StringIO(out))
+    return {r["path"]: r["permalink"] for r in rows
+            if r.get("path") and r.get("permalink")}
+
+
+def changed_urls():
+    """Page URLs touched by the last commit, in every language."""
     diff = subprocess.run(
         ["git", "diff", "--name-only", "HEAD~1", "HEAD"],
         cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
-    urls = set()
+    published = source_to_permalink()
+    urls, missing = set(), []
     for path in diff:
-        m = re.fullmatch(r"content/(.+?)(\.es)?\.md", path)
-        if not m:
+        if not (path.startswith("content/") and path.endswith(".md")):
             continue
-        slug, es = m.group(1), m.group(2)
-        slug = "" if slug == "_index" else slug.removesuffix("/_index")
-        prefix = "/es" if es else ""
-        urls.add(f"https://{HOST}{prefix}/{slug}{'/' if slug else ''}")
+        url = published.get(path)
+        (urls.add(url) if url else missing.append(path))
+    for path in missing:
+        # Deleted or draft: nothing to announce, but say so rather than
+        # silently submitting a stale guess.
+        print(f"   (no published URL for {path} — skipped)", file=sys.stderr)
     return sorted(urls)
 
 
