@@ -10,6 +10,7 @@ nav_primary = "Principal"
 lang_switcher = "Idioma"
 lang_en = "English"
 lang_es = "Español"
+lang_de = "Deutsch"
 
 # ── Hero ──
 hero_pill = "100% en el dispositivo · sin subir nada"

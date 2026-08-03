@@ -19,10 +19,10 @@ Requires Hugo **extended** ≥ 0.163.
 ## Structure
 
 ```
-hugo.toml            site config + [languages.en|es] + shared [params]
-i18n/                UI string tables — en.toml + es.toml (one key per string)
-content/             _index, privacy, terms, imprint, about, contact (+ .es.md)
-content/guides/      SEO/GEO content hub — _index + one Markdown file per guide (+ .es.md)
+hugo.toml            site config + [languages.en|es|de] + shared [params]
+i18n/                UI string tables — en/es/de.toml (one key per string)
+content/             _index, privacy, terms, imprint, about, contact (+ .es.md/.de.md)
+content/guides/      SEO/GEO content hub — _index + one Markdown file per guide (+ .es.md/.de.md)
 themes/aegis/        layouts + assets/css (the theme)
   layouts/guides/    list.html (hub) + single.html (article) templates
   layouts/index.rsl.xml    RSL 1.0 AI-licensing terms -> /license.xml
@@ -54,22 +54,41 @@ All tunables are in `hugo.toml` under `[params]`:
   (`tagline`, `description`, `price`, `priceNote`, `priceDisclaimer`); everything
   shared (brand, store URLs, legal entity) stays in the root `[params]`.
 
-## Languages (EN + ES)
+## Languages (EN + ES + DE)
 
-The site is bilingual: **English** is the default, served at `/`; **Spanish** is
-served at `/es/`. Adding a third language is: a `[languages.xx]` block in
-`hugo.toml`, an `i18n/xx.toml`, and `*.xx.md` content files.
+The site is trilingual: **English** is the default, served at `/`; **Spanish** at
+`/es/`; **German** at `/de/`. Adding a fourth language is: a `[languages.xx]`
+block in `hugo.toml`, an `i18n/xx.toml`, and `*.xx.md` content files — the
+templates read the language list rather than branching on it.
 
-- **UI strings** are in `i18n/en.toml` / `i18n/es.toml` and used via `{{ i18n "key" }}`.
-  Page text is translated by filename — `about.md` (EN) + `about.es.md` (ES).
+- **UI strings** are in `i18n/<lang>.toml` and used via `{{ i18n "key" }}`.
+  Page text is translated by filename — `about.md` (EN) + `about.es.md` (ES) +
+  `about.de.md` (DE).
 - **Language detection & redirect** — a tiny inline script in `partials/head.html`
   reads the browser language (and any explicit choice saved by the switcher) and
-  redirects an es-preferring visitor from an English page to its Spanish twin,
-  using the page's own `hreflang` links. It **never** redirects a Spanish page to
-  English on its own, so crawlers index every URL. The `EN|ES` switcher
-  (`partials/lang-switch.html`) stores the choice in `localStorage` so it sticks.
+  redirects, say, a de-preferring visitor from an English page to its German
+  twin, using the page's own `hreflang` links. It only ever redirects **away
+  from English** on its own, so a crawler (Accept-Language en, no stored choice)
+  that lands on `/es/` or `/de/` indexes that URL instead of being bounced. The
+  `EN|ES|DE` switcher (`partials/lang-switch.html`) stores the choice in
+  `localStorage` so it sticks. **Editing this script changes the CSP hash** —
+  see "Verify & audit".
 - **hreflang + x-default** alternates are emitted for every page from
-  `.AllTranslations`; English is `x-default`.
+  `.AllTranslations`; English is `x-default`. A language may claim extra
+  regional targets via `hreflangAlso` in its params: German declares `de-AT` and
+  `de-CH` pointing at the same `/de/` URL, so a search in Vienna or Zurich
+  resolves to the German edition rather than the English one. `head.html` and
+  `layouts/sitemap.xml` both read that list, so the two can't disagree.
+- **The German guide hub is at `/de/ratgeber/`**, not `/de/guides/` —
+  `[languages.de.permalinks]` renames the section, because *Ratgeber* is the
+  word German search actually uses. Build links from `site.GetPage "/guides"`
+  and the page's own `.RelPermalink`, never a hand-built `/guides/` path.
+- **The German edition covers DACH, not just Germany.** Where the law differs,
+  the guides carry the Austrian and Swiss position beside the German one, and
+  five guides exist **only** in German because the query does: § 20 PAuswG,
+  PostIdent/VideoIdent, Kleinanzeigen, SCHUFA, and Austria + Switzerland. A
+  guide with no English twin is fine — Hugo pairs by filename and simply emits
+  one alternate.
 
 ## SEO & GEO
 
@@ -119,10 +138,12 @@ answer engines:
 - **`hreflang`** alternates in the `<head>` for every page (`en`, `es`, and
   `x-default` → English), plus per-language `og:locale` / `og:locale:alternate`,
   mirrored as `xhtml:link` alternates in the sitemaps.
-- **Spanish slugs** — every `.es.md` guide sets `slug:`, so Spanish pages live
-  at `/es/guides/como-censurar-un-pasaporte-o-dni/` rather than the English
-  path. `netlify.toml` 301s every old `/es/` URL. Translations still pair by
-  filename, so `hreflang` and the OG cards are unaffected. **Adding a Spanish
+- **Translated slugs** — every `.es.md` and `.de.md` guide sets `slug:`, so
+  Spanish pages live at `/es/guides/como-censurar-un-pasaporte-o-dni/` and
+  German ones at `/de/ratgeber/ausweis-oder-reisepass-schwaerzen/` rather than
+  the English path. `netlify.toml` 301s every old `/es/` URL (the German set was
+  born with its own slugs, so it needs none). Translations still pair by
+  filename, so `hreflang` and the OG cards are unaffected. **Adding a translated
   guide means adding a `slug:`** — and if you ever rename one, add the 301.
 - **`llms.txt`** + **`llms-full.txt`** — generated per language (`/llms.txt`,
   `/es/llms.txt`, …) from the live content via Hugo output formats; both carry
@@ -155,14 +176,19 @@ answer engines:
 > page and its structured data can't drift. Each guide's own FAQ works the same
 > way, from its `faq:` front matter.
 >
-> **New guide?** Add `content/guides/<slug>.md` **and `<slug>.es.md`** with
-> `title`, `description`, `date`/`lastmod`, `weight`, `keywords`, `answer`,
-> `takeaways`, and optional `faq:` / `howto:`. The hub, home teaser, sitemap,
-> `llms.txt`, related-content index and Article/FAQ/HowTo structured data all
-> pick it up with no template changes. Two things do **not** happen by
-> themselves: run `python3 scripts/og-card.py <slug>` for its social card
-> (otherwise it falls back to the generic one), and give it a `weight` — guides
-> are ordered by weight, not by date.
+> **New guide?** Add `content/guides/<slug>.md` **and `<slug>.es.md` /
+> `<slug>.de.md`** with `title`, `description`, `date`/`lastmod`, `weight`,
+> `keywords`, `answer`, `takeaways`, and optional `faq:` / `howto:` (plus
+> `slug:` on any non-English file). The hub, home teaser, sitemap, `llms.txt`,
+> related-content index and Article/FAQ/HowTo structured data all pick it up
+> with no template changes. Two things do **not** happen by themselves: run
+> `python3 scripts/og-card.py <slug>` for its social cards — it generates one
+> per language file that exists — and give it a `weight`, since guides are
+> ordered by weight, not by date.
+>
+> German copy uses **„…“** quotes and the formal **Sie** throughout. An ASCII
+> `"` closing a `„` inside front matter silently breaks the YAML parse — Hugo
+> then reports a front-matter error for a line that looks perfectly fine.
 >
 > If the guide's body already opens with its own "Short answer:" line, rewrite
 > that opening — the `answer:` card now sits directly above it.
@@ -200,6 +226,11 @@ not participate, so a new page still needs Search Console on that side.
   the invariant (exactly one distinct hash of each kind) and updates
   `netlify.toml`. A *new* inline `<script>` is a *new* hash, not a swap.
   Never use a `style="..."` attribute — it is blocked the same way.
+  `--write` rewrites the hashes **inside each directive**; it used to guess
+  which stale hash to replace and, for a changed *script*, wrote the
+  stylesheet's hash into `script-src`. Always finish with `scripts/verify.py`,
+  which loads the real pages under these headers and listens for
+  `securitypolicyviolation` — that is what catches this class of mistake.
 - **Google Analytics must make zero network contact before consent.** It is
   injected only by `assets/js/consent.js` after an explicit Accept; nothing
   Google-shaped may go back into static markup. `scripts/verify.py` asserts this

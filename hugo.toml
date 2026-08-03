@@ -4,7 +4,7 @@ enableRobotsTXT = true
 enableInlineShortcodes = true
 disableKinds = ["taxonomy", "term"]
 
-# Bilingual: English (default, served at /) and Spanish (served at /es/).
+# Trilingual: English (default, served at /), Spanish (/es/) and German (/de/).
 # The browser language is detected client-side and the visitor is redirected to
 # their language via the per-page hreflang alternates (see partials/head.html).
 defaultContentLanguage = "en"
@@ -85,6 +85,62 @@ defaultContentLanguageInSubdir = false
       weight = 40
     [[languages.es.menus.footer]]
       name = "Contacto"
+      pageRef = "/contact"
+      weight = 50
+
+# ─────────────────────────────  German  ───────────────────────────────
+# Aimed at the whole DACH market, not just Germany: the guides carry the
+# Austrian and Swiss position alongside the German one wherever the law
+# differs, and `hreflangAlso` (below) declares de-AT / de-CH alternates so a
+# search in Vienna or Zurich resolves to this edition rather than the English
+# one. There is a single German edition — one URL per page, three targets.
+[languages.de]
+  locale = "de-DE"
+  label = "Deutsch"
+  title = "Anonymize my ID — Ausweis teilen, Identität schützen"
+  weight = 3
+  # The section itself is renamed for German: /de/ratgeber/ rather than
+  # /de/guides/. "Ratgeber" is the word German search actually uses for this
+  # kind of hub, and it is the one segment every guide URL inherits.
+  [languages.de.permalinks]
+    [languages.de.permalinks.page]
+      guides = "/ratgeber/:slug/"
+    [languages.de.permalinks.section]
+      guides = "/ratgeber/"
+  [languages.de.params]
+    tagline = "Teilen Sie Ihren Ausweis, nicht Ihre Identität."
+    description = "Personalausweis oder Reisepass fotografieren und eine sichere, geschwärzte Kopie mit Wasserzeichen erstellen — 100 % auf dem Handy, ohne Upload."
+    price = "≈ 4 €"
+    priceNote = "einmalig · für immer"
+    priceDisclaimer = "ca. — zzgl. MwSt., je nach Region"
+    ogImageAlt = "Anonymize my ID — ein fotografierter Reisepass, direkt auf dem Gerät geschwärzt und mit Wasserzeichen versehen"
+    # Extra hreflang targets that resolve to this same German edition. Germany
+    # is covered by the plain `de` alternate; these two add Austria and
+    # Switzerland explicitly.
+    hreflangAlso = ["de-AT", "de-CH"]
+  [languages.de.menus]
+    [[languages.de.menus.footer]]
+      name = "Ratgeber"
+      pageRef = "/guides"
+      weight = 5
+    [[languages.de.menus.footer]]
+      name = "Datenschutzerklärung"
+      pageRef = "/privacy"
+      weight = 10
+    [[languages.de.menus.footer]]
+      name = "Nutzungsbedingungen"
+      pageRef = "/terms"
+      weight = 20
+    [[languages.de.menus.footer]]
+      name = "Impressum"
+      pageRef = "/imprint"
+      weight = 30
+    [[languages.de.menus.footer]]
+      name = "Über uns"
+      pageRef = "/about"
+      weight = 40
+    [[languages.de.menus.footer]]
+      name = "Kontakt"
       pageRef = "/contact"
       weight = 50
 

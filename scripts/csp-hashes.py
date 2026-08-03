@@ -34,6 +34,27 @@ def sha256(text):
     return "sha256-" + base64.b64encode(hashlib.sha256(text.encode()).digest()).decode()
 
 
+def set_hashes(toml, style, script):
+    """Rewrite the sha256 tokens inside script-src and style-src, in place.
+
+    Directive-scoped on purpose. The previous version walked every hash in the
+    file and replaced a stale one with `style if old not in scripts else script`
+    — which resolves to `style` for a stale *script* hash as well, because a
+    stale script hash is by definition absent from `scripts`. So editing the
+    inline script wrote the stylesheet's hash into script-src and dropped the
+    script's own: the browser then silently blocks the language-redirect script
+    in production, which is the exact failure this tool exists to prevent.
+    """
+    want = {"script-src": script, "style-src": style}
+
+    def fix(m):
+        return m.group(1) + re.sub(r"'sha256-[A-Za-z0-9+/=]+'",
+                                   f"'{want[m.group(1)]}'", m.group(2))
+
+    # Each directive runs to the next ';' or the end of the quoted header value.
+    return re.sub(r"\b(script-src|style-src)([^;\"]*)", fix, toml)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true", help="update netlify.toml in place")
@@ -66,23 +87,22 @@ def main():
 
     style, script = next(iter(styles)), next(iter(scripts))
     toml = NETLIFY.read_text(encoding="utf-8")
-    live = re.findall(r"'(sha256-[A-Za-z0-9+/=]+)'", toml)
-    stale = [h for h in (style, script) if h not in live]
+    fixed = set_hashes(toml, style, script)
 
-    if not stale:
+    if fixed == toml:
         print("\nnetlify.toml is up to date.")
         return 0
 
-    print(f"\nnetlify.toml is STALE — missing: {', '.join(stale)}")
+    live = re.findall(r"'(sha256-[A-Za-z0-9+/=]+)'", toml)
+    stale = [h for h in (style, script) if h not in live]
+    print(f"\nnetlify.toml is STALE — script-src wants '{script}', "
+          f"style-src wants '{style}'"
+          + (f" (missing: {', '.join(stale)})" if stale else ""))
     if not args.write:
         print("re-run with --write to update it.")
         return 1
 
-    for old in live:
-        if old not in (style, script):
-            replacement = style if old not in scripts else script
-            toml = toml.replace(f"'{old}'", f"'{replacement}'")
-    NETLIFY.write_text(toml, encoding="utf-8")
+    NETLIFY.write_text(fixed, encoding="utf-8")
     print("netlify.toml updated. Now re-run scripts/verify.py in a real browser.")
     return 0
 

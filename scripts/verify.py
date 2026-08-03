@@ -28,8 +28,13 @@ PUBLIC = ROOT / "public"
 PORT = 8899
 RELATED_LINKS = 5
 
+# The guide hub's URL segment differs by language — German publishes it at
+# /de/ratgeber/ (see [languages.de.permalinks] in hugo.toml). Keep this in step
+# with GUIDE_SECTIONS in audit.py.
+GUIDE_SECTIONS = {"guides", "ratgeber"}
+
 PATHS = [
-    "/", "/es/", "/guides/", "/es/guides/",
+    "/", "/es/", "/de/", "/guides/", "/es/guides/", "/de/ratgeber/",
     "/guides/send-a-copy-of-your-passport-safely/",
     "/guides/how-to-redact-a-passport-or-id/",       # has the fieldmap diagram
     "/guides/dni-vs-passport-what-to-redact/",       # has a comparison table
@@ -38,7 +43,14 @@ PATHS = [
     # paths they used to live at are 301s in netlify.toml, not pages.
     "/es/guides/que-es-la-mrz-zona-de-lectura-mecanica/",
     "/es/guides/puede-una-empresa-guardar-copia-del-dni/",
+    # German: the fieldmap, a comparison table, a German-only guide with no
+    # English twin (so hreflang has a single alternate), and the flagship.
+    "/de/ratgeber/ausweis-oder-reisepass-schwaerzen/",
+    "/de/ratgeber/personalausweis-oder-reisepass-was-schwaerzen/",
+    "/de/ratgeber/personalausweis-kopieren-erlaubt/",
+    "/de/ratgeber/ausweiskopie-oesterreich-schweiz/",
     "/about/", "/privacy/", "/terms/", "/contact/", "/imprint/",
+    "/de/about/", "/de/privacy/", "/de/imprint/",
 ]
 
 
@@ -107,7 +119,7 @@ def main():
 
             notes = []
             parts = [x for x in path.split("/") if x]
-            if "guides" in parts and parts[-1] != "guides":
+            if GUIDE_SECTIONS & set(parts) and parts[-1] not in GUIDE_SECTIONS:
                 if page.locator(".answer-box").count() != 1:
                     notes.append("missing the short-answer block")
                 if page.locator(".takeaways li").count() < 3:

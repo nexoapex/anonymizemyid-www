@@ -60,7 +60,7 @@ preferences"** in the footer — this stops Google Analytics immediately and
 clears its cookies.
 
 If you reject, or before you choose, only one piece of local browser storage is
-used: your language preference (English/Spanish), which never leaves your
+used: your language preference (English, Spanish or German), which never leaves your
 browser and is not shared with anyone.
 
 Standard server logs (e.g. IP address) may be processed by our hosting

@@ -10,7 +10,10 @@
       <a href="{{ "/" | relLangURL }}#how">{{ i18n "nav_how" }}</a>
       <a href="{{ "/" | relLangURL }}#features">{{ i18n "nav_features" }}</a>
       <a href="{{ "/" | relLangURL }}#pricing">{{ i18n "nav_pricing" }}</a>
-      <a href="{{ "/guides/" | relLangURL }}">{{ i18n "nav_guides" }}</a>
+      {{/* The section's own .RelPermalink, not `"/guides/" | relLangURL`: German
+           publishes this hub at /de/ratgeber/ (see [languages.de.permalinks]),
+           and a hand-built path would 404 there. */}}
+      {{ with site.GetPage "/guides" }}<a href="{{ .RelPermalink }}">{{ i18n "nav_guides" }}</a>{{ end }}
       {{ partial "lang-switch.html" . }}
       <a class="nav-cta" href="{{ "/" | relLangURL }}#get">{{ i18n "nav_get" }}</a>
     </nav>

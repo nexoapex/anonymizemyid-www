@@ -1,18 +1,56 @@
 {{- /* llms-full.txt — full text of the whole site in one file for LLMs / GEO.
        The home block is built from the same i18n strings and FAQ partial as the
-       rendered page, so it is automatically bilingual. */ -}}
-{{- $es := eq site.Language.Lang "es" -}}
-# {{ site.Params.appName }} — {{ if $es }}contenido completo del sitio{{ else }}full site content{{ end }}
+       rendered page, so it follows every language automatically. Only the
+       handful of labels that have no i18n key live in the table below (same
+       reasoning as index.llms.txt: one row per language beats a branch per
+       string). */ -}}
+{{- $strings := dict
+  "en" (dict
+    "fullSite" "full site content"
+    "home" "Home"
+    "noAccount" "No account, no upload, no server. The app interface is in English for now."
+    "availability" "Availability"
+    "ios" "on the App Store, iOS 13 or later"
+    "android" "on Google Play"
+    "shortAnswer" "Short answer"
+    "keyPoints" "Key points"
+    "summary" "Summary"
+    "footer" "Anonymize my ID processes documents 100% on-device. Apple, App Store, Google Play and their logos are trademarks of their respective owners.")
+  "es" (dict
+    "fullSite" "contenido completo del sitio"
+    "home" "Inicio"
+    "noAccount" "Sin cuenta, sin subir nada y sin servidor. La aplicación está por ahora disponible solo en inglés."
+    "availability" "Disponibilidad"
+    "ios" "en el App Store, iOS 13 o posterior"
+    "android" "en Google Play"
+    "shortAnswer" "Respuesta corta"
+    "keyPoints" "Puntos clave"
+    "summary" "Resumen"
+    "footer" "Anonymize my ID procesa documentos 100% en el dispositivo. Apple, App Store, Google Play y sus logotipos son marcas de sus respectivos propietarios.")
+  "de" (dict
+    "fullSite" "vollständiger Website-Inhalt"
+    "home" "Startseite"
+    "noAccount" "Kein Konto, kein Upload, kein Server. Die App-Oberfläche ist derzeit nur auf Englisch."
+    "availability" "Verfügbarkeit"
+    "ios" "im App Store, ab iOS 13"
+    "android" "bei Google Play"
+    "shortAnswer" "Kurze Antwort"
+    "keyPoints" "Kernpunkte"
+    "summary" "Zusammenfassung"
+    "footer" "Anonymize my ID verarbeitet Dokumente zu 100 % auf dem Gerät. Apple, App Store, Google Play und die zugehörigen Logos sind Marken ihrer jeweiligen Inhaber.")
+-}}
+{{- $t := index $strings site.Language.Lang -}}
+# {{ site.Params.appName }} — {{ $t.fullSite }}
 
 > {{ site.Params.tagline }} {{ site.Params.description }}
-> Canonical: {{ site.Home.Permalink }} · Publisher: {{ site.Params.company }} · Language: {{ if $es }}es-ES{{ else }}en-US{{ end }}
+> Canonical: {{ site.Home.Permalink }} · Publisher: {{ site.Params.company }} · Language: {{ site.Language.Locale }}
 
 ---
 
-# {{ if $es }}Inicio{{ else }}Home{{ end }} — {{ site.Params.appName }}
+# {{ $t.home }} — {{ site.Params.appName }}
 URL: {{ site.Home.Permalink }}
 
-{{ site.Params.appName }}: {{ site.Params.tagline }} {{ i18n "hero_lede" }} {{ if $es }}Sin cuenta, sin subir nada y sin servidor. La aplicación está por ahora disponible solo en inglés.{{ else }}No account, no upload, no server. The app interface is in English for now.{{ end }}
+{{ site.Params.appName }}: {{ site.Params.tagline }} {{ i18n "hero_lede" }} {{ $t.noAccount }}
 
 ## {{ i18n "how_title" }}
 1. {{ i18n "step1_t" }} — {{ i18n "step1_d" }}
@@ -23,9 +61,9 @@ URL: {{ site.Home.Permalink }}
 - {{ i18n "plan_free" }} ({{ i18n "plan_free_price" }}): {{ site.Params.freeUses }} {{ i18n "plan_free_li1_suffix" }}, {{ i18n "plan_free_li2" }}, {{ i18n "plan_free_li3" }}, {{ i18n "plan_free_li4" }}, {{ i18n "plan_free_li5" }}.
 - {{ i18n "plan_pro" }} ({{ site.Params.price }} — {{ site.Params.priceDisclaimer }}): {{ i18n "plan_pro_li1_strong" }} {{ i18n "plan_pro_li1_suffix" }}, {{ i18n "plan_pro_li2" }}, {{ i18n "plan_pro_li3" }}, {{ i18n "plan_pro_li4" }}, {{ i18n "plan_pro_li5" }}, {{ i18n "plan_pro_li6" }}.
 
-## {{ if $es }}Disponibilidad{{ else }}Availability{{ end }}
-- iOS: {{ if $es }}en el App Store, iOS 13 o posterior{{ else }}on the App Store, iOS 13 or later{{ end }} — {{ site.Params.appStoreUrl }}
-- Android: {{ if $es }}en Google Play{{ else }}on Google Play{{ end }} — {{ site.Params.playStoreUrl }}
+## {{ $t.availability }}
+- iOS: {{ $t.ios }} — {{ site.Params.appStoreUrl }}
+- Android: {{ $t.android }} — {{ site.Params.playStoreUrl }}
 
 ## {{ i18n "faq_title" }}
 {{ range partial "home-faq.html" . -}}
@@ -38,19 +76,19 @@ A: {{ .a }}
 
 # {{ .Title }}
 URL: {{ .Permalink }}
-{{ with .Description }}Summary: {{ . }}
+{{ with .Description }}{{ $t.summary }}: {{ . }}
 {{ end }}
 {{- /* The guide's own short answer, ahead of the body — the same passage the
        page shows above the fold and publishes as Article.abstract, so a model
        reading this file quotes the answer we wrote rather than assembling one
        from the narrative below. */ -}}
-{{ with .Params.answer }}{{ if $es }}Respuesta corta{{ else }}Short answer{{ end }}: {{ . }}
+{{ with .Params.answer }}{{ $t.shortAnswer }}: {{ . }}
 {{ end }}
-{{- with .Params.takeaways }}{{ if $es }}Puntos clave{{ else }}Key points{{ end }}:
+{{- with .Params.takeaways }}{{ $t.keyPoints }}:
 {{ range . }}- {{ . }}
 {{ end }}
 {{ end }}
 {{ .RawContent }}
 {{ end }}
 ---
-© {{ now.Year }} {{ site.Params.company }}. {{ if $es }}Anonymize my ID procesa documentos 100% en el dispositivo. Apple, App Store, Google Play y sus logotipos son marcas de sus respectivos propietarios.{{ else }}Anonymize my ID processes documents 100% on-device. Apple, App Store, Google Play and their logos are trademarks of their respective owners.{{ end }}
+© {{ now.Year }} {{ site.Params.company }}. {{ $t.footer }}

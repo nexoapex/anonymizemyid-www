@@ -1,40 +1,95 @@
-{{- /* llms.txt — concise, curated map of the site for LLMs (see llmstxt.org). */ -}}
-{{- $es := eq site.Language.Lang "es" -}}
+{{- /* llms.txt — concise, curated map of the site for LLMs (see llmstxt.org).
+
+       All the prose lives in one per-language table below rather than in
+       `{{ if $es }}…{{ else }}…{{ end }}` scattered through the body: with two
+       languages that was readable, with three it becomes a nest of branches
+       where a missing arm silently emits English into a German file. Adding a
+       fourth language is now one row. */ -}}
+{{- $strings := dict
+  "en" (dict
+    "intro" (printf "%s is a privacy-first mobile app by %s that photographs an ID card or passport and produces a safe, watermarked, redacted copy — processed 100%% on the device, with no account, no upload and no server. Free tier: %d anonymizations per install (every field hidden, black & white, watermark). Pro is a one-time purchase of %s (%s) for unlimited use, blur/pixelate/solid-bar redaction, partial redaction, colour output and a custom watermark. Available on the App Store (iOS 13 or later) and on Google Play (Android). The app interface is in English for now." site.Params.appName site.Params.company (int site.Params.freeUses) site.Params.price site.Params.priceDisclaimer)
+    "pages" "Pages"
+    "home" "Home"
+    "guides" "Guides"
+    "guidesLede" "Practical, plain-English guides on sharing ID documents safely."
+    "shortAnswer" "Short answer"
+    "getApp" "Get the app"
+    "about" "About"
+    "publisher" "Publisher"
+    "support" "Support"
+    "privacy" "Privacy / GDPR"
+    "location" "Location"
+    "country" "Spain"
+    "optional" "Optional"
+    "fullText" "Full site text (one file)"
+    "fullTextDesc" "every page's content concatenated for deep context")
+  "es" (dict
+    "intro" (printf "%s es una app móvil centrada en la privacidad de %s que fotografía un DNI o pasaporte y produce una copia segura, con marca de agua y los datos ocultos — procesada 100%% en el dispositivo, sin cuenta, sin subir nada y sin servidor. Versión gratuita: %d anonimizaciones por instalación (todos los campos ocultos, blanco y negro, marca de agua). Pro es un pago único de %s (%s) con uso ilimitado, censura con desenfoque/pixelado/barras sólidas, censura parcial, salida en color y marca de agua personalizada. Disponible en el App Store (iOS 13 o posterior) y en Google Play (Android). La aplicación está por ahora disponible solo en inglés." site.Params.appName site.Params.company (int site.Params.freeUses) site.Params.price site.Params.priceDisclaimer)
+    "pages" "Páginas"
+    "home" "Inicio"
+    "guides" "Guías"
+    "guidesLede" "Guías claras y prácticas para compartir documentos de identidad de forma segura."
+    "shortAnswer" "Respuesta corta"
+    "getApp" "Descargar la app"
+    "about" "Información"
+    "publisher" "Editor"
+    "support" "Soporte"
+    "privacy" "Privacidad / RGPD"
+    "location" "Ubicación"
+    "country" "España"
+    "optional" "Opcional"
+    "fullText" "Texto completo del sitio (un archivo)"
+    "fullTextDesc" "el contenido de cada página concatenado para contexto profundo")
+  "de" (dict
+    "intro" (printf "%s ist eine datenschutzorientierte Mobil-App der %s: Sie fotografiert einen Personalausweis oder Reisepass und erzeugt daraus eine sichere, geschwärzte Kopie mit Wasserzeichen — zu 100 %% auf dem Gerät verarbeitet, ohne Konto, ohne Upload und ohne Server. Gratisversion: %d Anonymisierungen pro Installation (alle Felder verdeckt, Schwarzweiß, Wasserzeichen). Pro ist ein einmaliger Kauf für %s (%s) mit unbegrenzter Nutzung, Schwärzung per Unschärfe, Pixeln oder deckendem Balken, Teilschwärzung, farbiger Ausgabe und eigenem Wasserzeichen. Erhältlich im App Store (ab iOS 13) und bei Google Play (Android). Die App-Oberfläche ist derzeit nur auf Englisch. Die Ratgeber behandeln die Rechtslage in Deutschland (§ 20 PAuswG, Bundesmeldegesetz, Geldwäschegesetz) sowie in Österreich und der Schweiz." site.Params.appName site.Params.company (int site.Params.freeUses) site.Params.price site.Params.priceDisclaimer)
+    "pages" "Seiten"
+    "home" "Startseite"
+    "guides" "Ratgeber"
+    "guidesLede" "Praktische, verständliche Ratgeber zum sicheren Weitergeben von Ausweisdokumenten in Deutschland, Österreich und der Schweiz."
+    "shortAnswer" "Kurze Antwort"
+    "getApp" "App holen"
+    "about" "Über"
+    "publisher" "Herausgeber"
+    "support" "Support"
+    "privacy" "Datenschutz / DSGVO"
+    "location" "Sitz"
+    "country" "Spanien"
+    "optional" "Optional"
+    "fullText" "Vollständiger Website-Text (eine Datei)"
+    "fullTextDesc" "der Inhalt jeder Seite am Stück für tiefen Kontext")
+-}}
+{{- $t := index $strings site.Language.Lang -}}
 # {{ site.Params.appName }}
 
 > {{ site.Params.tagline }} {{ site.Params.description }}
 
-{{ if $es -}}
-{{ site.Params.appName }} es una app móvil centrada en la privacidad de {{ site.Params.company }} que fotografía un DNI o pasaporte y produce una copia segura, con marca de agua y los datos ocultos — procesada 100% en el dispositivo, sin cuenta, sin subir nada y sin servidor. Versión gratuita: {{ site.Params.freeUses }} anonimizaciones por instalación (todos los campos ocultos, blanco y negro, marca de agua). Pro es un pago único de {{ site.Params.price }} ({{ site.Params.priceDisclaimer }}) con uso ilimitado, censura con desenfoque/pixelado/barras sólidas, censura parcial, salida en color y marca de agua personalizada. Disponible en el App Store (iOS 13 o posterior) y en Google Play (Android). La aplicación está por ahora disponible solo en inglés.
-{{- else -}}
-{{ site.Params.appName }} is a privacy-first mobile app by {{ site.Params.company }} that photographs an ID card or passport and produces a safe, watermarked, redacted copy — processed 100% on the device, with no account, no upload and no server. Free tier: {{ site.Params.freeUses }} anonymizations per install (every field hidden, black & white, watermark). Pro is a one-time purchase of {{ site.Params.price }} ({{ site.Params.priceDisclaimer }}) for unlimited use, blur/pixelate/solid-bar redaction, partial redaction, colour output and a custom watermark. Available on the App Store (iOS 13 or later) and on Google Play (Android). The app interface is in English for now.
-{{- end }}
+{{ $t.intro }}
 
-## {{ if $es }}Páginas{{ else }}Pages{{ end }}
-- [{{ if $es }}Inicio{{ else }}Home{{ end }}]({{ site.Home.Permalink }}): {{ site.Params.description }}
+## {{ $t.pages }}
+- [{{ $t.home }}]({{ site.Home.Permalink }}): {{ site.Params.description }}
 {{ range (where site.RegularPages "Section" "!=" "guides") -}}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{ end }}
 {{- $guides := where site.RegularPages "Section" "guides" -}}
 {{- with $guides }}
-## {{ if $es }}Guías{{ else }}Guides{{ end }}
-{{ if $es }}Guías claras y prácticas para compartir documentos de identidad de forma segura.{{ else }}Practical, plain-English guides on sharing ID documents safely.{{ end }}
+## {{ $t.guides }}
+{{ $t.guidesLede }}
 {{ range . -}}
 {{/* The guide's own short answer follows its description, so an agent that
      only ever fetches llms.txt still gets the answer we wrote rather than
      having to fetch and summarise the page. */}}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}{{ with .Params.answer }}
-  {{ if $es }}Respuesta corta{{ else }}Short answer{{ end }}: {{ . }}{{ end }}
+  {{ $t.shortAnswer }}: {{ . }}{{ end }}
 {{ end }}
 {{- end }}
-## {{ if $es }}Descargar la app{{ else }}Get the app{{ end }}
+## {{ $t.getApp }}
 - App Store (iOS): {{ site.Params.appStoreUrl }}
 - Google Play (Android): {{ site.Params.playStoreUrl }}
 
-## {{ if $es }}Información{{ else }}About{{ end }}
-- {{ if $es }}Editor{{ else }}Publisher{{ end }}: {{ site.Params.company }} ({{ site.Params.parentSite }})
-- {{ if $es }}Soporte{{ else }}Support{{ end }}: {{ site.Params.email }} — {{ if $es }}Privacidad / RGPD{{ else }}Privacy / GDPR{{ end }}: {{ site.Params.privacyEmail }}
-- {{ if $es }}Ubicación{{ else }}Location{{ end }}: El Vendrell, Tarragona, {{ if $es }}España{{ else }}Spain{{ end }}
+## {{ $t.about }}
+- {{ $t.publisher }}: {{ site.Params.company }} ({{ site.Params.parentSite }})
+- {{ $t.support }}: {{ site.Params.email }} — {{ $t.privacy }}: {{ site.Params.privacyEmail }}
+- {{ $t.location }}: El Vendrell, Tarragona, {{ $t.country }}
 
-## {{ if $es }}Opcional{{ else }}Optional{{ end }}
-- [{{ if $es }}Texto completo del sitio (un archivo){{ else }}Full site text (one file){{ end }}]({{ "llms-full.txt" | relLangURL }}): {{ if $es }}el contenido de cada página concatenado para contexto profundo{{ else }}every page's content concatenated for deep context{{ end }}
+## {{ $t.optional }}
+- [{{ $t.fullText }}]({{ "llms-full.txt" | relLangURL }}): {{ $t.fullTextDesc }}

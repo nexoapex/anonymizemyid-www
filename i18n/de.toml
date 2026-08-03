@@ -1,0 +1,175 @@
+# German UI strings. Keys mirror i18n/en.toml.
+# Register: consistently formal ("Sie"). The guides deal with law, landlords and
+# employers, and the DACH reader expects that register for the subject — mixing
+# in "du" anywhere would read as a translation slip, so there is none.
+
+# ── Navigation / Kopfzeile ──
+nav_how = "So funktioniert's"
+nav_features = "Funktionen"
+nav_pricing = "Preis"
+nav_guides = "Ratgeber"
+nav_get = "App holen"
+nav_primary = "Hauptnavigation"
+lang_switcher = "Sprache"
+lang_en = "English"
+lang_es = "Español"
+lang_de = "Deutsch"
+
+# ── Hero ──
+hero_pill = "100 % auf dem Gerät · kein Upload"
+hero_lede = "Fotografieren Sie Ihren Personalausweis oder Reisepass und erhalten Sie eine sichere, geschwärzte Kopie mit Wasserzeichen — vollständig auf Ihrem Handy verarbeitet. Ideal für Hotels, Mietwagen, Vermieter und Visumanträge."
+hero_home_alt = "Startbildschirm der App Anonymize my ID"
+badges_free_try = "Kostenlos testen unter iOS und Android."
+app_lang_note = "Die App selbst ist derzeit nur auf Englisch verfügbar."
+
+# ── Vertrauensleiste ──
+trust_no_account_t = "Kein Konto"
+trust_no_account_d = "nichts zu registrieren"
+trust_no_upload_t = "Kein Upload"
+trust_no_upload_d = "Ihr Foto verlässt das Handy nie"
+trust_docs_t = "Ausweis & Reisepass"
+trust_docs_d = "Vorder- und Rückseite, Datenseite"
+trust_onetime_t = "Einmalzahlung"
+trust_onetime_d = "kein Abo, niemals"
+
+# ── So funktioniert's ──
+how_title = "Drei Schritte zur sicheren Kopie"
+step1_t = "Fotografieren oder auswählen"
+step1_d = "Fotografieren Sie Ihren Ausweis oder Reisepass, oder wählen Sie ein vorhandenes Foto. Alles passiert offline."
+step2_t = "Verdecken, was zählt"
+step2_d = "Ziehen Sie die Kästchen über die sensiblen Felder. Die Gratisversion verdeckt alles; Pro lässt Sie zwischen Unschärfe, Pixeln, Teilschwärzung und Farbe wählen."
+step3_t = "Sicher weitergeben"
+step3_d = "Exportieren Sie eine Kopie mit Wasserzeichen und schicken Sie sie, wohin Sie wollen — Ihre echten Daten bleiben privat."
+ba_before_alt = "Originales Ausweisdokument"
+ba_free_alt = "Anonymisierte Kopie: schwarzweiß, alle Felder verdeckt, mit Wasserzeichen"
+ba_pro_alt = "Anonymisierte Kopie mit Pro: Unschärfe und Teilschwärzung in Farbe"
+ba_before_cap = "Vorher — Ihr Dokument"
+ba_free_cap = "Gratis — alles verdeckt · s/w · Wasserzeichen"
+ba_pro_cap = "Pro — Unschärfe, Teilschwärzung, Farbe"
+
+# ── Funktionen ──
+features_title = "Für den Datenschutz gebaut, fürs Reisen gemacht"
+feat_offline_t = "100 % offline"
+feat_offline_d = "Die gesamte Verarbeitung läuft auf dem Gerät mit der Bildengine von Apple bzw. Google. Nichts wird hochgeladen."
+feat_stored_t = "Nichts gespeichert"
+feat_stored_d = "Kein Konto, und die App behält nie eine Kopie Ihres Originalfotos."
+feat_docs_t = "Ausweise & Reisepässe"
+feat_docs_d = "Ausweiskarten von vorn und hinten sowie Reisepass-Datenseiten, mit sinnvollen Feldvorlagen."
+feat_hide_t = "Jedes Feld verdecken"
+feat_hide_d = "Kästchen verschieben, vergrößern, hinzufügen oder löschen — Sie verdecken genau das, was Sie wollen."
+feat_blur_t = "Unschärfe · Pixel · Balken"
+feat_blur_d = "Wählen Sie pro Feld, wie es verdeckt wird — ein sauberer Balken, eine Unschärfe oder ein Pixelraster."
+feat_partial_t = "Teilschwärzung"
+feat_partial_d = "Zeigen Sie nur die letzten Ziffern einer Nummer und verdecken Sie den Rest."
+feat_bw_t = "Schwarzweiß oder Farbe"
+feat_bw_d = "Behalten Sie den klassischen Fotokopie-Look in Schwarzweiß, oder bleiben Sie in Farbe."
+feat_watermark_t = "Fälschungssicheres Wasserzeichen"
+feat_watermark_d = "Legen Sie ein eigenes Wasserzeichen über das ganze Bild, damit Kopien nicht weiterverwendet werden können."
+
+# ── Preis ──
+pricing_title = "Einfacher Preis"
+pricing_sub = "Kostenlos testen. Einmal alles freischalten — ohne Abo."
+plan_free = "Gratis"
+plan_free_price = "0 €"
+plan_free_note = "Zum Ausprobieren"
+plan_free_li1_suffix = "Anonymisierungen pro Installation"
+plan_free_li2 = "Alle sensiblen Felder verdeckt"
+plan_free_li3 = "Schwarzweiß + Wasserzeichen"
+plan_free_li4 = "Ausweise & Reisepässe"
+plan_free_li5 = "100 % offline"
+plan_best = "Beste Wahl"
+plan_pro = "Pro"
+plan_pro_once = "einmalig"
+plan_pro_li1_strong = "Unbegrenzt"
+plan_pro_li1_suffix = "anonymisieren"
+plan_pro_li2 = "Selbst entscheiden, was verdeckt wird"
+plan_pro_li3 = "Unschärfe, Pixel oder deckende Balken"
+plan_pro_li4 = "Teilschwärzung (letzte Ziffern zeigen)"
+plan_pro_li5 = "In Farbe behalten"
+plan_pro_li6 = "Eigener Wasserzeichentext und eigene Deckkraft"
+plan_get = "App holen"
+
+# ── Datenschutzband ──
+privacy_title = "Ihre Identität verlässt Ihr Handy nie"
+privacy_body = "Es gibt keinen Server, kein Konto und keine Analyse Ihrer Dokumente. Das Originalfoto wird lokal verarbeitet und nie gespeichert oder irgendwohin gesendet."
+privacy_read = "Datenschutzerklärung lesen →"
+
+# ── Fragen ──
+faq_title = "Fragen"
+
+# ── Ratgeber (Teaser auf der Startseite + Übersicht) ──
+guides_title = "Ratgeber"
+guides_teaser_sub = "Verständliche Hinweise, wie Sie Reisepass oder Ausweis weitergeben, ohne Ihre Identität preiszugeben."
+read_guide = "Zum Ratgeber →"
+browse_all = "Alle Ratgeber ansehen"
+
+# ── Abschluss-CTA ──
+cta_title = "Leicht reisen. Sicher teilen."
+cta_sub = "Holen Sie sich Anonymize my ID auf Ihr Handy."
+
+# ── Store-Badges ──
+badge_download = "Laden im"
+badge_getiton = "Jetzt bei"
+badge_soon = "Demnächst im"
+
+# ── Fußzeile ──
+footer_tagline_suffix = "Zu 100 % auf Ihrem Gerät verarbeitet."
+footer_parent = "Nexo Apex"
+footer_aria = "Fußzeile"
+footer_product_of = "Anonymize my ID ist ein Produkt der {{ .company }} (USt-IdNr. {{ .vat }}), {{ .address }}."
+footer_rights = "© {{ .year }} {{ .company }}. Alle Rechte vorbehalten. Apple, App Store, Google Play und die zugehörigen Logos sind Marken ihrer jeweiligen Inhaber."
+
+# ── Ratgeber-Vorlagen ──
+guide_cta_hub_title = "Teilen Sie Ihren Ausweis, nicht Ihre Identität"
+guide_cta_hub_body = "Anonymize my ID erledigt das alles für Sie — sensible Felder verdecken und ein Wasserzeichen setzen, zu 100 % auf Ihrem Handy und ohne Upload."
+guide_cta_title = "In wenigen Schritten erledigt"
+guide_cta_body = "Anonymize my ID verdeckt jedes sensible Feld und setzt ein fälschungssicheres Wasserzeichen — zu 100 % auf Ihrem Handy, ohne Konto und ohne Upload."
+crumb_home = "Startseite"
+byline_by = "Von David Pelayo"
+byline_min_read = "Min. Lesezeit"
+byline_updated = "Aktualisiert"
+howto_default = "Schritt für Schritt"
+guide_faq_title = "Häufige Fragen"
+related_title = "Weiterlesen"
+short_answer = "Kurze Antwort"
+
+# ── Cookie-Einwilligung ──
+cookie_aria = "Cookie-Einwilligung"
+cookie_banner_body = "Wir würden gern Google Analytics einsetzen, um den Website-Traffic zu verstehen. Es wird nur geladen, wenn Sie zustimmen, und Sie können Ihre Entscheidung jederzeit ändern."
+cookie_accept = "Zustimmen"
+cookie_reject = "Ablehnen"
+cookie_policy_link = "Datenschutzerklärung"
+cookie_manage = "Cookie-Einstellungen"
+
+# ── Rechtliche Seiten ──
+single_updated = "Zuletzt aktualisiert"
+
+# ── 404 ──
+notfound_title = "Seite nicht gefunden"
+notfound_body = "Diese Seite gibt es nicht — Ihre Dokumente sind aber sicher. Zurück zur Startseite."
+notfound_home = "← Zur Startseite"
+
+# ── Autor (E-E-A-T) ──
+author_role = "Gründer der NEXO APEX S.L."
+author_bio = "David Pelayo ist Gründer der NEXO APEX S.L. und Entwickler von Anonymize my ID. Er schreibt diese Ratgeber aus der technischen Perspektive der Dokumentenschwärzung: was sich aus einem unscharf gemachten Bild tatsächlich zurückholen lässt, was die maschinenlesbare Zone wirklich kodiert und was ein Unternehmen rechtlich wirklich aufbewahren darf."
+author_knows_about = "Schwärzen von Dokumenten|Sicherheit von Ausweisdokumenten|maschinenlesbare Zonen (ICAO 9303)|Datenminimierung nach der DSGVO|Bildverarbeitung auf dem Gerät"
+author_more = "Mehr über den Menschen dahinter"
+
+# ── Feld-Diagramm ──
+fm_title = "Welche Felder Sie auf der Datenseite eines Reisepasses verdecken sollten"
+fm_alt = "Schema der Datenseite eines Reisepasses. Lichtbild, Name, Vornamen und Staatsangehörigkeit sind als sichtbar markiert; Dokumentennummer, Geburtsdatum, Ablaufdatum, Geburtsort, Unterschrift und die beiden Zeilen der maschinenlesbaren Zone am Fuß der Seite sind als zu verdecken markiert."
+fm_caption = "Die Datenseite eines Reisepasses, Feld für Feld. Für einen Personalausweis gilt dieselbe Aufteilung — nur die Anordnung ist anders."
+fm_doc_label = "REISEPASS / DATENSEITE"
+fm_key_hide = "Vor dem Teilen verdecken"
+fm_key_keep = "Normalerweise sichtbar lassen"
+fm_photo = "Lichtbild"
+fm_surname = "Name"
+fm_given = "Vornamen"
+fm_docno = "Dokumentennummer"
+fm_nationality = "Staatsangehörigkeit"
+fm_dob = "Geburtsdatum"
+fm_expiry = "Gültig bis"
+fm_pob = "Geburtsort"
+fm_signature = "Unterschrift"
+fm_mrz = "Maschinenlesbare Zone (MRZ)"
+skip_to_content = "Zum Inhalt springen"

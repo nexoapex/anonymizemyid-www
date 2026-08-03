@@ -4,9 +4,15 @@
 {{- $orgID := printf "%s#organization" $base -}}
 {{- $siteID := printf "%s#website" $base -}}
 {{- $ogImage := "images/og.png" | absURL -}}
-{{- $inLang := cond (eq site.Language.Lang "es") "es-ES" "en-US" -}}
+{{- /* en-US / es-ES / de-DE, straight from each language's `locale` in
+       hugo.toml — see the same derivation in partials/head.html. */ -}}
+{{- $inLang := site.Language.Locale -}}
+{{- /* Every published edition, for the nodes that describe the product rather
+       than this page (the app is offered in all of them). */ -}}
+{{- $allLangs := slice -}}
+{{- range site.Home.AllTranslations }}{{ $allLangs = $allLangs | append .Language.Lang }}{{ end -}}
 {{- if and .IsPage (eq .Section "guides") -}}
-  {{- $ogSuffix := cond (eq site.Language.Lang "es") ".es" "" -}}
+  {{- $ogSuffix := cond (eq site.Language.Lang "en") "" (printf ".%s" site.Language.Lang) -}}
   {{- with resources.Get (printf "images/og/%s%s.png" .File.TranslationBaseName $ogSuffix) -}}
     {{- $ogImage = .RelPermalink | absURL -}}
   {{- end -}}
@@ -37,8 +43,8 @@
     "image" ("images/icon-512.png" | absURL)
     "sameAs" $profiles
     "contactPoint" (slice
-      (dict "@type" "ContactPoint" "contactType" "customer support" "email" site.Params.email "availableLanguage" (slice "en" "es"))
-      (dict "@type" "ContactPoint" "contactType" "privacy" "email" site.Params.privacyEmail "availableLanguage" (slice "en" "es")))
+      (dict "@type" "ContactPoint" "contactType" "customer support" "email" site.Params.email "availableLanguage" $allLangs)
+      (dict "@type" "ContactPoint" "contactType" "privacy" "email" site.Params.privacyEmail "availableLanguage" $allLangs))
     "address" (dict
       "@type" "PostalAddress"
       "streetAddress" "Edificio Camí Reial, c/ Camí Reial 13-17, 3a planta"
@@ -88,7 +94,7 @@
       "image" $ogImageObj
       "isAccessibleForFree" true
       "inLanguage" $inLang
-      "availableLanguage" (slice "en" "es")
+      "availableLanguage" $allLangs
       "publisher" (dict "@id" $orgID)
       "offers" (dict
         "@type" "AggregateOffer"
@@ -212,6 +218,17 @@
       "marca de agua"             (slice "Marca de agua digital" "https://en.wikipedia.org/wiki/Digital_watermarking")
       "driving licence"           (slice "Driver's licence" "https://en.wikipedia.org/wiki/Driver%27s_license")
       "whatsapp"                  (slice "WhatsApp" "https://en.wikipedia.org/wiki/WhatsApp")
+      "reisepass"                 (slice "Reisepass" "https://de.wikipedia.org/wiki/Reisepass")
+      "personalausweis"           (slice "Personalausweis" "https://de.wikipedia.org/wiki/Personalausweis")
+      "maschinenlesbare zone"     (slice "Maschinenlesbare Zone" "https://de.wikipedia.org/wiki/Maschinenlesbare_Zone")
+      "schwärzen"                 (slice "Schwärzung" "https://de.wikipedia.org/wiki/Schw%C3%A4rzung")
+      "identitätsdiebstahl"       (slice "Identitätsdiebstahl" "https://de.wikipedia.org/wiki/Identit%C3%A4tsdiebstahl")
+      "dsgvo"                     (slice "Datenschutz-Grundverordnung" "https://de.wikipedia.org/wiki/Datenschutz-Grundverordnung")
+      "wasserzeichen"             (slice "Digitales Wasserzeichen" "https://de.wikipedia.org/wiki/Digitales_Wasserzeichen")
+      "führerschein"              (slice "Führerschein" "https://de.wikipedia.org/wiki/F%C3%BChrerschein")
+      "identitätskarte"           (slice "Identitätskarte" "https://de.wikipedia.org/wiki/Identit%C3%A4tskarte_(Schweiz)")
+      "postident"                 (slice "Postident" "https://de.wikipedia.org/wiki/Postident")
+      "schufa"                    (slice "Schufa" "https://de.wikipedia.org/wiki/Schufa")
   -}}
   {{- /* Every guide in this hub is about identity documents, including the
          scenario ones whose keywords are situational ("landlords", "hosts",
@@ -219,8 +236,11 @@
          beats stretching a situational keyword onto an article that does not
          mean the same thing — "short-term rentals" is not Airbnb, and the UK's
          right-to-work check is not Wikipedia's "right to work". */ -}}
-  {{- $about := slice (dict "@type" "Thing" "name" "Identity document" "sameAs" "https://en.wikipedia.org/wiki/Identity_document") -}}
-  {{- $namesSeen := slice "Identity document" -}}
+  {{- $baseline := index (dict
+      "de" (slice "Ausweisdokument" "https://de.wikipedia.org/wiki/Ausweis")
+    ) site.Language.Lang | default (slice "Identity document" "https://en.wikipedia.org/wiki/Identity_document") -}}
+  {{- $about := slice (dict "@type" "Thing" "name" (index $baseline 0) "sameAs" (index $baseline 1)) -}}
+  {{- $namesSeen := slice (index $baseline 0) -}}
   {{- range .Params.keywords -}}
     {{- with index $entities (lower .) -}}
       {{- $name := index . 0 -}}

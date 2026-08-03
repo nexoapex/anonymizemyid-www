@@ -40,4 +40,30 @@
           "a" "Sí. Como tu documento se procesa 100% en el dispositivo, sin cuenta y sin subir nada, nunca se convierte en datos que nosotros — ni nadie — podamos guardar, filtrar o vernos obligados a entregar.")
 -}}
 {{- end -}}
+{{- if eq site.Language.Lang "de" -}}
+{{- /* The German edition carries one question the other two do not: whether
+       copying a Personalausweis is allowed at all. It is the single most
+       searched question in this market and the answer (§ 20 Abs. 2 PAuswG)
+       is genuinely counter-intuitive, so it belongs above the fold. */ -}}
+{{- $faq = slice
+    (dict "q" "Wird mein Dokument irgendwohin hochgeladen?"
+          "a" "Nein. Alles wird auf Ihrem Gerät verarbeitet. Die App hat keinen Server und sendet oder speichert Ihr Foto nie.")
+    (dict "q" "Was ist in der Gratisversion enthalten?"
+          "a" (printf "%d Anonymisierungen pro Installation. Jede verdeckt alle sensiblen Felder, wandelt das Bild in Schwarzweiß um und setzt ein Wasserzeichen." (int site.Params.freeUses)))
+    (dict "q" "Was bekomme ich mit Pro?"
+          "a" (printf "Eine einmalige Freischaltung für %s (%s) — für immer, ohne Abo — mit unbegrenzten Anonymisierungen und voller Kontrolle: Sie entscheiden, was verdeckt wird, mit Unschärfe, Pixeln oder deckenden Balken, Teilschwärzung, Farbe und eigenem Wasserzeichen." site.Params.price site.Params.priceDisclaimer))
+    (dict "q" "Darf ich meinen Personalausweis überhaupt kopieren?"
+          "a" "Ja. Seit 2017 erlaubt § 20 Abs. 2 PAuswG dem Ausweisinhaber ausdrücklich, den Personalausweis zu kopieren oder kopieren zu lassen — die Kopie muss aber eindeutig und dauerhaft als Kopie erkennbar sein. Genau das leistet ein flächiges Wasserzeichen. In Österreich und der Schweiz gibt es keine vergleichbare Sondernorm; dort entscheidet allein der Datenschutz.")
+    (dict "q" "Welche Dokumente werden unterstützt?"
+          "a" "Ausweiskarten von vorn und hinten — etwa der deutsche Personalausweis oder die Schweizer Identitätskarte — und die Datenseite von Reisepässen. Die Kästchen lassen sich frei verschieben; die Feldvorlagen sind auf englisch- und spanischsprachige Dokumentlayouts abgestimmt.")
+    (dict "q" "Ist es sicher, eine anonymisierte Kopie weiterzugeben?"
+          "a" "Die App hilft Ihnen, die sensiblen Felder zu verdecken, und setzt ein fälschungssicheres Wasserzeichen, sodass eine weitergegebene Kopie nicht zur Identitätsübernahme taugt. Sie behalten die Kontrolle darüber, was vor dem Teilen verdeckt ist.")
+    (dict "q" "Kann ich eine Ausweiskopie per E-Mail oder WhatsApp verschicken?"
+          "a" "Nur geschwärzt. Sind die sensiblen Felder verdeckt und ist die Kopie mit einem Wasserzeichen versehen, lässt sich ein abgefangenes oder weitergeleitetes Bild nicht mehr nutzen, um Konten zu eröffnen oder Dokumente zu fälschen. Anonymize my ID erstellt diese sichere Kopie in wenigen Schritten.")
+    (dict "q" "Auf welchen Geräten läuft die App?"
+          "a" "Auf iPhone und iPad ab iOS 13 über den App Store und auf Android-Handys über Google Play. Auf beiden arbeitet sie vollständig offline.")
+    (dict "q" "Ist das DSGVO-konform?"
+          "a" "Ja. Weil Ihr Dokument zu 100 % auf dem Gerät verarbeitet wird, ohne Konto und ohne Upload, entstehen bei uns überhaupt keine personenbezogenen Daten, die wir — oder sonst jemand — speichern, verlieren oder herausgeben müssten.")
+-}}
+{{- end -}}
 {{- return $faq -}}

@@ -4,8 +4,10 @@
     python3 scripts/og-card.py send-a-copy-of-your-passport-safely
     python3 scripts/og-card.py --all          # every guide missing a card
 
-Writes assets/images/og/<slug>.png and <slug>.es.png, reading each title from
-the guide's own front matter so the card and the page cannot drift.
+Writes assets/images/og/<slug>.png plus one <slug>.<lang>.png per translation
+that exists on disk, reading each title from the guide's own front matter so the
+card and the page cannot drift. Guides that exist in only one language (the
+German-only DACH set, for instance) get just that language's card.
 
 A guide with no card falls back to the shared static/images/og.png, which works
 but is generic — worth generating one for anything you expect to be shared.
@@ -68,8 +70,29 @@ def title_of(path):
 
 
 def font_size(title):
+    # German titles run long (compound nouns, "Personalausweis"), so there is a
+    # smaller tier below the original four — without it a 70-character title
+    # runs past the bottom of the 630px card.
     n = len(title)
-    return 62 if n <= 34 else 55 if n <= 46 else 48 if n <= 58 else 43
+    return 62 if n <= 34 else 55 if n <= 46 else 48 if n <= 58 else 43 if n <= 70 else 38
+
+
+def variants(slug):
+    """Every language file for a slug: <slug>.md plus <slug>.<lang>.md.
+
+    Returns [(suffix, path)], where suffix is "" for the default language and
+    ".<lang>" otherwise — the same naming partials/head.html looks the card up
+    by. A slug that exists in only one language yields only that one.
+    """
+    out = []
+    for path in sorted(GUIDES.glob(f"{slug}.*")):
+        if path.suffix != ".md":
+            continue
+        rest = path.name[len(slug):-3]        # "" or ".de"
+        if rest and not rest.startswith("."):  # a longer slug that shares a prefix
+            continue
+        out.append((rest, path))
+    return out
 
 
 def main():
@@ -78,24 +101,30 @@ def main():
     ap.add_argument("--all", action="store_true", help="every guide missing a card")
     args = ap.parse_args()
 
-    slugs = args.slugs
+    slugs, jobs = args.slugs, []
     if args.all:
-        slugs = sorted({p.stem for p in GUIDES.glob("*.md")
-                        if not p.stem.startswith("_") and not p.stem.endswith(".es")
-                        and not (OUT / f"{p.stem}.png").exists()})
-        if not slugs:
+        # Every language variant that has no card yet — which is how a newly
+        # added language gets its whole set generated in one run.
+        for src in sorted(GUIDES.glob("*.md")):
+            if src.name.startswith("_"):
+                continue
+            slug = src.stem.split(".")[0]
+            suffix = src.stem[len(slug):]
+            dest = OUT / f"{slug}{suffix}.png"
+            if not dest.exists():
+                jobs.append((dest, title_of(src)))
+        if not jobs:
             print("every guide already has a card.")
             return 0
-    if not slugs:
+    elif slugs:
+        for slug in slugs:
+            found = variants(slug)
+            if not found:
+                sys.exit(f"no guide file for {slug} in {GUIDES}")
+            for suffix, src in found:
+                jobs.append((OUT / f"{slug}{suffix}.png", title_of(src)))
+    else:
         ap.error("pass one or more slugs, or --all")
-
-    jobs = []
-    for slug in slugs:
-        for suffix, name in (("", f"{slug}.md"), (".es", f"{slug}.es.md")):
-            src = GUIDES / name
-            if not src.exists():
-                sys.exit(f"missing {src}")
-            jobs.append((OUT / f"{slug}{suffix}.png", title_of(src)))
 
     from playwright.sync_api import sync_playwright
     OUT.mkdir(parents=True, exist_ok=True)

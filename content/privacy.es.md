@@ -61,7 +61,7 @@ cuando quieras desde **«Preferencias de cookies»** en el pie de página — es
 detiene Google Analytics de inmediato y borra sus cookies.
 
 Si rechazas, o antes de elegir, solo se usa un dato de almacenamiento local
-del navegador: tu idioma preferido (inglés/español), que nunca sale de tu
+del navegador: tu idioma preferido (inglés, español o alemán), que nunca sale de tu
 navegador ni se comparte con nadie.
 
 Los registros habituales del servidor (p. ej. la dirección IP) puede

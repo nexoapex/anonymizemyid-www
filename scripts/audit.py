@@ -29,6 +29,10 @@ PUBLIC = ROOT / "public"
 
 TITLE_MAX = 60
 DESC_MIN, DESC_MAX = 110, 160
+# URL segment the guide hub lives under, per language. English and Spanish share
+# /guides/; German uses /ratgeber/. Add a segment here when a language renames
+# the section in hugo.toml, or its guides drop out of the link-distribution check.
+GUIDE_SECTIONS = ("guides", "ratgeber")
 
 
 def first(pattern, text):
@@ -82,8 +86,11 @@ def check_external(pages):
             with urllib.request.urlopen(req, timeout=20) as r:
                 return url, r.status
         except urllib.error.HTTPError as e:
-            # A HEAD-hostile host is not a dead link; retry once with GET.
-            if e.code in (403, 405):
+            # A host that dislikes HEAD, or a WAF that dislikes a non-browser
+            # user agent, is not a dead link. The German federal sites
+            # (bsi.bund.de, bfdi.bund.de) answer 400 to the UA above and 200 to
+            # a browser one, so 400 belongs in this retry alongside 403/405.
+            if e.code in (400, 403, 405):
                 try:
                     with urllib.request.urlopen(urllib.request.Request(
                             url, headers={"User-Agent": "Mozilla/5.0"}), timeout=20) as r:
@@ -97,7 +104,10 @@ def check_external(pages):
     bad = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
         for url, status in pool.map(head, urls):
-            if status != 200:
+            # Any 2xx means the source is reachable. EUR-Lex answers its ELI
+            # permalinks with 202, which the old `!= 200` reported as a broken
+            # primary source on every guide that cites the GDPR.
+            if not (isinstance(status, int) and 200 <= status < 300):
                 bad.append(f"external {status}  {url}")
     print(f"external URLs checked: {len(urls)}")
     return bad
@@ -218,8 +228,15 @@ def main():
             if not href.endswith((".xml", ".txt", ".png", ".svg", ".ico",
                                   ".webmanifest", ".jpg", ".webp")):
                 links[href].add(url)
+    # The guide hub is not called "guides" in every language — German publishes
+    # it at /de/ratgeber/ (see [languages.de.permalinks] in hugo.toml). Matching
+    # only on "/guides/" silently dropped a whole language out of the
+    # inbound-link distribution check, which is the one check that notices a
+    # guide nothing links to.
     guides = [u for u in pages
-              if "/guides/" in u and not u.endswith("guides/") and not u.startswith("/en/")]
+              if any(f"/{s}/" in u for s in GUIDE_SECTIONS)
+              and not any(u.endswith(f"{s}/") for s in GUIDE_SECTIONS)
+              and not u.startswith("/en/")]
     inbound = {u: len(links.get(u, set()) - {u}) for u in guides}
 
     print(f"pages: {len(pages)}   guides: {len(guides)}")

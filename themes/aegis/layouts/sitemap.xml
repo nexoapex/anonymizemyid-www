@@ -22,7 +22,15 @@
     {{- end }}
     {{- if .IsTranslated }}
     {{- range .AllTranslations }}
-    <xhtml:link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}" />
+    {{- $href := .Permalink }}
+    <xhtml:link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ $href }}" />
+    {{- /* Extra regional targets that resolve to the same edition — German
+           declares de-AT and de-CH. Kept in step with partials/head.html: a
+           sitemap that advertises a narrower set than the pages do is a
+           disagreement Search Console reports. */ -}}
+    {{- range .Language.Params.hreflangAlso }}
+    <xhtml:link rel="alternate" hreflang="{{ . }}" href="{{ $href }}" />
+    {{- end }}
     {{- end }}
     {{- range .AllTranslations }}
     {{- if eq .Language.Lang "en" }}
