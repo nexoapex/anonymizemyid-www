@@ -303,6 +303,12 @@ def render(jobs):
         page = browser.new_context(viewport={"width": 1200, "height": 630},
                                    device_scale_factor=1).new_page()
         for dest, title, lang, is_default in jobs:
+            if lang not in ARTWORK:
+                # Falling back silently would draw English field labels onto a
+                # card whose title is in another language, and nothing
+                # downstream would notice — the card renders, it is just wrong.
+                print(f"  !! no ARTWORK entry for {lang!r} — drawing English "
+                      f"document labels on {dest.name}", file=sys.stderr)
             art = ARTWORK.get(lang, ARTWORK["en"])
             # On a shared card the eyebrow carries the value proposition instead
             # of a section name - it is the one card where nobody arrived from a
