@@ -3,7 +3,9 @@
 {{- $base := site.BaseURL -}}
 {{- $orgID := printf "%s#organization" $base -}}
 {{- $siteID := printf "%s#website" $base -}}
-{{- $ogImage := "images/og.png" | absURL -}}
+{{- /* Per-language shared card, matching partials/head.html. */ -}}
+{{- $ogSuffix := cond (eq site.Language.Lang "en") "" (printf ".%s" site.Language.Lang) -}}
+{{- $ogImage := (printf "images/og%s.png" $ogSuffix) | absURL -}}
 {{- /* en-US / es-ES / de-DE, straight from each language's `locale` in
        hugo.toml — see the same derivation in partials/head.html. */ -}}
 {{- $inLang := site.Language.Locale -}}
@@ -12,7 +14,6 @@
 {{- $allLangs := slice -}}
 {{- range site.Home.AllTranslations }}{{ $allLangs = $allLangs | append .Language.Lang }}{{ end -}}
 {{- if and .IsPage (eq .Section "guides") -}}
-  {{- $ogSuffix := cond (eq site.Language.Lang "en") "" (printf ".%s" site.Language.Lang) -}}
   {{- with resources.Get (printf "images/og/%s%s.png" .File.TranslationBaseName $ogSuffix) -}}
     {{- $ogImage = .RelPermalink | absURL -}}
   {{- end -}}

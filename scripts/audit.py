@@ -155,6 +155,21 @@ def main():
             if "width=" not in img or "height=" not in img:
                 issues.append(f"img without dimensions {url}")
 
+        # The social card is the one asset nothing else on the page references,
+        # so a missing file is invisible until a link is shared and unfurls
+        # blank. Both the per-guide cards and the per-language shared card are
+        # picked by string interpolation in head.html, which cannot fail loudly.
+        # The [\s>] guard keeps og:image:width and friends out.
+        for tag in re.findall(r"<meta[^>]*>", html):
+            if not re.search(r'(?:property|name)="?(?:og:image|twitter:image)"?[\s>]', tag):
+                continue
+            m = re.search(r'content="?(https://anonymizemyid\.com[^"\s>]+)', tag)
+            if not m:
+                continue
+            path = urllib.parse.unquote(m.group(1).replace("https://anonymizemyid.com", ""))
+            if path not in on_disk:
+                issues.append(f"og:image missing       {url} -> {path}")
+
         for blob in re.findall(r"<script type=application/ld\+json>(.*?)</script>", html, re.S):
             try:
                 graph = json.loads(blob).get("@graph", [])

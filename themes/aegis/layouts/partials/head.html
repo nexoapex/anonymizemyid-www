@@ -3,13 +3,18 @@
 {{- $isHome := .IsHome -}}
 {{- $desc := .Description | default site.Params.description -}}
 {{- $ogTitle := cond $isHome (printf "%s — %s" site.Params.appName site.Params.tagline) .Title -}}
-{{- $ogImage := "images/og.png" | absURL -}}
+{{- /* English cards are unsuffixed; every other language is .<lang>. The same
+       convention covers the shared card and the per-guide ones, so a language
+       is one suffix rather than a branch. */ -}}
+{{- $ogSuffix := cond (eq site.Language.Lang "en") "" (printf ".%s" site.Language.Lang) -}}
+{{- /* The shared card is per-language too. It used to be one English image on
+       every page of every language, so a link to /de/ or /es/ unfurled in
+       English — on the pages people actually share (home, hub, legal). */ -}}
+{{- $ogImage := (printf "images/og%s.png" $ogSuffix) | absURL -}}
 {{- $ogAlt := site.Params.ogImageAlt | default (printf "%s — %s" site.Params.appName site.Params.tagline) -}}
-{{- /* Guides get their own generated card (assets/images/og/<slug>[.es].png);
-       everything else keeps the shared app screenshot above. */ -}}
+{{- /* Guides get their own generated card (assets/images/og/<slug>[.<lang>].png);
+       everything else keeps the shared card above. */ -}}
 {{- if and .IsPage (eq .Section "guides") -}}
-  {{- /* English cards are <slug>.png; every other language is <slug>.<lang>.png. */ -}}
-  {{- $ogSuffix := cond (eq site.Language.Lang "en") "" (printf ".%s" site.Language.Lang) -}}
   {{- with resources.Get (printf "images/og/%s%s.png" .File.TranslationBaseName $ogSuffix) -}}
     {{- $ogImage = .RelPermalink | absURL -}}
     {{- $ogAlt = $.Title -}}
