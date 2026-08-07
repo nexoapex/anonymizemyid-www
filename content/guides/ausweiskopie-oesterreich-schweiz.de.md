@@ -5,7 +5,7 @@ subtitle: "Kein § 20 PAuswG, kein Freibrief — warum in Wien und Zürich das D
 description: "Österreich und die Schweiz kennen keine Sondernorm für Ausweiskopien. Was das für Vermieter, Hotels, Arbeitgeber und Banken bedeutet — und was Sie schwärzen."
 date: 2026-08-03
 lastmod: 2026-08-03
-weight: 22
+weight: 20
 slug: "ausweiskopie-oesterreich-schweiz"
 keywords:
   - "Österreich"

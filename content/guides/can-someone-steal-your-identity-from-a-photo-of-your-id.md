@@ -4,7 +4,7 @@ subtitle: "The direct answer, and what actually enables it."
 description: "Yes, in specific ways. Here's exactly what fields make an ID photo dangerous and how redacting them removes most of the risk."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 5
+weight: 6
 keywords:
   - "identity theft"
   - "risk"

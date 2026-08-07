@@ -5,7 +5,7 @@ subtitle: "Die Anfrage selbst ist das Warnsignal — und die zwei Maschen, für 
 description: "Auf Kleinanzeigen-Portalen verlangen angebliche Käufer eine Ausweiskopie. Warum es dafür fast nie einen Grund gibt und was Sie stattdessen antworten."
 date: 2026-08-03
 lastmod: 2026-08-03
-weight: 17
+weight: 10
 slug: "kleinanzeigen-kaeufer-will-ausweis"
 keywords:
   - "Kleinanzeigen"

@@ -4,7 +4,7 @@ subtitle: "What letting agents and landlords actually need to see — and how to
 description: "Landlords and letting agents often ask for ID during referencing. Here's what's normal, what to redact, and how to send a safe copy."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 10
+weight: 11
 keywords:
   - "landlords"
   - "renting"

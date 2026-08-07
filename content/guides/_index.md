@@ -7,17 +7,20 @@ description: "Practical, plain-English guides on sharing your passport or ID saf
 
 A hotel wants "a copy of your passport." A landlord asks you to WhatsApp your ID. A visa form needs a scan. Handing over a full, unedited photo of your document is one of the quickest ways to leak your identity — and once it is sitting in someone's inbox or camera roll, you cannot get it back.
 
-These guides explain how to show a business what it actually needs to see while hiding the parts that let someone impersonate you: the document number, the machine-readable zone, your date of birth and your signature. No jargon and no scare tactics — just what to cover, why it matters, and how to do it in about a minute on your phone.
+These guides explain how to show someone what they actually need to see while hiding the parts that let them impersonate you: the document number, the machine-readable zone, your date of birth and your signature. No jargon and no scare tactics — just what to cover, why it matters, and how to do it in about a minute on your phone.
+
+They are also honest about the limit. **Redaction does not work everywhere.** A handful of checks — a bank's anti-money-laundering verification, guest registration at a hotel, a statutory right-to-work check — are legally required to capture the complete document, and a black bar there is a failed check rather than a protection. [When redacting your ID won't work](/guides/when-redacting-your-id-wont-work/) sets out exactly where the line falls. Everything on the other side of it — marketplace buyers, hosts, private landlords, clients, platform support desks — is where these guides do their work, and that is the large majority of what you will actually be asked.
 
 ## Who's asking, and what they actually need
 
-| Who's asking | What they genuinely need to see | Safe to hide |
-| --- | --- | --- |
-| [A hotel](/guides/hotel-asking-for-passport-copy/) | Name, photo, nationality | Number, MRZ, date of birth, signature |
-| [A landlord or letting agent](/guides/landlord-asking-for-id-or-passport-copy/) | Name, photo, right to reside | Number, MRZ, date of birth, signature |
-| [A new employer](/guides/employer-asking-for-id-or-passport-copy/) | Name, photo, right-to-work status | Number, MRZ, signature |
-| [A car rental desk](/guides/car-rental-id-copy/) | Name, photo, licence details | Number, MRZ, signature |
-| [A short-term rental host](/guides/airbnb-host-asking-for-id/) | Name, photo, nationality | Number, MRZ, date of birth, signature |
-| [A bank, via its own KYC portal](/guides/bank-account-id-verification/) | The full document, through their system | Nothing — redacting can fail the check |
-| [Someone wanting a selfie with your ID](/guides/selfie-holding-your-id/) | Your face, plus the name and photo on the document | Number, MRZ, date of birth, signature — and check the channel first |
+| Who's asking | Redaction works? | What they genuinely need | Cover |
+| --- | --- | --- | --- |
+| [A marketplace buyer](/guides/marketplace-buyer-asking-for-id/) | Send nothing | Nothing at all | The request is the red flag |
+| [A short-term rental host](/guides/airbnb-host-asking-for-id/) | Yes | Name, photo, nationality | Number, MRZ, date of birth, signature |
+| [A landlord or letting agent](/guides/landlord-asking-for-id-or-passport-copy/) | Yes | Name, photo, right to reside | Number, MRZ, date of birth, signature |
+| [A car rental desk](/guides/car-rental-id-copy/) | Partly | Name, photo, licence number | Passport number, MRZ, signature |
+| [Someone wanting a selfie with your ID](/guides/selfie-holding-your-id/) | Check the channel first | Your face plus the name and photo | Number, MRZ, date of birth, signature |
+| [A hotel, at check-in](/guides/hotel-asking-for-passport-copy/) | **No** | Document number and date of birth, by law | MRZ and signature only |
+| [A new employer](/guides/employer-asking-for-id-or-passport-copy/) | **No**, for the statutory check | The full document, once | Redact only the extra copies |
+| [A bank](/guides/bank-account-id-verification/) | **No** | The full document, via its own app | Nothing — verify the request instead |
 

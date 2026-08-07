@@ -5,7 +5,7 @@ subtitle: "Die direkte Antwort — und was ihn tatsächlich möglich macht."
 description: "Ja, auf ganz bestimmte Weise. Welche Felder ein Ausweisfoto gefährlich machen und wie das Schwärzen den größten Teil des Risikos beseitigt."
 date: 2026-07-20
 lastmod: 2026-08-03
-weight: 6
+weight: 7
 slug: "identitaetsdiebstahl-durch-ausweisfoto"
 keywords:
   - "Identitätsdiebstahl"

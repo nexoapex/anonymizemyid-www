@@ -4,7 +4,7 @@ subtitle: "Qué necesita el mostrador además de tu carné de conducir — y có
 description: "Al alquilar un coche suelen fotocopiar tu DNI o pasaporte además del carné. Esto es lo normal, qué censurar y cómo compartirlo de forma segura."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 13
+weight: 14
 slug: "alquiler-de-coche-copia-del-dni"
 keywords:
   - "alquiler de coches"

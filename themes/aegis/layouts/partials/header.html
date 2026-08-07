@@ -15,7 +15,12 @@
            and a hand-built path would 404 there. */}}
       {{ with site.GetPage "/guides" }}<a href="{{ .RelPermalink }}">{{ i18n "nav_guides" }}</a>{{ end }}
       {{ partial "lang-switch.html" . }}
-      <a class="nav-cta" href="{{ "/" | relLangURL }}#get">{{ i18n "nav_get" }}</a>
+      {{/* Two labels, one shown at a time by CSS. Below 560px the full label
+           ("Descargar la app", "Get the app") pushed the brand, the language
+           switcher and this button past the right edge of the viewport. */}}
+      <a class="nav-cta" href="{{ "/" | relLangURL }}#get"
+         ><span class="nav-cta-full">{{ i18n "nav_get" }}</span
+         ><span class="nav-cta-short">{{ i18n "nav_get_short" }}</span></a>
     </nav>
   </div>
 </header>

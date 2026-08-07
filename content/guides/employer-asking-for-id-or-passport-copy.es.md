@@ -1,61 +1,70 @@
 ---
-title: "¿Es seguro enviarle tu DNI a un nuevo empleo?"
-subtitle: "Qué necesita de verdad la incorporación — y cómo enviar una copia que te siga protegiendo."
-description: "Las nuevas empresas suelen pedir el DNI al incorporarte. Esto es lo normal, qué censurar y cómo enviar una copia segura de tu documento."
+title: "La empresa te pide el DNI: qué no puedes censurar"
+subtitle: "El alta en la Seguridad Social necesita tu número. La copia \"para el expediente\", no."
+description: "El alta en la Seguridad Social necesita el documento completo. Dónde acaba eso y qué peticiones de RR. HH. sí puedes censurar."
 date: 2026-07-20
-lastmod: 2026-07-20
-weight: 11
+lastmod: 2026-08-07
+weight: 18
 slug: "empresa-pide-copia-del-dni"
 keywords:
-  - "empresas"
+  - "empleadores"
   - "incorporación"
-  - "derecho a trabajar"
+  - "Seguridad Social"
   - "quién pide el DNI"
-answer: "Sí: verificar tu identidad y tu derecho a trabajar es parte habitual de cualquier incorporación. Lo que merece la pena cuestionar es si RR. HH. necesita guardar indefinidamente una copia completa y sin censurar. Envía una copia que mantenga tu nombre, tu foto y tu situación laboral y oculte el número de documento, la zona de lectura mecánica y la firma."
+  - "cuándo no funciona censurar"
+answer: "Separa la petición en dos. El alta en la Seguridad Social y cualquier comprobación laboral obligatoria necesitan el documento completo: tu número de DNI o NIE es la clave sobre la que se construyen tu alta, tu contrato y tus nóminas, y censurarlo solo rompe el trámite. Todo lo que RR. HH. pida *más allá* de eso — una copia \"para el expediente\", un escaneo para el directorio, un documento reenviado meses después — es donde encaja una copia censurada y con marca de agua."
 takeaways:
-  - "**Pregunta qué se guarda y qué solo se consulta**: muchas comprobaciones son una revisión puntual, no una copia permanente."
-  - "Tapa el número, la MRZ y la firma; descubre tu fecha de nacimiento solo si nóminas la necesita expresamente."
-  - "Para una verificación posterior, manda una **copia nueva con marca de agua** en vez de reenviar el archivo del correo antiguo."
+  - "**No censures para el trámite obligatorio.** El alta necesita tu número de documento, que además ya está en tu contrato."
+  - "**Tu número de documento es un dato de nómina, no un secreto que ocultarle a tu empresa** — el campo que hay que proteger es la *imagen* del documento."
+  - "**La segunda, tercera y cuarta petición son las que hay que censurar** — el reenvío para un control de antecedentes, la subida a un portal, la copia \"para el expediente\"."
 faq:
-  - q: "¿Es normal que una nueva empresa pida una copia de mi DNI?"
-    a: "Sí. Verificar tu identidad y tu derecho a trabajar es parte habitual de la incorporación en la mayoría de sitios. Lo que sí conviene cuestionar no es que lo pidan, sino si necesitan una copia completa y sin censurar guardada de forma indefinida."
-  - q: "¿Qué debo censurar antes de enviar mi documento a RRHH?"
-    a: "Tapa el número de documento, la zona de lectura mecánica, tu fecha de nacimiento si no se exige por separado, y tu firma. Deja visibles tu nombre, tu foto y tu nacionalidad o situación laboral."
-  - q: "RRHH volvió a pedir mi documento meses después para una comprobación, ¿la misma copia?"
-    a: "No — envía una copia nueva, censurada y con marca de agua, para esa solicitud concreta. Una foto sin proteger en un correo antiguo es un riesgo, haya salido bien el puesto o no."
-  - q: "¿Y si el portal de incorporación exige subir un archivo, no enviarlo por correo?"
-    a: "La misma copia censurada sirve para subirla igual que para enviarla por correo — censura y añade marca de agua antes, y sube ese archivo en lugar de la foto original, salvo que el portal esté diseñado específicamente para verificar el documento completo (algunas comprobaciones de derecho a trabajar sí exigen ver el documento sin censurar)."
+  - q: "¿Puedo enviar el DNI censurado a mi nueva empresa?"
+    a: "Para el alta en la Seguridad Social, no: ese trámite se hace con tu número de DNI o NIE y no funciona sin él. Para todo lo demás, sí. Merece la pena preguntar cuál de las dos cosas es cada petición."
+  - q: "Entonces, ¿qué puedo censurar de cara a una empresa?"
+    a: "Todo lo que quede fuera del trámite obligatorio: un escaneo \"para tu expediente\", un portal de incorporación que pide subir el documento sin necesitarlo legalmente, un responsable que te pide una foto por WhatsApp, o una empresa de verificación de antecedentes meses después. En todos esos casos una copia censurada y con marca de agua es lo adecuado."
+  - q: "¿Necesita mi empresa mi número de documento?"
+    a: "Normalmente sí, y conviene decirlo claro: en España tu DNI o NIE es la clave del alta en la Seguridad Social y de tus nóminas. Tratarlo como un campo que ocultar a tu propia empresa es el instinto equivocado; lo que hay que cuidar es la imagen del documento, no un número que tu contrato ya lleva."
+  - q: "RR. HH. me lo ha pedido otra vez meses después para un control de antecedentes. ¿La misma copia?"
+    a: "Envía una copia nueva, censurada y con marca de agua que nombre esa petición y su fecha, en lugar de reenviar el adjunto original. Una foto sin protección en un hilo de correo antiguo es un riesgo, saliera bien el trabajo o no."
+  - q: "¿Puede la empresa guardar la copia para siempre?"
+    a: "Solo mientras dure la base legal. Una copia tomada \"para el expediente\" sin base es justo a lo que apunta el principio de minimización del RGPD. Está desarrollado en la guía sobre si una empresa puede guardar una copia de tu DNI."
 ---
 
-Llega una oferta de trabajo y, con ella, un correo de incorporación: «Adjunta una copia de tu pasaporte o DNI para nuestros registros». Parece papeleo, pero se aplica la misma regla que con un hotel o un casero — puedes demostrar quién eres sin entregar un documento que también demuestra todo lo demás sobre ti.
+Llega la oferta y con ella el correo de incorporación: "Adjunta una copia del DNI o el pasaporte para nuestros archivos." Lo útil es darse cuenta de que casi nunca es *una* petición. Es un trámite obligatorio mezclado con un puñado de costumbres administrativas, y esas dos mitades merecen respuestas opuestas.
 
-## Por qué lo piden las empresas
+## La mitad que no puedes censurar
 
-La incorporación suele necesitar confirmar tu identidad, cotejar tus datos con el contrato y la nómina y, en muchos sitios, verificar que tienes derecho a trabajar allí. Motivos legítimos — ninguno exige una copia permanente y sin proteger de tu pasaporte o DNI completo guardada en una bandeja de RRHH o una unidad compartida.
+Donde la empresa realiza un **trámite legal de identidad o de alta**, necesita el documento tal cual. En España tu **DNI o NIE es la clave sobre la que se construyen el alta en la Seguridad Social, el contrato y la nómina**; ya figura en tu contrato. Ocultárselo a tu propia empresa no es una victoria de privacidad, es un problema de nómina.
 
-## Qué necesita ver de verdad la incorporación
+La misma lógica se aplica en otros países a las comprobaciones obligatorias de derecho al trabajo, donde la norma suele exigir conservar una copia de exactamente lo que se vio. Una copia censurada no la cumple.
 
-- Tu **nombre completo**, para que coincida con el contrato y la nómina.
-- Tu **foto**, para confirmar que eres la persona contratada.
-- Tu **nacionalidad o situación laboral**, cuando forme parte de la comprobación.
+Así que para el trámite obligatorio: envía el documento entero, por el sistema que use el proceso de la empresa. Es uno de los casos recogidos en [cuándo censurar el DNI no sirve de nada]({{< relref "/guides/when-redacting-your-id-wont-work.md" >}}).
 
-Tu número de documento, la zona de lectura mecánica, tu fecha de nacimiento y tu firma casi nunca hacen falta en una copia guardada en un archivo — son identificadores para sistemas gubernamentales y fronterizos, no para los registros de RRHH.
+## La mitad que sí deberías censurar
 
-## Qué censurar antes de enviarlo
+Todo lo demás. Y en la mayoría de las incorporaciones hay bastante "todo lo demás":
 
-- **El número de documento o pasaporte.**
-- **La zona de lectura mecánica.**
-- **Tu fecha de nacimiento**, salvo que la nómina la exija específicamente — en ese caso, muestra solo ese dato.
-- **Tu firma.**
+- Un escaneo pedido **"para tu expediente"** sin base declarada.
+- Un **portal de incorporación** que pide subir el documento aunque el trámite no lo necesitara.
+- Un responsable que te pide una **foto por WhatsApp** porque el portal daba problemas.
+- Una **empresa de verificación de antecedentes**, o un RR. HH. nuevo, que lo pide otra vez meses después.
+- Una copia para el **directorio, la tarjeta de acceso o el control de entrada**.
 
-Si el proceso de RRHH exige específicamente ver el original sin censurar — algunas verificaciones de derecho a trabajar sí lo hacen — suele ser una comprobación puntual, presencial o supervisada, no una copia que luego se queda en tu expediente para siempre. Pregunta qué se conserva y qué solo se consulta.
+Ninguna de esas es el trámite obligatorio, y en todas ellas encaja una copia censurada y con marca de agua que muestre tu nombre y tu foto. Tapa la [zona de lectura mecánica]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}) y tu firma, y márcala con *"Para la incorporación en [empresa] — [fecha]"* para que no sirva en ningún otro sitio.
 
-## Añade una marca de agua antes de que salga de tu móvil
+| La petición | ¿Censurar? | Por qué |
+| --- | --- | --- |
+| Alta en la Seguridad Social | No | Se tramita con tu número de documento |
+| Comprobación legal de derecho al trabajo | No | La copia debe mostrar lo que se vio |
+| "Una copia para tu expediente" | Sí | Sin base declarada; aplica la minimización |
+| Subida a un portal de incorporación | Sí | Salvo que *sea* el trámite obligatorio |
+| Foto por WhatsApp a un responsable | Sí | Canal equivocado para un documento entero |
+| Control de antecedentes, meses después | Sí | Copia nueva, marcada para esa petición |
 
-Una copia marcada «Para la incorporación a [Empresa] — [fecha]» deja de servir fuera del expediente para el que se pidió, ya sea porque se reenvía por error, queda en una bandeja filtrada o se conserva más tiempo del previsto.
+## Una sola pregunta lo ordena todo
 
-## Hazlo desde tu móvil
+"¿Esto es para el alta, o para el expediente?" Es una pregunta normal, RR. HH. la responde en una frase, y la respuesta te dice en cuál de las dos mitades estás.
 
-Fotografía el documento, tapa los campos anteriores, añade una marca de agua y envía eso en lugar del original — todo en el propio dispositivo, sin subir nada a ningún sitio. Es lo que hace [Anonymize my ID](/#get). Para el detalle de qué campos tapar, consulta [cómo censurar un pasaporte o DNI]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}}); para entender por qué importa en concreto la zona de lectura mecánica, consulta [qué es la MRZ]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}).
+## Hazlo en el móvil
 
-Nuevo trabajo, nuevo casero, nuevo banco — el hábito es el mismo siempre: envía la copia censurada, nunca el original.
+Para las peticiones de la segunda mitad: fotografía el documento, tapa los campos de arriba, añade una marca de agua y envía eso en lugar del original — todo en el dispositivo, sin subir nada. Es lo que hace [Anonymize my ID](/#get). Sobre qué campos tapar exactamente, mira [cómo censurar un pasaporte o DNI]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}}); sobre cuánto tiempo puede conservarse lo que sí se queda, [¿puede una empresa guardar una copia de tu DNI?]({{< relref "/guides/can-a-company-keep-a-copy-of-your-id.md" >}}).

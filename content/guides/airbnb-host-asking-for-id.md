@@ -4,7 +4,7 @@ subtitle: "Why the platform's own check and a host's private message are not the
 description: "Short-term rental hosts often ask for ID in the chat. Here's what the platform already verifies, what local law requires, and what to send instead."
 date: 2026-07-28
 lastmod: 2026-07-28
-weight: 9
+weight: 10
 keywords:
   - "short-term rentals"
   - "travel"

@@ -1,59 +1,61 @@
 ---
-title: "Is it safe to give a hotel a copy of your passport?"
-subtitle: "What's normal, what your rights are, and how to hand over a copy you can trust."
-description: "Hotels can be legally required to register guests, but you can give them a redacted copy instead of the full, unedited one."
+title: "Hotel wants a passport copy: what you can and can't redact"
+subtitle: "Guest-registration law needs your document number. The photocopy in the back office does not."
+description: "Guest registration is a legal duty in much of Europe and needs your document number and date of birth. What you cannot redact, and what you still can."
 date: 2026-06-29
-lastmod: 2026-06-29
-weight: 8
+lastmod: 2026-08-07
+weight: 17
 keywords:
   - "hotels"
   - "travel"
   - "passport"
   - "who asks for ID"
-answer: "Yes — if you control what the copy shows. Hotels in many countries are legally required to register guests, but that means recording specific details, not keeping a full, unedited image of your passport. Hand over a redacted copy that keeps your name, photo and nationality and hides the number, machine-readable zone and date of birth."
+  - "when redaction fails"
+answer: "Not the way most advice suggests. In Spain, Italy, Portugal, Greece and much of Europe, guest registration is a legal duty and the data the property has to file includes your document number and date of birth — redact those and check-in stalls. What you can still push back on is the *photocopy*: the law tells the property to record specific fields, not to keep an image of your passport. Ask them to read the details and hand the document back."
 takeaways:
-  - "**Offer to show the original first** — many front desks only need to record details on the spot."
-  - "If a copy is genuinely needed, hide the passport number, MRZ, date of birth and signature."
-  - "**Emailing a passport before arrival is the riskiest version of the request** — if you must, send a redacted copy watermarked for that hotel and stay."
+  - "**Do not redact the document number or date of birth at a front desk in Europe** — guest-registration law requires both, and a covered field means a failed check-in."
+  - "**Recording data and keeping a copy are different things.** Ask them to record and return; that is what the law actually asks for."
+  - "**A pre-arrival email request is the one where redaction genuinely helps** — there is no legal duty to send an image ahead of arrival."
 faq:
-  - q: "Do hotels have to see my passport?"
-    a: "In many countries, including Spain, accommodation providers are legally required to record certain guest identity details and report them to the authorities. They can check your document, but they rarely need to keep a full, unedited copy."
-  - q: "Can I refuse to let a hotel photocopy my passport?"
-    a: "Often you can ask them to view it and record only what the law requires, rather than keep a full copy. If they do need a copy, offer a redacted one that still shows your name, photo and nationality."
-  - q: "A hotel asked me to email my passport before arrival — is that safe?"
-    a: "Email is the weakest link: the image sits on mail servers and in sent folders indefinitely. If you must send something ahead, send a redacted, watermarked copy marked for that hotel and that stay."
-  - q: "What does a hotel actually need from my passport?"
-    a: "Usually your full name, nationality, document type and photo — enough to match you to the booking and meet registration rules. The document number, machine-readable zone and date of birth can almost always be hidden."
+  - q: "Can I give a hotel a redacted copy of my passport?"
+    a: "Not for the registration itself. In countries with a guest-registration duty — Spain, Italy, Portugal, Greece and others — the property has to file your document type and number, your date of birth and your nationality with the authorities. Covering those fields makes the filing impossible, so the front desk will simply ask again for the original."
+  - q: "So is there anything I can refuse?"
+    a: "Yes: the photocopy. The obligation is to *record* specific data, not to retain an image of the document. You can ask staff to read the fields into their system and hand the passport straight back, and you can ask what happens to any scan they do take and how long it is kept."
+  - q: "A hotel asked me to email my passport before arrival — is that different?"
+    a: "Completely different, and this is where redaction earns its keep. No registration law requires a pre-arrival image; the property is asking for convenience. Send a copy with the machine-readable zone and signature covered and a watermark naming the property and the dates, or simply say you will present the document at check-in."
+  - q: "What can I always cover, even at the desk?"
+    a: "The machine-readable zone and your signature. Neither is part of what a registration system asks for — the MRZ merely re-encodes the fields the clerk is already typing in, and no guest register anywhere collects a specimen signature."
 ---
 
-You arrive at the front desk, tired, and the receptionist asks for your passport "to make a copy." It feels routine, and often it is. But "a copy" usually means a full photograph or photocopy of the page that holds your document number, date of birth and machine-readable zone — and that copy then lives in the hotel's files, on its email, or in a folder you will never see again. So the honest answer to *is it safe?* is: **it can be, if you control what the copy shows.**
+You arrive at the front desk and the receptionist asks for your passport "to make a copy." A lot of privacy advice will tell you to hand over a redacted one. For a European hotel that advice is mostly wrong, and following it will get you sent back to the desk.
 
-## Why hotels ask in the first place
+## The honest version: registration law needs the number
 
-In many countries, accommodation providers are **legally required** to register their guests and report certain identity details to the police or local authorities. Spain is a well-known example: under [Royal Decree 933/2021](https://www.boe.es/eli/es/rd/2021/10/26/933), hotels, rentals and campsites must collect guest data and submit it. This is a real obligation, not an overreach, and it is why the request is so common across Europe.
+In many countries, accommodation providers are **legally required** to register guests and file certain identity details with the police. Spain is the strictest well-documented example: under [Royal Decree 933/2021](https://www.boe.es/eli/es/rd/2021/10/26/933), in force for hotels, short-term rentals and campsites since 2 December 2024, the property must collect and transmit — among other fields — **the document type and number, the date of birth, the nationality and, for a Spanish DNI, the support number.**
 
-What the law generally requires is that the hotel **records specific details** — not that it keeps a permanent, unedited image of your entire passport. That distinction is where your privacy lives.
+Those are the exact fields most guides tell you to black out. Black them out and the property cannot complete the filing it is legally obliged to make, so it will ask you for the document again. This is one of the situations where **redacting does not protect you, it just wastes everyone's afternoon** — see [when redacting your ID won't work]({{< relref "/guides/when-redacting-your-id-wont-work.md" >}}) for the full list.
 
-## What a hotel genuinely needs
+## What you can still push back on
 
-To meet registration rules and match you to your booking, a hotel typically needs:
+The obligation is to **record data**. It is not an obligation to keep a photograph of your passport, and the two get conflated constantly at the front desk.
 
-- your **full name**,
-- your **nationality** and **document type**,
-- your **photo**, to confirm the document is yours.
+- **Ask them to record and return.** "Please take the details you need and hand it back" is a reasonable, common request, and a compliant property can meet it — the data goes into the registration system either way.
+- **Ask what happens to any scan.** Under the GDPR the property needs a lawful basis and a retention period for an image it keeps beyond the filing. The Spanish data protection authority has said plainly that the decree obliges properties to *collect data*, not to hoard document images.
+- **Cover the MRZ and your signature** if you do end up providing an image. Neither is in any guest register: the [machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}) only re-encodes fields the clerk is already typing, and no register collects a specimen signature.
 
-It almost never has a genuine need to retain your **passport number**, your **[machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** or your **date of birth** in a copy sitting on its systems. Those are exactly the fields that turn a leaked hotel file into an identity-theft kit.
+## Where redaction genuinely helps: the pre-arrival email
 
-## How to hand over a copy you can trust
+Plenty of hotels and rentals now ask guests to **email or message a passport photo ahead of check-in**. Nothing in any registration law requires this. It is a convenience for the property, and it is the riskiest version of the request: email and chat keep that image on servers, in sent folders and in backups more or less forever.
 
-You can be fully cooperative and still protect yourself:
+Here a redacted copy is exactly right — or a polite "I'll bring it to check-in."
 
-1. **Offer to show the original** and let staff record what they need on the spot. Many places are happy with this.
-2. **If they need a copy, give a redacted one.** Hide the number, machine-readable zone, date of birth and signature; keep your name, photo and nationality visible. See [how to redact a passport or ID card]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}}) for exactly which fields to cover.
-3. **Watermark it for that hotel and stay** — for example, *"For Hotel Marina, 29 June–2 July"* — so the copy cannot be reused elsewhere.
+| | At the desk, for registration | Emailed before arrival |
+| --- | --- | --- |
+| **Legally required?** | Yes, in much of Europe | No |
+| **Document number** | Must stay visible | Cover it |
+| **Date of birth** | Must stay visible | Cover it |
+| **MRZ and signature** | Cover — never registered | Cover |
+| **A redacted copy works?** | No | Yes |
+| **Better option** | Show the original, ask for it back | Present it at check-in instead |
 
-## The real red flag: emailing your passport before arrival
-
-Plenty of hotels and rentals now ask guests to **email or message a passport photo ahead of check-in**. This is the riskiest version of the request. Email and chat keep that image on servers, in sent folders and in backups more or less forever, far outside the hotel's front desk.
-
-If you must send something in advance, never send the raw page. Send a **redacted, watermarked copy** prepared on your phone — [Anonymize my ID](/#get) does this offline in about a minute — and, if you can, delete it from the thread once you have checked in. For more on why messaging apps are a poor place for documents, read [is it safe to send your ID over WhatsApp or email?]({{< relref "/guides/is-it-safe-to-send-id-over-whatsapp-or-email.md" >}}).
+If you do send something ahead, send a **redacted, watermarked copy** prepared on your phone — [Anonymize my ID](/#get) does this offline in about a minute — and delete it from the thread once you have checked in. For why messaging apps are a poor place for documents, read [is it safe to send your ID over WhatsApp or email?]({{< relref "/guides/is-it-safe-to-send-id-over-whatsapp-or-email.md" >}}).

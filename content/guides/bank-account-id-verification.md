@@ -1,64 +1,61 @@
 ---
-title: "What ID copy does your bank actually need?"
-subtitle: "The difference between an official KYC upload and an ad hoc emailed copy — and what to redact either way."
-description: "Banks need to verify your identity, but not every ID request is the same. Here's what's normal for KYC checks and what to redact when it isn't."
+title: "You cannot redact your ID for a bank — and shouldn't try"
+subtitle: "KYC needs the whole document. The useful skill here is telling a real bank request from a fake one."
+description: "Redacting your ID will not get you through a bank's identity check — anti-money-laundering rules require the full document. What to do instead."
 date: 2026-07-20
-lastmod: 2026-07-20
-weight: 12
+lastmod: 2026-08-07
+weight: 19
 keywords:
   - "banks"
   - "KYC"
   - "anti-money-laundering"
   - "who asks for ID"
-answer: "It depends on the channel. Verifying your identity is a genuine legal requirement for banks under KYC and anti-money-laundering rules, and their official app or upload portal usually needs the full, unredacted document. A request to email or message a copy is a different situation — verify it independently first, then send a redacted, watermarked copy."
+  - "when redaction fails"
+answer: "No. Opening or keeping a bank account is a regulated identity check, and anti-money-laundering law requires the institution to capture the complete document — Germany's § 8 GwG says so in as many words. A redacted or watermarked copy fails the check, and the only thing you achieve is a repeat request. Send the full document through the bank's own app or portal, and put your effort into the question that actually matters: whether the request came from your bank at all."
 takeaways:
-  - "**Official app or portal:** expect to send the full document — redacting there can make the check fail."
-  - "**Ad hoc email or message:** verify the request on the number on your card before sending anything."
-  - "**Your date of birth is frequently required** for KYC name-and-DOB matching, so check before hiding it."
+  - "**Redaction does not work here.** AML rules require the complete document; a covered field is a rejected check."
+  - "**A watermark does not help either** — a KYC system reads fields, and an overlay across them is a failed capture, not a protection."
+  - "**The real risk is a fake request.** Genuine KYC runs inside the bank's app or portal, started by you, never from an inbound email or message."
 faq:
-  - q: "Why does a bank need a copy of my ID?"
-    a: "Banks are generally required by anti-money-laundering and know-your-customer (KYC) rules to verify who their customers are before opening or maintaining an account. That's a legitimate, regulated requirement — the question is how they collect it."
-  - q: "Is it safe to upload my ID through my bank's official app or portal?"
-    a: "That's generally the safest channel for this specific purpose — it's built for it, usually encrypted in transit, and is what the KYC requirement actually expects. It's a different situation from being asked to email or message a copy outside that system."
-  - q: "A bank employee asked me to email a copy of my ID — is that normal?"
-    a: "Be cautious. Legitimate KYC verification almost always happens through the bank's own secure upload system, not a personal email exchange. If email is genuinely the only option offered, send a redacted, watermarked copy and confirm the request through an official channel first."
-  - q: "What should I redact if I do send a copy outside an official portal?"
-    a: "The document number, the machine-readable zone, and your signature at minimum. Your date of birth is often required for KYC matching, so you may need to leave that visible — check what the specific check actually requires before hiding it."
+  - q: "Can I send my bank a redacted copy of my ID?"
+    a: "No. Identity verification for a bank account is a regulated check under anti-money-laundering rules and the institution is required to capture the full document. Germany's Geldwäschegesetz § 8 states the duty explicitly. Cover a field and the check fails — you will simply be asked again."
+  - q: "Will a watermark stop my bank accepting the copy?"
+    a: "It can, and it is not worth the risk. KYC systems read the document's fields and often compare the photo to a live capture; an overlay across the data page is read as an obstruction or a tampering signal. Use the bank's own upload flow and send the document as it is."
+  - q: "Then what protects me when a bank asks for ID?"
+    a: "Channel discipline, not redaction. A genuine check happens inside the bank's own app or web portal, in a session you started from the application itself. Nothing legitimate requires you to email a passport photo, message it, or send it to an address someone read out to you on a call."
+  - q: "Someone from my bank emailed asking for a copy of my ID. What should I do?"
+    a: "Treat it as fraud until proven otherwise. Do not reply to the message or use any number or link in it. Call the number printed on your card or on the bank's official site and ask whether a verification step is genuinely pending on your account. If it is, complete it inside the app."
+  - q: "Is this the same for PostIdent, VideoIdent or a mortgage broker?"
+    a: "PostIdent and VideoIdent are the same regulated check by another name and need the complete document. A broker or intermediary is not the regulated institution and is a different question — ask which entity is running the check and complete it with that entity directly rather than emailing anyone a copy."
 ---
 
-Opening an account, or sometimes just keeping one open, a bank asks to verify your identity. Unlike a hotel or a landlord, this one usually has a real regulatory basis — but not every way of asking for it is equally safe, and it's worth knowing the difference.
+This site exists to help you redact documents, so here is the honest boundary of that: **for a bank, redaction is the wrong tool, and using it will not work.**
 
-## Why banks ask: KYC and anti-money-laundering rules
+## Why the full document, and no less
 
-Financial institutions are generally required by law to know who their customers are — a set of checks usually called **KYC (know your customer)**, part of wider [anti-money-laundering regulation](https://eur-lex.europa.eu/eli/dir/2015/849/oj). This isn't a bank being nosy; verifying identity before opening or maintaining an account is a compliance obligation in most places, and it's one of the few ID requests in this guide series with a hard legal basis behind it.
+Opening or maintaining an account is a regulated identity check — **KYC**, part of [anti-money-laundering regulation](https://eur-lex.europa.eu/eli/dir/2015/849/oj). The obligation sits on the institution, not on you, and in several jurisdictions it is written as a duty to take a *complete* copy. Germany is the clearest: **§ 8 of the Geldwäschegesetz** requires the obliged entity to make a complete copy or complete digital record of the identity document.
 
-## The channel matters more than usual here
+A verification system reads the fields — name, date of birth, document number, expiry, often the [machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}) — and frequently matches the photograph against a live capture of your face. Black bars over any of that are not a privacy setting; they are a failed read. So is a watermark laid across the data page, which some capture systems score as evidence of tampering.
 
-Most legitimate KYC verification happens through the bank's **own app or secure upload portal** — built for exactly this, and the system the compliance check is actually designed around. That's a different situation from a request to email a photo, message it, or send it some other ad hoc way. If someone claiming to be from your bank asks for a copy outside the official channel, verify the request independently — call the number on your card or their official site — before sending anything.
+There is no clever partial version of this. The check needs the document.
 
-## What an official KYC upload needs
+## What to do instead
 
-Official portals are usually designed to capture the full, unredacted document, because the verification system is built to check it against the data you provide (name, date of birth, document number) and sometimes to match your face to the photo. Redacting fields there can cause the check to fail — this is one of the few cases in this guide series where the full document, through the right channel, is genuinely what's required.
+The thing genuinely worth guarding here is not *which fields* the bank sees. It is **whether the request came from your bank at all** — because impersonating a bank's verification step is one of the most common ways full ID copies are stolen.
 
-## Official portal versus an ad hoc request
+1. **Start the flow yourself.** Open the bank's app or type its address by hand. A real pending verification will be waiting for you there.
+2. **Never act on an inbound message.** Not the link, not the phone number, not the "case reference". Fraudulent versions of this request are competent, urgent and well-branded.
+3. **Call the number on your card** if you are unsure whether something is really pending.
+4. **Refuse email and messaging outright.** No regulated institution needs your passport as an email attachment, and no legitimate process breaks if you decline that channel and use the app.
+5. **If you have already sent one**, work through [you already sent an unredacted ID copy]({{< relref "/guides/already-sent-an-unredacted-id-copy.md" >}}).
 
-| | The bank's own app or portal | Email, message or other ad hoc request |
+| | The bank's own app or portal | An email, call or message asking for a copy |
 | --- | --- | --- |
-| **Is it expected?** | Yes — the KYC check is built around it | Rarely; verify independently before sending anything |
-| **Send the full document?** | Usually yes — redacting can make the check fail | No — send a redacted, watermarked copy |
-| **Date of birth** | Required for name-and-date matching | Often required too; check before hiding it |
-| **Number and MRZ** | Required | Cover unless that specific check needs them |
-| **Watermark** | Not applicable | Always, naming the request and date |
+| **Who started it?** | You, from the application | Them |
+| **Send the full document?** | Yes — the check requires it | No — send nothing at all |
+| **Does redaction help?** | No, it fails the check | No, the request itself is the problem |
+| **What to do** | Complete it in the app | Call the number on your card |
 
-## If you're sending a copy outside that system
+## Where this site's tools do belong
 
-Sometimes a copy is requested by email or in person for a specific, limited purpose — a mortgage broker, an account opening step handled by a human rather than the app. There, the usual rules apply:
-
-- **The document number** and **[the machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** can usually be covered unless the specific check needs them.
-- **Your signature** can usually be covered unless it's being compared to one on file.
-- **Your date of birth** is frequently required for KYC name-and-DOB matching — check before hiding it, rather than assuming it's safe to cover.
-- Add a watermark naming the request and date regardless.
-
-## Do it on your phone when a redacted copy is appropriate
-
-For the cases where a redacted copy is the right call, [Anonymize my ID](/#get) produces one entirely on-device — see [how to redact a passport or ID card]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}}) for exactly which fields to cover. When in doubt about what a specific KYC process needs, ask the bank directly rather than guessing — sending too little can be as much of a hassle as sending too much.
+Redaction and watermarking are for the long tail of requests with **no regulator behind them**: a marketplace buyer, a private landlord, a short-term-rental host, a client, a platform's support desk. Those are the situations where the person asking has no legal claim to your document number, and where a covered field costs you nothing. See [when redacting your ID won't work]({{< relref "/guides/when-redacting-your-id-wont-work.md" >}}) for the boundary, and [how to redact a passport or ID card]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}}) for the method once you are on the right side of it.

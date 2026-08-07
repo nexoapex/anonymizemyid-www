@@ -4,7 +4,7 @@ subtitle: "What manual editing gets right, what it misses, and when each approac
 description: "Blurring an ID photo with a markup tool is better than nothing, but it misses things a dedicated redaction app handles by default. Here's the honest comparison."
 date: 2026-07-20
 lastmod: 2026-08-01
-weight: 6
+weight: 7
 keywords:
   - "blur"
   - "redaction"

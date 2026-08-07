@@ -4,7 +4,7 @@ subtitle: "Qué acierta la edición manual, qué se le escapa y cuándo cada opc
 description: "Difuminar la foto de un documento con una app de marcado es mejor que nada, pero se le escapan cosas que una app de censura dedicada cubre por defecto."
 date: 2026-07-20
 lastmod: 2026-08-01
-weight: 6
+weight: 7
 slug: "difuminar-el-dni-a-mano-o-con-app"
 keywords:
   - "desenfoque"

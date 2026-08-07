@@ -5,7 +5,7 @@ subtitle: "Was der Schalter neben dem Führerschein wirklich braucht — und wie
 description: "Mietwagenstationen kopieren neben dem Führerschein oft den Ausweis. Was üblich ist, was Sie schwärzen sollten und wie Sie die Kopie sicher übergeben."
 date: 2026-07-20
 lastmod: 2026-08-03
-weight: 15
+weight: 16
 slug: "mietwagen-ausweiskopie"
 keywords:
   - "Mietwagen"

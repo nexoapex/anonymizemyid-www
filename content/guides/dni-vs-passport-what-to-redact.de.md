@@ -5,7 +5,7 @@ subtitle: "Gleiches Prinzip, andere Anordnung — wo die sensiblen Felder auf we
 description: "Personalausweis und Reisepass verstecken andere Felder an anderen Stellen. Was Sie auf jedem Dokument verdecken sollten, bevor Sie eine Kopie weitergeben."
 date: 2026-07-20
 lastmod: 2026-08-03
-weight: 8
+weight: 9
 slug: "personalausweis-oder-reisepass-was-schwaerzen"
 keywords:
   - "Personalausweis"

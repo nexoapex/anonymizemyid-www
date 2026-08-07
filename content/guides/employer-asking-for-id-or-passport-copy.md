@@ -1,60 +1,69 @@
 ---
-title: "Is it safe to send a new employer a copy of your ID?"
-subtitle: "What onboarding actually requires — and how to send a copy that still protects you."
-description: "New employers often ask for ID during onboarding. Here's what's normal, what to redact, and how to send a safe copy of your passport or ID."
+title: "New employer wants your ID: what you can't redact"
+subtitle: "A statutory right-to-work check needs the whole document. The extra copy for the HR folder does not."
+description: "Right-to-work and payroll checks legally need the full, unredacted document. Here's where that ends — and which of HR's other ID requests you can send redacted."
 date: 2026-07-20
-lastmod: 2026-07-20
-weight: 11
+lastmod: 2026-08-07
+weight: 18
 keywords:
   - "employers"
   - "onboarding"
   - "right to work"
   - "who asks for ID"
-answer: "Yes — verifying your identity and right to work is a standard part of onboarding. What is worth questioning is whether HR needs a complete, unredacted copy kept on file indefinitely. Send a copy that keeps your name, photo and right-to-work status and hides the document number, machine-readable zone and signature."
+  - "when redaction fails"
+answer: "Split the request in two. A statutory right-to-work or payroll registration check needs the full document — a UK manual check has to copy the pages showing your photo, date of birth, expiry and signature, and a Spanish employer needs your DNI or NIE number to register you with Social Security. Redacting there fails the check. Everything HR asks for *beyond* that — a copy \"for the file\", a scan for a staff directory, a document re-sent months later — is where a redacted, watermarked copy belongs."
 takeaways:
-  - "**Ask what is kept versus what is only viewed** — right-to-work checks are often a one-off supervised look, not a permanent copy."
-  - "Redact the number, MRZ and signature; reveal your date of birth only if payroll specifically requires it."
-  - "Send a **fresh watermarked copy** for a later background check rather than resending the original email attachment."
+  - "**Do not redact for the statutory check.** Right-to-work rules require a copy of exactly what the employer saw; a covered field invalidates it."
+  - "**Your document number is payroll data, not a secret to keep from HR** — in Spain the DNI/NIE goes on your Social Security registration."
+  - "**The second, third and fourth requests are the ones to redact** — a re-send for a background check, an onboarding portal upload, a copy \"for the file\"."
 faq:
-  - q: "Is it normal for a new employer to ask for a copy of my ID?"
-    a: "Yes. Verifying your identity and your right to work is a standard part of onboarding in most places. What's worth questioning is not that they ask, but whether they need a complete, unredacted copy kept on file indefinitely."
-  - q: "What should I redact before sending my ID to HR?"
-    a: "Cover the document number, the machine-readable zone, your date of birth if it isn't separately required, and your signature. Keep your name, photo and nationality or right-to-work status visible."
+  - q: "Can I send my employer a redacted passport for a right-to-work check?"
+    a: "No. Where the check is statutory the employer has to retain a copy showing exactly what they saw on the day — in the UK that means the pages carrying the photograph, date of birth, expiry date, signature and any visa endorsement. A redacted copy does not satisfy that and the employer will have to redo the check."
+  - q: "Then what is safe to redact for an employer?"
+    a: "Anything outside the statutory check. HR asking for a scan \"for your file\", an onboarding portal that wants a document upload it does not legally need, a manager asking you to WhatsApp a photo of your ID, or a background-check firm months later — all of those are ordinary requests where a redacted, watermarked copy is appropriate."
+  - q: "Does my employer need my document number?"
+    a: "Usually yes, and this is worth being clear about: in Spain your DNI or NIE number is what your Social Security registration and your payslip are keyed on. Treating it as a field to hide from your own employer is the wrong instinct — the field worth guarding is the *image* of the document, not the number your contract already carries."
   - q: "HR asked for my ID again for a background check months later — same copy?"
-    a: "No — send a new redacted, watermarked copy for that specific request. A photo sitting unprotected in an old email thread is a liability whether or not the job worked out."
-  - q: "What if the onboarding portal requires an upload, not an email?"
-    a: "The same redacted copy works for an upload as it does for email — redact and watermark first, then upload that file instead of the original photo, unless the portal is specifically designed and required to capture the unredacted document (some right-to-work checks do require the full document to be viewed or verified by a specific system)."
+    a: "Send a fresh redacted, watermarked copy naming that request and date, rather than forwarding the original attachment. A photo sitting unprotected in an old email thread is a liability whether or not the job worked out."
+  - q: "Can my employer keep the copy forever?"
+    a: "Only as long as the lawful basis lasts. Statutory right-to-work copies have a defined retention period; a copy taken \"for the file\" with no such basis is exactly the kind the GDPR's data-minimisation principle is aimed at. See can a company legally keep a copy of your ID."
 ---
 
-A job offer arrives, and with it an onboarding email: "Please attach a copy of your passport or ID for our records." It feels like paperwork, but the same rule that applies to a hotel or a landlord applies here — you can prove who you are without handing over a document that also proves everything else about you.
+A job offer arrives, and with it: "Please attach a copy of your passport or ID." The useful thing to notice is that this is almost never *one* request. It is a statutory check bundled together with a handful of administrative habits, and those two halves deserve opposite answers.
 
-## Why employers ask
+## The half you cannot redact
 
-Onboarding typically needs to confirm your identity, match your details to your contract and payroll, and in many places verify that you're legally entitled to work there. All legitimate reasons — none of them require a permanent, unprotected copy of your full passport or ID sitting in an HR inbox or shared drive.
+Where an employer is running a **statutory identity or right-to-work check**, the law generally requires them to keep a copy of exactly what they were shown. In the UK, a manual right-to-work check requires copying the pages carrying the photograph, date of birth, expiry date, signature and any endorsement showing permission to work — the standard the Home Office applies is that the copy must let them see precisely what the employer saw on the date of the check. A redacted copy does not meet it.
 
-## What onboarding actually needs to see
+The same logic applies to payroll. In Spain your **DNI or NIE number is the key your Social Security registration and payslips are built on**; it is on your contract already. Hiding it from your own employer is not a privacy win, it is a payroll problem.
 
-- Your **full name**, to match your contract and payroll records.
-- Your **photo**, to confirm you're the person who was hired.
-- Your **nationality or right-to-work status**, where that's part of the check.
+So: for the statutory check, send the document whole, through whatever system the employer's process uses. This is one of the cases covered in [when redacting your ID won't work]({{< relref "/guides/when-redacting-your-id-wont-work.md" >}}).
 
-Your document number, machine-readable zone, date of birth and signature are rarely needed in a copy kept on file — they're identifiers for government and border systems, not HR records.
+## The half you should redact
 
-## What to redact before you send it
+Everything else. And in most onboardings there is a surprising amount of "everything else":
 
-- **The document or passport number.**
-- **The machine-readable zone.**
-- **Your date of birth**, unless payroll specifically requires it — in which case, reveal only that field.
-- **Your signature.**
+- A scan requested **"for your file"** with no stated basis.
+- An onboarding portal that asks for a document upload the statutory check did not need.
+- A manager asking you to **WhatsApp a photo** because the portal was awkward.
+- A **background-check firm** or a new HR system asking again, months later.
+- A copy for a **staff directory, badge or building pass**.
 
-If HR's process specifically requires viewing the unredacted original — some right-to-work verification systems do — that's usually a one-time, in-person or supervised check, not a copy that then lives in your file forever. Ask what's kept versus what's just viewed.
+None of those is the statutory check, and for all of them a redacted, watermarked copy showing your name, photo and — where relevant — your right-to-work status is entirely appropriate. Cover the [machine-readable zone]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}) and your signature, and watermark it *"For [Company] onboarding — [date]"* so it is useless anywhere else.
 
-## Watermark it before it leaves your phone
+| The request | Redact? | Why |
+| --- | --- | --- |
+| Statutory right-to-work check | No | The copy must show what the employer saw |
+| Social Security / payroll registration | No | Keyed on your document number |
+| "A copy for your file" | Yes | No stated basis; minimisation applies |
+| Onboarding portal upload | Yes | Unless it *is* the statutory check |
+| WhatsApp photo to a manager | Yes | Wrong channel for an unredacted document |
+| Background check, months later | Yes | Fresh copy, watermarked for that request |
 
-A copy marked "For [Company] onboarding — [date]" stays useless outside the file it was meant for, whether it's forwarded by mistake, sits in a breached inbox, or is kept longer than intended.
+## Ask the one question that sorts them
+
+"Is this for the right-to-work check, or for the file?" It is a normal question, HR can answer it in a sentence, and the answer tells you which of the two halves you are in.
 
 ## Do it on your phone
 
-Photograph the document, cover the fields above, add a watermark, and send that instead of the original — all on-device, with nothing uploaded anywhere. That's what [Anonymize my ID](/#get) does. For exactly which fields to cover, see [how to redact a passport or ID card]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}}); to understand why the machine-readable zone specifically matters, see [what is the MRZ]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}).
-
-New job, new landlord, new bank — the habit is the same every time: send the redacted copy, never the original.
+For the requests in the second half: photograph the document, cover the fields above, add a watermark, and send that instead of the original — all on-device, nothing uploaded. That is what [Anonymize my ID](/#get) does. For exactly which fields to cover, see [how to redact a passport or ID card]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}}); for how long an employer may hold what it does keep, see [can a company legally keep a copy of your ID]({{< relref "/guides/can-a-company-keep-a-copy-of-your-id.md" >}}).

@@ -25,15 +25,27 @@ regelt ausdrücklich, wer den Personalausweis kopieren darf und wie die Kopie
 gekennzeichnet sein muss. Österreich und die Schweiz haben keine solche Norm —
 dort entscheidet allein das Datenschutzrecht.
 
+Sie benennen auch die Grenze. **Schwärzen funktioniert nicht überall.** Einige
+wenige Prüfungen — die geldwäscherechtliche Legitimation einer Bank, die
+Meldepflicht bei Gästen aus dem Ausland, die Prüfung des Aufenthaltstitels durch
+den Arbeitgeber — sind gesetzlich darauf angelegt, das vollständige Dokument zu
+erfassen; ein schwarzer Balken ist dort eine gescheiterte Prüfung und kein
+Schutz. [Wann Schwärzen nicht funktioniert](/de/ratgeber/wann-schwaerzen-nicht-funktioniert/)
+zieht die Linie genau. Alles jenseits davon — Käufer bei Kleinanzeigen oder
+Vinted, Gastgeber, private Vermieter, Auftraggeber, Plattform-Support — ist das
+Feld dieser Ratgeber, und das ist die große Mehrheit dessen, wonach Sie
+tatsächlich gefragt werden.
+
 ## Wer fragt, und was er wirklich braucht
 
-| Wer fragt | Was wirklich gesehen werden muss | Darf verdeckt werden |
-| --- | --- | --- |
-| [Ein Hotel](/de/ratgeber/hotel-will-ausweiskopie/) | Name, Lichtbild, Staatsangehörigkeit | Nummer, MRZ, Geburtsdatum, Unterschrift |
-| [Ein Vermieter oder Makler](/de/ratgeber/vermieter-verlangt-ausweiskopie/) | Name, Lichtbild, Identität | Nummer, MRZ, Geburtsdatum, Unterschrift |
-| [Ein neuer Arbeitgeber](/de/ratgeber/arbeitgeber-verlangt-ausweiskopie/) | Name, Lichtbild, Arbeitserlaubnis | Nummer, MRZ, Unterschrift |
-| [Eine Mietwagenstation](/de/ratgeber/mietwagen-ausweiskopie/) | Name, Lichtbild, Führerscheindaten | Nummer, MRZ, Unterschrift |
-| [Ein Airbnb-Gastgeber](/de/ratgeber/airbnb-gastgeber-verlangt-ausweis/) | Name, Lichtbild, Staatsangehörigkeit | Nummer, MRZ, Geburtsdatum, Unterschrift |
-| [Eine Bank über ihr eigenes Portal](/de/ratgeber/identitaetspruefung-bei-der-bank/) | Das vollständige Dokument, über ihr System | Nichts — Schwärzen lässt die Prüfung scheitern |
-| [Ein Käufer bei Kleinanzeigen](/de/ratgeber/kleinanzeigen-kaeufer-will-ausweis/) | Im Regelfall gar nichts | Alles — hier ist die Frage selbst das Warnsignal |
-| [Wer ein Selfie mit dem Ausweis will](/de/ratgeber/selfie-mit-ausweis-in-der-hand/) | Ihr Gesicht plus Name und Lichtbild im Dokument | Nummer, MRZ, Geburtsdatum, Unterschrift — und prüfen Sie zuerst den Kanal |
+| Wer fragt | Schwärzen möglich? | Was wirklich gebraucht wird | Verdecken |
+| --- | --- | --- | --- |
+| [Ein Käufer bei Kleinanzeigen](/de/ratgeber/kleinanzeigen-kaeufer-will-ausweis/) | Nichts schicken | Gar nichts | Die Frage selbst ist das Warnsignal |
+| [Vinted, willhaben, Ricardo](/de/ratgeber/vinted-willhaben-verkaeufer-verifizierung/) | Ja | Steuer-ID, nicht der Ausweis | Nummer, MRZ, Unterschrift |
+| [Ein Airbnb-Gastgeber](/de/ratgeber/airbnb-gastgeber-verlangt-ausweis/) | Ja | Name, Lichtbild, Staatsangehörigkeit | Nummer, MRZ, Geburtsdatum, Unterschrift |
+| [Ein Vermieter oder Makler](/de/ratgeber/vermieter-verlangt-ausweiskopie/) | Ja | Name, Lichtbild, Identität | Nummer, MRZ, Geburtsdatum, Unterschrift |
+| [Eine Mietwagenstation](/de/ratgeber/mietwagen-ausweiskopie/) | Teilweise | Name, Lichtbild, Führerscheinnummer | Passnummer, MRZ, Unterschrift |
+| [Wer ein Selfie mit dem Ausweis will](/de/ratgeber/selfie-mit-ausweis-in-der-hand/) | Erst den Kanal prüfen | Ihr Gesicht plus Name und Lichtbild | Nummer, MRZ, Geburtsdatum, Unterschrift |
+| [Ein Hotel, bei ausländischem Pass](/de/ratgeber/hotel-will-ausweiskopie/) | **Nein** | Seriennummer, gesetzlich | Kopieren muss es ihn nicht |
+| [Ein neuer Arbeitgeber](/de/ratgeber/arbeitgeber-verlangt-ausweiskopie/) | **Nein** beim Aufenthaltstitel | Der Titel vollständig | Nur die Kopien darüber hinaus |
+| [Eine Bank](/de/ratgeber/identitaetspruefung-bei-der-bank/) | **Nein** | Das vollständige Dokument, über die App | Nichts — die Anfrage prüfen |

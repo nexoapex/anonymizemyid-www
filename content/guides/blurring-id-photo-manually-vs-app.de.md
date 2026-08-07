@@ -5,7 +5,7 @@ subtitle: "Was manuelles Bearbeiten richtig macht, was es übersieht und wann we
 description: "Den Ausweis mit dem Markierwerkzeug unscharf zu machen ist besser als nichts — aber es übersieht drei Dinge, die eine Schwärzungs-App von Haus aus abdeckt."
 date: 2026-07-20
 lastmod: 2026-08-03
-weight: 7
+weight: 8
 slug: "ausweis-selbst-schwaerzen-oder-app"
 keywords:
   - "Unschärfe"

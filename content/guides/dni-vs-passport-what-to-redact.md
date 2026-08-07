@@ -4,7 +4,7 @@ subtitle: "Same principle, different layout — where the sensitive fields sit o
 description: "A Spanish DNI and a passport hide different fields in different places. Here's what to cover on each before sharing a copy."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 7
+weight: 8
 keywords:
   - "DNI"
   - "NIE"

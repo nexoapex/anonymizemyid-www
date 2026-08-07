@@ -5,7 +5,7 @@ subtitle: "Eine echte Identitätsprüfung läuft in der App des Unternehmens. Ei
 description: "Selfies mit dem Ausweis sind mal echte Identitätsprüfung, mal Betrug. Erkennbar am Kanal — plus was Sie auf dem Dokument gefahrlos verdecken können."
 date: 2026-08-01
 lastmod: 2026-08-03
-weight: 16
+weight: 14
 slug: "selfie-mit-ausweis-in-der-hand"
 keywords:
   - "Selfie mit Ausweis"

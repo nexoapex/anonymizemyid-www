@@ -1,91 +1,64 @@
 ---
-title: "¿Es seguro dar a un hotel una copia de tu pasaporte?"
-subtitle: "Qué es lo normal, cuáles son tus derechos y cómo entregar una copia de fiar."
-description: "Los hoteles pueden estar obligados por ley a registrar a los huéspedes, pero puedes darles una copia censurada en lugar de la completa sin editar."
+title: "El hotel pide copia del DNI: qué puedes censurar y qué no"
+subtitle: "El registro de viajeros necesita tu número de documento. La fotocopia del cajón, no."
+description: "El RD 933/2021 obliga a los alojamientos a registrar tu número de documento y tu fecha de nacimiento. Qué no puedes censurar, y qué sí puedes negarte a dar."
 date: 2026-06-29
-lastmod: 2026-06-29
-weight: 8
+lastmod: 2026-08-07
+weight: 17
 slug: "hotel-pide-copia-del-pasaporte"
 keywords:
   - "hoteles"
   - "viajes"
-  - "pasaporte"
+  - "RD 933/2021"
   - "quién pide el DNI"
-answer: "Sí, si tú controlas lo que enseña la copia. En muchos países los alojamientos están obligados por ley a registrar a sus huéspedes, pero eso significa anotar unos datos concretos, no quedarse una imagen completa y sin editar de tu pasaporte. Entrega una copia censurada que mantenga tu nombre, foto y nacionalidad y oculte el número, la MRZ y la fecha de nacimiento."
+  - "cuándo no funciona censurar"
+answer: "No como suele decirse por ahí. En España el registro de viajeros es una obligación legal y los datos que el alojamiento tiene que comunicar incluyen el tipo y número de documento, la fecha de nacimiento y, en el DNI, el número de soporte: si los tapas, el check-in se atasca. Lo que sí puedes discutir es la *fotocopia*: la norma manda registrar unos datos concretos, no quedarse con una imagen de tu documento. Pide que lo lean y te lo devuelvan."
 takeaways:
-  - "**Ofrece enseñar el original primero**: muchas recepciones solo necesitan anotar los datos en el momento."
-  - "Si de verdad hace falta una copia, tapa el número de pasaporte, la MRZ, la fecha de nacimiento y la firma."
-  - "**Enviar el pasaporte por correo antes de llegar es la versión más arriesgada** de la petición: si no queda otra, manda una copia censurada y con marca de agua para ese hotel y esas fechas."
+  - "**No censures el número de documento ni la fecha de nacimiento en un mostrador español** — el RD 933/2021 los exige, y un campo tapado es un check-in fallido."
+  - "**Registrar datos y guardar una copia son cosas distintas.** Pide que registren y devuelvan: eso es lo que la norma pide de verdad."
+  - "**Que te lo pidan por correo antes de llegar es el caso donde censurar sí sirve** — ninguna norma obliga a enviar una imagen por adelantado."
 faq:
-  - q: "¿Los hoteles tienen que ver mi pasaporte?"
-    a: "En muchos países, incluida España, los establecimientos de alojamiento están obligados por ley a registrar ciertos datos de identidad de los huéspedes y comunicarlos a las autoridades. Pueden comprobar tu documento, pero rara vez necesitan quedarse una copia completa y sin editar."
-  - q: "¿Puedo negarme a que un hotel fotocopie mi pasaporte?"
-    a: "A menudo puedes pedir que lo consulten y anoten solo lo que exige la ley, en lugar de quedarse una copia completa. Si necesitan una copia, ofréceles una censurada que siga mostrando tu nombre, tu foto y tu nacionalidad."
-  - q: "Un hotel me pidió enviar el pasaporte por correo antes de llegar, ¿es seguro?"
-    a: "El correo es el eslabón más débil: la imagen queda en los servidores de correo y en la carpeta de enviados indefinidamente. Si tienes que mandar algo por adelantado, envía una copia censurada y con marca de agua indicando ese hotel y esa estancia."
-  - q: "¿Qué necesita en realidad un hotel de mi pasaporte?"
-    a: "Normalmente tu nombre completo, tu nacionalidad, el tipo de documento y tu foto — lo justo para cotejarte con la reserva y cumplir las normas de registro. El número de documento, la zona de lectura mecánica y la fecha de nacimiento casi siempre se pueden ocultar."
+  - q: "¿Puedo darle al hotel una copia censurada del DNI o el pasaporte?"
+    a: "Para el registro, no. El Real Decreto 933/2021 obliga al alojamiento a comunicar el tipo y número de documento, la fecha de nacimiento, la nacionalidad y el número de soporte del DNI. Si tapas esos campos, la comunicación no se puede hacer y en recepción te volverán a pedir el original."
+  - q: "¿Hay algo a lo que sí pueda negarme?"
+    a: "Sí: a la fotocopia. La obligación es *registrar* unos datos, no conservar una imagen del documento. Puedes pedir que introduzcan los campos en su sistema y te devuelvan el documento, y puedes preguntar qué pasa con cualquier escaneo que hagan y cuánto tiempo lo guardan."
+  - q: "El hotel me pide el pasaporte por correo antes de llegar. ¿Es lo mismo?"
+    a: "Es algo completamente distinto, y ahí censurar sí vale la pena. Ninguna norma de registro exige una imagen previa a la llegada: el alojamiento lo pide por comodidad. Envía una copia con la zona de lectura mecánica y la firma tapadas y una marca de agua con el nombre del alojamiento y las fechas, o simplemente di que lo presentarás en el check-in."
+  - q: "¿Qué puedo tapar siempre, incluso en el mostrador?"
+    a: "La zona de lectura mecánica y tu firma. Ninguna de las dos forma parte de lo que pide el registro de viajeros: la MRZ solo recodifica los campos que el recepcionista ya está tecleando, y ningún registro recoge una firma."
+  - q: "¿Y en un piso turístico o un apartamento?"
+    a: "Las mismas obligaciones. El RD 933/2021 alcanza a hoteles, apartamentos turísticos, campings y alquiler de vehículos. Un anfitrión que te escribe por chat pidiendo una foto del pasaporte fuera de la plataforma es otra cosa, y ahí sí conviene una copia censurada."
 ---
 
-Llegas a recepción, cansado, y el recepcionista te pide el pasaporte «para hacer
-una copia». Parece rutina, y muchas veces lo es. Pero «una copia» suele significar
-una foto o fotocopia completa de la página que contiene tu número de documento, tu
-fecha de nacimiento y tu zona de lectura mecánica — y esa copia pasa a vivir en los
-archivos del hotel, en su correo o en una carpeta que no volverás a ver. Así que la
-respuesta honesta a *¿es seguro?* es: **puede serlo, si controlas lo que muestra la
-copia.**
+Llegas a recepción y te piden el pasaporte "para hacer una copia". Buena parte de los consejos de privacidad te dirán que entregues una copia censurada. En un hotel español ese consejo es casi todo equivocado, y seguirlo te va a devolver al mostrador.
 
-## Por qué lo piden los hoteles
+## La versión honesta: el registro necesita el número
 
-En muchos países, los establecimientos de alojamiento están **obligados por ley** a
-registrar a sus huéspedes y comunicar ciertos datos de identidad a la policía o a
-las autoridades locales. España es un ejemplo conocido — el [Real Decreto 933/2021](https://www.boe.es/eli/es/rd/2021/10/26/933): hoteles, alquileres y
-campings deben recabar los datos del huésped y remitirlos. Es una obligación real,
-no un abuso, y por eso la petición es tan común en toda Europa.
+En España el registro de viajeros es una **obligación legal**. Con el [Real Decreto 933/2021](https://www.boe.es/eli/es/rd/2021/10/26/933), exigible a hoteles, alquileres de corta duración y campings desde el 2 de diciembre de 2024, el alojamiento debe recoger y comunicar — entre otros campos — **el tipo y número de documento, la fecha de nacimiento, la nacionalidad y, en el caso del DNI, el número de soporte.**
 
-Lo que la ley suele exigir es que el hotel **anote unos datos concretos** — no que
-conserve una imagen permanente y sin editar de todo tu pasaporte. En esa distinción
-vive tu privacidad.
+Son exactamente los campos que la mayoría de las guías te dicen que tapes. Si los tapas, el alojamiento no puede completar la comunicación a la que está obligado, así que te pedirá el documento otra vez. Este es uno de esos casos en los que **censurar no te protege: solo te hace perder la tarde** — la lista completa está en [cuándo censurar el DNI no sirve de nada]({{< relref "/guides/when-redacting-your-id-wont-work.md" >}}).
 
-## Qué necesita de verdad un hotel
+## Lo que sí puedes discutir
 
-Para cumplir las normas de registro y cotejarte con tu reserva, un hotel suele
-necesitar:
+La obligación es **registrar datos**. No es una obligación de guardar una fotografía de tu documento, y las dos cosas se confunden constantemente en recepción.
 
-- tu **nombre completo**,
-- tu **nacionalidad** y el **tipo de documento**,
-- tu **foto**, para confirmar que el documento es tuyo.
+- **Pide que registren y devuelvan.** "Coge los datos que necesites y me lo devuelves" es una petición razonable y habitual, y un alojamiento que cumple la norma puede atenderla: los datos entran en el sistema igual.
+- **Pregunta qué pasa con el escaneo.** Con el RGPD, el alojamiento necesita una base legal y un plazo de conservación para una imagen que guarde más allá de la comunicación. La Agencia Española de Protección de Datos ha señalado que el decreto obliga a *recoger datos*, no a acumular imágenes de documentos.
+- **Tapa la MRZ y la firma** si al final entregas una imagen. Ninguna de las dos está en el registro: la [zona de lectura mecánica]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}) solo recodifica campos que el recepcionista ya teclea, y no se registra ninguna firma.
 
-Casi nunca tiene una necesidad real de conservar tu **número de pasaporte**, tu
-**[zona de lectura mecánica]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}})** o tu **fecha de nacimiento** en una copia guardada en
-sus sistemas. Son justo los campos que convierten un archivo filtrado de un hotel en
-un kit de robo de identidad.
+## Donde censurar sí sirve: el correo previo a la llegada
 
-## Cómo entregar una copia de fiar
+Muchos hoteles y apartamentos piden hoy que **envíes una foto del pasaporte antes del check-in**. Ninguna norma de registro lo exige. Es una comodidad para el alojamiento, y es la versión más arriesgada de la petición: el correo y el chat guardan esa imagen en servidores, en bandejas de enviados y en copias de seguridad prácticamente para siempre.
 
-Puedes colaborar del todo y aun así protegerte:
+Aquí una copia censurada es exactamente lo correcto — o un educado "lo presento al llegar".
 
-1. **Ofrece enseñar el original** y deja que el personal anote lo que necesite en el
-   momento. En muchos sitios les vale con eso.
-2. **Si necesitan una copia, dales una censurada.** Oculta el número, la zona de
-   lectura mecánica, la fecha de nacimiento y la firma; deja visibles tu nombre, tu
-   foto y tu nacionalidad. Consulta [cómo censurar un pasaporte o DNI]({{< relref "/guides/how-to-redact-a-passport-or-id.md" >}})
-   para saber exactamente qué campos tapar.
-3. **Ponle una marca de agua con ese hotel y esa estancia** — por ejemplo,
-   *«Para el Hotel Marina, 29 de junio – 2 de julio»* — para que la copia no se pueda
-   reutilizar en otro sitio.
+| | En el mostrador, para el registro | Por correo antes de llegar |
+| --- | --- | --- |
+| **¿Obligatorio por ley?** | Sí, en España y buena parte de Europa | No |
+| **Número de documento** | Debe verse | Tápalo |
+| **Fecha de nacimiento** | Debe verse | Tápala |
+| **MRZ y firma** | Tápalas — no se registran | Tápalas |
+| **¿Sirve una copia censurada?** | No | Sí |
+| **Mejor opción** | Enseñar el original y pedir que te lo devuelvan | Presentarlo en el check-in |
 
-## La verdadera señal de alarma: enviar el pasaporte por correo antes de llegar
-
-Muchos hoteles y alquileres piden ahora a los huéspedes que **envíen por correo o
-mensajería una foto del pasaporte antes del check-in**. Es la versión más arriesgada
-de la petición. El correo y el chat guardan esa imagen en servidores, en la carpeta
-de enviados y en copias de seguridad prácticamente para siempre, mucho más allá de
-la recepción del hotel.
-
-Si tienes que mandar algo por adelantado, no envíes nunca la página en bruto. Envía
-una **copia censurada y con marca de agua** preparada en tu móvil —
-[Anonymize my ID](/es/#get) lo hace sin conexión en cosa de un minuto — y, si puedes,
-bórrala del hilo en cuanto hagas el check-in. Para saber más sobre por qué las apps
-de mensajería son un mal sitio para los documentos, lee
-[¿es seguro enviar tu documento por WhatsApp o correo?]({{< relref "/guides/is-it-safe-to-send-id-over-whatsapp-or-email.md" >}}).
+Si acabas enviando algo por adelantado, envía una **copia censurada y con marca de agua** hecha en el móvil — [Anonymize my ID](/#get) lo hace sin conexión en un minuto — y bórrala del hilo cuando hayas hecho el check-in. Sobre por qué la mensajería es mal sitio para un documento: [¿es seguro enviar tu documento por WhatsApp o correo?]({{< relref "/guides/is-it-safe-to-send-id-over-whatsapp-or-email.md" >}}).

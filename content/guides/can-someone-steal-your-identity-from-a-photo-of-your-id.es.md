@@ -4,7 +4,7 @@ subtitle: "La respuesta directa, y qué es lo que realmente lo permite."
 description: "Sí, de formas concretas. Esto es exactamente qué campos hacen peligrosa una foto del DNI y cómo censurarlos elimina casi todo el riesgo."
 date: 2026-07-20
 lastmod: 2026-07-20
-weight: 5
+weight: 6
 slug: "robo-de-identidad-con-una-foto-del-dni"
 keywords:
   - "robo de identidad"
