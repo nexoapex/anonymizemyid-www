@@ -4,7 +4,7 @@ subtitle: "What the counter actually needs alongside your driving licence — an
 description: "Your licence number is never redactable, and in Spain vehicle rental sits inside the same registration duty as hotels. What you can still cover."
 date: 2026-07-20
 lastmod: 2026-08-07
-weight: 16
+weight: 18
 keywords:
   - "car rental"
   - "travel"

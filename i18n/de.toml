@@ -18,7 +18,7 @@ lang_de = "Deutsch"
 
 # ── Hero ──
 hero_pill = "100 % auf dem Gerät · kein Upload"
-hero_lede = "Fotografieren Sie Ihren Personalausweis oder Reisepass und erhalten Sie eine sichere, geschwärzte Kopie mit Wasserzeichen — vollständig auf Ihrem Handy verarbeitet. Ideal für Hotels, Mietwagen, Vermieter und Visumanträge."
+hero_lede = "Fotografieren Sie Ihren Personalausweis oder Reisepass und erhalten Sie eine sichere, geschwärzte Kopie mit Wasserzeichen — vollständig auf Ihrem Handy verarbeitet. Für Gastgeber, Vermieter, Käufer und Auftraggeber, die danach fragen."
 hero_home_alt = "Startbildschirm der App Anonymize my ID"
 badges_free_try = "Kostenlos testen unter iOS und Android."
 app_lang_note = "Die App selbst ist derzeit nur auf Englisch verfügbar."

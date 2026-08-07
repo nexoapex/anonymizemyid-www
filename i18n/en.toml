@@ -15,7 +15,7 @@ lang_de = "Deutsch"
 
 # ── Hero ──
 hero_pill = "100% on-device · no upload"
-hero_lede = "Photograph an ID card or passport and get a safe, watermarked, redacted copy — processed entirely on your phone. Perfect for hotels, rentals and visa forms while you travel."
+hero_lede = "Photograph an ID card or passport and get a safe, watermarked, redacted copy — processed entirely on your phone. For the hosts, landlords, buyers and clients who ask for one."
 hero_home_alt = "Anonymize my ID app home screen"
 badges_free_try = "Free to try on iOS and Android."
 app_lang_note = ""

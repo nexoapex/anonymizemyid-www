@@ -4,7 +4,7 @@ subtitle: "Was wirklich zählt, worauf Sie achten sollten und was sich heute noc
 description: "Sie haben ein vollständiges Foto von Ausweis oder Reisepass verschickt. So schätzen Sie das Risiko ein, erwirken die Löschung und achten aufs Richtige."
 date: 2026-07-28
 lastmod: 2026-08-03
-weight: 21
+weight: 23
 slug: "ausweiskopie-ungeschwaerzt-verschickt"
 keywords:
   - "Identitätsdiebstahl"

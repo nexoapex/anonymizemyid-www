@@ -5,7 +5,7 @@ subtitle: "Die Führerscheinnummer nie — und in Spanien auch die Ausweisdaten 
 description: "Die Führerscheinnummer lässt sich nirgends schwärzen, und in Spanien gilt für Mietwagen dieselbe Registrierungspflicht wie für Hotels."
 date: 2026-07-20
 lastmod: 2026-08-07
-weight: 18
+weight: 20
 slug: "mietwagen-ausweiskopie"
 keywords:
   - "Mietwagen"

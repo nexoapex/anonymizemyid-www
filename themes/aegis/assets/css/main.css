@@ -35,6 +35,19 @@ a:hover{text-decoration:underline}
 }
 .skip-link:focus{left:0; text-decoration:none}
 main:focus{outline:none}
+/* Keyboard focus (WCAG 2.4.7 / 2.4.11). There was no focus style at all, so
+   keyboard users got the UA default — which on this near-black background is
+   in practice invisible in several browsers. :focus-visible rather than
+   :focus, so a mouse click on a button does not leave a ring behind. */
+:focus-visible{outline:3px solid var(--amber-bright); outline-offset:2px; border-radius:4px}
+.btn:focus-visible,.nav-cta:focus-visible,.badge:focus-visible{outline-offset:3px}
+/* Honour a reduced-motion preference (WCAG 2.3.3). Smooth scrolling and the
+   card lift are the only two motions on the site, and both are decorative. */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important; animation-duration:.01ms!important}
+  .guide-card:hover{transform:none}
+}
 /* Inline links within body copy must not rely on colour alone (a11y). */
 p a{text-decoration:underline}
 h1,h2,h3{line-height:1.12; letter-spacing:-.02em; margin:0 0 .4em}

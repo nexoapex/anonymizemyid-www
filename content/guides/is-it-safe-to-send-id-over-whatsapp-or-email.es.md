@@ -4,7 +4,7 @@ subtitle: "Qué le pasa de verdad a la imagen después de darle a enviar — y l
 description: "WhatsApp y el correo no están hechos para proteger tu documento. Esto es lo que le pasa a la imagen después de enviarla, y la forma más segura de compartirla."
 date: 2026-06-28
 lastmod: 2026-06-28
-weight: 15
+weight: 17
 slug: "enviar-el-dni-por-whatsapp-o-correo"
 keywords:
   - "WhatsApp"

@@ -5,11 +5,12 @@ subtitle: "Cómo compartir tu pasaporte o DNI sin regalar tu identidad."
 description: "Guías claras y prácticas para compartir tu pasaporte o DNI de forma segura — qué censurar y cómo hacerlo en tu móvil en un minuto."
 ---
 
-Un hotel quiere «una copia de tu pasaporte». Un casero te pide que le mandes el
-DNI por WhatsApp. Un formulario de visado necesita un escaneo. Entregar una foto
-completa y sin editar de tu documento es una de las formas más rápidas de
-filtrar tu identidad — y, una vez está en la bandeja de entrada o el carrete de
-otra persona, ya no la recuperas.
+Un comprador de Wallapop quiere «solo una foto del DNI para verificarte». Un
+anfitrión de alquiler turístico te escribe fuera de la plataforma. Un casero te
+pide que se lo mandes por WhatsApp. Entregar una foto completa y sin editar de
+tu documento es una de las formas más rápidas de filtrar tu identidad — y, una
+vez está en la bandeja de entrada o el carrete de otra persona, ya no la
+recuperas.
 
 Estas guías explican cómo enseñar a quien te lo pide lo que de verdad necesita
 ver mientras ocultas lo que permitiría suplantarte: el número de documento, la
@@ -34,6 +35,8 @@ de lo que de verdad te van a pedir.
 | [Un comprador de Wallapop](/es/guides/comprador-de-wallapop-pide-el-dni/) | No envíes nada | Nada en absoluto | La petición es la señal de alarma |
 | [Un piso compartido, antes de la visita](/es/guides/piso-compartido-piden-el-dni/) | No envíes nada aún | Nada hasta ver la habitación | El momento es la señal de alarma |
 | [Un match de una app de citas](/es/guides/apps-de-citas-piden-el-dni/) | No envíes nada | Nada, nunca | No existe verificación entre apps |
+| [Un cliente que te da de alta](/es/guides/cliente-pide-el-dni-a-un-autonomo/) | Sí | Nombre y foto | Número, MRZ, fecha de nacimiento, firma |
+| [El soporte, para recuperar una cuenta](/es/guides/recuperar-cuenta-piden-el-dni/) | Sí | Nombre y foto, para cotejar la cuenta | Número, MRZ, firma |
 | [Un anfitrión de alquiler turístico](/es/guides/anfitrion-de-airbnb-pide-el-dni/) | Sí | Nombre, foto, nacionalidad | Número, MRZ, fecha de nacimiento, firma |
 | [Un casero o una agencia](/es/guides/casero-pide-copia-del-dni/) | Sí | Nombre, foto, derecho de residencia | Número, MRZ, fecha de nacimiento, firma |
 | [Un mostrador de alquiler de coches](/es/guides/alquiler-de-coche-copia-del-dni/) | En parte | Nombre, foto, número del carné | Número de pasaporte, MRZ, firma |

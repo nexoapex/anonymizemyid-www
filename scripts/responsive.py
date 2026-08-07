@@ -29,8 +29,11 @@ What it checks, and why each one is here rather than eyeballed:
                 a card section look unfinished at exactly one breakpoint.
   collisions    Sibling boxes that overlap. Almost always an absolutely
                 positioned badge or tag that fits at one width and not another.
-  under header  Content sitting beneath the sticky header at page top, i.e.
-                scroll-margin missing on an anchor target.
+  under header  Content sitting beneath the sticky header at page top, and any
+                anchor target whose scroll-margin does not clear that header.
+  no focus      An interactive control with no visible focus indicator. On this
+                palette the UA default ring is effectively invisible, so its
+                absence is a real WCAG 2.4.7 failure rather than a style nit.
 """
 import argparse, functools, http.server, json, pathlib, re, socketserver, sys, threading
 
@@ -64,7 +67,7 @@ PATHS = [
 PROBE = r"""() => {
   const vw = window.innerWidth;
   const out = {overflow: [], small: [], tiny: [], measure: [], orphan: [],
-               collide: [], underHeader: []};
+               collide: [], underHeader: [], noFocus: []};
   const label = el => {
     const t = (el.innerText || el.textContent || '').trim().replace(/\s+/g, ' ');
     return el.tagName.toLowerCase()
@@ -187,6 +190,23 @@ PROBE = r"""() => {
   return out;
 }"""
 
+# Keyboard focus is checked from Python rather than in PROBE, because
+# `element.focus()` does not reliably put a link or button into :focus-visible —
+# that selector keys off how focus arrived. Pressing Tab for real does.
+FOCUS_PROBE = """() => {
+  const el = document.activeElement;
+  if (!el || el === document.body) return null;
+  const cs = getComputedStyle(el);
+  const r = el.getBoundingClientRect();
+  const ring = (parseFloat(cs.outlineWidth) || 0) > 0 && cs.outlineStyle !== 'none';
+  const glow = cs.boxShadow && cs.boxShadow !== 'none';
+  const label = el.tagName.toLowerCase()
+    + (typeof el.className === 'string' && el.className
+       ? '.' + el.className.trim().split(/\\s+/)[0] : '')
+    + ' "' + (el.innerText || '').trim().replace(/\\s+/g, ' ').slice(0, 24) + '"';
+  return {ok: ring || glow, label, hidden: !r.width && !r.height};
+}"""
+
 
 def headers_from_netlify():
     toml = (ROOT / "netlify.toml").read_text(encoding="utf-8")
@@ -251,6 +271,16 @@ def main():
                 for check, items in res.items():
                     for item in items:
                         findings.setdefault((path, check, item), []).append(w)
+
+                # Walk the first stretch of the tab order for real. 24 presses
+                # reaches the header, the hero CTAs and the first body links on
+                # every template, which is where a missing ring would show.
+                for _ in range(24):
+                    page.keyboard.press("Tab")
+                    f = page.evaluate(FOCUS_PROBE)
+                    if not f or f["hidden"] or f["ok"]:
+                        continue
+                    findings.setdefault((path, "noFocus", f["label"]), []).append(w)
                 if args.shots and w in (390, 768, 1440):
                     slug = (path.strip("/").replace("/", "_") or "home")
                     page.screenshot(path=str(SHOT_DIR / f"{slug}@{w}.png"),

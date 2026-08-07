@@ -5,7 +5,7 @@ subtitle: "Was das Meldegesetz wirklich verlangt, was seit 2025 weggefallen ist 
 description: "Hotels müssen Gäste aus dem Ausland melden — eine Ausweiskopie ist dafür aber nicht vorgesehen. Was gilt in Deutschland, Österreich und der Schweiz."
 date: 2026-06-29
 lastmod: 2026-08-03
-weight: 23
+weight: 25
 slug: "hotel-will-ausweiskopie"
 keywords:
   - "Hotel"

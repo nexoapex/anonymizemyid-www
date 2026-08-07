@@ -4,7 +4,7 @@ subtitle: "El KYC necesita el documento entero. Lo útil aquí es distinguir una
 description: "Censurar el DNI no sirve para verificar una cuenta: la normativa antiblanqueo exige el documento completo. Qué hacer en su lugar."
 date: 2026-07-20
 lastmod: 2026-08-07
-weight: 21
+weight: 23
 slug: "verificacion-de-identidad-en-el-banco"
 keywords:
   - "bancos"

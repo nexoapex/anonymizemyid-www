@@ -5,7 +5,7 @@ subtitle: "Was das Onboarding wirklich braucht — und wann eine Kopie in der Pe
 description: "Neue Arbeitgeber fragen beim Onboarding nach dem Ausweis. Wann eine Kopie in der Personalakte zulässig ist, was Sie schwärzen und wie Sie sie sicher schicken."
 date: 2026-07-20
 lastmod: 2026-08-03
-weight: 24
+weight: 26
 slug: "arbeitgeber-verlangt-ausweiskopie"
 keywords:
   - "Arbeitgeber"

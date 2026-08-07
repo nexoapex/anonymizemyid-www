@@ -5,7 +5,7 @@ subtitle: "Was Makler und Vermieter tatsächlich sehen müssen — und wie Sie e
 description: "Vermieter und Makler fragen bei der Wohnungsbewerbung nach dem Ausweis. Was zulässig ist, was Sie schwärzen sollten und wie Sie sicher antworten."
 date: 2026-07-20
 lastmod: 2026-08-03
-weight: 15
+weight: 17
 slug: "vermieter-verlangt-ausweiskopie"
 keywords:
   - "Vermieter"

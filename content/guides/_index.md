@@ -5,7 +5,7 @@ subtitle: "How to share your passport or ID without giving your identity away."
 description: "Practical, plain-English guides on sharing your passport or ID safely — what to redact, and how to do it on your phone in a minute."
 ---
 
-A hotel wants "a copy of your passport." A landlord asks you to WhatsApp your ID. A visa form needs a scan. Handing over a full, unedited photo of your document is one of the quickest ways to leak your identity — and once it is sitting in someone's inbox or camera roll, you cannot get it back.
+A marketplace buyer wants "just a photo of your ID to verify you." A short-term rental host messages you outside the app. A landlord asks you to WhatsApp it over. Handing across a full, unedited photo of your document is one of the quickest ways to leak your identity — and once it is sitting in someone's inbox or camera roll, you cannot get it back.
 
 These guides explain how to show someone what they actually need to see while hiding the parts that let them impersonate you: the document number, the machine-readable zone, your date of birth and your signature. No jargon and no scare tactics — just what to cover, why it matters, and how to do it in about a minute on your phone.
 
@@ -18,6 +18,8 @@ They are also honest about the limit. **Redaction does not work everywhere.** A 
 | [A marketplace buyer](/guides/marketplace-buyer-asking-for-id/) | Send nothing | Nothing at all | The request is the red flag |
 | [A flatshare, before a viewing](/guides/flatshare-or-roommate-asking-for-id/) | Send nothing yet | Nothing until you have seen the room | The timing is the red flag |
 | [A dating match](/guides/dating-app-verification-id-request/) | Send nothing | Nothing, ever | No cross-app verification exists |
+| [A freelance client](/guides/freelance-client-asking-for-id/) | Yes | Name and photo | Number, MRZ, date of birth, signature |
+| [Account recovery support](/guides/social-account-recovery-id-request/) | Yes | Name and photo, to match the account | Number, MRZ, signature |
 | [A short-term rental host](/guides/airbnb-host-asking-for-id/) | Yes | Name, photo, nationality | Number, MRZ, date of birth, signature |
 | [A landlord or letting agent](/guides/landlord-asking-for-id-or-passport-copy/) | Yes | Name, photo, right to reside | Number, MRZ, date of birth, signature |
 | [A car rental desk](/guides/car-rental-id-copy/) | Partly | Name, photo, licence number | Passport number, MRZ, signature |

@@ -4,7 +4,7 @@ subtitle: "El alquiler de vehículos está dentro del RD 933/2021, igual que los
 description: "En España el alquiler de vehículos tiene la misma obligación de registro que los hoteles. Qué no puedes tapar y qué sí, en España y fuera."
 date: 2026-07-20
 lastmod: 2026-08-07
-weight: 16
+weight: 18
 slug: "alquiler-de-coche-copia-del-dni"
 keywords:
   - "alquiler de coches"

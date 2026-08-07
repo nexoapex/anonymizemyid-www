@@ -5,12 +5,12 @@ subtitle: "Wie Sie Reisepass oder Personalausweis weitergeben, ohne Ihre Identit
 description: "Praktische Ratgeber zum sicheren Weitergeben von Ausweis und Reisepass — was Sie schwärzen sollten und wie es in einer Minute am Handy geht."
 ---
 
-Ein Hotel möchte „eine Kopie Ihres Ausweises“. Ein Vermieter bittet Sie, den
-Personalausweis per WhatsApp zu schicken. Ein Visumantrag verlangt einen Scan.
-Ein vollständiges, unbearbeitetes Foto Ihres Dokuments herauszugeben, ist einer
-der schnellsten Wege, Ihre Identität zu verlieren — und sobald es in einem
-fremden Postfach oder einer fremden Fotomediathek liegt, bekommen Sie es nicht
-zurück.
+Ein Käufer bei Kleinanzeigen will „nur kurz ein Ausweisfoto zur Verifizierung“.
+Ein Gastgeber schreibt Sie außerhalb der Plattform an. Ein Vermieter bittet Sie,
+den Personalausweis per WhatsApp zu schicken. Ein vollständiges, unbearbeitetes
+Foto Ihres Dokuments herauszugeben, ist einer der schnellsten Wege, Ihre
+Identität zu verlieren — und sobald es in einem fremden Postfach oder einer
+fremden Fotomediathek liegt, bekommen Sie es nicht zurück.
 
 Diese Ratgeber erklären, wie Sie einem Unternehmen genau das zeigen, was es
 wirklich sehen muss, und dabei verdecken, was zur Identitätsübernahme taugt:
@@ -44,6 +44,8 @@ tatsächlich gefragt werden.
 | [Vinted, willhaben, Ricardo](/de/ratgeber/vinted-willhaben-verkaeufer-verifizierung/) | Ja | Steuer-ID, nicht der Ausweis | Nummer, MRZ, Unterschrift |
 | [Eine WG, vor der Besichtigung](/de/ratgeber/wg-zimmer-ausweiskopie/) | Noch nichts schicken | Nichts, bevor Sie das Zimmer gesehen haben | Der Zeitpunkt ist das Warnsignal |
 | [Ein Match in einer Dating-App](/de/ratgeber/dating-app-verifizierung-ausweis/) | Nichts schicken | Nie etwas | Eine app-übergreifende Verifizierung gibt es nicht |
+| [Ein Auftraggeber](/de/ratgeber/auftraggeber-verlangt-ausweiskopie/) | Ja | Name und Lichtbild | Nummer, MRZ, Geburtsdatum, Unterschrift |
+| [Support bei der Kontowiederherstellung](/de/ratgeber/konto-wiederherstellung-ausweis/) | Ja | Name und Lichtbild, zum Abgleich | Nummer, MRZ, Unterschrift |
 | [Ein Airbnb-Gastgeber](/de/ratgeber/airbnb-gastgeber-verlangt-ausweis/) | Ja | Name, Lichtbild, Staatsangehörigkeit | Nummer, MRZ, Geburtsdatum, Unterschrift |
 | [Ein Vermieter oder Makler](/de/ratgeber/vermieter-verlangt-ausweiskopie/) | Ja | Name, Lichtbild, Identität | Nummer, MRZ, Geburtsdatum, Unterschrift |
 | [Eine Mietwagenstation](/de/ratgeber/mietwagen-ausweiskopie/) | Teilweise | Name, Lichtbild, Führerscheinnummer | Passnummer, MRZ, Unterschrift |

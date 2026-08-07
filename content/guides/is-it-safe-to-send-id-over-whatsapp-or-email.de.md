@@ -5,7 +5,7 @@ subtitle: "Was mit dem Bild nach dem Absenden wirklich passiert — und wie es d
 description: "WhatsApp und E-Mail sind nicht dafür gebaut, Ihren Ausweis zu schützen. Was nach dem Senden mit dem Bild passiert und wie Sie es trotzdem sicher teilen."
 date: 2026-06-28
 lastmod: 2026-08-03
-weight: 17
+weight: 19
 slug: "ausweis-per-whatsapp-oder-e-mail-senden"
 keywords:
   - "WhatsApp"

@@ -15,7 +15,7 @@ lang_de = "Deutsch"
 
 # ── Hero ──
 hero_pill = "100% en el dispositivo · sin subir nada"
-hero_lede = "Fotografía tu DNI, NIE o pasaporte y consigue una copia segura, con marca de agua y los datos ocultos — procesada por completo en tu móvil. Perfecta para hoteles, alquileres y trámites de visado cuando viajas."
+hero_lede = "Fotografía tu DNI, NIE o pasaporte y consigue una copia segura, con marca de agua y los datos ocultos — procesada por completo en tu móvil. Para anfitriones, caseros, compradores y clientes que te la piden."
 hero_home_alt = "Pantalla de inicio de la app Anonymize my ID"
 badges_free_try = "Gratis para probar en iOS y Android."
 app_lang_note = "Por ahora, la aplicación está disponible solo en inglés."
