@@ -3,6 +3,7 @@
 the same day instead of whenever they next crawl.
 
     python3 scripts/indexnow.py --new           # URLs added/changed in the last commit
+    python3 scripts/indexnow.py --since e689a81 # ...since a given commit (multi-commit sessions)
     python3 scripts/indexnow.py --all           # every URL in the sitemaps
     python3 scripts/indexnow.py /guides/foo/ /es/guides/foo/
     python3 scripts/indexnow.py --all --dry-run
@@ -57,10 +58,15 @@ def source_to_permalink():
             if r.get("path") and r.get("permalink")}
 
 
-def changed_urls():
-    """Page URLs touched by the last commit, in every language."""
+def changed_urls(since="HEAD~1"):
+    """Page URLs touched since `since`, in every language.
+
+    Defaults to the last commit. Pass --since when a session shipped several
+    commits: submitting only the last one's pages silently omits the rest, and
+    IndexNow has no way to tell you that.
+    """
     diff = subprocess.run(
-        ["git", "diff", "--name-only", "HEAD~1", "HEAD"],
+        ["git", "diff", "--name-only", since, "HEAD"],
         cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
     published = source_to_permalink()
     urls, missing = set(), []
@@ -105,6 +111,8 @@ def main():
     ap.add_argument("urls", nargs="*", help="paths or full URLs to submit")
     ap.add_argument("--all", action="store_true", help="every URL in the sitemaps")
     ap.add_argument("--new", action="store_true", help="URLs touched by the last commit")
+    ap.add_argument("--since", metavar="REF",
+                    help="URLs touched since REF (e.g. a session's first commit)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -113,6 +121,8 @@ def main():
 
     if args.all:
         urls = sitemap_urls()
+    elif args.since:
+        urls = changed_urls(args.since)
     elif args.new:
         urls = changed_urls()
     else:
