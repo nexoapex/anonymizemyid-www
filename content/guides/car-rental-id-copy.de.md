@@ -1,27 +1,31 @@
 ---
 title: "Mietwagen: Darf die Station eine Ausweiskopie behalten?"
 seoTitle: "Mietwagen und die Ausweiskopie"
-subtitle: "Was der Schalter neben dem Führerschein wirklich braucht — und wie Sie es sicher übergeben."
-description: "Mietwagenstationen kopieren neben dem Führerschein oft den Ausweis. Was üblich ist, was Sie schwärzen sollten und wie Sie die Kopie sicher übergeben."
+subtitle: "Die Führerscheinnummer nie — und in Spanien auch die Ausweisdaten nicht."
+description: "Die Führerscheinnummer lässt sich nirgends schwärzen, und in Spanien gilt für Mietwagen dieselbe Registrierungspflicht wie für Hotels."
 date: 2026-07-20
-lastmod: 2026-08-03
-weight: 16
+lastmod: 2026-08-07
+weight: 18
 slug: "mietwagen-ausweiskopie"
 keywords:
   - "Mietwagen"
   - "Reise"
   - "Führerschein"
   - "wer nach dem Ausweis fragt"
-answer: "Ja, in denselben Grenzen wie überall sonst. Der Schalter braucht Name, Lichtbild und Führerscheindaten, um Mietvertrag und Versicherung zuzuordnen — nicht Ihre Passnummer, die maschinenlesbare Zone, Ihr Geburtsdatum oder Ihre Unterschrift als Fotokopie in der Stationsablage. Bereiten Sie vor der Reise eine geschwärzte Kopie mit Wasserzeichen vor."
+  - "wann Schwärzen nicht funktioniert"
+answer: "Teilweise — und im Urlaubsland kann es anders sein als zu Hause. Ihre Führerscheinnummer schwärzen Sie nirgends: auf sie sind Versicherungsschutz und die Haftung für Bußgelder geschrieben. In Spanien fällt die Autovermietung zudem unter dieselbe Registrierungspflicht wie Hotels (RD 933/2021), die Station muss dort Dokumentennummer und Geburtsdatum erfassen. In der DACH-Region gibt es keine solche Pflicht: Passnummer, MRZ, Geburtsdatum und Unterschrift dürfen Sie verdecken."
 takeaways:
-  - "Fragen Sie: **„Brauchen Sie eine Kopie oder genügt die Einsicht?“** — oft wird gar nichts aufbewahrt."
-  - "Verdecken Sie Dokumentennummer, MRZ und Unterschrift, dazu das Geburtsdatum, sofern es nicht mit dem Führerschein abgeglichen wird."
-  - "Wird auch der Führerschein kopiert, gilt dieselbe Logik für alles, was über den Fahrberechtigungsnachweis hinausgeht."
+  - "**Die Führerscheinnummer nie verdecken** — Versicherung und Bußgeldhaftung stützen sich darauf."
+  - "**In Spanien fällt Autovermietung unter RD 933/2021**, wie Hotels: Dokumentennummer und Geburtsdatum müssen erfasst werden."
+  - "**In Deutschland, Österreich und der Schweiz gibt es keine solche Pflicht** — dort entscheidet allein die Erforderlichkeit nach DSGVO."
+  - "Fragen Sie: **„Brauchen Sie eine Kopie oder genügt die Einsicht?“** — außerhalb einer Pflicht wird oft gar nichts aufbewahrt."
 faq:
   - q: "Warum will eine Mietwagenfirma neben dem Führerschein auch den Ausweis?"
     a: "Der Führerschein belegt, dass Sie fahren dürfen; Personalausweis oder Reisepass belegen, wer Sie sind — und darauf sind Mietvertrag, Kaution und Versicherung geschrieben. Viele Stationen kopieren beides aus Gewohnheit, besonders bei ausländischen Führerscheinen oder bei bestimmten Zahlungsmitteln."
   - q: "Was sollte ich für eine Mietwagenstation schwärzen?"
-    a: "Dokumentennummer, maschinenlesbare Zone, Unterschrift und das Geburtsdatum, sofern es nicht für den Abgleich mit dem Führerschein gebraucht wird. Name, Lichtbild und Führerscheindaten bleiben sichtbar. Beim Personalausweis zusätzlich die Anschrift auf der Rückseite."
+    a: "Die Führerscheinnummer nie. In der DACH-Region ansonsten Dokumentennummer, maschinenlesbare Zone, Unterschrift und Geburtsdatum, sofern es nicht mit dem Führerschein abgeglichen wird; beim Personalausweis zusätzlich die Anschrift auf der Rückseite. Name, Lichtbild und Führerscheindaten bleiben sichtbar."
+  - q: "Warum will die Station in Spanien mehr Daten als zu Hause?"
+    a: "Weil sie dort muss. Das spanische Real Decreto 933/2021 gilt ausdrücklich für Beherbergung *und die Vermietung von Kraftfahrzeugen*; die Station meldet Dokumentennummer, Geburtsdatum und Staatsangehörigkeit an die Behörden. Eine geschwärzte Kopie kann sie dafür nicht verwenden."
   - q: "Kann ich den Ausweis nicht einfach zeigen, statt eine Kopie zu hinterlassen?"
     a: "Oft ja — fragen Sie, ob die Angaben notiert und das Original zurückgegeben werden können, statt eine Fotokopie anzufertigen. Landet doch eine Kopie in der Mietakte, bieten Sie eine geschwärzte mit Wasserzeichen an."
   - q: "Ist es am Flughafenschalter anders als in einer Stadtfiliale?"
@@ -43,6 +47,22 @@ Ihr Führerschein belegt, dass Sie fahren dürfen; er trägt aber nicht immer Ih
 - Ihre **Staatsangehörigkeit**, soweit sie für die Mietbedingungen eine Rolle spielt.
 
 Nicht gebraucht werden Passnummer, maschinenlesbare Zone, Geburtsdatum oder Unterschrift als Fotokopie in der Stationsablage, nachdem die Prüfung erledigt ist. Und die **Wohnanschrift** auf der Rückseite des Personalausweises steht ohnehin schon im Mietvertrag, wenn sie gebraucht wird.
+
+## Zwei Dinge, die Sie nicht verdecken können
+
+**Die Führerscheinnummer.** Auf sie sind der Versicherungsschutz und die Haftung für ein Bußgeld oder eine Maut geschrieben; ein Mietvertrag ohne sie funktioniert nicht. Das ist kein zu schützendes Feld, sondern der Zweck des Dokuments.
+
+**In Spanien die Ausweisdaten, weil Autovermietung dort eine registrierte Tätigkeit ist.** Das [Real Decreto 933/2021](https://www.boe.es/eli/es/rd/2021/10/26/933) gilt ausdrücklich für Beherbergung **und die Vermietung von Kraftfahrzeugen** und unterwirft die Vermietung ohne Fahrer derselben Registrierungs- und Meldepflicht wie ein Hotel. Eine spanische Station, die Dokumentennummer und Geburtsdatum aufnimmt, ist also nicht neugierig, sondern erfüllt eine Meldepflicht — mit einer geschwärzten Kopie geht das nicht. Siehe [Wann Schwärzen nicht funktioniert]({{< relref "/guides/when-redacting-your-id-wont-work.md" >}}).
+
+In Deutschland, Österreich und der Schweiz gibt es keine vergleichbare Norm für Mietwagen. Dort entscheidet allein, ob die Kopie für den Vertrag erforderlich ist.
+
+| | Spanien | DACH |
+| --- | --- | --- |
+| **Registrierungspflicht?** | Ja, RD 933/2021 | Nein |
+| **Dokumentennummer** | Muss erfasst werden | Verdecken |
+| **Geburtsdatum** | Muss erfasst werden | Verdecken |
+| **Führerscheinnummer** | Erforderlich | Erforderlich |
+| **MRZ und Unterschrift** | Verdecken | Verdecken |
 
 ## Was Sie vor der Übergabe verdecken
 

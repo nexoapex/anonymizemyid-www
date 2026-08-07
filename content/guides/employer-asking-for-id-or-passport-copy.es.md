@@ -4,7 +4,7 @@ subtitle: "El alta en la Seguridad Social necesita tu número. La copia \"para e
 description: "El alta en la Seguridad Social necesita el documento completo. Dónde acaba eso y qué peticiones de RR. HH. sí puedes censurar."
 date: 2026-07-20
 lastmod: 2026-08-07
-weight: 18
+weight: 20
 slug: "empresa-pide-copia-del-dni"
 keywords:
   - "empleadores"

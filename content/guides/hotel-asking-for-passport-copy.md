@@ -4,7 +4,7 @@ subtitle: "Guest-registration law needs your document number. The photocopy in t
 description: "Guest registration is a legal duty in much of Europe and needs your document number and date of birth. What you cannot redact, and what you still can."
 date: 2026-06-29
 lastmod: 2026-08-07
-weight: 17
+weight: 19
 keywords:
   - "hotels"
   - "travel"

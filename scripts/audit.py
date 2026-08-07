@@ -191,7 +191,13 @@ def main():
             continue
 
         title = first(r"<title>(.*?)</title>", html)
-        desc = first(r'<meta name=description content="?([^">]*)"?>', html)
+        # Three quoting forms, because the minifier picks whichever is shortest
+        # for the value: unquoted, double-quoted, and — when the value itself
+        # contains a double quote — single-quoted. Reading only the first two
+        # made a perfectly good description look like an empty one.
+        desc = (first(r'<meta name=description content="([^"]*)"', html)
+                or first(r"<meta name=description content='([^']*)'", html)
+                or first(r"<meta name=description content=([^\s>]*)", html))
         titles[title] += 1
         descs[desc] += 1
 

@@ -5,7 +5,7 @@ subtitle: "§ 8 GwG verlangt die vollständige Kopie. Die eigentliche Fähigkeit
 description: "Eine geschwärzte Ausweiskopie besteht die Legitimationsprüfung der Bank nicht: § 8 GwG verlangt eine vollständige Kopie. Was Sie stattdessen tun."
 date: 2026-07-20
 lastmod: 2026-08-07
-weight: 24
+weight: 26
 slug: "identitaetspruefung-bei-der-bank"
 keywords:
   - "Bank"

@@ -5,7 +5,7 @@ subtitle: "Warum die Prüfung der Plattform und die Nachricht eines Gastgebers n
 description: "Gastgeber von Ferienwohnungen fragen oft im Chat nach dem Ausweis. Was die Plattform schon geprüft hat, was das Gesetz verlangt und was Sie schicken."
 date: 2026-07-28
 lastmod: 2026-08-03
-weight: 12
+weight: 14
 slug: "airbnb-gastgeber-verlangt-ausweis"
 keywords:
   - "Ferienwohnung"

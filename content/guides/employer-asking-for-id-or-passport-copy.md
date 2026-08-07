@@ -4,7 +4,7 @@ subtitle: "A statutory right-to-work check needs the whole document. The extra c
 description: "Right-to-work and payroll checks legally need the full, unredacted document. Here's where that ends — and which of HR's other ID requests you can send redacted."
 date: 2026-07-20
 lastmod: 2026-08-07
-weight: 18
+weight: 20
 keywords:
   - "employers"
   - "onboarding"

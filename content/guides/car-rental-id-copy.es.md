@@ -1,26 +1,30 @@
 ---
-title: "¿Es seguro dar tu DNI al alquilar un coche?"
-subtitle: "Qué necesita el mostrador además de tu carné de conducir — y cómo entregarlo de forma segura."
-description: "Al alquilar un coche suelen fotocopiar tu DNI o pasaporte además del carné. Esto es lo normal, qué censurar y cómo compartirlo de forma segura."
+title: "Alquilar un coche: qué no puedes censurar del DNI"
+subtitle: "El alquiler de vehículos está dentro del RD 933/2021, igual que los hoteles."
+description: "En España el alquiler de vehículos tiene la misma obligación de registro que los hoteles. Qué no puedes tapar y qué sí, en España y fuera."
 date: 2026-07-20
-lastmod: 2026-07-20
-weight: 14
+lastmod: 2026-08-07
+weight: 16
 slug: "alquiler-de-coche-copia-del-dni"
 keywords:
   - "alquiler de coches"
   - "viajes"
   - "carné de conducir"
   - "quién pide el DNI"
-answer: "Sí, con los mismos límites que en cualquier otro sitio. El mostrador necesita tu nombre, tu foto y los datos del carné para cuadrar el contrato y el seguro, no tu número de pasaporte, tu MRZ, tu fecha de nacimiento ni tu firma guardados en una fotocopia en la oficina. Prepara una copia censurada y con marca de agua antes de viajar."
+  - "cuándo no funciona censurar"
+answer: "En parte, y en España menos de lo que parece. El número de tu carné de conducir no se censura en ningún sitio: es sobre lo que se escriben el seguro y la responsabilidad por multas. Y en España el alquiler de vehículos entra en el RD 933/2021 con la misma obligación de registro que un hotel, así que el mostrador tiene que anotar tu número de documento y tu fecha de nacimiento. Fuera de esa obligación sí puedes tapar número de pasaporte, MRZ, fecha de nacimiento y firma."
 takeaways:
-  - "Pregunta: **«¿necesitáis quedaros una copia o solo comprobarlo?»**. Muchas veces no se queda nada."
-  - "Tapa el número de documento, la MRZ y la firma, y también la fecha de nacimiento salvo que la estén cotejando con tu carné."
-  - "Si también fotocopian el carné de conducir, aplica la misma lógica a todo lo que vaya más allá de demostrar que puedes conducir."
+  - "**Nunca censures el número del carné de conducir** — el seguro y la responsabilidad por multas se apoyan en él."
+  - "**En España el alquiler de vehículos está en el RD 933/2021**, junto con los hoteles: hay que registrar número de documento y fecha de nacimiento."
+  - "Pregunta: **«¿necesitáis quedaros una copia o solo comprobarlo?»**. Fuera de esa obligación, muchas veces no se queda nada."
+  - "En otros países sí puedes tapar número de pasaporte, MRZ, fecha de nacimiento y firma; deja nombre, foto y datos del carné."
 faq:
   - q: "¿Por qué me pide una empresa de alquiler mi DNI o pasaporte, y no solo el carné?"
     a: "El carné confirma que puedes conducir; un DNI o pasaporte confirma quién eres, que es sobre lo que se redacta el contrato de alquiler y el seguro. Muchos mostradores fotocopian ambos como práctica habitual, sobre todo con clientes extranjeros o según la forma de pago."
   - q: "¿Qué debo censurar en una copia para un mostrador de alquiler de coches?"
-    a: "Tapa el número de documento, la zona de lectura mecánica, tu fecha de nacimiento si no hace falta para cotejarla con el carné, y tu firma. Deja visibles tu nombre, tu foto y los datos del carné."
+    a: "El número del carné de conducir nunca: el seguro y la responsabilidad por multas se escriben sobre él. Fuera de España puedes tapar en general el número de pasaporte, la zona de lectura mecánica, tu fecha de nacimiento y tu firma, dejando visibles tu nombre, tu foto y los datos del carné."
+  - q: "¿De verdad el RD 933/2021 cubre el alquiler de coches?"
+    a: "Sí. El Real Decreto 933/2021 se titula para las actividades de hospedaje *y alquiler de vehículos a motor*, y el alquiler sin conductor tiene las mismas obligaciones de registro documental y de comunicación. Por eso un mostrador español pide los mismos campos de identidad que un hotel."
   - q: "¿Puedo simplemente enseñar el documento en lugar de dejarles una copia?"
     a: "A menudo sí — pregunta si pueden anotar los datos y devolverte el original en lugar de quedarse una fotocopia. Si de verdad necesitan una copia para tu expediente de alquiler, ofréceles una censurada y con marca de agua."
   - q: "¿Cambia algo en un mostrador de aeropuerto frente a uno local?"
@@ -33,22 +37,28 @@ En el mostrador de alquiler, junto al carné de conducir, te piden «el DNI o el
 
 Tu carné de conducir demuestra que puedes conducir; no siempre recoge tu nombre legal como lo hace tu pasaporte o DNI, que es sobre lo que en realidad se redacta el contrato de alquiler, la fianza y el seguro. Muchos mostradores fotocopian ambos documentos como práctica habitual — sobre todo con visitantes que alquilan con un carné extranjero, donde cotejar ambos importa más.
 
-## Qué necesita el mostrador en realidad
+## Dos cosas que no puedes tapar
 
-- Tu **nombre completo** y tu **foto**, que coincidan con el carné y la reserva.
-- Los **datos del carné** — el documento que de verdad demuestra que puedes conducir.
-- Tu **nacionalidad**, cuando sea relevante para las condiciones del alquiler.
+**El número de tu carné de conducir.** Es sobre lo que se escriben la cobertura del seguro y la responsabilidad por una multa de velocidad o un peaje, y un contrato de alquiler sin él no funciona. No es un campo que proteger: es el sentido del documento.
 
-No necesitan tu número de pasaporte, tu zona de lectura mecánica, tu fecha de nacimiento ni tu firma guardados en una fotocopia en el archivo de la oficina una vez hecha la comprobación.
+**En España, los campos de identidad, porque el alquiler de vehículos es actividad registrada.** El [Real Decreto 933/2021](https://www.boe.es/eli/es/rd/2021/10/26/933) se titula para hospedaje **y alquiler de vehículos a motor**, y somete el alquiler sin conductor a la misma obligación de registro documental y comunicación que un hotel. Así que un mostrador español que pide tu número de documento y tu fecha de nacimiento no está siendo curioso: está preparando una comunicación a la que está obligado. Ver [cuándo censurar el DNI no sirve de nada]({{< relref "/guides/when-redacting-your-id-wont-work.md" >}}).
 
-## Qué censurar antes de entregar una copia
+## Qué sí puedes tapar
 
-- **El número de documento o pasaporte.**
+Fuera de esa obligación — la mayor parte de Europa, la mayor parte del tiempo — el mostrador necesita tu **nombre**, tu **foto**, los **datos del carné** y a veces tu **nacionalidad**. No necesita:
+
+- **El número de pasaporte o de documento de identidad.**
 - **[La zona de lectura mecánica]({{< relref "/guides/what-is-the-mrz-machine-readable-zone.md" >}}).**
-- **Tu fecha de nacimiento**, salvo que se vaya a cotejar específicamente con el carné.
+- **Tu fecha de nacimiento**, salvo que se coteje con el carné.
 - **Tu firma.**
 
-Si también fotocopian tu carné, la misma lógica se aplica ahí para cualquier dato que no confirme que estás habilitado para conducir.
+| | España | La mayoría de los demás países |
+| --- | --- | --- |
+| **¿Obligación de registro?** | Sí, RD 933/2021 | Normalmente no |
+| **Número de documento** | Hay que registrarlo | Tápalo |
+| **Fecha de nacimiento** | Hay que registrarla | Tápala |
+| **Número del carné** | Necesario | Necesario |
+| **MRZ y firma** | Tápalas | Tápalas |
 
 ## Pregunta qué pasa con la copia
 

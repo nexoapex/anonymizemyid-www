@@ -5,7 +5,7 @@ subtitle: "Warum Sie hier ausnahmsweise nicht schwärzen sollten — und wo trot
 description: "Bei PostIdent und VideoIdent wird das vollständige Ausweisdokument erfasst. Warum das so sein muss, welche Daten fließen und wo Betrug lauert."
 date: 2026-08-03
 lastmod: 2026-08-03
-weight: 23
+weight: 25
 slug: "postident-videoident-ausweisdaten"
 keywords:
   - "Postident"

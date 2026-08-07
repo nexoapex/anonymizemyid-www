@@ -32,6 +32,8 @@ de lo que de verdad te van a pedir.
 | Quién lo pide | ¿Sirve censurar? | Qué necesita de verdad | Tapar |
 | --- | --- | --- | --- |
 | [Un comprador de Wallapop](/es/guides/comprador-de-wallapop-pide-el-dni/) | No envíes nada | Nada en absoluto | La petición es la señal de alarma |
+| [Un piso compartido, antes de la visita](/es/guides/piso-compartido-piden-el-dni/) | No envíes nada aún | Nada hasta ver la habitación | El momento es la señal de alarma |
+| [Un match de una app de citas](/es/guides/apps-de-citas-piden-el-dni/) | No envíes nada | Nada, nunca | No existe verificación entre apps |
 | [Un anfitrión de alquiler turístico](/es/guides/anfitrion-de-airbnb-pide-el-dni/) | Sí | Nombre, foto, nacionalidad | Número, MRZ, fecha de nacimiento, firma |
 | [Un casero o una agencia](/es/guides/casero-pide-copia-del-dni/) | Sí | Nombre, foto, derecho de residencia | Número, MRZ, fecha de nacimiento, firma |
 | [Un mostrador de alquiler de coches](/es/guides/alquiler-de-coche-copia-del-dni/) | En parte | Nombre, foto, número del carné | Número de pasaporte, MRZ, firma |

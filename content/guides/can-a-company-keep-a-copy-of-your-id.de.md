@@ -4,7 +4,7 @@ subtitle: "Was die DSGVO über Verlangen, Aufbewahren und Löschen wirklich sagt
 description: "Eine Firma braucht nach der DSGVO eine Rechtsgrundlage für die Ausweiskopie und darf sie nur so lange behalten, wie der Zweck dauert. So löschen Sie sie."
 date: 2026-07-28
 lastmod: 2026-08-03
-weight: 18
+weight: 20
 slug: "darf-eine-firma-die-ausweiskopie-speichern"
 keywords:
   - "DSGVO"

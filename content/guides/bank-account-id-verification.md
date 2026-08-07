@@ -4,7 +4,7 @@ subtitle: "KYC needs the whole document. The useful skill here is telling a real
 description: "Redacting your ID will not get you through a bank's identity check — anti-money-laundering rules require the full document. What to do instead."
 date: 2026-07-20
 lastmod: 2026-08-07
-weight: 19
+weight: 21
 keywords:
   - "banks"
   - "KYC"

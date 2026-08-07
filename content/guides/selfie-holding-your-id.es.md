@@ -5,7 +5,7 @@ subtitle: "Una verificación de identidad real ocurre dentro de la propia app de
 description: "Pedir un selfi con el DNI en la mano puede ser una verificación legítima o una estafa. La pista está en cómo se recoge la foto — y en qué puedes tapar."
 date: 2026-08-01
 lastmod: 2026-08-01
-weight: 12
+weight: 14
 slug: "selfi-con-el-dni-en-la-mano"
 keywords:
   - "selfi con DNI"

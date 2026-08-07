@@ -4,7 +4,7 @@ subtitle: "What actually matters, what to watch, and what is worth doing today."
 description: "You sent a full photo of your passport or ID and now regret it. Here's how to judge how bad it is, get it deleted, and watch the right things."
 date: 2026-07-28
 lastmod: 2026-07-28
-weight: 16
+weight: 18
 keywords:
   - "identity theft"
   - "risk"

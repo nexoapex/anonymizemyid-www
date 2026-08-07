@@ -10,6 +10,11 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+/* The header is sticky and 62px tall, so every one of the nav's in-page jumps
+   (#how, #features, #pricing, #get) parked its target underneath it. This is
+   the whole fix — scroll-margin applies to the scroll-into-view position, not
+   to layout, so nothing moves until an anchor is followed. */
+:target,[id]{scroll-margin-top:78px}
 body{
   margin:0; background:var(--bg); color:var(--text);
   font-family:var(--font); line-height:1.55; -webkit-font-smoothing:antialiased;

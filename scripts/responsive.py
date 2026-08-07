@@ -54,7 +54,11 @@ PATHS = [
     "/guides/send-a-copy-of-your-passport-safely/",
     "/es/guides/que-es-la-mrz-zona-de-lectura-mecanica/",
     "/de/ratgeber/personalausweis-kopieren-erlaubt/",
-    "/about/", "/privacy/", "/es/terms/",
+    # A guide with a howto list, and the two longest tables on the site.
+    "/guides/when-redacting-your-id-wont-work/",
+    "/es/guides/piso-compartido-piden-el-dni/",
+    "/de/ratgeber/vinted-willhaben-verkaeufer-verifizierung/",
+    "/about/", "/privacy/", "/es/terms/", "/contact/", "/de/imprint/", "/404.html",
 ]
 
 PROBE = r"""() => {
@@ -166,6 +170,18 @@ PROBE = r"""() => {
     if (h1) {
       const r = h1.getBoundingClientRect();
       if (r.top < h && r.bottom > 0) out.underHeader.push(`h1 top=${Math.round(r.top)} header=${Math.round(h)}`);
+    }
+    // Every in-page anchor the page links to must also clear it. scroll-margin
+    // is the fix; this is the check that it is actually in force, measured
+    // rather than assumed, because the value has to exceed a header height
+    // that itself varies with the viewport.
+    for (const a of document.querySelectorAll('a[href^="#"], a[href*="/#"]')) {
+      const id = a.getAttribute('href').split('#')[1];
+      if (!id) continue;
+      const target = document.getElementById(id);
+      if (!target) continue;
+      const sm = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+      if (sm < h) out.underHeader.push(`#${id} scroll-margin ${sm}px < header ${Math.round(h)}px`);
     }
   }
   return out;

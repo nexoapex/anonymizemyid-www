@@ -4,7 +4,7 @@ subtitle: "A real identity check happens inside the company's own app. A still p
 description: "Selfie-with-ID requests are sometimes a genuine identity check and sometimes a scam. The tell is how the photo is collected — plus what you can safely cover."
 date: 2026-08-01
 lastmod: 2026-08-01
-weight: 12
+weight: 14
 keywords:
   - "selfie with ID"
   - "identity verification"

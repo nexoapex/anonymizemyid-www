@@ -4,7 +4,7 @@ subtitle: "Qué importa de verdad, qué vigilar y qué merece la pena hacer hoy.
 description: "Enviaste una foto completa de tu DNI o pasaporte y te has arrepentido. Cómo calibrar la gravedad, conseguir que la borren y vigilar lo que toca."
 date: 2026-07-28
 lastmod: 2026-07-28
-weight: 16
+weight: 18
 slug: "ya-he-enviado-el-dni-sin-censurar"
 keywords:
   - "robo de identidad"

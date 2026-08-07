@@ -42,6 +42,8 @@ tatsächlich gefragt werden.
 | --- | --- | --- | --- |
 | [Ein Käufer bei Kleinanzeigen](/de/ratgeber/kleinanzeigen-kaeufer-will-ausweis/) | Nichts schicken | Gar nichts | Die Frage selbst ist das Warnsignal |
 | [Vinted, willhaben, Ricardo](/de/ratgeber/vinted-willhaben-verkaeufer-verifizierung/) | Ja | Steuer-ID, nicht der Ausweis | Nummer, MRZ, Unterschrift |
+| [Eine WG, vor der Besichtigung](/de/ratgeber/wg-zimmer-ausweiskopie/) | Noch nichts schicken | Nichts, bevor Sie das Zimmer gesehen haben | Der Zeitpunkt ist das Warnsignal |
+| [Ein Match in einer Dating-App](/de/ratgeber/dating-app-verifizierung-ausweis/) | Nichts schicken | Nie etwas | Eine app-übergreifende Verifizierung gibt es nicht |
 | [Ein Airbnb-Gastgeber](/de/ratgeber/airbnb-gastgeber-verlangt-ausweis/) | Ja | Name, Lichtbild, Staatsangehörigkeit | Nummer, MRZ, Geburtsdatum, Unterschrift |
 | [Ein Vermieter oder Makler](/de/ratgeber/vermieter-verlangt-ausweiskopie/) | Ja | Name, Lichtbild, Identität | Nummer, MRZ, Geburtsdatum, Unterschrift |
 | [Eine Mietwagenstation](/de/ratgeber/mietwagen-ausweiskopie/) | Teilweise | Name, Lichtbild, Führerscheinnummer | Passnummer, MRZ, Unterschrift |

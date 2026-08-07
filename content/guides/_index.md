@@ -16,6 +16,8 @@ They are also honest about the limit. **Redaction does not work everywhere.** A 
 | Who's asking | Redaction works? | What they genuinely need | Cover |
 | --- | --- | --- | --- |
 | [A marketplace buyer](/guides/marketplace-buyer-asking-for-id/) | Send nothing | Nothing at all | The request is the red flag |
+| [A flatshare, before a viewing](/guides/flatshare-or-roommate-asking-for-id/) | Send nothing yet | Nothing until you have seen the room | The timing is the red flag |
+| [A dating match](/guides/dating-app-verification-id-request/) | Send nothing | Nothing, ever | No cross-app verification exists |
 | [A short-term rental host](/guides/airbnb-host-asking-for-id/) | Yes | Name, photo, nationality | Number, MRZ, date of birth, signature |
 | [A landlord or letting agent](/guides/landlord-asking-for-id-or-passport-copy/) | Yes | Name, photo, right to reside | Number, MRZ, date of birth, signature |
 | [A car rental desk](/guides/car-rental-id-copy/) | Partly | Name, photo, licence number | Passport number, MRZ, signature |

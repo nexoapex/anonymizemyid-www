@@ -4,7 +4,7 @@ subtitle: "El registro de viajeros necesita tu número de documento. La fotocopi
 description: "El RD 933/2021 obliga a los alojamientos a registrar tu número de documento y tu fecha de nacimiento. Qué no puedes censurar, y qué sí puedes negarte a dar."
 date: 2026-06-29
 lastmod: 2026-08-07
-weight: 17
+weight: 19
 slug: "hotel-pide-copia-del-pasaporte"
 keywords:
   - "hoteles"

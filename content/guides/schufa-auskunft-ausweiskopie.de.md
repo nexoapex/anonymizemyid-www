@@ -5,7 +5,7 @@ subtitle: "Die kostenlose Datenkopie nach Art. 15 DSGVO — und wie viel Ausweis
 description: "Für die kostenlose Datenkopie verlangen Auskunfteien einen Identitätsnachweis. Was Sie dabei schwärzen dürfen und warum die Kopie danach gelöscht werden muss."
 date: 2026-08-03
 lastmod: 2026-08-03
-weight: 17
+weight: 19
 slug: "schufa-auskunft-ausweiskopie"
 keywords:
   - "Schufa"
